@@ -1,0 +1,61 @@
+\chapter{The Structure of Memory}
+
+\section{What a Field Must Remember}
+
+Chapter 6 left one question deliberately open. A world was established to be a persistent field, \(M_t\) : X → \(\mathbb{R}^d\), and every point of that field was said to carry a vector of real values describing local state. But a vector in \(\mathbb{R}^d\), taken on its own, is mute. It does not say whether its entries encode color or material or uncertainty or something else entirely, and a reader who has only been told that the world is a field is entitled to worry that this is a promissory note rather than an answer.
+
+The worry deserves to be taken seriously, because it points at something true. A field that is merely a vector at every point, with no further structure imposed on what that vector must represent, is not yet capable of doing the work the previous chapter demanded of it. Recall the wall. Persistence required more than a value existing at the wall's location; it required that value to remain coherent under repeated observation, that regions of uncertainty be distinguishable from regions of settled fact, and that whatever had already happened to the wall leave some trace that later observations could be checked against. None of this follows automatically from \(M_t\) simply being \(\mathbb{R}^d\text{-valued}\). It has to be built in, deliberately, by deciding what the vector at each point actually contains.
+
+This chapter makes that decision. It gives the field an internal structure, one that will be assumed, referred to, and built upon by nearly every chapter that follows.
+
+\section{The Five Components of Memory}
+
+At each point x in the domain, the field's value decomposes into five named components:
+
+\[ M_t(x) = \bigl(\Phi_t(x),\, v_t(x),\, S_t(x),\, R_t(x),\, z_t(x)\bigr). \]
+
+Each component answers a different question about that point of the world, and each is necessary in a way the others do not substitute for.
+
+\(\Phi_t(x)\), the coherence potential, answers how stable this region is. High values of Φ mark regions where structure is settled and mutually reinforcing; low values mark regions on the verge of reorganizing. Φ is what makes it meaningful to speak of a wall as opposed to an arbitrary patch of field: the wall is exactly the region where Φ is high and has remained high.
+
+\(v_t(x)\), the vector flow, answers where this region is going. It encodes directed change: drift, propagation, the local tendency of the field to move rather than merely to sit. A field with no vector component would be static by construction, incapable of representing anything in the process of happening, and a persistent world must be able to represent things in the process of happening as readily as it represents things that have finished happening.
+
+\(S_t(x)\), the entropy, answers how settled this region actually is, as distinct from how coherent it currently appears. A region can have high Φ while also having high S, if what has been observed so far is coherent but thin, consistent with many different underlying possibilities that have not yet been distinguished. Entropy is the field's honest account of what it does not yet know about itself, and it receives a full chapter of its own, Chapter 8, because the consequences of taking uncertainty seriously as a first-class quantity turn out to be extensive.
+
+\(R_t(x)\), the causal residue, answers what has happened here. It is the trace left behind by prior events, prior commitments, prior interactions, the record that lets a later observation be checked for consistency against something more specific than the field's present appearance. Without R, the field would have no memory in the ordinary sense of the word; it would have only a current state, endlessly overwritten, indistinguishable from a system with no persistence at all beyond the current instant. R is developed fully in Chapter 11.
+
+\(z_t(x)\), the appearance, answers what this region currently looks like: the resolved, committed, perceivable content that an observation actually returns. Chapter 9 is devoted to explaining why appearance must be a distinct component rather than something derived on demand, and to the invention-to-memory principle that governs how z comes to hold a fixed value in the first place.
+
+Together these five components give each point of the field an answer to five different questions: how stable, how it is changing, how uncertain, what has happened, and what it currently looks like. No one of these can stand in for another. A field with coherence but no residue could not distinguish a wall that has always been solid from a wall that has just been solidly imagined; a field with appearance but no entropy could not distinguish a confident perception from a plausible guess. The decomposition is not decoration. It is the minimum structure required for the persistence argued for in Chapter 6 to actually hold.
+
+\section{Refining the Decomposition}
+
+Readers familiar with this book's supporting technical material, in particular the Architecture Specification for factored world-engine updates, will recognize this decomposition as a revision of an earlier one. That document defined the field's state as a six-tuple,
+
+\[ M_t(x) = (\Phi_t,\, v_t,\, S_t,\, A_t,\, R_t,\, z_t), \]
+
+with \(A_t\) named as an affordance structure or interaction algebra: a component of the world-state itself, alongside coherence, flow, uncertainty, residue, and appearance. This book does not use that six-tuple, and the omission is deliberate rather than an oversight to be quietly stepped around.
+
+The reason is best seen through an example simple enough to settle the question outright. A ladder affords climbing to a human and does not afford climbing, in any useful sense, to a goldfish. The ladder has not changed between these two cases. What has changed is the capability of the party encountering it. If affordance were a property of the field alone, stored at the ladder's location the way Φ or z are stored there, this difference would have nowhere to live: the field would have to somehow encode a single, agent-independent fact about climbability, and that fact would either be wrong for the human or wrong for the goldfish. Affordance is not a property of a place. It is a relation between a place and a capability, and treating it as though it belonged to the world-state alone was a category error, however natural it seemed when the six-tuple was first written down.
+
+The decomposition used in this book therefore removes \(A_t\) as a field component. Affordances are reintroduced in Chapter 10 in a different form entirely, as a relation
+
+\[ A : M \times C \to \mathcal{P}(\Delta\psi), \]
+
+where C denotes an agent's capability or cognitive state, and where the output is the set of proposed changes that agent's encounter with the field could give rise to. The persistent world stores coherence, flow, uncertainty, residue, and appearance. It does not store, and should not store, a ready-made list of what any given visitor can do with it. What any given visitor can do with it is computed at the point of encounter, from the field's structure and the visitor's capability together, and Chapter 10 is where that computation is developed.
+
+This is worth stating plainly as an instance of a general policy this book follows throughout: where an earlier formulation is superseded by a later and better one, the change is named rather than silently absorbed. The six-component decomposition was not a mistake so much as an intermediate stage, one that correctly identified affordance as important before correctly identifying where it belonged. Refining it is part of the same process that produced it.
+
+\section{What Observation Recovers}
+
+Chapter 6 introduced the observation operator \(O_\theta\), mapping the field to what an observer perceives, and deliberately said nothing about what \(O_\theta\) actually returns. With the field's internal structure now in view, that question can be given a real answer, or at least the shape of one.
+
+No single observation recovers all five components at once, and this is not a limitation to be engineered away so much as a fact about what observation is. A camera pointed at the wall recovers something close to z, the field's current appearance, and recovers it richly. It recovers Φ and S only indirectly, if at all: a photograph does not directly report how stable a region is or how much remains unresolved about it, though a sequence of photographs, compared against one another, might allow those quantities to be inferred. A physical measurement of stress or load, by contrast, might recover something closer to Φ directly, while saying very little about appearance. A historical record, a document, or a witness's testimony draws primarily on R, the residue of what has happened, often with no access to the field's current appearance at all.
+
+This is exactly the behavior one should expect once observation is understood as a projection rather than a re-derivation of the whole state. \(O_\theta\) is not one fixed operator recovering one fixed slice of \(M_t\); it is a family of possible operators, each suited to a different combination of components, each giving an observer partial access to a field that always contains more than any single observation returns. A rendering pipeline, a physics sensor, and a written record are not competing, imperfect attempts at the same underlying task. They are different projections of the same five-component structure, each faithful to the part of it they are built to read, none of them faithful to the whole.
+
+This also clarifies something about disagreement between observers that was only gestured at in Chapter 6. Two observations of the same region can differ, sometimes sharply, without either being mistaken, simply because they are reading different components of a field that is not obligated to make every component agree in the way appearance alone might suggest. A region can look settled, high z-coherence, while still carrying high entropy about aspects the appearance does not touch. Recognizing this is part of what it means to take the five-component structure seriously rather than treating it as an internal bookkeeping detail invisible from the outside.
+
+\section{Looking Ahead}
+
+This chapter has given the field a name for each of the five things it must keep track of, and has explained why a sixth candidate, affordance, does not belong on that list. It has not yet said how any of these five components actually behaves: how entropy resolves into certainty, how appearance becomes fixed once observed, how residue accumulates, or how coherence and flow interact as the field evolves. Each of the next several chapters takes up one of these questions in turn, beginning with entropy, the component whose behavior turns out to have the widest consequences for everything the rest of this book will build.

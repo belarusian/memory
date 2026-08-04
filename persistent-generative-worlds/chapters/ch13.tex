@@ -1,0 +1,37 @@
+\chapter{Neural Proposals}
+
+\section{A Menu Is Not a Decision}
+
+Chapter 10 left affordance as a set: A(M, C) returns P(\(\Delta\psi\)), the range of changes a given capability could propose at a given point of encounter, climbing, sitting, inspecting, each a live candidate rather than a foregone conclusion. Chapter 12 then explained what happens to a single \(\Delta\psi\) once it exists, added to the field rather than substituted for it, but was careful to say that it had not explained how one candidate gets selected from many, or how a candidate's actual content, the specific shape of a specific proposed change, comes to be generated in the first place. A menu is not a decision, and this chapter is where the decision gets made.
+
+\section{Two Sources for One Proposal}
+
+It helps to notice, before building the selection mechanism, that \(\Delta\psi\) is not really produced by a single process. It has two distinct sources, and collapsing them into one obscures a distinction that later chapters will need.
+
+The first source is the field's own intrinsic tendency to change, independent of any agent's intent. A coherence gradient smooths itself over time; an entropy field that has been locally disturbed relaxes back toward its surroundings; residue accumulates a small amount of drift even without deliberate action. This book will write this contribution as \(F_{\mathrm{phys}}(M)\): not physics in the sense of the physical sciences necessarily, but physics in the sense this book has used the word since Chapter 8, the field's own rule-governed behavior, occurring whether or not anyone is watching or acting.
+
+The second source is deliberate and learned: a neural forcing term, \(F_\psi\)(M, p, a, o), driven by the field's current state M, an agent's position or point of encounter p, an intended action a, and whatever observation o currently constrains the proposal. This is where the affordance menu from Chapter 10 actually gets converted into content. Given that climbing the ladder has been selected, \(F_\psi\) is what actually generates the specific proposed change, a trajectory, a displacement, a new configuration, that climbing would produce. It is called neural because it is learned rather than hand-specified: the mapping from context to proposed content is exactly the kind of function a trained model is suited to approximate, and this book will not pretend that mapping could be written down in closed form the way the entropy constraint was.
+
+The full proposal combines both sources,
+
+\[ \partial_t \Pi = -\delta H/\delta M + F_\psi(M, p, a, o), \]
+
+where the first term captures the field's intrinsic relaxation and the second captures the agent-driven forcing. \(\Delta\psi\), as it appeared in Chapter 12, is the discrete-time accumulation of this combined rate over one update step. It was never purely an agent's invention. Some of it is simply what the field would have done regardless of any agent's presence, and separating the two contributions matters because they will be held to different standards once Chapter 14 asks whether a proposal is admissible: a field's own intrinsic drift is, almost by construction, close to what the field already permits, while a neural forcing term, expressive by design, has no such guarantee and is where most of a proposal's risk actually lives.
+
+\section{Selecting Among Affordances}
+
+This still leaves the question Chapter 12 set aside: given a menu of live candidates, sitting, climbing, inspecting, each independently viable, how does one of them actually become the a that \(F_\psi\) is asked to realize? The mechanism this book adopts is the one Chapter 10 already built the vocabulary for, without yet putting it to use. Recall \(\rho_c(x)\), the cue-triggered relevance introduced in section 10.2. Selection among a menu of candidates follows relevance the same way behavior was already said to follow it: a candidate is chosen with probability increasing in how strongly its associated cue has activated relevance for the agent's current capability,
+
+\[ \pi(a \mid x) \propto \exp\bigl(\beta \cdot \rho_c(x, a)\bigr), \]
+
+where β governs how sharply selection favors the most strongly activated candidate over its rivals. A high β makes selection nearly deterministic, always taking the most strongly cued option; a low β allows genuine exploration among candidates whose activation is close but not equal. This is not a new primitive introduced for this chapter alone. It is the same relevance-following behavior Chapter 10 attributed to affordance activation in general, now made responsible for a specific job: turning a menu into a single chosen action, which \(F_\psi\) then converts into a specific proposed content.
+
+\section{Expressivity Without Authority}
+
+It is worth stating plainly what has and has not been achieved once a is selected and \(F_\psi\)(M, p, a, o) has produced a concrete \(\Delta\psi\). What has been achieved is content: a specific, well-formed proposal, grounded in both the field's intrinsic tendencies and a genuinely learned, genuinely expressive model of what a chosen action would actually change. What has not been achieved is permission. Nothing about being selected by π, and nothing about being generated by a well-trained \(F_\psi\), guarantees that the resulting \(\Delta\psi\) respects the entropy constraint from Chapter 8, the invention-to-memory discipline from Chapter 9, or the accumulated residue from Chapter 11. A neural proposal, however well trained, is exactly the kind of process that can produce a fluent, locally plausible \(\Delta\psi\) that nonetheless asserts something the field's own history has already ruled out, a courtyard resolving into undisturbed paving where the residue already records that the ground was recently dug.
+
+This is not a defect to be trained away. It is the reason the proposal layer and the constraint layer are kept as two separate stages rather than one, and it is worth being explicit about why, since the temptation to merge them is real. A proposal generator that has fully internalized every constraint the field could ever impose would need to carry the entire admissibility structure of Chapter 14 inside itself, retrained or reasoned through on every update, and would likely purchase this at the cost of exactly the expressivity that made the proposal layer worth having in the first place. This is the second failure mode from Chapter 12 in a new guise: a proposal mechanism so heavily constrained at generation time that it can no longer propose anything genuinely novel is functionally indistinguishable from the rigid, inert system that chapter warned against. The proposal layer is deliberately allowed to be wrong. Its job is expressivity, not authority, and authority belongs to the stage that comes next.
+
+\section{Looking Ahead}
+
+This chapter has given \(\Delta\psi\) a real origin: a combination of the field's own intrinsic tendencies and a learned, agent-driven forcing term, with selection among competing candidates governed by the same relevance-following behavior Chapter 10 introduced for affordance activation generally. What it has not done, deliberately, is check any of this against what the field is actually permitted to become. A proposal, however well motivated and however fluently generated, is still only a candidate. Chapter 14 is where a candidate is finally held against the field's constraints and either accepted, corrected, or refused.

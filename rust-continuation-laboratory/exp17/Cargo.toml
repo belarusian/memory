@@ -1,0 +1,7 @@
+[package]
+name = "exp17-fair-continuation-scheduler"
+version = "0.1.0"
+edition = "2021"
+
+[dependencies]
+continuation-shared = { path = "../shared" }

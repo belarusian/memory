@@ -1,0 +1,208 @@
+\chapter{Rust Software Architecture}
+
+\section{Purpose and Scope}
+
+This appendix specifies traits and module boundaries for an implementation of Chapter 25's reference architecture in Rust, growing directly out of Chapters 25 through 30. It is a design specification, not a complete implementation, and it does not claim to be the only valid way to encode this book's architecture in the language. Its purpose is narrower and more useful than completeness: to show that the permission boundaries Chapter 25.4 argued for conceptually, a proposal service that cannot write to the world, a projection service that cannot commit, can be enforced by Rust's own type system rather than left to an implementer's discipline.
+
+\section{Core Types}
+
+The five-component field of Appendix A.3, indexed by the Hilbert-ordered patch scheme of Chapter 26.3.
+
+\begin{Verbatim}[breaklines=true, breaksymbolleft={}, fontsize=\small]
+pub struct PatchId(u64);
+
+pub struct Patch {
+    pub id: PatchId,
+    pub phi: Field<f64>,       // Φ: coherence potential
+    pub v: Field<Vec3>,        // v: vector flow
+    pub s: Field<f64>,         // S: entropy; see Entropy below
+    pub r: Residue,            // R: compressed causal trace, Chapter 11.2
+    pub z: Appearance,         // z: committed appearance
+}
+
+pub struct Entropy {
+    pub value: f64,
+    pub live_possibilities: LivePossibilitySet,  // L_t(x), Chapter 8.1
+}
+
+pub struct Residue {
+    // Deliberately not a log or a Vec<Event>: Chapter 11.2 was explicit
+    // that R_t is a compressed trace, not an append-only record. The
+    // internal representation is left to the implementer; what this
+    // type must support is the accumulation operation below.
+    data: Box<dyn ResidueRepr>,
+}
+
+pub trait ResidueRepr {
+    // R_{t+1} = R_t ⊕ event_t. Appendix B.9 already flagged that ⊕'s
+    // full algebra is only partially specified: it is required to
+    // commute over causally independent events and nothing more.
+    fn accumulate(&mut self, event: &Event, independent_of: &[EventId]);
+}
+\end{Verbatim}
+
+\section{The World Store Trait}
+
+This realizes Chapter 25.3 and Chapter 26.7's storage interface: the single authoritative location for committed state.
+
+\begin{Verbatim}[breaklines=true, breaksymbolleft={}, fontsize=\small]
+pub trait WorldStore {
+    fn get_patch(&self, id: PatchId, mask: ComponentMask) -> Option<Patch>;
+    fn enumerate(&self, region: Region) -> Vec<PatchId>;
+    // resolved patches only; unresolved space is implicit, Chapter 26.2
+
+    // Note what is absent: there is no set_patch or write method on this
+    // trait. Writing is not a WorldStore operation. It is the sole
+    // responsibility of the CommitLedger in D.5, and that separation is
+    // enforced here by simply never giving this trait a mutating method,
+    // rather than by convention.
+}
+\end{Verbatim}
+
+\section{Proposal and Projection}
+
+This is where Chapter 25.4's permission boundary becomes a compile-time guarantee rather than a design intention.
+
+\begin{Verbatim}[breaklines=true, breaksymbolleft={}, fontsize=\small]
+pub trait ProposalService {
+    // Deliberately takes &dyn WorldStore, never &mut dyn WorldStore.
+    // A proposal service that tried to write to the world would not
+    // compile against this trait; the boundary Chapter 13.4 argued for
+    // conceptually (expressivity without authority) is, here, simply
+    // unavailable as a capability, not merely discouraged.
+    fn propose(&self, world: &dyn WorldStore, agent: AgentId, x: Position, cap: Capability)
+        -> Option<Proposal>;
+}
+
+pub struct Proposal {
+    pub delta_psi: FieldDelta,
+    pub origin: AgentId,
+    pub intent: Position,
+}
+
+pub trait ProjectionService {
+    // Also takes only a shared reference to the world; a projection
+    // service computes a candidate, it does not commit one.
+    fn project(&self, world: &dyn WorldStore, proposal: &Proposal, c: &ConstraintManifold)
+        -> ProjectionResult;
+}
+
+pub enum ProjectionResult {
+    Admitted(FieldDelta),
+    Corrected(FieldDelta),  // nearest admissible point, Chapter 14.3
+    Refused,                 // no admissible point close enough, Chapter 15.4
+}
+\end{Verbatim}
+
+\section{Commit and the Residue Ledger}
+
+The only component in this design with mutable access to the world store.
+
+\begin{Verbatim}[breaklines=true, breaksymbolleft={}, fontsize=\small]
+pub trait CommitLedger {
+    fn commit(&mut self, world: &mut dyn WorldStore, result: ProjectionResult, threshold: f64)
+        -> CommitOutcome;
+
+    fn merge_simultaneous(&mut self, world: &mut dyn WorldStore, group: Vec<ProjectionResult>)
+        -> CommitOutcome;  // Chapter 15.3, Chapter 29.3's joint admissibility
+}
+
+pub enum CommitOutcome {
+    Committed { new_state: PatchId, residue_updated: bool },
+    Refused,
+}
+\end{Verbatim}
+
+\section{Scheduler}
+
+This realizes Chapter 25.2 and Chapter 17's multi-rate execution.
+
+\begin{Verbatim}[breaklines=true, breaksymbolleft={}, fontsize=\small]
+pub trait Scheduler {
+    fn fast_tick(&mut self, world: &mut dyn WorldStore, proposal: &dyn ProposalService,
+                 projection: &dyn ProjectionService, commit: &mut dyn CommitLedger);
+        // z, v: appearance and flow, Chapter 17.2
+
+    fn slow_tick(&mut self, world: &mut dyn WorldStore, proposal: &dyn ProposalService,
+                 projection: &dyn ProjectionService, commit: &mut dyn CommitLedger);
+        // Φ and topological/identity structure, run at a coarser interval
+}
+\end{Verbatim}
+
+A concrete implementation would typically run fast\_tick on a fine timer and slow\_tick on a coarser one, exactly as Chapter 17.2 described; nothing in the trait itself requires a particular scheduling mechanism, only that the two rates remain distinct calls rather than a single undifferentiated update.
+
+\section{Rendering}
+
+This realizes Chapter 25.5 and Chapter 27's account of the renderer as a client, and Chapter 27.4's finding that an unresolved query is secretly a write.
+
+\begin{Verbatim}[breaklines=true, breaksymbolleft={}, fontsize=\small]
+pub trait Renderer {
+    // A Renderer holds only a shared reference to the world store. It
+    // cannot mutate the field, even for the unresolved-region case.
+    fn observe(&self, world: &dyn WorldStore, query: Query) -> Observation;
+
+    // When observe() encounters an unresolved region, it does not have
+    // the authority to resolve it directly. It must instead produce a
+    // proposal and hand it to the ordinary write pipeline, like any
+    // other agent; there is no privileged rendering-triggered write
+    // path in this design, matching Appendix C.5's pseudocode.
+    fn propose_for_unresolved(&self, world: &dyn WorldStore, x: Position) -> Option<Proposal>;
+}
+\end{Verbatim}
+
+\section{Multiplayer Synchronization}
+
+This realizes Chapter 29's arbitration between commutative and conflicting proposals.
+
+\begin{Verbatim}[breaklines=true, breaksymbolleft={}, fontsize=\small]
+pub trait ConflictResolver {
+    fn partition(&self, proposals: &[(AgentId, Proposal)]) -> Vec<ProposalGroup>;
+        // disjoint-support groups need no coordination, Chapter 29.2
+
+    fn resolve_group(&self, world: &dyn WorldStore, group: &ProposalGroup, c: &ConstraintManifold)
+        -> ProjectionResult;
+        // joint projection for genuine conflicts, Chapter 29.3
+}
+
+pub trait SocialAdmissibility {
+    // Chapter 29.4-29.5's second, deliberately unformalized layer:
+    // monitors patterns of committed proposals over a window of time,
+    // downstream of ordinary constraint checking, not folded into it.
+    fn monitor(&mut self, agent: AgentId, history: &[CommitOutcome]) -> SocialSignal;
+}
+\end{Verbatim}
+
+\section{The Interaction Interface}
+
+This realizes Chapter 28.2's five-operation action vocabulary directly as a closed enum, so that the interaction layer accepts only well-formed actions rather than arbitrary intent.
+
+\begin{Verbatim}[breaklines=true, breaksymbolleft={}, fontsize=\small]
+pub enum Action {
+    Store { target: Position, content: Content },
+    Retrieve { target: Position },
+    Modify { target: Position, rule: ModifyRule },
+    Compose { targets: Vec<Position>, rule: ComposeRule },
+    Rewrite { target: Region, rule: RewriteRule },
+        // content-preserving, rule-governed; Chapter 28.3's Abjad-to-
+        // Hijā'ī example is the paradigm case this variant is for
+}
+
+pub trait ActionInterface {
+    fn submit(&self, action: Action, agent: AgentId) -> Proposal;
+        // Every Action, however it arrives, human input or another AI
+        // system's output, produces a Proposal through this single
+        // path; Chapter 28.4's claim that human and AI agents share
+        // one interface is, here, the fact that there is only one
+        // submit() method for both to call.
+}
+\end{Verbatim}
+
+\section{Module Layout}
+
+A crate structure separating these concerns cleanly keeps the permission boundaries of D.3 through D.5 from being circumvented by convenience:
+
+world-core (Patch, Field, Entropy, Residue, Appearance types, no logic); world-proposal (ProposalService implementations, \(F_{\mathrm{phys}}\) and \(F_\psi\)); world-projection (ProjectionService, the constraint manifold C); world-commit (CommitLedger, residue accumulation, refusal logic); world-storage (WorldStore implementations, Hilbert indexing, sparse allocation, streaming); world-render (Renderer implementations, forward and inverse decoders); world-net (ConflictResolver, SocialAdmissibility, distributed sharding per Chapter 30); world-interact (ActionInterface, the five-operation vocabulary). Dependencies flow in one direction, world-proposal, world-projection, and world-render depend on world-core and on the WorldStore trait from world-storage, but never on each other directly and never on world-commit; only world-commit and the top-level scheduler are permitted to depend on a mutable WorldStore.
+
+\section{What This Appendix Does Not Specify}
+
+This appendix has said nothing about concrete serialization formats for Patch data on disk, the choice of async runtime or threading model for the scheduler, GPU or SIMD acceleration of field operations, or the internal architecture of \(F_\psi\) and the inverse-rendering decoders that generate candidate content. Each of these is a genuine engineering decision with no single correct answer, and each is left to an implementer in the same spirit Chapter 33.8 and Chapter 42.4 already set for the main text: this book specifies roles and boundaries, not every choice within them.

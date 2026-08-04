@@ -1,0 +1,117 @@
+\chapter{Mathematical Notation and Preliminaries}
+
+\section{Purpose and Scope}
+
+The main text develops this book's formalism gradually, deliberately, and in service of an argument, introducing each operator only once the intuition and architecture motivating it were in place. This appendix inverts that order. It collects, in one place and without narrative scaffolding, the objects the main text defined and used, so that a reader who wants to check a claim, extend the framework, or simply see the whole apparatus side by side does not have to reassemble it from forty-two chapters. Nothing here is new. Every definition below restates something Chapters 6 through 41 already established, with a pointer back to where it was first introduced. Appendices B through F build on the vocabulary fixed here without redefining it.
+
+\section{The Domain and the Field}
+
+X denotes the domain over which a persistent world is defined, a set of positions or situations whose specific structure is left open by the formalism itself (Chapter 6). The world-state at time t is a field
+
+\(M_t\) : X → \(\mathbb{R}^d\),
+
+assigning to each point of X a vector of real values (Chapter 6.4). 𝓜 denotes the full configuration space of possible field states, equipped with a metric g giving distance between two configurations literal, non-metaphorical content (Chapter 18.3).
+
+\section{The Five Field Components}
+
+At each point x ∈ X, \(M_t(x)\) decomposes into five components (Chapter 7.2):
+
+\(\Phi_t(x)\), the coherence potential, a scalar measuring local stability;
+
+\(v_t(x)\), the vector flow, encoding directed change;
+
+\(S_t(x)\), the entropy, measuring how much remains genuinely unresolved, with \(L_t(x)\) denoting the associated live possibility set (Chapter 8.1);
+
+\(R_t(x)\), the causal residue, a compressed trace of prior events at x, accumulating via \(R_{t+1}(x)\) = \(R_t(x)\) ⊕ \(\mathrm{event}_t(x)\) for some domain-specific accumulation operator ⊕ (Chapter 11.3);
+
+\(z_t(x)\), the appearance, the resolved, committed, perceivable content an observation returns, updated via the invention-to-memory rule \(z_{t+1}(x)\) = \(z_t(x)\) + λ · ẑ(x) (Chapter 9.3).
+
+An earlier six-component decomposition additionally included \(A_t\), an affordance field; this was revised (Chapter 7.3) once affordance was recognized as relational rather than field-intrinsic. Affordance is now the relation
+
+A : M × C → 𝒫(\(\Delta\psi\)),
+
+where C denotes an agent's capability or cognitive state and the output is the set of proposals that agent's encounter with the field could give rise to (Chapter 10.1).
+
+\section{Core Operators}
+
+\(O_\theta\), the observation operator, maps the field to what an observer perceives, \(O_\theta\)(\(M_t\)) = \(y_t\), and is understood as a family of operators, each recovering a different partial slice of the five components (Chapters 6.2 and 7.4). Its forward direction reads committed appearance; its inverse direction proposes a candidate ẑ for an unresolved region, itself entering the write cycle as a genuine proposal rather than a direct write (Chapter 9.5, Chapter 27.4).
+
+\(\Delta\psi\), the proposal, is a candidate change to the field, combining the field's intrinsic tendency \(F_{\mathrm{phys}}\) and a learned, agent-driven forcing term \(F_\psi\),
+
+\(\partial_t \Pi\) = −\(\delta H\)/\(\delta M\) + \(F_\psi\)(M, p, a, o)
+
+(Chapter 13.2), with candidates among a live affordance menu selected by relevance,
+
+π(a | x) ∝ exp(β · \(\rho_c(x,a)\))
+
+(Chapter 13.3), where \(\rho_c(x,a)\) is cue-triggered relevance (Chapter 10.2).
+
+\(\Pi_C\), constraint projection, maps a proposal onto the nearest point of the admissible manifold C,
+
+Y = \(\operatorname*{argmin}_{Y \in C}\) ‖Y − (\(M_t\) + \(\Delta\psi\))‖²
+
+(Chapter 14.3). Commit is the further, distinct operation by which a projected candidate Y becomes the field's genuine next state, \(M_{t+1}\), or is refused outright when no admissible point sufficiently honors the original proposal's intent (Chapter 15.1, Chapter 15.4). Writing, in general, is addition rather than replacement,
+
+\(M_{t+1}\) = \(M_t\) + \(\Delta\psi\)
+
+(Chapter 12.3), of which the appearance and residue update rules above are special cases.
+
+\section{The Constraint Manifold}
+
+C, the constraint manifold, is the intersection of every admissibility condition this book's chapters establish,
+
+C = \(C_S\) ∩ \(C_z\) ∩ \(C_R\) ∩ \(C_A\) ∩ ⋯,
+
+where \(C_S\) is the entropy constraint (\(\Delta S_t(x)\) ≥ 0 outside the observed region, Chapter 8.4), \(C_z\) is appearance consistency (Chapter 9), \(C_R\) is residue consistency (Chapter 11), and \(C_A\) is affordance-realizability, defined via the bridge η introduced in A.7 below (Chapter 21.5). The list is explicitly left open by an ellipsis; later chapters and applications (Chapters 32, 33, 36) add further, domain-specific members. C distinguishes hard constraints, which fix its shape outright, from soft dynamics, \(F_{\mathrm{phys}}\) and \(F_\psi\), which vary only within whatever region the hard constraints permit (Chapter 18.4).
+
+\section{Trajectories, Fixed Points, and Identity}
+
+A trajectory is a committed sequence \(M_t\), \(M_{t+1}\), \(M_{t+2}\), … A fixed point \(M^*\) satisfies
+
+\(M^*\) = \(\Pi_C\)(\(M^*\) + \(\Delta\psi\)),
+
+trivial when \(\Delta\psi\) = 0 throughout, dynamic when \(\Delta\psi\) is genuinely nonzero but reliably projects and commits back to the same configuration (Chapter 16.3). Identity, under this framework, is such a fixed point, later refined into a conserved trajectory through phase space once Hamiltonian dynamics are introduced: treating Φ as position-like and v as momentum-like, a Hamiltonian trajectory satisfies
+
+∂Φ/∂t = \(\delta H\)/\(\delta v\), ∂v/∂t = −\(\delta H\)/\(\delta \Phi\)
+
+(Chapter 20.3), conserving H and the symplectic structure relating Φ and v exactly, with Chapter 16's fixed point recovered as the degenerate case where the orbit shrinks to a point (Chapter 20.5). Stability of a fixed point corresponds to a local minimum of H restricted to C; instability, to a saddle or local maximum (Chapter 19.5).
+
+\section{Categories, Cue Categories, and World Sheaves}
+
+\(F_{\mathrm{field}}\) denotes the field-coherence sheaf, assigning to each patch of a cover of X the set of locally admissible configurations on that patch, with the sheaf condition asking whether locally admissible, overlap-compatible configurations glue into one global section (Chapter 21.2). Failure to glue is measured by cohomology; \(H^1\)(𝒢∞) ≠ 0 marks a state with no such global assembly, this book's precise sense of a spatial hallucination (Chapter 21.3).
+
+\(F_{\mathrm{cue}}\) denotes the cue-coherence sheaf, \(F_{\mathrm{cue}}\) : \(\mathrm{CueCat}^{\mathrm{op}}\) → Set, defined over CueCat, the category of cues or contexts, asking whether locally activated affordances assemble into one coherent agent policy (Chapter 10.5). The two sheaves are connected, not identified, by a bridge
+
+η : \(F_{\mathrm{cue}}\) ⇒ O*\(F_{\mathrm{field}}\),
+
+where O is the map induced by \(O_\theta\) from CueCat into Patch(𝓜) (Chapter 21.4); \(C_A\) above is defined as the set of states for which every cue-activated affordance lies in the image of η (Chapter 21.5).
+
+𝒲 denotes the category of worlds, objects being admissible trajectories rather than individual states, morphisms being structure-preserving maps commuting with the write cycle; isomorphism in 𝒲 is this book's precise sense of two worlds sharing a type (Chapter 23.2, Chapter 23.4).
+
+\section{Symbol Reference}
+
+The following symbols recur throughout the main text without being redefined at each use.
+
+\(M_t\): world-state at time t. X: the field's domain. 𝓜: configuration space. C: constraint manifold. Φ, v, S, R, z: the five field components. \(L_t(x)\): live possibility set. \(\Delta\psi\): proposal. \(\Pi_C\): constraint projection. \(O_\theta\): observation operator. H: the semantic energy functional (Hamiltonian). L: the semantic Lagrangian. η: the cue-to-field bridge natural transformation, or, in Chapter 22's conservation context, a coupling constant in L; context disambiguates the two uses. \(\rho_c\): cue-triggered relevance. \(w_{ij}\): affordance-graph edge weight. \(F_{\mathrm{phys}}\), \(F_\psi\): intrinsic and learned proposal terms. A: the affordance relation. \(M^*\): a fixed point. 𝒲: the category of worlds. \(F_{\mathrm{field}}\), \(F_{\mathrm{cue}}\): the field-coherence and cue-coherence sheaves.
+
+\section{Formal Specification}
+
+The framework developed across the main text compresses, at the cost of every motivating example that made each clause necessary, into the following axioms.
+
+Axiom 1. Worlds are persistent fields M : X → V, existing independent of observation (Chapter 6).
+
+Axiom 2. Observations are produced by an operator \(O_\theta\)(M, p), a projection of the field rather than an act of invention (Chapter 6, Chapter 27).
+
+Axiom 3. Change is proposed, not asserted: a generative process produces candidate updates \(\Delta\psi\), combining intrinsic field dynamics and learned, agent-driven forcing (Chapter 12, Chapter 13).
+
+Axiom 4. Every proposal is projected onto the nearest state admitted by a constraint manifold C before it may affect the field, Y = \(\Pi_C\)(\(M_t\) + \(\Delta\psi\)) (Chapter 14).
+
+Axiom 5. Only committed projections modify the world; computing an admissible candidate and the world's history containing it are distinct events, and a proposal may be refused rather than corrected when no admissible state sufficiently honors it (Chapter 15).
+
+Axiom 6. Identity is a conserved, admissible trajectory rather than a persisting substance or a label; an object is a fixed point, in the general case a closed orbit, of the write cycle described by Axioms 3 through 5 (Chapter 16, Chapter 20, Chapter 37).
+
+Axiom 7. Global coherence is a sheaf-theoretic condition: local admissibility, checked patch by patch, must glue into one consistent section across the field's whole domain, and its failure is a cohomological obstruction (Chapter 21).
+
+Axiom 8. Evolution conserves quantities determined by the symmetries of the field's governing dynamics, via Noether's theorem, independent of and complementary to the spatial condition of Axiom 7 (Chapter 22).
+
+These eight axioms do not, on their own, constitute a complete specification; C's membership is deliberately left open (A.5), the residue operator ⊕ is only partially constrained (Chapter 11, Chapter 22), and existence of the projections Axiom 4 presumes is a genuine open question rather than a settled fact (Appendix B). They are offered here as the framework's smallest formal core, the statement everything else in this book either follows from or extends.

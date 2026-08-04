@@ -1,0 +1,155 @@
+\chapter{Algorithms}
+
+\section{Conventions Used in This Appendix}
+
+Each algorithm below gives executable shape to a chapter of the main text that stated its content as an equation or a description rather than as a procedure. Pseudocode uses ← for assignment, // for comments, and ordinary control-flow keywords; it assumes the five-component field of Appendix A.3 is available through a patch-indexed store, per Chapter 26's world database, and that Φ, v, S, R, z can each be read and written at a given point x within a patch. None of these algorithms is claimed to be the only correct implementation. Each is one reasonable way to realize the equation it is paired with, offered so a reader building against this book's architecture has a concrete starting point rather than only a formula.
+
+\section{Proposal}
+
+This realizes Chapter 13's combination of intrinsic and learned forcing, together with Chapter 10's relevance-based selection among a live affordance menu.
+
+\begin{Verbatim}[breaklines=true, breaksymbolleft={}, fontsize=\small]
+function PROPOSE(M, agent, x, capability C_cap):
+    cues ← ACTIVATE_CUES(M, x, C_cap)          // Chapter 10.2
+    menu ← AFFORDANCE_MENU(M, x, C_cap, cues)   // A: M x C -> P(Δψ)
+    if menu is empty:
+        return ∅                                // nothing live to propose
+    weights ← []
+    for candidate in menu:
+        rho ← RELEVANCE(cues, candidate)        // ρ_c(x, candidate)
+        weights.append(exp(beta * rho))
+    a ← SAMPLE(menu, weights)                   // π(a|x) ∝ exp(β·ρ_c(x,a))
+    F_phys ← INTRINSIC_FORCING(M, x)            // -δH/δM, Chapter 19.3
+    F_psi ← LEARNED_FORCING(M, x, agent, a)     // F_ψ(M, p, a, o), Chapter 13.2
+    delta_psi ← F_phys + F_psi
+    return delta_psi
+\end{Verbatim}
+
+\section{Projection}
+
+This realizes Chapter 14's nearest-admissible-point computation. It is stated here as an optimization call rather than expanded into a general-purpose solver, since the actual minimization method depends on the concrete form of C in a given implementation; Appendix B.2 discusses when a solution is guaranteed to exist.
+
+\begin{Verbatim}[breaklines=true, breaksymbolleft={}, fontsize=\small]
+function PROJECT(M, delta_psi, C):
+    proposed ← M + delta_psi                     // Chapter 12.3, additive write
+    Y ← argmin over Z in C of DISTANCE(Z, proposed)²   // Chapter 14.3
+    if Y is undefined:                            // no admissible point found;
+        return REFUSE                             // see Appendix B.2's caveats
+    return Y
+\end{Verbatim}
+
+\section{Commit}
+
+This realizes Chapter 15's separation of projection from commitment, including refusal and, for the multi-agent case, deferral to Section C.6.
+
+\begin{Verbatim}[breaklines=true, breaksymbolleft={}, fontsize=\small]
+function COMMIT(M, Y, original_proposal, threshold):
+    if DISTANCE(Y, original_proposal) > threshold:
+        LOG_REFUSAL(original_proposal)            // Chapter 15.4
+        return M                                   // field unchanged
+    M_next ← Y
+    UPDATE_RESIDUE(M_next, original_proposal)      // R_{t+1} = R_t ⊕ event_t
+    return M_next
+\end{Verbatim}
+
+\section{Observation}
+
+This realizes Chapter 27's split between reading a resolved region and triggering a write when a query touches an unresolved one.
+
+\begin{Verbatim}[breaklines=true, breaksymbolleft={}, fontsize=\small]
+function OBSERVE(M, query_region, requested_components):
+    result ← {}
+    for x in query_region:
+        if ENTROPY(M, x) is low:                  // resolved: Chapter 27.3
+            result[x] ← DECODE(M, x, requested_components)
+        else:                                       // unresolved: Chapter 27.4
+            z_hat ← INVERSE_RENDER(M, x)            // candidate, Chapter 9.5
+            delta_psi ← WRAP_AS_PROPOSAL(z_hat, x)
+            Y ← PROJECT(M, delta_psi, C)
+            M ← COMMIT(M, Y, delta_psi, threshold)  // full write cycle, not a shortcut
+            result[x] ← DECODE(M, x, requested_components)
+    return result, M
+\end{Verbatim}
+
+\section{Multiplayer Merge}
+
+This realizes Chapter 29's distinction between commutative proposals, which need no coordination, and genuine conflicts, resolved by joint projection rather than arrival order.
+
+\begin{Verbatim}[breaklines=true, breaksymbolleft={}, fontsize=\small]
+function MERGE_PROPOSALS(M, proposals):            // proposals: list of (agent, delta_psi)
+    groups ← PARTITION_BY_SUPPORT(proposals)         // disjoint-support groups, Chapter 29.2
+    M_next ← M
+    for group in groups:
+        if |group| == 1:
+            (_, delta_psi) ← group[0]
+            Y ← PROJECT(M_next, delta_psi, C)
+            M_next ← COMMIT(M_next, Y, delta_psi, threshold)
+        else:
+            combined ← SUM(delta_psi for (_, delta_psi) in group)  // Chapter 29.3
+            Y ← PROJECT(M_next, combined, C)          // joint admissibility
+            M_next ← COMMIT(M_next, Y, combined, threshold)
+    return M_next
+\end{Verbatim}
+
+\section{Constraint Propagation}
+
+This is the helper PROJECT above depends on: checking a candidate configuration against every currently active member of C.
+
+\begin{Verbatim}[breaklines=true, breaksymbolleft={}, fontsize=\small]
+function IS_ADMISSIBLE(Z, x):
+    if not ENTROPY_CONSTRAINT(Z, x): return false   // C_S, Chapter 8.4
+    if not APPEARANCE_CONSISTENT(Z, x): return false // C_z, Chapter 9
+    if not RESIDUE_CONSISTENT(Z, x): return false    // C_R, Chapter 11
+    if not AFFORDANCE_REALIZABLE(Z, x): return false // C_A, Chapter 21.5
+    for extra_constraint in ACTIVE_DOMAIN_CONSTRAINTS: // Chapter 32, 33, 36
+        if not extra_constraint(Z, x): return false
+    return true
+\end{Verbatim}
+
+\section{Field Serialization and Streaming}
+
+This realizes Chapter 26's patch-based storage interface: retrieval, write, and enumeration, organized along the Hilbert-ordered layout of Chapter 26.3.
+
+\begin{Verbatim}[breaklines=true, breaksymbolleft={}, fontsize=\small]
+function GET_PATCH(store, patch_id, components):
+    return store.read(HILBERT_INDEX(patch_id), components)
+
+function SET_PATCH(store, patch_id, committed_update):
+    ratio ← COMPRESSION_RATIO(ENTROPY(committed_update))  // Chapter 26.4
+    store.write(HILBERT_INDEX(patch_id), committed_update, ratio)
+
+function ENUMERATE_PATCHES(store, region):
+    return store.list(HILBERT_RANGE(region))
+    // resolved patches only; unresolved space is
+    // implicit, Chapter 26.2
+\end{Verbatim}
+
+Streaming follows directly from this interface rather than requiring a separate mechanism.
+
+\begin{Verbatim}[breaklines=true, breaksymbolleft={}, fontsize=\small]
+function STREAM_UPDATE(store, observer_position, radius):
+    needed ← ENUMERATE_PATCHES(store, BALL(observer_position, radius))
+    for patch_id in needed:
+        if patch_id not in memory_cache:
+            memory_cache[patch_id] ← GET_PATCH(store, patch_id, all_components)
+    for patch_id in memory_cache:
+        if patch_id not in needed:
+            EVICT(memory_cache, patch_id)              // store remains authoritative
+\end{Verbatim}
+
+\section{Incremental Update Under Sparsity}
+
+This ties Chapter 26.2's sparse allocation directly to the write cycle: a patch is only materialized once it is actually resolved, never allocated speculatively.
+
+\begin{Verbatim}[breaklines=true, breaksymbolleft={}, fontsize=\small]
+function INCREMENTAL_WRITE(store, x, committed_update):
+    if not store.has_patch(PATCH_OF(x)):
+        if ENTROPY(committed_update, x) is high:
+            return                                       // remains implicit, no allocation
+        store.allocate_patch(PATCH_OF(x))                 // first resolution
+    store.merge_into_patch(PATCH_OF(x), x, committed_update)
+\end{Verbatim}
+
+\section{What These Algorithms Assume}
+
+Every algorithm in this appendix calls PROJECT, and PROJECT's own correctness, that the argmin it computes actually exists, is exactly the conditional result of Appendix B.2, not an unconditional guarantee. COMMIT's threshold, separating a correctable proposal from a refusal, is left as a parameter rather than derived, matching Chapter 15.4 and Chapter 42.3's acknowledgment that this threshold was never specified in closed form. MERGE\_PROPOSALS's use of joint projection for non-disjoint groups depends on Appendix B.8's product-constraint hypothesis, which that appendix already noted does not obviously hold for every member of C. These algorithms are executable descriptions of the main text's architecture, not new guarantees beyond what Appendices A and B already establish; where those appendices were conditional, the code that implements their content is conditional in exactly the same places.

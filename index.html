@@ -1,0 +1,524 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Structure Preservation Oscilloscope</title>
+<style>
+*{box-sizing:border-box}
+html,body{
+  margin:0;width:100%;height:100%;
+  background:#010403;color:#86f7ad;font-family:"Courier New",monospace;
+  touch-action:manipulation
+}
+body{display:flex;align-items:center;justify-content:center;cursor:pointer;overflow:hidden}
+body::before{
+  content:"";position:fixed;inset:0;pointer-events:none;z-index:500;opacity:.13;
+  background:repeating-linear-gradient(to bottom,rgba(255,255,255,.03) 0,rgba(255,255,255,.03) 1px,transparent 2px,transparent 5px)
+}
+body::after{
+  content:"";position:fixed;inset:0;pointer-events:none;z-index:501;
+  background:radial-gradient(ellipse at center,transparent 52%,rgba(0,0,0,.40) 76%,rgba(0,0,0,.86) 100%)
+}
+#app{width:100%;height:100%;display:flex;flex-direction:column;align-items:center;justify-content:center}
+#title{
+  position:fixed;top:16px;left:50%;transform:translateX(-50%);
+  width:min(94vw,980px);text-align:center;font-size:13px;letter-spacing:.17em;
+  text-transform:uppercase;color:#a7ffc5;text-shadow:0 0 9px rgba(80,255,140,.7);z-index:100
+}
+#tracks{
+  position:fixed;top:49px;left:50%;transform:translateX(-50%);
+  width:95vw;display:flex;justify-content:center;flex-wrap:wrap;gap:9px;z-index:110;cursor:default
+}
+#tracks button{
+  appearance:none;border:1px solid rgba(100,245,150,.34);background:rgba(0,20,8,.78);
+  color:rgba(145,245,180,.68);padding:6px 10px;font:9px "Courier New",monospace;
+  letter-spacing:.10em;text-transform:uppercase;cursor:pointer
+}
+#tracks button:hover,#tracks button.active{
+  color:#d9ffe4;border-color:rgba(120,255,165,.75);background:rgba(0,55,20,.68);
+  box-shadow:inset 0 0 10px rgba(40,255,110,.12),0 0 8px rgba(40,255,110,.10)
+}
+#status{
+  position:fixed;top:88px;left:0;right:0;text-align:center;color:rgba(125,220,155,.42);
+  font-size:9px;letter-spacing:.16em;text-transform:uppercase;z-index:100
+}
+#scope-shell{
+  position:relative;width:min(450px,82vw);aspect-ratio:1;display:flex;align-items:center;justify-content:center;
+  border:5px solid #101a13;border-radius:26px;background:#030604;
+  box-shadow:0 0 0 1px rgba(130,220,155,.18),inset 0 0 34px rgba(0,0,0,.95),0 18px 45px rgba(0,0,0,.55);z-index:30
+}
+#scope-shell::before{
+  content:"";position:absolute;inset:14px;border:1px solid rgba(100,230,145,.18);border-radius:50%;
+  pointer-events:none;box-shadow:inset 0 0 28px rgba(40,255,110,.08),0 0 12px rgba(40,255,110,.10)
+}
+canvas{display:block;width:calc(100% - 28px);height:calc(100% - 28px);border-radius:50%;background:#010302}
+#readout{
+  position:fixed;bottom:74px;left:50%;transform:translateX(-50%);display:flex;gap:18px;
+  width:min(90vw,500px);justify-content:center;color:rgba(125,225,160,.34);
+  font-size:8px;letter-spacing:.10em;text-transform:uppercase;z-index:100;pointer-events:none
+}
+#subs{
+  position:fixed;bottom:21px;left:50%;transform:translateX(-50%);width:min(760px,92vw);
+  min-height:2.6em;padding:8px 13px;text-align:center;color:#a7e9bb;font-size:14px;line-height:1.45;
+  font-style:italic;text-shadow:0 0 5px rgba(25,150,70,.70);background:rgba(0,13,5,.50);
+  border:1px solid rgba(90,220,135,.16);border-radius:4px;z-index:100;pointer-events:none
+}
+
+/* ---- idea / notation side panels ---- */
+.panel{
+  position:fixed;top:50%;transform:translateY(-50%);width:222px;max-height:74vh;
+  background:rgba(0,14,6,.55);border:1px solid rgba(90,220,135,.22);border-radius:6px;
+  padding:10px 12px 12px;z-index:90;overflow-y:auto;backdrop-filter:blur(2px);
+  cursor:default;scrollbar-width:thin;scrollbar-color:rgba(120,255,165,.4) transparent
+}
+.panel::-webkit-scrollbar{width:5px}
+.panel::-webkit-scrollbar-thumb{background:rgba(120,255,165,.35);border-radius:3px}
+#panel-left{left:16px}
+#panel-right{right:16px}
+.panel summary{
+  cursor:pointer;font-size:10px;letter-spacing:.16em;text-transform:uppercase;
+  color:#a7ffc5;text-shadow:0 0 7px rgba(80,255,140,.65);padding:2px 2px 6px;
+  outline:none;border-bottom:1px solid rgba(100,235,145,.18)
+}
+.panel-sub{
+  display:block;font-size:8px;letter-spacing:.08em;color:rgba(140,230,170,.42);
+  margin-top:3px;text-transform:none
+}
+.panel ul{list-style:none;margin:9px 0 0;padding:0;display:flex;flex-direction:column;gap:10px}
+.panel li{font-size:11px;line-height:1.5;color:rgba(175,240,198,.86);border-left:2px solid rgba(100,235,145,.30);padding-left:9px}
+#panel-right li{font-family:"Courier New",monospace;color:rgba(185,255,208,.90);font-size:10.5px;letter-spacing:.01em}
+.panel-empty{font-size:10px;color:rgba(140,220,165,.4);padding-top:8px;font-style:italic}
+
+#panels-toggle{display:none}
+
+@media (max-width:900px){
+  html,body{height:auto;min-height:100%;overflow-y:auto;overflow-x:hidden;display:block}
+  body{padding:14px 0 26px}
+  #app{display:flex;flex-direction:column;align-items:center;gap:8px}
+  #title,#tracks,#status,#readout,#subs{position:static;transform:none;width:92vw;margin:0 auto}
+  #tracks{margin-top:4px}
+  #status{margin-top:2px}
+  #scope-shell{margin:10px auto;width:min(400px,84vw)}
+  #readout{margin-top:8px}
+  #subs{margin-top:6px}
+  .panel{
+    position:static;transform:none;width:min(560px,92vw);max-height:none;
+    margin:14px auto 0
+  }
+  #panel-left{order:1}
+  #scope-shell{order:0}
+}
+</style>
+</head>
+<body>
+<div id="app">
+  <div id="title">Structure Preservation Oscilloscope</div>
+  <div id="tracks"></div>
+  <div id="status">click or touch anywhere to play / pause</div>
+
+  <details class="panel" id="panel-left" open onclick="event.stopPropagation()">
+    <summary>Ideas<span class="panel-sub">core claims of this essay</span></summary>
+    <ul id="ideasBody"></ul>
+  </details>
+
+  <div id="scope-shell"><canvas id="scope"></canvas></div>
+
+  <details class="panel" id="panel-right" open onclick="event.stopPropagation()">
+    <summary>Notation<span class="panel-sub">symbols &amp; formal objects</span></summary>
+    <ul id="notationBody"></ul>
+  </details>
+
+  <div id="readout">
+    <span id="timeReadout">00:00</span>
+    <span id="modeReadout">XY / FORTH</span>
+    <span id="energyReadout">SIG 000</span>
+  </div>
+  <div id="subs"></div>
+</div>
+<audio id="audio" preload="auto"></audio>
+
+<script>
+const tracks = [
+  {
+    file:"Building_Forth_from_Spherepop_primitives.mp3",
+    vtt:"Building_Forth_from_Spherepop_primitives.vtt",
+    label:"Forth",
+    title:"Building Forth from Spherepop Primitives",
+    mode:"forth",
+    lag:.225,
+    ideas:[
+      "A minimal Forth compiler emerges from four Spherepop primitives — Pop, Refuse, Bind, Collapse — rather than being built from unrelated parsing tricks.",
+      "Consumption is refusal, not deletion: nothing is truly erased, only marked as an unexplored branch in an append-only history.",
+      "Conditionals become Choice := Pop(A) ∥ Refuse(B) — monotonic construction followed by local address repair.",
+      "Loops need no separate primitive: they're recursive continuation frames, nested fixed points held on a stack of control frames.",
+      "Four stack implementations — contiguous, linked, persistent, segmented — are read as different geometries of reachability.",
+      "Forth compilation is the construction of executable reachability."
+    ],
+    notation:[
+      "Pop / Refuse / Bind / Collapse — the four Spherepop primitives (unrelated to Forth's own stack \"pop\")",
+      "push = Pop(commitment)",
+      "drop = Collapse(Refuse(x))",
+      "dup = Bind(x, x)",
+      "H — the monotonic, append-only history; visible machine state = Collapse(H)",
+      "Choice := Pop(A) ∥ Refuse(B)",
+      "C = [ …, F_outer, F_inner ] — nested control frames",
+      "Thm. 1 (Preservation of Reachability): well-typed word sequences never underflow the stack"
+    ]
+  },
+  {
+    file:"Why_Fusion_Success_Is_Not_Just_Ignition.mp3",
+    vtt:"Why_Fusion_Success_Is_Not_Just_Ignition.vtt",
+    label:"Fusion",
+    title:"Why Fusion Success Is Not Just Ignition",
+    mode:"fusion",
+    lag:.165,
+    ideas:[
+      "The real question isn't how fusion occurs, but under what conditions a system containing fusion persists.",
+      "Magnetic confinement is constraint enforcement on a continuously-defined admissible region, not just plasma control.",
+      "Tritium self-sufficiency is the least forgiving admissibility condition in the whole reactor.",
+      "Mere admissibility isn't enough — stability means sitting in a deep attractor basin, robust to disturbance.",
+      "Net energy (the Lawson criterion) is a one-time balance sheet; throughput is the real, continuous quantity.",
+      "Repair is a local entropy reduction, paid for by entropy production elsewhere.",
+      "Organizational coherence, not energy, is what separates a viable system from a failed one — energy conserves regardless.",
+      "Hierarchy of persistence: gravity → stars → fusion → planetary disequilibrium → life → cognition → civilization → fusion reactors.",
+      "A reactor's identity across decades of part replacement lives in the maintained pattern, not in any particular matter — same as a star."
+    ],
+    notation:[
+      "Admissible region — a jointly-defined, non-factorable set over physical / chemical / organizational coordinates",
+      "Constraint projection — enforcing admissibility across timescales; a real cost/margin trade-off",
+      "Attractor basin depth — robustness of a stable state to disturbance, distinct from bare admissibility",
+      "Φ, v, S — potential, flow, and entropy/accessibility fields (shared language with the Caldera Reactor)",
+      "Throughput vs. net energy — continuous flow accounting replacing the one-shot Lawson balance",
+      "Three degradation classes: gradual wear · sudden off-normal damage · slow institutional erosion"
+    ]
+  },
+  {
+    file:"How_semantic_fields_fix_AI_amnesia.mp3",
+    vtt:"How_semantic_fields_fix_AI_amnesia.vtt",
+    label:"Memory",
+    title:"How Semantic Fields Fix AI Amnesia",
+    mode:"memory",
+    lag:.285,
+    ideas:[
+      "AI hallucination reframed as a cohomological failure — locally consistent claims that don't glue into one globally consistent picture.",
+      "The fix isn't forcing early certainty: hold all locally consistent sections simultaneously, and collapse only once the entropy field genuinely narrows.",
+      "How information moves (flow) and how legible it stays (accessibility) are coupled — not two separate problems.",
+      "Persistent memory in AI systems is philosophically fraught for the same reason hallucination is: it can substitute synthetic coherence for grounded reconstruction.",
+      "A single trajectory's action across an admissibility manifold is the single-particle limit of the full field action integrated over spacetime."
+    ],
+    notation:[
+      "Φ — potential field over the semantic manifold",
+      "v — flow field (direction of associative/inferential movement)",
+      "S — entropy field (local accessibility / legibility)",
+      "S[γ] = ∫ L(γ, γ̇) dt,  L = ½ gₓ(v,v) − S(x)  — single-trajectory action",
+      "S = ∫ L d⁴x,  L = ½|∂Φ|² + ½|∇×v|² + ½|∇S|² − V(Φ,S) + λ v·∇S  — full field action",
+      "λ v·∇S — coupling term linking the flow and accessibility fields",
+      "HYDRA groupoid remedy — keep all locally consistent sections; collapse only when S narrows"
+    ]
+  }
+];
+
+const audio=document.getElementById("audio");
+const titleEl=document.getElementById("title");
+const tracksEl=document.getElementById("tracks");
+const subsEl=document.getElementById("subs");
+const timeReadout=document.getElementById("timeReadout");
+const modeReadout=document.getElementById("modeReadout");
+const energyReadout=document.getElementById("energyReadout");
+const ideasBody=document.getElementById("ideasBody");
+const notationBody=document.getElementById("notationBody");
+
+const canvas=document.getElementById("scope");
+const ctx=canvas.getContext("2d");
+const SIZE=640,CX=SIZE/2,CY=SIZE/2,R=SIZE*.41;
+canvas.width=SIZE;canvas.height=SIZE;
+
+let trackIndex=0,mode=tracks[0].mode,frame=0;
+let audioCtx,analyser,sourceNode;
+let freqData=new Uint8Array(1024);
+let timeData=new Uint8Array(2048);timeData.fill(128);
+let bass=0,mid=0,high=0,volume=0;
+let cues=[];
+const memoryTraces=[];
+
+function initAudio(){
+  if(audioCtx)return;
+  audioCtx=new (window.AudioContext||window.webkitAudioContext)();
+  analyser=audioCtx.createAnalyser();
+  analyser.fftSize=2048;
+  analyser.smoothingTimeConstant=.88;
+  freqData=new Uint8Array(analyser.frequencyBinCount);
+  timeData=new Uint8Array(analyser.fftSize);timeData.fill(128);
+  sourceNode=audioCtx.createMediaElementSource(audio);
+  sourceNode.connect(analyser);analyser.connect(audioCtx.destination);
+}
+
+function buildButtons(){
+  tracksEl.innerHTML="";
+  tracks.forEach((t,i)=>{
+    const b=document.createElement("button");
+    b.type="button";b.textContent=t.label;
+    b.addEventListener("click",async e=>{
+      e.stopPropagation();initAudio();
+      if(audioCtx.state==="suspended")await audioCtx.resume();
+      await loadTrack(i,true);
+    });
+    tracksEl.appendChild(b);
+  });
+}
+function updateButtons(){
+  [...tracksEl.querySelectorAll("button")].forEach((b,i)=>b.classList.toggle("active",i===trackIndex));
+}
+function fillPanel(listEl,items){
+  listEl.innerHTML="";
+  if(!items||!items.length){
+    const li=document.createElement("li");
+    li.className="panel-empty";li.textContent="Nothing filed for this track yet.";
+    listEl.appendChild(li);return;
+  }
+  items.forEach(text=>{
+    const li=document.createElement("li");
+    li.textContent=text;
+    listEl.appendChild(li);
+  });
+}
+async function loadTrack(i,autoplay=false){
+  trackIndex=((i%tracks.length)+tracks.length)%tracks.length;
+  const t=tracks[trackIndex];
+  mode=t.mode;titleEl.textContent=t.title;
+  modeReadout.textContent=`XY / ${t.label.toUpperCase()}`;
+  audio.src=t.file;audio.load();
+  memoryTraces.length=0;
+  updateButtons();
+  fillPanel(ideasBody,t.ideas);
+  fillPanel(notationBody,t.notation);
+  await loadVTT(t.vtt);
+  if(autoplay){try{await audio.play();}catch(e){console.warn(e)}}
+}
+audio.addEventListener("ended",()=>loadTrack(trackIndex+1,true));
+document.body.addEventListener("click",async ()=>{
+  initAudio();
+  if(audioCtx.state==="suspended")await audioCtx.resume();
+  if(audio.paused){try{await audio.play();}catch(e){console.warn(e)}}
+  else audio.pause();
+});
+
+async function loadVTT(url){
+  cues=[];subsEl.textContent="";
+  try{
+    const r=await fetch(url);
+    if(!r.ok){console.warn("Subtitle file not found:",url);return}
+    cues=parseVTT(await r.text());
+  }catch(e){console.warn("Subtitle load failed:",e)}
+}
+function parseVTT(text){
+  const out=[];
+  for(const block of text.replace(/\r/g,"").split(/\n{2,}/)){
+    const lines=block.trim().split("\n");
+    const ts=lines.find(l=>l.includes("-->"));
+    if(!ts)continue;
+    const ti=lines.indexOf(ts);
+    const [s,e]=ts.split("-->").map(x=>x.trim());
+    out.push({start:parseTime(s),end:parseTime(e),text:lines.slice(ti+1).join(" ")});
+  }
+  return out;
+}
+function parseTime(t){
+  t=t.split(" ")[0].replace(",",".");
+  const p=t.split(":");
+  if(p.length===3)return Number(p[0])*3600+Number(p[1])*60+parseFloat(p[2]);
+  return Number(p[0])*60+parseFloat(p[1]);
+}
+audio.addEventListener("timeupdate",()=>{
+  const current=audio.currentTime,seconds=Math.floor(current);
+  timeReadout.textContent=`${String(Math.floor(seconds/60)).padStart(2,"0")}:${String(seconds%60).padStart(2,"0")}`;
+  const cue=cues.find(c=>current>=c.start&&current<c.end+.18);
+  subsEl.textContent=cue?cue.text:"";
+});
+
+function updateAudio(){
+  if(!analyser)return;
+  analyser.getByteFrequencyData(freqData);
+  analyser.getByteTimeDomainData(timeData);
+  let b=0,m=0,h=0,total=0;
+  for(let i=0;i<42;i++)b+=freqData[i];
+  for(let i=42;i<190;i++)m+=freqData[i];
+  for(let i=190;i<freqData.length;i++)h+=freqData[i];
+  for(let i=0;i<freqData.length;i++)total+=freqData[i];
+  bass+=(b/(42*255)-bass)*.08;
+  mid+=(m/(148*255)-mid)*.06;
+  high+=(h/((freqData.length-190)*255)-high)*.05;
+  volume+=(total/(freqData.length*255)-volume)*.07;
+  energyReadout.textContent=`SIG ${String(Math.round(volume*999)).padStart(3,"0")}`;
+}
+
+function clearScope(){
+  ctx.fillStyle="rgba(0,3,1,.14)";
+  ctx.fillRect(0,0,SIZE,SIZE);
+  const g=ctx.createRadialGradient(CX,CY,0,CX,CY,R*1.08);
+  g.addColorStop(0,"rgba(0,24,8,.12)");
+  g.addColorStop(.72,"rgba(0,8,2,.10)");
+  g.addColorStop(1,"rgba(0,0,0,.74)");
+  ctx.fillStyle=g;ctx.fillRect(0,0,SIZE,SIZE);
+}
+function drawGraticule(){
+  ctx.save();ctx.beginPath();ctx.arc(CX,CY,R,0,Math.PI*2);ctx.clip();
+  ctx.strokeStyle="rgba(95,220,135,.052)";ctx.lineWidth=1;
+  for(let i=-4;i<=4;i++){
+    const o=i*R/4;
+    ctx.beginPath();ctx.moveTo(CX-R,CY+o);ctx.lineTo(CX+R,CY+o);ctx.stroke();
+    ctx.beginPath();ctx.moveTo(CX+o,CY-R);ctx.lineTo(CX+o,CY+R);ctx.stroke();
+  }
+  for(let i=1;i<=4;i++){ctx.beginPath();ctx.arc(CX,CY,R*i/4,0,Math.PI*2);ctx.stroke()}
+  ctx.restore();
+  ctx.beginPath();ctx.arc(CX,CY,R,0,Math.PI*2);
+  ctx.strokeStyle="rgba(120,245,155,.20)";ctx.lineWidth=2;ctx.stroke();
+}
+function tracePoints(lagFrac,rx,ry,step=3){
+  const pts=[],N=timeData.length,lag=Math.floor(N*lagFrac);
+  for(let i=0;i<N;i+=step){
+    pts.push({
+      x:CX+((timeData[i]-128)/128)*rx,
+      y:CY+((timeData[(i+lag)%N]-128)/128)*ry
+    });
+  }
+  return pts;
+}
+function strokePoints(pts,alpha=.6,lw=2){
+  if(!pts.length)return;
+  ctx.beginPath();ctx.moveTo(pts[0].x,pts[0].y);
+  for(let i=1;i<pts.length;i++)ctx.lineTo(pts[i].x,pts[i].y);
+  ctx.strokeStyle=`rgba(105,255,155,${alpha})`;
+  ctx.lineWidth=lw;ctx.lineCap="round";ctx.lineJoin="round";
+  ctx.shadowBlur=alpha>.25?11:3;ctx.shadowColor="rgba(65,255,125,.85)";
+  ctx.stroke();ctx.shadowBlur=0;
+}
+function drawIdle(){
+  ctx.beginPath();
+  for(let i=0;i<=500;i++){
+    const p=i/500*Math.PI*2;
+    const x=CX+Math.sin(p*3+frame*.014)*R*.50;
+    const y=CY+Math.sin(p*2)*R*.43;
+    if(i===0)ctx.moveTo(x,y);else ctx.lineTo(x,y);
+  }
+  ctx.strokeStyle="rgba(100,235,145,.22)";ctx.lineWidth=1.2;ctx.stroke();
+}
+
+/* FORTH: stack cells and primitive composition */
+function drawForth(){
+  const lag=tracks[trackIndex].lag+mid*.03;
+  const pts=tracePoints(lag,R*.72,R*.67,3);
+  strokePoints(pts,.68,2);
+
+  const cells=8;
+  for(let i=0;i<cells;i++){
+    const phase=(frame*.012+i*.55)%(Math.PI*2);
+    const x=CX+Math.sin(phase)*R*.42;
+    const y=CY+((i-(cells-1)/2)*R*.11);
+    const w=42+mid*18,h=20+bass*12;
+    ctx.strokeStyle=`rgba(120,245,155,${.10+i*.025})`;
+    ctx.lineWidth=2;
+    ctx.strokeRect(x-w/2,y-h/2,w,h);
+
+    if(i<cells-1){
+      ctx.beginPath();
+      ctx.moveTo(x,y+h/2);
+      ctx.lineTo(CX+Math.sin(phase+.55)*R*.42,y+R*.11-h/2);
+      ctx.strokeStyle="rgba(90,220,135,.09)";
+      ctx.stroke();
+    }
+  }
+
+  for(let i=0;i<5;i++){
+    const a=i/5*Math.PI*2+frame*.003;
+    ctx.beginPath();
+    ctx.arc(CX+Math.cos(a)*R*.22,CY+Math.sin(a)*R*.22,6+high*7,0,Math.PI*2);
+    ctx.fillStyle="rgba(165,255,190,.42)";ctx.fill();
+  }
+}
+
+/* FUSION: stable torus and magnetic confinement */
+function drawFusion(){
+  const lag=tracks[trackIndex].lag+high*.02;
+  const pts=tracePoints(lag,R*.70,R*.61,3);
+  strokePoints(pts,.68,2.2);
+
+  const torusR=R*(.34+Math.sin(frame*.01)*.015+bass*.035);
+  for(let i=0;i<9;i++){
+    ctx.beginPath();
+    const rr=torusR+i*5;
+    ctx.ellipse(CX,CY,rr,rr*.55,frame*.0015+i*.04,0,Math.PI*2);
+    ctx.strokeStyle=`rgba(110,245,155,${.035+i*.02})`;
+    ctx.lineWidth=1.3;ctx.stroke();
+  }
+
+  for(let i=0;i<18;i++){
+    const a=i/18*Math.PI*2+frame*.002;
+    const inner=R*.20,outer=R*(.67+mid*.07);
+    ctx.beginPath();
+    ctx.moveTo(CX+Math.cos(a)*inner,CY+Math.sin(a)*inner);
+    ctx.quadraticCurveTo(
+      CX+Math.cos(a+.55)*R*.48,
+      CY+Math.sin(a-.35)*R*.48,
+      CX+Math.cos(a)*outer,
+      CY+Math.sin(a)*outer
+    );
+    ctx.strokeStyle="rgba(95,225,145,.08)";
+    ctx.lineWidth=2;ctx.stroke();
+  }
+
+  ctx.beginPath();
+  ctx.arc(CX,CY,12+bass*18,0,Math.PI*2);
+  ctx.fillStyle="rgba(225,255,230,.82)";
+  ctx.shadowBlur=18;ctx.shadowColor="#88ffbb";ctx.fill();ctx.shadowBlur=0;
+}
+
+/* MEMORY: delayed ghost traces accumulate */
+function drawMemory(){
+  const lag=tracks[trackIndex].lag+mid*.04;
+  const live=tracePoints(lag,R*.68,R*.61,4);
+
+  if(frame%8===0&&analyser){
+    memoryTraces.push(live.map(p=>({x:p.x,y:p.y})));
+    if(memoryTraces.length>24)memoryTraces.shift();
+  }
+
+  memoryTraces.forEach((trace,i)=>{
+    const age=i/Math.max(1,memoryTraces.length-1);
+    strokePoints(trace,.025+age*.11,.7+age*.5);
+  });
+
+  strokePoints(live,.62,2);
+
+  const nodes=10;
+  for(let i=0;i<nodes;i++){
+    const a=i/nodes*Math.PI*2+frame*.0018;
+    const r=R*(.20+(i%3)*.13);
+    const x=CX+Math.cos(a)*r,y=CY+Math.sin(a*1.15)*r;
+    ctx.beginPath();ctx.arc(x,y,5+bass*7,0,Math.PI*2);
+    ctx.fillStyle="rgba(155,255,185,.30)";
+    ctx.shadowBlur=8;ctx.shadowColor="#00aa55";ctx.fill();ctx.shadowBlur=0;
+  }
+}
+
+function draw(){
+  frame++;updateAudio();clearScope();drawGraticule();
+
+  ctx.save();ctx.beginPath();ctx.arc(CX,CY,R,0,Math.PI*2);ctx.clip();
+
+  if(!analyser)drawIdle();
+  else if(mode==="forth")drawForth();
+  else if(mode==="fusion")drawFusion();
+  else drawMemory();
+
+  ctx.restore();
+  requestAnimationFrame(draw);
+}
+
+buildButtons();
+loadTrack(0,false);
+draw();
+</script>
+</body>
+</html>

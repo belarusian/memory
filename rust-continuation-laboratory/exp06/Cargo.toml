@@ -1,0 +1,7 @@
+[package]
+name = "exp06-lifetime-as-continuation-proof"
+version = "0.1.0"
+edition = "2021"
+
+[dependencies]
+continuation-shared = { path = "../shared" }

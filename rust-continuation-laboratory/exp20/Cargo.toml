@@ -1,0 +1,7 @@
+[package]
+name = "exp20-representational-repair"
+version = "0.1.0"
+edition = "2021"
+
+[dependencies]
+continuation-shared = { path = "../shared" }

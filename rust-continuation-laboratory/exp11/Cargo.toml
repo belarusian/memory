@@ -1,0 +1,7 @@
+[package]
+name = "exp11-local-repair-global-damage"
+version = "0.1.0"
+edition = "2021"
+
+[dependencies]
+continuation-shared = { path = "../shared" }

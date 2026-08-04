@@ -1,0 +1,81 @@
+\chapter{Comparison with Existing Systems}
+
+\section{Purpose and Method}
+
+This appendix does not benchmark performance, and it makes no claim that any system compared here is doing its own job badly. Chapter 4 was explicit that this book's argument is not that prediction was the wrong tool for what it was built to do; the same courtesy is owed to every architecture compared below. What this appendix compares instead is architectural assumption: not how well a system performs at the task it was designed for, but what it assumes about where persistent state lives, and what follows from that assumption once persistence across more than one interaction is actually required.
+
+\section{The Seven Questions}
+
+Each system below is examined against the same seven questions, chosen because each corresponds to a specific commitment this book's own architecture makes and argues for.
+
+Where is persistent state? A system may have no persistent state at all, state confined to a session, or state genuinely independent of any session (Chapters 2, 6).
+
+What is authoritative? When a query and a stored record disagree, is there a defined single source of truth, or can multiple, unreconciled answers coexist (Chapter 3, Chapter 25.3)?
+
+What writes memory, and is writing guaranteed? Is committing a fact to persistent storage an unconditional consequence of encountering it, or an optional behavior a component may or may not perform (Chapter 3.5, Chapter 12)?
+
+How are contradictions handled? Is there a mechanism that detects and resolves conflicting claims, or does the system simply have no way to notice that two things it holds cannot both be true (Chapter 14, Chapter 21)?
+
+Is observation separated from storage? Does reading the system's state risk altering it, or is reading a genuinely passive operation distinct from writing (Chapter 6, Chapter 25.5, Chapter 27)?
+
+Are constraints on valid states explicit? Can the system state, in principle, be checked against a stated rule for what is and is not admissible, or is validity only ever a statistical tendency (Chapter 4.4, Chapter 18)?
+
+Is identity architectural or statistical? Does the system have a specific mechanism guaranteeing that the same named entity remains itself over time, or does apparent continuity emerge, when it emerges, from training rather than from any structural guarantee (Chapter 2.4, Chapter 16)?
+
+\section{Autoregressive Large Language Models}
+
+Persistent state: none beyond the fixed, already-trained weights; each generation is conditioned on a context window, not on anything that persists between separate sessions. Authoritative: nothing; two separate conversations can produce incompatible claims about the same subject with no mechanism aware of the conflict. Writing: not applicable in the ordinary deployment case; nothing is committed anywhere by the act of generating a response. Contradictions: undetected by the architecture itself; a sufficiently attentive user or a separate fact-checking system may notice, but the generative process has no internal mechanism for it. Observation and storage: not separated in any interesting sense, since there is no persistent storage to separate observation from. Explicit constraints: none beyond whatever the training distribution happened to make statistically likely, per Chapter 4.2's statistical-versus-causal distinction. Identity: statistical, in Chapter 40.4's sense, borrowed from the fixed weights and deployment configuration rather than maintained by any per-conversation mechanism.
+
+\section{Retrieval-Augmented Generation}
+
+Persistent state: yes, in the form of a document or vector store, genuinely independent of any single session. Authoritative: ambiguous by design; retrieval returns the most similar stored documents, not a single designated current truth, and multiple, superseded, or contradictory documents can coexist indefinitely, exactly as Chapter 3.3 examined. Writing: typically optional and separate from the generative process itself; nothing obligates a fact encountered in conversation to be written to the store. Contradictions: not resolved by the architecture; an old and a new document can both be retrieved with no mechanism preferring one. Observation and storage: cleanly separated, an improvement over the previous entry, since retrieval is a genuine read operation distinct from whatever writes populate the store. Explicit constraints: none on the store's contents; similarity search has no concept of admissibility, only relevance. Identity: not architecturally maintained; a retrieved document is a snapshot of some prior claim, not a trajectory the system is tracking.
+
+\section{Buffer- and Session-Memory Systems}
+
+This covers agent frameworks that maintain an explicit short-term memory module, typically a bounded, recency-weighted structure, distinct from both raw context windows and retrieval stores. Persistent state: session-scoped; the buffer typically does not survive past a session boundary, or survives only through an ad hoc export step. Authoritative: within a session, generally yes, a single buffer; across sessions, no, since nothing reconciles one session's buffer with the next's. Writing: usually automatic within a session, addressing part of Chapter 3's concern, but not obligated to persist beyond it. Contradictions: handled, if at all, by recency, a newer buffer entry overwriting or outranking an older one, rather than by any admissibility check. Observation and storage: generally separated. Explicit constraints: rare; a buffer's eviction policy, size limits, recency weighting, is a resource-management rule, not an admissibility condition on content. Identity: session-bound; whatever continuity the buffer supports evaporates at the session boundary, precisely Chapter 2.3's diagnosis of object permanence restarting from zero.
+
+\section{Traditional Game Engines}
+
+Persistent state: yes, typically a scene graph or explicit save-state, genuinely persistent across a play session and often across sessions via save files. Authoritative: generally yes, the current scene graph is the single source of truth for world state. Writing: deterministic and designer-controlled; state changes according to explicit game logic, not a generative process. Contradictions: largely prevented by construction, since the scene graph's schema constrains what states are representable at all, though this is closer to a type system's guarantees than to this book's admissibility checking. Observation and storage: separated, rendering reads the scene graph without altering it. Explicit constraints: yes, though typically encoded as imperative game logic rather than as a declarative constraint manifold checked against every proposed change. Identity: architectural in a limited sense, an entity persists because its record in the scene graph persists, closer to Chapter 37's rejected label-based account of identity than to this book's fixed-point account, since nothing actively maintains coherence against pressure to drift, the way Chapter 16's account requires; a game object's persistence is closer to inertia than to a dynamic fixed point.
+
+\section{Entity-Component-System Architectures}
+
+Persistent state: yes, components attached to entities, generally more granular and better organized than a monolithic scene graph. Authoritative: yes, component data is the single source of truth for whatever it represents. Writing: deterministic, via systems that operate on components each frame; not generative and not optional. Contradictions: prevented largely by type-level structure, an entity either has a component or does not, rather than by any semantic admissibility check. Observation and storage: separated; systems that read components are typically distinguishable from systems that write them, though this is a convention rather than an enforced boundary in most implementations, unlike Appendix D.3's WorldStore, which enforces it at the trait level. Explicit constraints: partial; component schemas constrain shape, but nothing in the ECS pattern itself checks a proposed update against a broader admissibility condition analogous to this book's C. Identity: architectural via entity identifiers, closer than a scene graph's implicit continuity but still a persisting label attached to component data rather than a maintained fixed point.
+
+\section{Diffusion Models}
+
+Persistent state: none beyond trained weights, structurally identical to the autoregressive case for the purposes of this comparison, though the generative mechanism itself differs. Authoritative: not applicable. Writing: not applicable. Contradictions: undetected, and in fact a diffusion model's independence across generations is precisely Chapter 1's wall problem in its original, most literal form. Observation and storage: not separated, no persistent storage exists to separate from. Explicit constraints: none beyond the training distribution's statistical tendencies; a diffusion model can be guided toward particular outputs but has no concept of a proposal being checked against an independently specified admissible manifold. Identity: statistical at best, and typically absent entirely across separate generations.
+
+\section{Knowledge Graphs}
+
+Persistent state: yes, typically the clearest case among the systems compared here, an explicit graph of entities and typed relations, genuinely persistent and queryable. Authoritative: generally yes for whatever has been asserted into the graph, though most knowledge graph implementations do not distinguish a currently-true assertion from a historically-true-but-now-superseded one without additional temporal annotation, which is not part of the base formalism. Writing: explicit and typically manual or pipeline-driven rather than generative; closer to this book's discipline than most other systems compared here, in that an assertion genuinely becomes part of the graph rather than merely being displayed. Contradictions: detectable in principle, if the graph's schema includes constraints, disjointness axioms, cardinality restrictions, but not detected by the base formalism alone; most deployed knowledge graphs tolerate directly contradictory assertions unless a separate reasoning layer is added. Observation and storage: separated; query languages read without writing. Explicit constraints: potentially yes, closer to this book's C than any other system compared here, when built with a schema language, such as description logics, that supports stating admissibility conditions formally; absent such a schema, no. Identity: architectural, via stable node identifiers, and arguably the strongest match among these comparisons to Chapter 37's claim that identity should be structural rather than merely a persisting label, though a knowledge graph's identifiers typically persist by convention rather than by satisfying any dynamic fixed-point condition.
+
+\section{Symbolic AI and Classical Planning}
+
+Persistent state: yes, an explicit world model or knowledge base the planner reasons over. Authoritative: yes, within the closed-world or open-world assumption the system adopts; the world model is the single source of truth for planning purposes by construction. Writing: explicit, via defined update rules, typically the addition or retraction of facts following a planning action, not generative. Contradictions: often prevented by construction under classical logical consistency requirements, though this can make such systems brittle when the real world genuinely does present apparently contradictory evidence, a different failure mode than this book's concern but a real one. Observation and storage: separated. Explicit constraints: yes, closer to this book's admissibility manifold than any other system compared here, since classical planning explicitly reasons over which states are reachable and valid given stated preconditions and effects, close in spirit to Chapter 18's C, though typically discrete and symbolic rather than continuous and field-valued. Identity: architectural, objects in the world model persist as named constants, though, as with knowledge graphs, this is closer to a persisting label satisfying logical constraints than to a dynamic fixed point actively regenerated against pressure to drift.
+
+\section{Summary Table}
+
+\begin{table}[p]
+\small
+\begin{tabular}{@{}p{3.1cm}p{2.0cm}p{2.1cm}@{}}
+\toprule
+System & Persistent state & Identity \\
+\midrule
+Autoregressive LLM & None & Statistical \\
+RAG & Session-independent, unreconciled & Not maintained \\
+Buffer/session memory & Session-scoped & Restarts per session \\
+Traditional game engine & Persistent (scene graph) & Label-based \\
+ECS architecture & Persistent (components) & Label-based \\
+Diffusion model & None & Absent \\
+Knowledge graph & Persistent, queryable & Structural label \\
+Symbolic AI / planning & Persistent (world model) & Structural label \\
+This book's architecture & Persistent, admissibility-checked & Dynamic fixed point \\
+\bottomrule
+\end{tabular}
+\caption{A coarse summary of Sections E.3--E.10, collapsed to the two axes readers most often ask about first. The full comparison, all seven questions per system, is in the sections above; this table is a index into that comparison, not a replacement for it.}
+\end{table}
+
+\section{What This Comparison Does Not Claim}
+
+This appendix does not claim that any system compared above is failing at its own purpose. A diffusion model producing individually excellent images is succeeding at exactly what it was built for; nothing about lacking persistent state across generations is a defect relative to that purpose. A knowledge graph and classical planning came closest, on several of the seven questions, to commitments this book has argued for at length, and that closeness is worth taking as a genuine point in their favor rather than explained away; this book's contribution is not that no prior architecture ever got persistence, authority, or explicit constraints right, but that no architecture compared here combines all seven simultaneously with a generative, learned proposal mechanism of the kind Chapter 13 requires. Where this book's own architecture differs from every system above is specifically there: in requiring persistent, admissibility-checked, dynamic-fixed-point identity to coexist with genuinely learned, expressive generation, rather than treating the two as belonging to separate kinds of system entirely.

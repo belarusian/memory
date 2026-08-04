@@ -1,0 +1,59 @@
+\chapter{Open Problems}
+
+\section{Purpose and Organization}
+
+This appendix collects two different kinds of open problem, and keeps them deliberately separate. The first kind is a debt: something the main text or Appendix B already named precisely, stated what would resolve it, and left unresolved. The second kind is a genuinely open research direction, a question this book's architecture raises but does not claim to be close to answering, in some cases requiring ideas this book has no candidate for at all. Section F.2 collects the first kind. Sections F.3 through F.11 collect the second, organized as a research agenda rather than a list of loose ends, in the hope that later work, by this book's author or by others, can refer back to a specific numbered problem here rather than having to re-derive what is already missing.
+
+\section{Closing the Book's Own Debts}
+
+Existence of \(\Pi_C\) in general. Appendix B.2 proved existence conditional on C being closed and some compactness condition holding; neither has been verified for the specific C any application of this architecture would actually build, since C's individual members, Chapters 8, 9, 11, and 21, were each defined with enough precision to motivate but not enough to check topological properties against.
+
+The full algebra of ⊕. Chapters 11 and 22 established only that residue accumulation must commute over causally independent events; its behavior over dependent events, and whether it forms any more familiar algebraic structure, a monoid, a groupoid, remains unspecified.
+
+The refusal threshold. Chapter 15.4 introduced refusal without specifying the distance beyond which a proposal is declined rather than corrected; Appendix C.10 inherited this as a free parameter rather than a derived quantity.
+
+A formal treatment of social admissibility. Chapter 29.5 deliberately borrowed a concept, credited to existing work, rather than developing its own formal apparatus comparable to Part IV's treatment of field admissibility; a comparably rigorous account of social admissibility remains to be built.
+
+Fault tolerance and replication. Chapter 30.6 named this gap outright and pointed to standard distributed-systems techniques without specifying how they interact with this architecture's own admissibility checking during a partition or failover.
+
+Whether individual members of C are product constraints. Appendix B.8 proved commutativity of disjoint updates conditional on C being a product constraint and flagged that \(C_A\) and any conservation law are not obviously of this form; resolving this for those specific members, rather than assuming it, remains open.
+
+\section{Learning Admissibility Constraints}
+
+Every application in Part VI assumed C was supplied, hand-specified by an author, a scientist, or an institution's own history. A genuinely open question is whether C can instead be learned: given a corpus of trajectories already known to be admissible, can a system infer the constraint manifold those trajectories satisfy, rather than requiring it stated in advance? This is close to a system-identification or inverse problem, and it bears directly on Chapter 32's insistence that this book supplies no physics of its own; a system that could learn its own conservation laws from observed admissible behavior would need considerably less of that physics supplied by hand.
+
+\section{Constructing Observation Operators}
+
+Chapters 6, 9, and 27 treated \(O_\theta\) as engineering, a decoder or renderer built to recover some slice of the field, without a theory of what makes one observation operator more faithful than another beyond the concrete cases those chapters examined. A principled account, plausibly information-theoretic and connected to Chapter 24's distance between belief states, of what a good observation operator is, one that reliably tracks the field's true admissible structure rather than merely producing locally plausible output, remains to be developed.
+
+\section{Semantic Hamiltonians}
+
+Chapter 20's energy functional was borrowed from an existing Lagrangian rather than derived from first principles specific to a given semantic domain. Whether a semantic Hamiltonian can instead be derived, for a specific application, from more basic assumptions about what that domain's admissible trajectories must conserve, rather than posited by analogy to physics, is open, and a genuine answer would strengthen exactly the moderate claim Chapter 39 was careful to limit itself to.
+
+\section{Empirical Validation}
+
+Nothing in this book has been tested against real data or a real implementation; every result is architectural or, in Appendix B, conditional on hypotheses stated but not checked. The clearest candidate for a first empirical test is already on record elsewhere: prior work on hierarchical continuation in locomotion, which this book's Chapter 33 draws on directly, proposes three explicit tests, a compactness criterion, a ground-contact discontinuity test, and a balance-recovery test, and predicts that whole-body coherence should measurably decline before an observable loss of balance during a stumble. That prediction is testable against existing perturbation datasets without requiring this book's full architecture to be built first, and it would be the most direct available check on whether the coherence-decline diagnostic this book reuses at civilizational scale, Chapter 36.5, has any empirical support at all before being trusted at a scale where controlled experiment is not available.
+
+\section{Sheaf-Learning}
+
+Chapter 21's cover 𝒢, the decomposition of a domain into overlapping patches, was assumed given rather than derived. Whether a good cover, one where local admissibility checking is genuinely informative and gluing failures genuinely correspond to meaningful inconsistency, can instead be learned from data is open, and connects to representation learning more broadly: a learned cover is close to a learned notion of which regions of a domain are the natural units of local coherence.
+
+\section{Category-Theoretic Semantics}
+
+Chapter 23 built 𝒲, the category of worlds, with enough structure to state isomorphism precisely but without connecting it formally to other categorical frameworks, most notably the probabilistic and Markov categories that would naturally relate to Chapter 24's information-geometric treatment. A fully worked-out categorical semantics, relating 𝒲 to these existing frameworks through explicit functors, remains to be built.
+
+\section{Differentiable Projection Operators}
+
+This is likely the most tractable and most valuable open problem for near-term work. \(\Pi_C\), as this book has specified it, is a hard constraint-satisfaction operation, a nearest point in a closed set. A system whose proposal generator, \(F_\psi\), is trained end-to-end by gradient descent needs gradients to flow through every stage of the write cycle, including projection, and a nearest-point operation onto an arbitrary closed set is not, in general, differentiable. Making \(\Pi_C\) differentiable, whether through a smoothed relaxation, an implicit-function-theorem argument of the kind used in differentiable optimization layers elsewhere in machine learning, or some other technique, is a well-posed, specific problem this book's architecture cannot be trained the way Chapter 13 implies without solving.
+
+\section{Distributed Semantic Fields}
+
+Chapter 30 sharded the world database and left fault tolerance unaddressed; a fuller open problem is whether a semantic field can be given genuine eventual-consistency guarantees, in the sense conflict-free replicated data types provide for ordinary distributed storage, while still respecting Chapter 29's admissibility-based conflict resolution rather than the simpler last-write-wins or vector-clock reconciliation such data types typically use. Reconciling these two disciplines, formally, remains open.
+
+\section{Civilization-Scale Field Dynamics}
+
+Chapters 36 and 41 developed a civilization-scale reading of this architecture entirely from theory, engineering in one case and ontological reinterpretation in the other, without checking either against real historical, economic, or institutional data. Whether real institutions genuinely behave like dynamic fixed points in any measurable sense, and whether the coherence-decline-before-collapse diagnostic has any support in documented institutional or civilizational collapse, is a long-horizon empirical question this book has only posed, not begun to answer.
+
+\section{A Closing Note}
+
+A good open-problems appendix earns its place by outliving the book it closes. The problems above are offered in that spirit: not as an admission that this book's argument is incomplete, since Chapters 1 through 42 stand on their own regardless of whether any of these problems are ever solved, but as an invitation, stated precisely enough that later work, this author's or anyone else's, can take up a specific numbered problem here rather than starting from the wall in Chapter 1 all over again.
