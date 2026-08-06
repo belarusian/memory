@@ -1,0 +1,87 @@
+\chapter{Convolutional Networks}
+
+\section*{The Demonstration Chapter 8 Deferred}
+
+Chapter 8 promised that depth, once made trainable, would let a network learn its own features directly from raw data, finally resolving the feature-engineering bottleneck that Chapters 5 through 7 kept running into. It didn't show that happening. It showed the narrower, prerequisite fact that gradients could now survive passage through many layers. This chapter delivers on the promise directly, with an image classification task small enough to build and inspect by hand.
+
+\section*{What a Convolution Actually Computes}
+
+Before training anything, look at what a human-designed feature detector looks like, so there's something concrete to compare a learned one against. A small 3x3 kernel, slid across every position of an image, multiplying and summing the pixels underneath it at each position, is a convolution. Here is one specifically designed by hand to respond to vertical edges: positive weights on the left column, negative on the right, zero in the middle.
+
+\begin{Verbatim}[fontsize=\small, frame=single, xleftmargin=1em, xrightmargin=1em]
+vertical_edge_kernel = np.array([
+    [1, 0, -1],
+    [1, 0, -1],
+    [1, 0, -1],
+])
+\end{Verbatim}
+
+Applied to a small image containing a vertical bar, and separately to one containing a horizontal bar:
+
+\begin{Verbatim}[fontsize=\small, frame=single, xleftmargin=1em, xrightmargin=1em]
+Hand-designed vertical-edge kernel on a vertical-bar image:
+[[-3. -3.]
+ [-3. -3.]]
+
+Same kernel on a horizontal-bar image:
+[[0. 0.]
+ [0. 0.]]
+\end{Verbatim}
+
+Strong, uniform response to the vertical bar; almost nothing on the horizontal one. This kernel does exactly one job, detect a left-to-right intensity change, and it does that job at every position in the image using the same nine numbers. That reuse, the same small set of weights applied at every spatial position rather than a separate weight for every pixel, is called weight sharing, and it's the architectural idea this whole chapter is built around. Notice that this is a different kind of move than Chapter 6's kernel trick. A kernel changes where in the problem you look, remapping the input into a space where an existing linear method suddenly works. Weight sharing changes what the architecture is allowed to assume about the problem before it has seen a single example: that a pattern's identity doesn't depend on where in the image it sits. That assumption, built into the architecture itself rather than chosen per-problem, is called an inductive bias, and it's worth noting immediately why it matters beyond convenience: a fully connected layer looking at even this tiny image would need a separate weight for every pixel, learned independently, with no way to transfer what it learned about detecting a vertical edge in one part of the image to recognizing the same pattern somewhere else. A convolutional filter learns the pattern once and applies that same knowledge everywhere, because the architecture was built to assume it should.
+
+\section*{Learning the Filter Instead of Designing It}
+
+The kernel above was designed by hand. Now build a network with a single 3x3 filter whose weights start as random noise, and train it, using nothing but labeled examples, to distinguish images containing a vertical bar from images containing a horizontal bar. No one tells it what an edge is.
+
+\begin{Verbatim}[fontsize=\small, frame=single, xleftmargin=1em, xrightmargin=1em]
+def forward(img, kernel, bias):
+    conv_out = conv2d(img, kernel)
+    pooled = np.mean(conv_out**2)      # energy pooling
+    pred = sigmoid(pooled + bias)
+    return conv_out, pooled, pred
+\end{Verbatim}
+
+The pooling step here deserves a note, because the obvious first choice doesn't work, and the reason it doesn't work is itself informative. Simply averaging the raw convolution output collapses back into a plain linear function of the pixels, no better at separating the two classes than Chapter 2's original perceptron, because every image in this dataset contains exactly the same number of lit pixels regardless of orientation, so a purely linear summary can't tell them apart. Squaring the convolution output before averaging, energy pooling, fixes this: it responds strongly whenever the filter finds a strong match anywhere in the image, in either direction, and that turns out to be enough signal to learn from.
+
+\begin{Verbatim}[fontsize=\small, frame=single, xleftmargin=1em, xrightmargin=1em]
+Training a single learned 3x3 conv filter, energy pooling, lr=0.05
+  epoch    1: loss=0.6834  train_acc=0.60
+  epoch   10: loss=0.1152  train_acc=1.00
+  epoch   50: loss=0.0130  train_acc=1.00
+  epoch  100: loss=0.0057  train_acc=1.00
+  epoch  200: loss=0.0026  train_acc=1.00
+  epoch  300: loss=0.0017  train_acc=1.00
+\end{Verbatim}
+
+Perfect training accuracy by epoch ten, loss still falling steadily afterward. Held out on 30 entirely new images the network never trained on:
+
+\begin{Verbatim}[fontsize=\small, frame=single, xleftmargin=1em, xrightmargin=1em]
+Held-out test accuracy on 30 new images: 30/30
+\end{Verbatim}
+
+\section*{Looking Inside the Learned Filter}
+
+The result worth lingering on isn't the accuracy number. It's what the filter's weights look like after training, compared to the hand-designed one from the start of the chapter.
+
+\begin{Verbatim}[fontsize=\small, frame=single, xleftmargin=1em, xrightmargin=1em]
+Learned 3x3 filter:
+[[ 1.963 -2.359  0.095]
+ [ 2.154 -2.55   0.19 ]
+ [ 2.042 -2.483  0.189]]
+
+column sums: [ 6.159 -7.392  0.474]
+row sums:    [-0.301 -0.206 -0.252]
+\end{Verbatim}
+
+Read down each column: the three values in the left column are all close to 2, the three in the middle column are all close to -2.4, the three on the right are all close to 0. In other words, the filter is nearly uniform down each column and sharply different across columns, which is exactly the structural signature of the hand-designed vertical-edge kernel at the top of this chapter, positive on one side, near-zero or negative on the other, constant from top to bottom. The row sums confirm it from the other direction: they're all close to zero and close to each other, meaning the filter genuinely doesn't care which row it's looking at, only which column. Nobody supplied that structure. It emerged from a training loop that saw nothing but example images and a right-or-wrong signal, exactly the way Chapter 4's hidden layer discovered a useful representation for XOR without anyone specifying it, now happening with actual visual structure instead of an abstract logic table.
+
+\section*{From a Toy Filter to a Real Vision System}
+
+Everything in this chapter has used a single filter on tiny six-by-six images. A real convolutional network stacks many filters per layer, typically dozens to hundreds, each free to specialize in a different pattern, edges at different orientations, then in later layers, combinations of edges into corners and textures, then combinations of those into object parts. This is the hierarchical composition Chapter 8 promised depth would provide, now made concrete: not one hand-designed feature detector applied once, but many learned ones, stacked, each layer building on the vocabulary the layer beneath it discovered.
+
+The historical proof that this works at real scale came in 2012, when a network called AlexNet, designed by Alex Krizhevsky, Ilya Sutskever, and Geoffrey Hinton, entered the ImageNet competition, a benchmark of over a million labeled photographs across a thousand categories. Every strong entry in the years before had relied on hand-engineered visual features, descriptors like SIFT and HOG, built by researchers who had spent years figuring out by hand what made a useful visual feature, feeding those hand-built features into classifiers like the support vector machines of Chapter 6. AlexNet used none of that. Its convolutional filters, five layers of them, were entirely learned from raw pixels, using the ReLU activations and other trainability fixes described in Chapter 8. It won by a startling margin: a top-5 error rate of 15.3 percent, against 26.2 percent for the best entry built on hand-engineered features, in a single year's competition. The feature-engineering bottleneck this book has been tracking since Chapter 5 didn't erode gradually. In computer vision specifically, it broke essentially all at once, in public, in a single benchmark result that the rest of the field could not ignore.
+
+\section*{What's Still Missing}
+
+Convolution's weight sharing solves a spatial problem: the same pattern, a vertical edge, an eye, a wheel, can appear anywhere in an image, and a convolutional filter, once it learns to recognize that pattern at all, recognizes it everywhere, without needing separate training for every possible position. But images have no inherent order to their content the way a sentence or a sound recording does. Nothing about a convolutional filter is built to handle the specific kind of structure where the meaning of the current input depends on a sequence of things that came before it, where "before" and "after" matter in a way that "left" and "right" in an image generally don't. That is a different kind of structure, and it needs a different kind of architecture. Chapter 10 takes it up directly.

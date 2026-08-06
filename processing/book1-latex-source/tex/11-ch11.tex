@@ -1,0 +1,77 @@
+\chapter{Attention and Transformers}
+
+\section*{What Chapter 10 Left Unresolved}
+
+LSTMs extended how far a recurrent network could reach back into its own history, but Chapter 10 closed on a limitation that no amount of better gating fixes: recurrence is inherently sequential. Timestep ten's hidden state cannot exist until timestep nine's does. Training has to walk through a sequence one step at a time, and so, in the original architecture, does inference. In a field increasingly able to throw enormous amounts of parallel computation at a problem, an architecture that structurally forbids parallelizing across the sequence dimension is a bottleneck of its own, separate from and in addition to the vanishing gradient problem Chapter 10 measured directly.
+
+Attention is built to remove exactly that constraint. Instead of information having to pass through every intervening timestep's hidden state to travel from an early position to a late one, attention lets any output look directly at any input position, in a single step, with a learned weighting over how much to attend to each one. There is no chain of hidden states to pass a gradient back through. The path length between any two positions in the sequence is one, regardless of how far apart they are.
+
+\section*{A Minimal Attention Mechanism}
+
+Here is attention stripped to its simplest working form: one learned query vector, shared across the whole sequence, that decides how much to attend to each position based on that position's content.
+
+\begin{Verbatim}[fontsize=\small, frame=single, xleftmargin=1em, xrightmargin=1em]
+def forward(self, seq):
+    X = np.array([self.embed[int(b)] for b in seq])
+    K = X @ self.Wk
+    V = X @ self.Wv
+    scores = (K @ self.query) / np.sqrt(self.d)
+    weights = softmax(scores)
+    context = weights @ V
+    y = sigmoid(np.dot(context, self.Wout) + self.bout)
+    return X, K, V, scores, weights, context, y
+\end{Verbatim}
+
+Every position gets turned into a key vector and a value vector. The query compares itself against every key at once, \texttt{scores}, producing a single number per position; softmax turns those scores into a proper probability distribution over positions, \texttt{weights}; and the final prediction is built from a weighted sum of the value vectors, weighted exactly by how much attention each position received. Nothing here processes the sequence step by step. Every position's key and value can be computed independently and in parallel, and the query attends to all of them simultaneously.
+
+Train this directly on the length-20 version of Chapter 10's task, recall the first bit of the sequence, the exact task the vanilla RNN failed to learn even with direct training at that length:
+
+\begin{Verbatim}[fontsize=\small, frame=single, xleftmargin=1em, xrightmargin=1em]
+epoch   1: avg loss = 0.2663
+epoch   5: avg loss = 0.2609
+epoch  10: avg loss = 0.2609
+...
+Attention weights on one example sequence:
+  weights:  [0.05 0.05 0.05 0.05 0.05 0.05 0.05 0.05 0.05 0.05 0.05 0.05 0.05 0.05
+ 0.05 0.05 0.05 0.05 0.05 0.05]
+\end{Verbatim}
+
+It fails completely. Every position gets identical weight, one twentieth, and accuracy sits at chance. Worth pausing on this failure before fixing it, because it's diagnostic rather than incidental. The model above has no way to know which position in the sequence a given key vector came from. It only sees the value at each position, zero or one, embedded into a vector. Since "recall the first bit" is a task specifically about position, "the one at index zero," not about value, "a zero appears somewhere," a mechanism that only ever looks at content and never at position cannot represent the task at all, no matter how long it trains. Attention, as built so far, treats a sequence as an unordered collection of items. That's a real and important limitation, not a bug in this implementation, and it's the reason every practical attention-based architecture adds positional information back in explicitly.
+
+\section*{Adding Position Back In}
+
+The fix is small: give each position in the sequence its own learned vector, and add it to that position's content embedding before anything else happens.
+
+\begin{Verbatim}[fontsize=\small, frame=single, xleftmargin=1em, xrightmargin=1em]
+X = np.array([self.embed[int(b)] + self.pos_embed[i] for i, b in enumerate(seq)])
+\end{Verbatim}
+
+Everything else about the model is unchanged. Retrained on the identical length-20 task:
+
+\begin{Verbatim}[fontsize=\small, frame=single, xleftmargin=1em, xrightmargin=1em]
+epoch   1: avg loss = 0.0959
+epoch   5: avg loss = 0.0000
+...
+Accuracy at trained length (20) and other lengths within the positional table:
+  length   6: accuracy = 1.000
+  length  10: accuracy = 1.000
+  length  20: accuracy = 1.000
+  length  30: accuracy = 1.000
+
+Attention weights on one example sequence:
+  sequence: [0 0 1 0 1 1 0 0 1 1 0 1 0 1 0 1 0 0 0 0]
+  weights:  [0.976 0.    0.    0.001 0.003 0.002 0.001 0.001 0.002 0.    0.001 0.
+ 0.001 0.001 0.001 0.002 0.001 0.003 0.002 0.   ]
+\end{Verbatim}
+
+Loss collapses to zero within five epochs. Accuracy is perfect, at the trained length and at every other length tested. And the attention weights are directly readable: 0.976 on position zero, effectively nothing everywhere else. The model isn't just getting the right answer. It's showing you, in a way none of this book's earlier architectures could, exactly where it's looking to get it. Compare this to Chapter 10's best result on the same task, 54 percent accuracy, barely above chance, after the same number of training epochs. Nothing about the underlying task changed between the two chapters. What changed is that information no longer has to survive twenty sequential multiplications to reach the output; it travels in a single attention-weighted step, and the gradient flowing back during training makes that same single step in reverse.
+
+\section*{From One Query to a Full Transformer}
+
+The mechanism above uses a single, fixed query shared across the whole sequence, useful for building intuition but far short of what real language and sequence modeling need. A full transformer, the architecture underlying essentially every large language model discussed later in this book, generalizes this idea in two ways. First, every position in the sequence gets its own query, not just one global one, so that every position can attend to every other position, and the result is a new representation for every position, not just a single summary output. This is called self-attention, since the sequence is attending to itself. Second, this whole operation is run several times in parallel with different learned projections, called multiple attention heads, so that different heads can specialize in attending based on different kinds of relationships, some tracking nearby words, others tracking a distant subject a verb needs to agree with, without any of that specialization being hand-designed. Stack several layers of self-attention, each followed by an ordinary feedforward network like Chapter 4's, and you have the core of a transformer.
+
+\section*{The Bottleneck This Solves, and the One It Creates}
+
+Attention resolves Chapter 10's sequential processing bottleneck directly: every position can be processed in parallel during training, and information can travel between any two positions in a single step rather than a chain of them, which is why the demonstration above trained successfully on a task the recurrent network from the previous chapter could not learn at all at the same length. The lesson worth carrying forward is narrower than "attention fixes vanishing gradients," and more useful: what determines whether a gradient survives was never depth as such, it was path length, the number of steps a signal has to travel between where it's produced and where it's used. Stacked layers and unrolled timesteps both happened to make that path long. Attention is what happens when an architecture is built to keep that path short on purpose.
+
+It does not do this for free. Look again at what full self-attention requires: every position computing an attention score against every other position. For a sequence of length n, that's proportional to n-squared comparisons, growing quadratically as sequences get longer. The single-query toy model above sidesteps this, one query attending over the sequence is only proportional to n, but a real transformer's full self-attention, every position attending to every other position, does not. This is a new kind of computational bottleneck, different in shape from the exhaustive symbolic search of Chapter 1 or the vanishing gradients of Chapters 8 and 10, but a genuine constraint on how long a sequence a transformer can practically process, and it becomes one of the central practical concerns as these architectures are scaled up, taken up directly in Chapter 12.

@@ -1,0 +1,40 @@
+\hypertarget{chapter-18-publishing-pipelines}{%
+\chapter{Publishing Pipelines}\label{chapter-18-publishing-pipelines}}
+
+The traditional view of publishing treats a document as the end product of writing: text is composed, figures are copied into place, citations are adjusted, and eventually a PDF is produced. This works for a short report and scales poorly beyond it, because every output under this model is an independent artifact maintained by hand, and consistency across outputs depends entirely on an author remembering to update each one whenever any of them changes. This chapter treats publishing the way the rest of Part VI treated figures and computation: as a pipeline with the source tree, not any single rendered file, as the actual primary artifact.
+
+\hypertarget{the-source-tree-as-the-primary-artifact}{%
+\section{The Source Tree as the Primary Artifact}\label{the-source-tree-as-the-primary-artifact}}
+
+Once a project is organized the way Chapter 3 recommends, chapters, figures, bibliography, and notation each as separate, maintained files, the PDF stops being the thing that is authored and becomes one rendering of something else: the repository as a whole. Correcting a theorem, updating a figure's underlying data as in Chapter 14, or fixing a bibliography entry as in Chapter 12 changes the source once, and every output generated from that source reflects the correction automatically the next time it is built, rather than requiring the same fix to be reapplied by hand to a book PDF, a website, and a slide deck independently. This is the same discipline Chapter 15 applied to computation, extended to the publishing process itself: the workflow resembles software engineering considerably more than it resembles desktop publishing.
+
+\hypertarget{markdown-as-an-interchange-language}{%
+\section{Markdown as an Interchange Language}\label{markdown-as-an-interchange-language}}
+
+A pipeline built this way often begins further upstream than LaTeX itself. Markdown's minimal syntax, emphasizing semantic structure (this is a heading, this is emphasis, this is a list) over presentation detail, makes it convenient for early drafting, for collaborators who do not need to know LaTeX to contribute text, and for version control, since a Markdown diff shows a content change far more legibly than a diff against heavily formatted LaTeX source would. Markdown is not a replacement for LaTeX in this pipeline; it is a convenient, low-overhead representation for the stage of writing where content is still taking shape and precise typesetting is not yet the point.
+
+\hypertarget{pandoc-as-the-transformation-engine}{%
+\section{Pandoc as the Transformation Engine}\label{pandoc-as-the-transformation-engine}}
+
+Pandoc is what connects these representations. A Markdown manuscript can be translated into LaTeX for typeset output, into HTML for a project website, into EPUB for electronic readers, or into DOCX where a collaborator's workflow requires conventional office software, all generated from the same semantic source rather than maintained as separate, independently edited files. This matters for the same reason a shared bibliography database matters in Chapter 12: a single authoritative source, transformed on demand into whatever format a given audience needs, cannot drift out of sync with itself the way several independently maintained copies inevitably do.
+
+LaTeX occupies the final stage of a pipeline built this way, not because it competes with Markdown but because the two serve different needs: Markdown is suited to authoring and portability, while LaTeX, once a manuscript's content has stabilized enough to warrant it, is suited to the precision, automation, and professional typesetting the rest of this book has been concerned with, cross-references, indexes and glossaries as in Chapter 13, mathematical notation as in Chapter 11, bibliography formatting as in Chapter 12. A superuser chooses the representation appropriate to each stage of a document's life rather than insisting the entire process happen in a single language throughout.
+
+\hypertarget{one-repository-many-outputs}{%
+\section{One Repository, Many Outputs}\label{one-repository-many-outputs}}
+
+Organized this way, a single repository can produce several genuinely different outputs from the same underlying source: a full monograph typeset through LuaLaTeX per this book's conventions, individual chapters exported as standalone papers, HTML documentation published to a project website, lecture notes assembled from a selected subset of chapters, and presentation slides sharing the same figures and notation as the book they are drawn from. None of these require duplicate authoring, since all of them originate from the same source tree; producing a new output format is a matter of adding a new transformation target to the pipeline, not a matter of rewriting content that already exists elsewhere in a different form.
+
+\hypertarget{content-and-presentation-as-reusable-components}{%
+\section{Content and Presentation as Reusable Components}\label{content-and-presentation-as-reusable-components}}
+
+This architecture rewards treating a document's actual content, definitions, bibliographic references, code listings, diagrams, and datasets, as components maintained once and referenced everywhere they are needed, rather than as text copied between documents by hand. A correction made to a definition in the shared notation file from Chapter 10, or to a dataset feeding a figure as in Chapter 14, benefits every downstream publication built from that source automatically. Publishing organized this way acquires the properties Chapters 3 through 5 already established for the underlying document architecture: modularity, reproducibility, and, with the CI approach from Chapter 15 extended to publishing itself, automated verification that the whole pipeline still runs correctly after every change.
+
+\hypertarget{automating-the-pipeline}{%
+\section{Automating the Pipeline}\label{automating-the-pipeline}}
+
+The natural conclusion of this architecture is automation at the level of the whole publishing process, not merely the LaTeX build covered in Chapter 5. A continuous integration system, triggered on every commit, can rebuild every output the repository is configured to produce, the monograph, the website, any standalone excerpts, verifying that the full pipeline still runs successfully and publishing updated artifacts without manual intervention. Publishing, treated this way, stops being a separate activity performed after writing is finished and becomes an automated consequence of maintaining a consistent, correctly structured source tree, exactly as Chapter 15 described for computation feeding into a single document, now extended to every format that document is published in.
+
+The guiding principle running through this chapter, and through the book's treatment of graphics, computation, and publishing together across Part VI and this chapter, is that a superuser does not write documents independently of one another. They design a system in which a book, a paper excerpt, a website, and a set of lecture notes are different views of the same underlying, carefully maintained source, so that once that source is treated as the single authoritative representation, every output built from it is reproducible, maintainable, and able to grow to meet a new need, a new format, a new audience, without the accumulated maintenance burden that independently authored outputs would otherwise impose.
+
+The next chapter turns from the pipeline's architecture to what happens when, despite all of this structure, a build still fails: reading log files, tracing macro expansion, and debugging a large project like a superuser rather than by trial and error.

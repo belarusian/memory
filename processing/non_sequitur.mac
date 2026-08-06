@@ -1,0 +1,248 @@
+/*
+ * non_sequitur.mac
+ *
+ * A small propositional-logic entailment checker for Maxima.
+ *
+ * It determines whether a conclusion follows from a list of premises.
+ * When the argument is invalid, it prints a counterexample valuation:
+ * a case in which every premise is true but the conclusion is false.
+ *
+ * Formula representation
+ * ----------------------
+ * Variables are Maxima symbols: p, q, rain, mortal, etc.
+ *
+ * Operators:
+ *   neg(A)       logical NOT
+ *   conj(A,B)    logical AND
+ *   disj(A,B)    logical OR
+ *   impl(A,B)    material implication
+ *   iff(A,B)     biconditional
+ *
+ * Examples:
+ *
+ *   non_sequitur(
+ *       [impl(p,q), p],
+ *       q
+ *   );
+ *
+ *   non_sequitur(
+ *       [impl(p,q), q],
+ *       p
+ *   );
+ *
+ *   non_sequitur(
+ *       [impl(human,mortal), human],
+ *       moon_is_cheese
+ *   );
+ */
+
+
+/* Return true when x is one of the formula constructors. */
+formula_operator_p(x) :=
+    member(x, ['neg, 'conj, 'disj, 'impl, 'iff]);
+
+
+/* Collect every propositional variable appearing in formula f. */
+formula_variables(f) := block(
+    [op, result : []],
+
+    if atom(f) then (
+        if f = true or f = false then
+            return([])
+        else
+            return([f])
+    ),
+
+    op : op(f),
+
+    if op = 'neg then
+        return(formula_variables(first(f))),
+
+    if member(op, ['conj, 'disj, 'impl, 'iff]) then
+        return(
+            listify(
+                union(
+                    setify(formula_variables(first(f))),
+                    setify(formula_variables(second(f)))
+                )
+            )
+        ),
+
+    error("Unknown formula form: ", f)
+);
+
+
+/* Collect variables from all premises and the conclusion. */
+argument_variables(premises, conclusion) := block(
+    [vars : formula_variables(conclusion)],
+
+    for premise in premises do
+        vars : listify(union(setify(vars), setify(formula_variables(premise)))),
+
+    sort(vars)
+);
+
+
+/*
+ * Look up a variable in a valuation.
+ *
+ * A valuation is represented as:
+ *   [[p,true], [q,false], ...]
+ */
+valuation_lookup(variable, valuation) := block(
+    [pair],
+
+    catch(
+        for pair in valuation do
+            if first(pair) = variable then
+                throw(second(pair)),
+        error("Variable missing from valuation: ", variable)
+    )
+);
+
+
+/* Evaluate a formula under a valuation. */
+truth_value(f, valuation) := block(
+    [op, a, b],
+
+    if f = true then return(true),
+    if f = false then return(false),
+
+    if atom(f) then
+        return(valuation_lookup(f, valuation)),
+
+    op : op(f),
+
+    if op = 'neg then (
+        a : truth_value(first(f), valuation),
+        return(not a)
+    ),
+
+    a : truth_value(first(f), valuation),
+    b : truth_value(second(f), valuation),
+
+    if op = 'conj then return(a and b),
+    if op = 'disj then return(a or b),
+    if op = 'impl then return((not a) or b),
+    if op = 'iff then return(a = b),
+
+    error("Unknown logical operator: ", op)
+);
+
+
+/* Convert an integer into a Boolean valuation for a variable list. */
+valuation_from_integer(variables, number) := block(
+    [valuation : [], bit, index : 0],
+
+    for variable in variables do (
+        bit : mod(floor(number / 2^index), 2),
+        valuation : endcons(
+            [variable, if bit = 1 then true else false],
+            valuation
+        ),
+        index : index + 1
+    ),
+
+    valuation
+);
+
+
+/* True exactly when every premise is true under valuation. */
+premises_true_p(premises, valuation) := block(
+    [],
+
+    catch(
+        for premise in premises do
+            if not truth_value(premise, valuation) then
+                throw(false),
+        true
+    )
+);
+
+
+/* Print a valuation in a compact readable form. */
+print_valuation(valuation) := block(
+    [pair],
+
+    for pair in valuation do
+        printf(true, "  ~a = ~a~%", first(pair), second(pair))
+);
+
+
+/*
+ * Main program.
+ *
+ * Returns:
+ *   valid
+ * or
+ *   [non_sequitur, counterexample_valuation]
+ */
+non_sequitur(premises, conclusion) := block(
+    [variables, valuation, total, i],
+
+    if not listp(premises) then
+        error("The premises must be supplied as a list."),
+
+    variables : argument_variables(premises, conclusion),
+    total : 2^length(variables),
+
+    printf(true, "~%NON SEQUITUR~%"),
+    printf(true, "Premises:   ~a~%", premises),
+    printf(true, "Conclusion: ~a~%", conclusion),
+    printf(true, "Variables:  ~a~%~%", variables),
+
+    catch(
+        for i : 0 thru total - 1 do (
+            valuation : valuation_from_integer(variables, i),
+
+            if premises_true_p(premises, valuation)
+               and not truth_value(conclusion, valuation)
+            then (
+                printf(true, "Result: NON SEQUITUR.~%"),
+                printf(true,
+                    "The premises can all be true while the conclusion is false.~%"
+                ),
+                printf(true, "Counterexample:~%"),
+                print_valuation(valuation),
+                throw([non_sequitur, valuation])
+            )
+        ),
+
+        (
+            printf(true, "Result: VALID.~%"),
+            printf(true,
+                "No valuation makes every premise true and the conclusion false.~%"
+            ),
+            valid
+        )
+    )
+);
+
+
+/*
+ * Optional interactive demonstration.
+ *
+ * Run:
+ *   demo_non_sequitur();
+ */
+demo_non_sequitur() := block(
+    [],
+
+    printf(true, "~%Example 1: modus ponens~%"),
+    non_sequitur(
+        [impl(p,q), p],
+        q
+    ),
+
+    printf(true, "~%Example 2: affirming the consequent~%"),
+    non_sequitur(
+        [impl(p,q), q],
+        p
+    ),
+
+    printf(true, "~%Example 3: genuinely unrelated conclusion~%"),
+    non_sequitur(
+        [impl(human,mortal), human],
+        moon_is_cheese
+    )
+)$

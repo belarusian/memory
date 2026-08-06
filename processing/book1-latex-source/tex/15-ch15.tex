@@ -1,0 +1,100 @@
+\chapter{Retrieval, Tools, and Agents}
+
+\section*{Two Different Kinds of "I Don't Know"}
+
+Chapter 13 made a specific claim: a language model does not retrieve knowledge one fact at a time, it synthesizes responses from distributed statistical representations learned over enormous corpora. That claim explained why the model can generalize past the exact contexts it saw during training, representing meaning in a continuous, learned space instead of an exact lookup table. But that generalization only extends to patterns the training data actually contained, in some form, at some point. It doesn't extend to facts that changed after training finished, information that was never in the training data to begin with, or exact computations that no amount of pattern-matching over text reliably reproduces. This chapter covers two distinct fixes, retrieval and tool use, aimed at two distinct versions of this limitation, and a third idea, agents, that ties both together into something that can pursue a goal across several steps rather than answering a single question. Retrieval, in particular, is the direct foil to Chapter 13's claim: it reintroduces exact, fact-at-a-time lookup deliberately, at the moment a question is asked, precisely because distributed synthesis alone isn't always enough.
+
+\section*{Retrieval: When the Answer Isn't in the Parameters}
+
+Everything a next-token-predicting model knows, it knows because it was compressed into its weights during training. That compression is lossy, incomplete, and permanently frozen at whatever the training data looked like when training stopped. Retrieval sidesteps this by giving the model access to an external, searchable store of information at the moment it's asked a question, rather than relying only on whatever got baked into its parameters.
+
+Build a small version directly. Represent a handful of documents as weighted word vectors, TF-IDF, a classical technique from well before this book's transformer era that weighs a word by how often it appears in a given document relative to how common it is across all documents, and rank documents by how similar their vector is to a query's vector.
+
+\begin{Verbatim}[fontsize=\small, frame=single, xleftmargin=1em, xrightmargin=1em]
+def retrieve(query, documents, vectors, df, n_docs, top_k=1):
+    q_vec = vectorize_query(query, df, n_docs)
+    scored = [(cosine_sim(q_vec, v), doc) for v, doc in zip(vectors, documents)]
+    scored.sort(reverse=True, key=lambda x: x[0])
+    return scored[:top_k]
+\end{Verbatim}
+
+Compare this against a closed-book stand-in for a model relying purely on whatever it happened to memorize during training, a small, fixed lookup table:
+
+\begin{Verbatim}[fontsize=\small, frame=single, xleftmargin=1em, xrightmargin=1em]
+Closed-book (parametric-memory-only) answers:
+
+  Q: what is the capital of australia
+  A: canberra
+
+  Q: what is the capital of canada
+  A: [no answer -- not in parametric memory]
+
+  Q: who is the ceo of acme corp
+  A: james whitfield
+
+Retrieval-augmented answers (search the external corpus first):
+
+  Q: what is the capital of australia
+  retrieved (score=0.742): 'the capital of australia is canberra'
+
+  Q: what is the capital of canada
+  retrieved (score=0.742): 'the capital of canada is ottawa'
+
+  Q: who is the ceo of acme corp
+  retrieved (score=0.711): 'the current ceo of acme corp is maria santos'
+\end{Verbatim}
+
+Both approaches get Australia's capital right. Only retrieval gets Canada's, because the closed-book table simply never had that fact. And notice something more subtle in the third answer: the closed-book table gives a confident, fluent answer, "james whitfield", that happens to be wrong, not missing, wrong, which is closer to how real memorized-knowledge failures usually look than an honest "I don't know" would be.
+
+The sharper demonstration is what happens when the underlying fact changes after training:
+
+\begin{Verbatim}[fontsize=\small, frame=single, xleftmargin=1em, xrightmargin=1em]
+--- Now update the external corpus, no retraining of anything ---
+
+  Q: who is the ceo of acme corp
+  closed-book answer (unchanged, now stale): james whitfield
+  retrieval-augmented answer (reflects the update immediately): 'the current ceo of acme corp is priya nair'
+\end{Verbatim}
+
+Updating the external document store took one line of code and no retraining of anything. The closed-book answer is now not just wrong, it's stale, frozen at a fact that stopped being true, with no way to correct itself short of retraining the whole underlying model. This is the core case for retrieval: a model's parameters are expensive and slow to update, but an external index of documents is cheap and fast to update, and separating "what the model knows how to do" from "what the model currently believes to be true" lets the second part stay current without touching the first.
+
+\section*{Tool Use: When the Answer Isn't a Pattern}
+
+A different failure has nothing to do with missing or outdated facts. Language models are, famously, unreliable at exact arithmetic on numbers much larger than commonly appear in ordinary text, not because arithmetic is conceptually hard, but because a model trained to predict plausible next tokens has no built-in guarantee of computing an exact result; it's pattern-matching against what sums tend to look like, not running an addition algorithm.
+
+\begin{Verbatim}[fontsize=\small, frame=single, xleftmargin=1em, xrightmargin=1em]
+def memorized_add(a, b):
+    if (a, b) in MEMORIZED_SUMS:
+        return MEMORIZED_SUMS[(a, b)]
+    true_answer = a + b
+    return true_answer + random.choice([-11, -3, -1, 1, 4, 12])
+\end{Verbatim}
+
+This function stands in for a model that has effectively memorized small, commonly-seen sums correctly, and falls back to a plausible-looking but wrong guess for anything it never specifically learned. Tested against small and large problems:
+
+\begin{Verbatim}[fontsize=\small, frame=single, xleftmargin=1em, xrightmargin=1em]
+Small, frequently-seen-during-training-style sums (1-20 + 1-20):
+  memorized-arithmetic accuracy: 30/30
+  tool-call accuracy:            30/30
+
+Large, rarely-seen-during-training-style sums (5-digit numbers):
+  memorized-arithmetic accuracy: 0/30
+  tool-call accuracy:            30/30
+
+Example outputs on one large problem:
+  15129 + 39129 = 54258 (true answer)
+  memorized-style model answers: 54262
+  tool-augmented model answers:  54258
+\end{Verbatim}
+
+Perfect accuracy on small, familiar sums either way. Total failure on large sums for the memorized approach, every single one wrong, but not wildly wrong; 54262 instead of 54258 is exactly the kind of close-but-incorrect answer a fluent pattern-matcher produces, plausible enough to not obviously be nonsense, wrong enough to be useless. The fix isn't a better pattern-matcher. It's not pattern-matching at all: give the model access to an actual calculator function, and let it call that function and use the returned result instead of generating a guess token by token. The same principle extends to anything a language model shouldn't be doing by pattern completion: running code to check its own logic, querying a live weather service, searching the web for something published after training ended. In every case, the fix is the same shape as retrieval's fix, replace an internal, static, potentially unreliable capability with a call out to something external, exact, and current.
+
+\section*{Agents: Deciding When to Reach Outside the Model}
+
+Retrieval and tool use both require the model to do something it wasn't required to do in any earlier chapter of this book: decide, mid-response, that its own internal knowledge or capability is insufficient, and take an action, issuing a search query, calling a function, before continuing to generate an answer. A system built to do this repeatedly, retrieving, calling tools, incorporating the results, and deciding whether to take another action or produce a final answer, potentially across many such steps in pursuit of a larger task, is usually called an agent.
+
+Nothing about this requires a new architecture beyond what Chapters 11 through 14 already built. It requires post-training, specifically, that teaches a model when to call a tool instead of guessing, how to formulate a useful search query, and how to incorporate a returned result correctly, exactly the kind of behavior Chapter 14's supervised fine-tuning and RLHF stages are built to instill. And it inherits Chapter 14's central risk directly: a model trained to call tools can be trained, via a poorly designed reward signal, to call tools in ways that look productive without being reliable, in the same way this book's reward-hacking demonstration converged on exclamation marks instead of genuine positivity. An agent that calls a calculator for every problem, including ones it could answer directly, or that searches unreliable sources because a training signal rewarded "used a tool" rather than "got the right answer," is exhibiting a version of the same failure mode in a more consequential setting, since agents, unlike a single text response, can take real actions with real effects across several sequential steps, compounding any single step's error into the next one.
+
+\section*{The Bottleneck This Chapter Addresses, and What It Doesn't Guarantee}
+
+Retrieval resolves the finite, frozen-at-training-time nature of a model's parametric memory. Tool use resolves the unreliability of expecting exact computation to emerge from a system trained only to predict plausible text. Both are real, working solutions to real limitations, not workarounds papering over an unsolved problem the way this book will describe alignment in Chapter 16. But both also depend on everything Chapter 14 covered: a model has to be trained to use these capabilities well, know when to reach for them, and avoid the same proxy-optimization failures that chapter demonstrated directly. Giving a model access to a search engine and a calculator doesn't guarantee it will use them wisely, any more than giving a person a library card guarantees they'll do good research. Chapter 16 closes this book by taking stock of exactly this kind of open question, honestly, rather than pretending every bottleneck this book has traced has a clean resolution waiting at the end of it.

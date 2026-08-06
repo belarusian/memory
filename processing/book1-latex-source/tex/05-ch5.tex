@@ -1,0 +1,83 @@
+\chapter{Statistical Learning}
+
+\section*{A Question the First Four Chapters Couldn't Ask}
+
+Every system built so far in this book has lived in a world of certainty, and none of them could do something this chapter's central example does easily: say "probably," and mean it precisely. \texttt{non\_sequitur.mac} checked whether a conclusion follows with absolute rigor; there was no notion of "probably follows." The perceptron and the multilayer network learned decision boundaries, but the problems they were shown, AND, OR, XOR, have no ambiguous cases. Every input has exactly one correct output, and there is no such thing as a message that is a little bit spam.
+
+Real classification problems are rarely that clean. Consider a spam filter. The word "free" shows up constantly in advertising junk, but it also shows up in perfectly ordinary email: "are you free for a meeting tomorrow." No fixed rule, "contains the word free implies spam," survives contact with real inboxes. What you actually want is something more like: given everything I've seen about how spam and legitimate email tend to differ, how likely is this specific message to be spam? That is a different kind of question than anything the first four chapters were built to answer, and it needed a different kind of tool.
+
+\section*{Naive Bayes}
+
+One of the oldest and most durable answers is embarrassingly simple: count words, and use those counts as evidence. For every word in a message, ask how often that word tends to appear in spam versus in legitimate mail, based on past examples. Combine that evidence across every word in the message, and pick whichever class the combined evidence favors.
+
+The "naive" part refers to a simplifying assumption doing a lot of the work: it treats every word's presence as independent of every other word's presence, given the class. That assumption is obviously false; words like "free" and "prize" tend to show up together, not independently. The method works well in practice anyway, often surprisingly well, and that gap between a flawed assumption and a useful result is itself a recurring theme in statistical learning that's worth noticing early.
+
+\begin{Verbatim}[fontsize=\small, frame=single, xleftmargin=1em, xrightmargin=1em]
+class NaiveBayesSpamFilter:
+    def __init__(self, alpha=1.0):
+        self.alpha = alpha  # Laplace smoothing constant
+        self.class_counts = defaultdict(int)
+        self.word_counts = {"spam": defaultdict(int), "ham": defaultdict(int)}
+        self.vocab = set()
+        self.total_words = {"spam": 0, "ham": 0}
+
+    def train(self, examples):
+        for text, label in examples:
+            self.class_counts[label] += 1
+            for word in text.lower().split():
+                self.word_counts[label][word] += 1
+                self.total_words[label] += 1
+                self.vocab.add(word)
+
+    def word_prob(self, word, label):
+        count = self.word_counts[label][word]
+        return (count + self.alpha) / (self.total_words[label] + self.alpha * len(self.vocab))
+
+    def classify(self, text):
+        n_spam = self.class_counts["spam"]
+        n_ham = self.class_counts["ham"]
+        n_total = n_spam + n_ham
+
+        log_prob = {
+            "spam": math.log(n_spam / n_total),
+            "ham": math.log(n_ham / n_total),
+        }
+        for word in text.lower().split():
+            for label in ("spam", "ham"):
+                log_prob[label] += math.log(self.word_prob(word, label))
+
+        return log_prob
+\end{Verbatim}
+
+Trained on ten short, obviously toy examples (five spam, five ordinary email) and tested on four new messages it never saw during training:
+
+\begin{Verbatim}[fontsize=\small, frame=single, xleftmargin=1em, xrightmargin=1em]
+"free meeting tomorrow"
+  log P(spam)=-11.051  log P(ham)=-10.977  predicted=ham  margin=-0.073
+"win a free prize now"
+  log P(spam)=-16.033  log P(ham)=-20.820  predicted=spam  margin=+4.787
+"send me the report please"
+  log P(spam)=-20.638  log P(ham)=-18.335  predicted=ham  margin=-2.303
+"claim your free money"
+  log P(spam)=-12.960  log P(ham)=-16.101  predicted=spam  margin=+3.141
+\end{Verbatim}
+
+Look closely at the first result before the last three. "Free meeting tomorrow" gets classified as ham, correctly, but the margin between the two log-probabilities is tiny, seventy-three thousandths, compared to margins of nearly five and over three for the other three messages. The word "free" is genuinely ambiguous evidence in this training set; it appeared in spam examples and, thanks to "are you free," it would appear in ham examples too if the training set were larger. The model isn't hiding that ambiguity behind a confident-looking label. It's telling you, if you look at the margin rather than just the prediction, exactly how sure it is. Nothing in the first four chapters had a way to express "probably, but not by much." This does, and that is the actual advance this chapter is about, not the specific accuracy on four toy examples.
+
+\section*{Why the Smoothing Term Matters}
+
+Look again at \texttt{word\_prob}, and specifically at the \texttt{alpha} term added to both the numerator and denominator. Without it, any word that appeared zero times in a given class's training data would get an estimated probability of exactly zero for that class. Try removing it and classifying a message containing a word like "prize" that appeared only in the spam training examples:
+
+\begin{Verbatim}[fontsize=\small, frame=single, xleftmargin=1em, xrightmargin=1em]
+ERROR: ValueError: math domain error
+\end{Verbatim}
+
+The program crashes, because it tries to take the logarithm of zero. This is not a bug in the implementation the way Chapter 1's sidebar described. It's the correct, if unhelpful, behavior of the underlying math: a probability of exactly zero for the ham class means the model has concluded, with total certainty, that no legitimate email could ever contain that word, based on nothing more than the fact that this particular ten-example training set happened not to include it. Laplace smoothing, the \texttt{alpha} term, is a small, principled adjustment that reserves a sliver of probability for words the model hasn't seen yet in a given class, on the reasoning that "I haven't seen this yet" and "this is impossible" are different claims and should never be treated as the same one. It's a small detail with a large consequence: without it, the model's confidence in what it doesn't know is indistinguishable from its confidence in what it does.
+
+\section*{The Bottleneck This Era Runs Into}
+
+Naive Bayes, and the broader family of statistical methods that grew up alongside it through the 1970s, 80s, and 90s, decision trees, logistic regression, hidden Markov models, solved something the earlier chapters genuinely could not: how to make a good decision under uncertainty, quantify how confident that decision is, and update gracefully as more evidence arrives. This is not a small achievement. Some of the era's quietest, most durable successes, statistical machine translation, speech recognition systems built on hidden Markov models, spam filters much like this toy one, were running in production while the field's more visible symbolic and connectionist projects were living through the winters described in Chapter 3.
+
+But look again at what this classifier actually operates on: word counts. Somebody, in this case the person writing the training examples, already decided that "which words appear" was the relevant signal, split the message into words, and handed the model a clean list of countable units. The model never touches raw text as a sequence of characters. It never has to figure out that "free" and "FREE" and "free!!!" probably mean the same thing, or that word order carries information the bag-of-words representation throws away entirely. All of that judgment, deciding what counts as a meaningful feature of the input, happened before the algorithm ever ran, and it happened by hand.
+
+This is the feature-engineering bottleneck, and it is what defines the next several chapters as much as it defines this one. Support vector machines, taken up next, offer a mathematically elegant way to work with cleverer, implicitly defined feature spaces. Probabilistic graphical models, after that, offer a principled way to encode structural assumptions about how variables relate. Both are real advances. Neither one removes the underlying requirement that a human being decides, in advance, what the raw input should be turned into before any learning begins. That requirement doesn't get resolved by a smarter algorithm within this paradigm. It gets resolved, a good deal later, by a different one entirely, once networks become deep enough and are given enough raw data to learn their own features directly. Keep the shape of this bottleneck in mind. It's the thread connecting a 1990s spam filter to why anyone bothered building deep convolutional networks at all.

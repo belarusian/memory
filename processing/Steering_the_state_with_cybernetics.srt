@@ -1,0 +1,6260 @@
+1
+00:00:00,000 --> 00:00:04,900
+Imagine, um, just for a moment, that you are standing in this big, empty field.
+
+2
+00:00:04,960 --> 00:00:06,040
+Okay, setting the scene.
+
+3
+00:00:06,320 --> 00:00:16,220
+Yeah, exactly. The wind is blowing, the grass is high, and you have just been given the most daunting, like, truly terrifying assignment in human history.
+
+4
+00:00:16,400 --> 00:00:16,960
+Which is?
+
+5
+00:00:17,100 --> 00:00:20,880
+You are tasked with rebuilding society from absolute scratch.
+
+6
+00:00:21,080 --> 00:00:23,440
+Oh, wow. That is a lot of pressure.
+
+7
+00:00:23,440 --> 00:00:30,360
+Right. Every institution, every law, every government building, every currency you've ever known has completely vanished.
+
+8
+00:00:31,120 --> 00:00:32,580
+You have a totally blank slate.
+
+9
+00:00:32,720 --> 00:00:33,760
+Just you in the grass.
+
+10
+00:00:34,060 --> 00:00:36,140
+Yeah, and millions of people are looking at you waiting.
+
+11
+00:00:36,440 --> 00:00:41,200
+So what is the very first thing your new government absolutely must do?
+
+12
+00:00:41,440 --> 00:00:47,140
+I mean, most people would probably sit down by a campfire and, I don't know, try to draft a constitution.
+
+13
+00:00:47,640 --> 00:00:51,300
+Right, or maybe you start passing laws to keep people from stealing from each other.
+
+14
+00:00:51,300 --> 00:00:53,600
+Or you figure out a way to collect taxes.
+
+15
+00:00:53,920 --> 00:00:55,900
+Or maybe you just crown a leader, you know?
+
+16
+00:00:56,180 --> 00:01:01,080
+Find the smartest or the strongest person and say, uh, okay, you're in charge, tell us what to do.
+
+17
+00:01:01,600 --> 00:01:06,500
+Exactly. Because most of us, when we think about government, we immediately jump to the language of authority.
+
+18
+00:01:06,880 --> 00:01:10,580
+Yeah, we think about who has the power to tell other people what to do.
+
+19
+00:01:11,100 --> 00:01:13,000
+It's completely natural that we go there.
+
+20
+00:01:13,160 --> 00:01:17,020
+I mean, our entire historical vocabulary for politics is built around this.
+
+21
+00:01:17,020 --> 00:01:29,720
+Oh, absolutely. If you trace it all the way from Plato in ancient Greece, through Thomas Hobbes and John Locke, right up to modern political science, it's all built around this central pillar of sovereignty.
+
+22
+00:01:30,120 --> 00:01:35,580
+We are just obsessed with the idea of legitimacy as this form of, like, rightful domination.
+
+23
+00:01:35,940 --> 00:01:38,140
+We constantly ask who ought to rule.
+
+24
+00:01:38,400 --> 00:01:43,060
+And by what moral or historical right do they hold that power over the rest of us?
+
+25
+00:01:43,180 --> 00:01:46,440
+We treat government like it's a throne that someone gets to sit on.
+
+26
+00:01:46,440 --> 00:01:49,500
+But today's deep dive is going to completely dismantle that throne.
+
+27
+00:01:49,960 --> 00:01:54,320
+We are looking at a genuinely mind-bending monograph from 2026.
+
+28
+00:01:54,520 --> 00:01:56,400
+Right. The one by the researcher known as Flyxion.
+
+29
+00:01:56,600 --> 00:02:00,780
+Yes. It's called Constitutional Cybernetics, a control theoretic theory of government.
+
+30
+00:02:01,220 --> 00:02:09,040
+And the mission for this deep dive is to completely rewire how you think about politics, human rights, and even democracy itself.
+
+31
+00:02:09,040 --> 00:02:13,880
+We are basically taking that traditional language of authority and legitimacy and tossing it out the window.
+
+32
+00:02:14,400 --> 00:02:15,180
+Right out the window.
+
+33
+00:02:15,180 --> 00:02:20,500
+In its place, we are bringing in the language of cybernetics and control theory.
+
+34
+00:02:20,740 --> 00:02:24,180
+Which sounds super sci-fi, but it's incredibly grounded.
+
+35
+00:02:24,600 --> 00:02:25,760
+Okay, let's unpack this.
+
+36
+00:02:26,280 --> 00:02:33,200
+The core premise we are starting with is that a government is not a static institution that rules over you.
+
+37
+00:02:33,360 --> 00:02:33,600
+Right.
+
+38
+00:02:33,780 --> 00:02:39,860
+It is a dynamic, continuously operating feedback loop of estimation and control.
+
+39
+00:02:39,860 --> 00:02:45,340
+Yeah. Flickrise is really demanding a radical fundamental shift in our perspective here.
+
+40
+00:02:45,700 --> 00:02:46,100
+How so?
+
+41
+00:02:46,100 --> 00:02:55,800
+Well, if we genuinely want to understand what a government is and why it fails or succeeds, we have to stop looking at static snapshots of institutions.
+
+42
+00:02:56,060 --> 00:02:57,840
+Like organizational charts and that sort of thing.
+
+43
+00:02:57,840 --> 00:02:59,560
+Exactly. We have to stop looking at those.
+
+44
+00:02:59,560 --> 00:03:06,400
+We are shifting entirely away from asking who ought to rule to asking what any governing system must actually accomplish in real time.
+
+45
+00:03:06,600 --> 00:03:09,080
+Basically, how to keep society from crashing into a wall.
+
+46
+00:03:09,320 --> 00:03:12,820
+You got it. It frames governance purely as an engineering problem.
+
+47
+00:03:12,880 --> 00:03:14,860
+So it's not about morality or divine right.
+
+48
+00:03:14,860 --> 00:03:16,880
+No, it's about survival.
+
+49
+00:03:17,880 --> 00:03:28,960
+If a society is going to survive the next century, it has to continually observe itself, figure out what state it's currently in, compare that to where it wants to be, and then take corrective action.
+
+50
+00:03:29,160 --> 00:03:32,980
+So it's not about issuing grand moral commands from on high.
+
+51
+00:03:33,020 --> 00:03:40,860
+Exactly. It's about maintaining a viable trajectory through an incredibly unpredictable, hostile environment.
+
+52
+00:03:40,860 --> 00:03:47,100
+To really grasp how massive this shift is, I want to look at this amazing historical coincidence.
+
+53
+00:03:48,080 --> 00:03:54,120
+Or honestly, maybe it's less of a coincidence and more of a hidden truth that's just been buried in the dictionary for thousands of years.
+
+54
+00:03:54,200 --> 00:03:56,700
+Oh, the etymology thing. Yeah, this is wild.
+
+55
+00:03:56,800 --> 00:04:00,320
+When I was reading through your notes on this, I had to stop and look it up because it blew my mind.
+
+56
+00:04:00,560 --> 00:04:03,500
+It all comes back to a single ancient Greek word, doesn't it?
+
+57
+00:04:03,560 --> 00:04:08,020
+It really is one of those linguistic keys that unlocks a whole new way of seeing the world.
+
+58
+00:04:08,520 --> 00:04:09,840
+The word is kybernetis.
+
+59
+00:04:10,240 --> 00:04:10,640
+Kybernetis.
+
+60
+00:04:10,640 --> 00:04:16,820
+Right. In ancient Greek, it means the helmsman or the steersman of a ship, the person standing at the back of the boat holding the tiller.
+
+61
+00:04:16,920 --> 00:04:18,520
+Okay, so the guy steering the boat.
+
+62
+00:04:18,980 --> 00:04:29,580
+Exactly. And what's so profound here is that this single root birthed two entirely different, seemingly unrelated concepts that we use all the time today.
+
+63
+00:04:29,640 --> 00:04:30,560
+Okay, lay it on me.
+
+64
+00:04:30,980 --> 00:04:37,140
+Well, the Romans took kybernetis and formed the Latin word guberner, which literally means to steer or govern.
+
+65
+00:04:37,580 --> 00:04:40,140
+Wait, so that is where we get the English word government?
+
+66
+00:04:40,140 --> 00:04:49,700
+Exactly. But then, centuries later, in 1948, the mathematician Norbert Wiener was trying to formalize a new science.
+
+67
+00:04:50,080 --> 00:04:50,960
+A science of what?
+
+68
+00:04:51,200 --> 00:04:56,000
+He was looking at how biological animals and mechanical machines communicate and control themselves.
+
+69
+00:04:56,600 --> 00:05:00,040
+He needed a word for this new science of feedback loops.
+
+70
+00:05:00,040 --> 00:05:02,300
+Don't tell me he went back to the Greek word.
+
+71
+00:05:02,300 --> 00:05:07,580
+He did. He went back to that exact same ancient Greek root and coined the term cybernetics.
+
+72
+00:05:07,920 --> 00:05:15,080
+Wow. So, government and cybernetics are literally linguistic twins. They come from the exact same idea of steering a ship.
+
+73
+00:05:15,200 --> 00:05:15,820
+They really do.
+
+74
+00:05:16,140 --> 00:05:22,360
+And if you take a second to think about what a helmsman actually does in the real world, it changes the entire metaphor of power?
+
+75
+00:05:22,360 --> 00:05:26,280
+Because a helmsman on a wooden ship in the middle of the ocean doesn't command the ocean.
+
+76
+00:05:26,620 --> 00:05:29,500
+Right. They can't stand on the deck and yell at a hurricane to calm down.
+
+77
+00:05:29,840 --> 00:05:31,880
+I mean, they can try, but it won't work.
+
+78
+00:05:32,020 --> 00:05:35,920
+They can't dictate the ocean currents or pass a law against rogue waves.
+
+79
+00:05:36,020 --> 00:05:36,680
+So, what do they do?
+
+80
+00:05:36,820 --> 00:05:42,920
+All a helmsman can do is continually estimate the environment around them, predict where the ship is heading,
+
+81
+00:05:43,560 --> 00:05:48,940
+and apply limited, tiny control inputs to the rudder to keep the ship from sinking.
+
+82
+00:05:48,940 --> 00:05:53,560
+That distinction you just made between commanding reality and steering through it,
+
+83
+00:05:53,680 --> 00:05:56,600
+that seems like the absolute foundation of this entire framework.
+
+84
+00:05:56,820 --> 00:06:02,020
+It really is. Traditional political science has this terrible habit of looking at society
+
+85
+00:06:02,020 --> 00:06:04,120
+as a state of static equilibrium.
+
+86
+00:06:04,460 --> 00:06:06,780
+Like, if we just write the perfect laws, we're done.
+
+87
+00:06:06,960 --> 00:06:11,620
+Exactly. It assumes that if you just sit down, debate the issues, get the laws right,
+
+88
+00:06:11,720 --> 00:06:16,420
+and structure the institutions perfectly, you achieve a stable state forever.
+
+89
+00:06:16,420 --> 00:06:18,340
+It treats society like a photograph.
+
+90
+00:06:18,940 --> 00:06:20,800
+Once the picture's taken, it's done.
+
+91
+00:06:21,200 --> 00:06:25,480
+But constitutional cybernetics looks at society as a continuous trajectory.
+
+92
+00:06:25,820 --> 00:06:27,960
+It's a movie that never stops rolling.
+
+93
+00:06:28,120 --> 00:06:29,740
+Right. Because things are always changing.
+
+94
+00:06:30,040 --> 00:06:34,400
+Always. The economy is always mutating. Demographic populations are shifting.
+
+95
+00:06:35,020 --> 00:06:36,860
+Disruptive technology is advancing.
+
+96
+00:06:37,240 --> 00:06:38,520
+Unpredictable disturbances.
+
+97
+00:06:38,740 --> 00:06:44,140
+Yes. Like global pandemics, sudden market crashes, or climate disasters.
+
+98
+00:06:44,140 --> 00:06:46,900
+They're constantly slamming into the hull of the ship.
+
+99
+00:06:47,040 --> 00:06:52,600
+So if it's a movie, the government is just constantly running what engineers call the classical cybernetic loop.
+
+100
+00:06:52,740 --> 00:06:56,740
+Right. The observe, estimate, compare, control loop.
+
+101
+00:06:57,060 --> 00:07:00,200
+Observe, estimate, compare, control, and then observe again.
+
+102
+00:07:01,400 --> 00:07:02,840
+I'm picturing the steersman here.
+
+103
+00:07:02,900 --> 00:07:03,100
+Yeah.
+
+104
+00:07:03,100 --> 00:07:06,700
+They feel the spray of the ocean in the direction of the wind.
+
+105
+00:07:06,820 --> 00:07:07,760
+That's observation, right?
+
+106
+00:07:07,780 --> 00:07:08,080
+Exactly.
+
+107
+00:07:08,420 --> 00:07:12,300
+Then they take that feeling, and guess how far off course the ship has drifted?
+
+108
+00:07:12,540 --> 00:07:13,400
+That's estimation.
+
+109
+00:07:13,560 --> 00:07:15,040
+Yep. They are building a mental model.
+
+110
+00:07:15,200 --> 00:07:18,640
+Then they look down at the compass to see the heading they're actually supposed to be on.
+
+111
+00:07:19,020 --> 00:07:19,760
+That's comparison.
+
+112
+00:07:20,100 --> 00:07:22,400
+Then they use their muscles to turn the wooden wheel.
+
+113
+00:07:22,640 --> 00:07:23,420
+That's control.
+
+114
+00:07:23,580 --> 00:07:24,840
+And then they don't just walk away.
+
+115
+00:07:24,840 --> 00:07:29,300
+They immediately stand there and feel the wind again to see if that turn actually did anything.
+
+116
+00:07:29,440 --> 00:07:30,300
+It's an endless loop.
+
+117
+00:07:30,760 --> 00:07:32,340
+That is the exact mechanism.
+
+118
+00:07:32,980 --> 00:07:38,720
+And Flyxion's argument is that every single thing a government does, no matter how complex or bureaucratic it seems,
+
+119
+00:07:39,140 --> 00:07:44,260
+is just a specific scaled-up implementation of this exact feedback loop.
+
+120
+00:07:44,480 --> 00:07:45,040
+Wait, really?
+
+121
+00:07:45,700 --> 00:07:46,600
+Every single thing?
+
+122
+00:07:46,780 --> 00:07:48,120
+Every single thing.
+
+123
+00:07:48,120 --> 00:07:52,940
+Whether you are looking at a central bank committee adjusting national interest rates to cool down inflation,
+
+124
+00:07:53,240 --> 00:07:57,560
+or a legislature arguing for three months over an infrastructure budget.
+
+125
+00:07:57,740 --> 00:08:01,180
+Or a Supreme Court reviewing the constitutionality of a new surveillance law.
+
+126
+00:08:01,280 --> 00:08:01,580
+Yes.
+
+127
+00:08:01,680 --> 00:08:05,600
+Or even a local environmental agency tracking pollution in a river.
+
+128
+00:08:06,120 --> 00:08:10,760
+They are all just executing the observe, estimate, compare, control loop.
+
+129
+00:08:10,960 --> 00:08:17,760
+So the objective of governance isn't to reach some perfect, static, utopian society where everything is solved forever.
+
+130
+00:08:17,760 --> 00:08:18,400
+Not at all.
+
+131
+00:08:18,700 --> 00:08:22,780
+The objective is to preserve the system's capacity to keep adapting to the next wave.
+
+132
+00:08:23,060 --> 00:08:24,840
+Let me see if I can put an analogy on this.
+
+133
+00:08:24,940 --> 00:08:27,840
+So I want to make sure I'm wrapping my head around this shift in values here.
+
+134
+00:08:27,940 --> 00:08:28,440
+Go for it.
+
+135
+00:08:28,720 --> 00:08:34,540
+It seems to me that traditional politics judges a pilot by how shiny their uniform is,
+
+136
+00:08:34,740 --> 00:08:36,160
+what speeches they give in the terminal,
+
+137
+00:08:36,700 --> 00:08:40,500
+and maybe by whether the passengers in the cabin voted for them to be in the cockpit.
+
+138
+00:08:40,960 --> 00:08:41,320
+Sure.
+
+139
+00:08:41,460 --> 00:08:43,160
+That's the classic view of legitimacy.
+
+140
+00:08:43,540 --> 00:08:46,480
+But cybernetics doesn't care about the uniform or the speeches.
+
+141
+00:08:46,480 --> 00:08:51,460
+It judges the pilot purely by whether they can keep the plane in the air
+
+142
+00:08:51,460 --> 00:08:54,980
+when a Category 5 hurricane suddenly forms right in front of them.
+
+143
+00:08:55,300 --> 00:08:57,800
+That is entirely brutally functional, yes.
+
+144
+00:08:57,920 --> 00:09:00,940
+I have to push back a little here because I'm feeling a sense of unease.
+
+145
+00:09:01,260 --> 00:09:01,580
+Uh-oh.
+
+146
+00:09:02,020 --> 00:09:02,500
+What's wrong?
+
+147
+00:09:02,560 --> 00:09:05,260
+Well, isn't this framework a bit, I don't know, cold?
+
+148
+00:09:05,260 --> 00:09:08,700
+We are talking about human society.
+
+149
+00:09:09,000 --> 00:09:11,380
+We are talking about laws that put people in prison,
+
+150
+00:09:11,840 --> 00:09:14,480
+budget debates that determine if children get school lunches,
+
+151
+00:09:14,620 --> 00:09:17,040
+the messy reality of human lives.
+
+152
+00:09:17,180 --> 00:09:17,940
+I see where you're going.
+
+153
+00:09:17,940 --> 00:09:23,720
+And this cybernetic theory seems to reduce all of that passion, morality, and suffering
+
+154
+00:09:23,720 --> 00:09:27,160
+to an automated thermostat regulating the air conditioning in a house.
+
+155
+00:09:27,800 --> 00:09:32,260
+It sounds like we are stripping the humanity and the moral weight out of politics entirely.
+
+156
+00:09:32,660 --> 00:09:34,240
+I completely understand that reaction.
+
+157
+00:09:34,760 --> 00:09:39,400
+It's usually the very first objection people have when you apply control theory to society.
+
+158
+00:09:39,660 --> 00:09:41,880
+That it feels deeply technocratic and sterile.
+
+159
+00:09:41,880 --> 00:09:42,320
+Exactly.
+
+160
+00:09:42,740 --> 00:09:45,000
+But if we dig a little deeper, it's actually the opposite.
+
+161
+00:09:45,260 --> 00:09:51,160
+It's not about automating humans or reducing us to mindless cogs in a giant machine.
+
+162
+00:09:51,360 --> 00:09:52,400
+Okay, then what is it about?
+
+163
+00:09:52,780 --> 00:09:59,620
+It's about recognizing the severe, unavoidable, and often tragic limitations of human institutions.
+
+164
+00:10:00,720 --> 00:10:06,100
+A thermostat is a simple controller because it operates in a simple, closed environment.
+
+165
+00:10:06,340 --> 00:10:06,520
+Right.
+
+166
+00:10:06,600 --> 00:10:08,340
+A house doesn't change its fundamental nature.
+
+167
+00:10:08,580 --> 00:10:09,080
+Exactly.
+
+168
+00:10:09,080 --> 00:10:11,840
+But human societies are infinitely complex.
+
+169
+00:10:12,000 --> 00:10:13,140
+They are constantly evolving.
+
+170
+00:10:13,740 --> 00:10:19,120
+The so-called thermostat of government is constantly being overwhelmed by incomplete information,
+
+171
+00:10:19,400 --> 00:10:21,260
+delayed signals, and human bias.
+
+172
+00:10:21,560 --> 00:10:22,000
+Oh, I see.
+
+173
+00:10:22,080 --> 00:10:26,160
+So acknowledging that government is a cybernetic loop isn't a cold dismissal of humanity.
+
+174
+00:10:26,700 --> 00:10:29,380
+It's a profound plea for epistemic humility.
+
+175
+00:10:29,600 --> 00:10:32,200
+Meaning we have to admit how little we actually know.
+
+176
+00:10:32,540 --> 00:10:32,920
+Yes.
+
+177
+00:10:32,920 --> 00:10:39,180
+It tells us that no leader, no matter how morally righteous their intentions, and no matter how
+
+178
+00:10:39,180 --> 00:10:44,500
+beautiful their speeches are, can successfully govern if they don't have accurate sensors.
+
+179
+00:10:44,840 --> 00:10:48,460
+Or if the steering wheel they are holding is completely disconnected from the rudder.
+
+180
+00:10:48,720 --> 00:10:49,240
+Exactly.
+
+181
+00:10:49,500 --> 00:10:54,400
+You can have the most moral pilot in the world, but if their dashboard is telling them they are
+
+182
+00:10:54,400 --> 00:11:00,240
+going up when they are actually going down, they are going to fly the plane straight into
+
+183
+00:11:00,240 --> 00:11:00,740
+a mountain.
+
+184
+00:11:01,100 --> 00:11:03,880
+And their good intentions won't save a single passenger.
+
+185
+00:11:04,300 --> 00:11:05,460
+That's the reality of it.
+
+186
+00:11:05,500 --> 00:11:06,420
+That makes a lot of sense.
+
+187
+00:11:06,740 --> 00:11:11,360
+Which leads us to what seems like the most terrifying hurdle the steersman faces.
+
+188
+00:11:11,940 --> 00:11:17,700
+If government is the helmsman and it relies entirely on its instruments to see the ocean,
+
+189
+00:11:18,160 --> 00:11:20,140
+how does it actually see?
+
+190
+00:11:20,280 --> 00:11:21,340
+Well, this is the kicker.
+
+191
+00:11:21,340 --> 00:11:25,520
+Because reading through the monograph, the terrifying truth seems to be that it can't.
+
+192
+00:11:25,540 --> 00:11:26,520
+Not directly, anyway.
+
+193
+00:11:26,680 --> 00:11:31,060
+You're touching on what the text calls the observer problem, which is perhaps the most
+
+194
+00:11:31,060 --> 00:11:33,680
+humbling concept in the entire theory.
+
+195
+00:11:33,860 --> 00:11:34,760
+The observer problem.
+
+196
+00:11:34,860 --> 00:11:35,720
+Unpack that for us.
+
+197
+00:11:36,000 --> 00:11:40,840
+In our daily lives, we casually talk about the state of the economy or the state of public
+
+198
+00:11:40,840 --> 00:11:42,940
+health as if they are physical objects.
+
+199
+00:11:43,200 --> 00:11:46,380
+Like things you can just put on a scale and weigh or measure with a tape measure.
+
+200
+00:11:46,500 --> 00:11:46,880
+Right.
+
+201
+00:11:47,040 --> 00:11:50,600
+But the true social state is infinite in its dimensionality.
+
+202
+00:11:50,600 --> 00:11:57,800
+It is made up of billions of daily interactions, undocumented emotional states, hidden financial
+
+203
+00:11:57,800 --> 00:12:01,420
+transactions, microscopic biological realities.
+
+204
+00:12:01,600 --> 00:12:02,860
+So it's just too big to comprehend.
+
+205
+00:12:03,120 --> 00:12:03,980
+Way too big.
+
+206
+00:12:04,040 --> 00:12:11,400
+There is no single instrument, no central authority, and no supercomputer on Earth that has direct,
+
+207
+00:12:11,860 --> 00:12:15,220
+unfettered access to the complete reality of a society.
+
+208
+00:12:15,500 --> 00:12:18,100
+So the government is essentially always flying blind.
+
+209
+00:12:18,360 --> 00:12:18,500
+Well.
+
+210
+00:12:18,600 --> 00:12:19,760
+It never actually looks out the window.
+
+211
+00:12:19,760 --> 00:12:23,980
+It's flying strictly on instruments, and the instruments are inherently, unavoidably
+
+212
+00:12:23,980 --> 00:12:24,420
+flawed.
+
+213
+00:12:24,700 --> 00:12:25,060
+Yikes.
+
+214
+00:12:25,400 --> 00:12:30,280
+To explain this, the framework leans heavily on the 18th century philosopher Immanuel Kant.
+
+215
+00:12:30,540 --> 00:12:32,440
+Oh, taking us back to philosophy class.
+
+216
+00:12:32,560 --> 00:12:33,220
+Just for a second.
+
+217
+00:12:33,820 --> 00:12:39,480
+Kant made this famous foundational distinction between phenomena, which is reality as we perceive
+
+218
+00:12:39,480 --> 00:12:42,740
+it, filter it, and represent it to ourselves in things in themselves.
+
+219
+00:12:42,740 --> 00:12:48,940
+The things in themselves being reality as it actually exists in the universe, completely independent
+
+220
+00:12:48,940 --> 00:12:50,400
+of our ability to observe it.
+
+221
+00:12:50,480 --> 00:12:50,960
+Exactly.
+
+222
+00:12:51,560 --> 00:12:57,100
+And Flyxion takes Kant's philosophy and applies it directly to political science.
+
+223
+00:12:57,460 --> 00:13:00,300
+The government never acts on reality in itself.
+
+224
+00:13:00,520 --> 00:13:02,500
+It is mathematically impossible.
+
+225
+00:13:02,500 --> 00:13:04,080
+It only ever acts on phenomena.
+
+226
+00:13:04,080 --> 00:13:04,480
+Yes.
+
+227
+00:13:04,480 --> 00:13:09,860
+It acts on an estimated internal state that it has reconstructed from delayed, noisy, and
+
+228
+00:13:09,860 --> 00:13:11,920
+often totally contradictory observations.
+
+229
+00:13:12,280 --> 00:13:17,360
+I want to make sure we don't lose anyone here, because there is a mathematical formula in the text that explains this.
+
+230
+00:13:17,880 --> 00:13:21,720
+And honestly, when I first saw the Greek letters, my eyes totally glazed over.
+
+231
+00:13:21,720 --> 00:13:23,220
+Yeah, formulas can do that.
+
+232
+00:13:23,280 --> 00:13:25,820
+But once I sat with it, it became incredibly profound.
+
+233
+00:13:26,660 --> 00:13:30,500
+The formula is AT, high ET, plus AT.
+
+234
+00:13:30,860 --> 00:13:32,860
+It looks intimidating, but it's brilliant.
+
+235
+00:13:33,160 --> 00:13:34,260
+Let's not just read the math.
+
+236
+00:13:34,340 --> 00:13:35,200
+Let's ground this.
+
+237
+00:13:35,620 --> 00:13:36,540
+Let's build a scenario.
+
+238
+00:13:36,980 --> 00:13:40,160
+Imagine a new, mysterious virus starts spreading through a country.
+
+239
+00:13:40,660 --> 00:13:43,820
+How does this formula explain what the government actually sees?
+
+240
+00:13:44,080 --> 00:13:46,100
+That's a perfect scenario to break this down.
+
+241
+00:13:46,800 --> 00:13:47,580
+Let's look at the pieces.
+
+242
+00:13:47,580 --> 00:13:54,300
+In your pandemic scenario, represents the true state of society at that exact moment in time.
+
+243
+00:13:54,420 --> 00:13:55,140
+The thing in itself.
+
+244
+00:13:55,360 --> 00:13:55,560
+Right.
+
+245
+00:13:55,720 --> 00:13:59,360
+It's the actual, precise number of people who have the virus.
+
+246
+00:13:59,700 --> 00:14:02,220
+Exactly how the virus is mutating in their bodies.
+
+247
+00:14:02,520 --> 00:14:04,960
+The exact number of hospital beds available.
+
+248
+00:14:05,560 --> 00:14:08,660
+The exact economic impact of people staying home.
+
+249
+00:14:08,860 --> 00:14:14,340
+Basically, an infinitely complex reality that the government cannot ever perfectly know.
+
+250
+00:14:14,560 --> 00:14:14,820
+Right.
+
+251
+00:14:14,940 --> 00:14:16,860
+God knows, X and A, but the president doesn't.
+
+252
+00:14:16,860 --> 00:14:19,980
+Okay, so the president doesn't have a direct line to six and eighters.
+
+253
+00:14:20,120 --> 00:14:24,640
+Instead, the government relies on A of dollars, which is the specific lens or the measurement
+
+254
+00:14:24,640 --> 00:14:26,540
+function of a particular observer.
+
+255
+00:14:26,860 --> 00:14:29,520
+Okay, give me an example of an observer in this pandemic.
+
+256
+00:14:29,900 --> 00:14:33,660
+Let's say HA1 is a rural hospital's testing capacity.
+
+257
+00:14:34,500 --> 00:14:38,100
+Tudotru 2 might be a network of epidemiologists looking at wastewater.
+
+258
+00:14:38,900 --> 00:14:43,400
+Tudotru 3s is an economist looking at credit card spending data to see if people are going
+
+259
+00:14:43,400 --> 00:14:44,060
+to restaurants.
+
+260
+00:14:44,060 --> 00:14:48,540
+Each of these observers is trying to look at 16, but their lens is incredibly narrow.
+
+261
+00:14:48,780 --> 00:14:49,040
+Yes.
+
+262
+00:14:49,260 --> 00:14:54,480
+They can only see the slice of reality that their specific tools allow them to see.
+
+263
+00:14:54,820 --> 00:14:58,920
+And then we get to the really dangerous part of the formula, the card's P.
+
+264
+00:14:59,600 --> 00:15:01,180
+This represents the noise, right?
+
+265
+00:15:01,260 --> 00:15:01,480
+Yes.
+
+266
+00:15:01,840 --> 00:15:02,780
+Tight is the distortion.
+
+267
+00:15:03,100 --> 00:15:05,240
+It's the unavoidable noise in the signal.
+
+268
+00:15:05,440 --> 00:15:06,160
+What kind of noise?
+
+269
+00:15:06,160 --> 00:15:10,960
+Well, for the rural hospital, the noise might be a two-week delay in getting test results
+
+270
+00:15:10,960 --> 00:15:11,820
+back from the lab.
+
+271
+00:15:12,140 --> 00:15:16,680
+For the epidemiologists, the noise might be a faulty chemical region that gives false
+
+272
+00:15:16,680 --> 00:15:17,240
+positives.
+
+273
+00:15:17,580 --> 00:15:19,340
+So mechanical or scientific noise?
+
+274
+00:15:19,680 --> 00:15:20,120
+Exactly.
+
+275
+00:15:20,380 --> 00:15:21,600
+But noise isn't just mechanical.
+
+276
+00:15:21,840 --> 00:15:23,020
+It can be political, too.
+
+277
+00:15:23,320 --> 00:15:23,940
+Oh, like what?
+
+278
+00:15:24,100 --> 00:15:29,420
+If a local mayor wants to look good for re-election, they might pressure the hospital to undercount
+
+279
+00:15:29,420 --> 00:15:29,980
+the deaths.
+
+280
+00:15:30,200 --> 00:15:32,080
+That political pressure is Thai.
+
+281
+00:15:32,340 --> 00:15:33,500
+It distorts the measurement.
+
+282
+00:15:33,500 --> 00:15:33,980
+Wow.
+
+283
+00:15:34,520 --> 00:15:38,720
+So when the output finally reaches the central government, what they get is Thai.
+
+284
+00:15:39,220 --> 00:15:39,580
+Correct.
+
+285
+00:15:39,820 --> 00:15:41,860
+They don't get the true reality of the pandemic.
+
+286
+00:15:41,860 --> 00:15:48,060
+They just get one tiny, delayed, politically distorted, scientifically narrow slice of data.
+
+287
+00:15:48,360 --> 00:15:52,920
+And when the government decides to issue a massive society-wide lockdown or a vaccine
+
+288
+00:15:52,920 --> 00:15:57,640
+mandate, which is a huge control action, it's not basing it on the true reality.
+
+289
+00:15:57,640 --> 00:16:06,460
+It's basing it on a massive, messy, patched-together amalgamation of millions of these flawed nidicals.
+
+290
+00:16:06,460 --> 00:16:06,960
+Precisely.
+
+291
+00:16:07,060 --> 00:16:10,700
+The government is always trying to reconstruct a map of a territory it can never actually
+
+292
+00:16:10,700 --> 00:16:11,080
+visit.
+
+293
+00:16:11,260 --> 00:16:12,160
+That is wild.
+
+294
+00:16:12,280 --> 00:16:17,400
+And because every formal system is incomplete, the text actually draws on Kurt Gödel's
+
+295
+00:16:17,400 --> 00:16:21,580
+incompleteness theorems here to show that no system can perfectly verify itself from
+
+296
+00:16:21,580 --> 00:16:22,140
+the inside.
+
+297
+00:16:22,140 --> 00:16:26,900
+There is always, always a gap between the map and the territory.
+
+298
+00:16:27,580 --> 00:16:32,160
+So governing is basically an inherently recursive process of continual approximation.
+
+299
+00:16:32,760 --> 00:16:37,080
+You gather the messy data, you make a best guess, you steer the ship, you check the noisy
+
+300
+00:16:37,080 --> 00:16:37,880
+instruments again.
+
+301
+00:16:38,020 --> 00:16:40,860
+You realize your guess was slightly wrong and you oversteered.
+
+302
+00:16:41,000 --> 00:16:41,140
+Yeah.
+
+303
+00:16:41,200 --> 00:16:42,200
+And you try to correct it.
+
+304
+00:16:42,300 --> 00:16:42,600
+Exactly.
+
+305
+00:16:42,740 --> 00:16:43,600
+Round and round forever.
+
+306
+00:16:43,940 --> 00:16:45,480
+I am synthesizing this.
+
+307
+00:16:45,580 --> 00:16:50,140
+And here's where it gets incredibly exciting for me, because this totally changes how we argue
+
+308
+00:16:50,140 --> 00:16:50,960
+about civil liberties.
+
+309
+00:16:50,960 --> 00:16:51,840
+Oh, big time.
+
+310
+00:16:52,460 --> 00:16:58,780
+If the government entirely relies on this distributed, decentralized network of censors to have any
+
+311
+00:16:58,780 --> 00:17:04,520
+clue what is going on, then things like freedom of the press, academic inquiry, and civil society
+
+312
+00:17:04,520 --> 00:17:07,100
+aren't just polite moral ideals.
+
+313
+00:17:07,400 --> 00:17:11,860
+No, they are absolute non-negotiable engineering necessities.
+
+314
+00:17:12,220 --> 00:17:17,900
+I think this is one of the most profound, world-shifting takeaways from Flipchon's work.
+
+315
+00:17:17,900 --> 00:17:23,100
+Because in our traditional political discourse, we usually defend free speech by saying it's
+
+316
+00:17:23,100 --> 00:17:24,380
+a fundamental human right.
+
+317
+00:17:24,780 --> 00:17:29,060
+Or we quote John Stuart Mill and say it's vital for human flourishing and the marketplace
+
+318
+00:17:29,060 --> 00:17:29,860
+of ideas.
+
+319
+00:17:30,220 --> 00:17:31,780
+And it absolutely is.
+
+320
+00:17:31,900 --> 00:17:34,060
+But from a purely cybernetic perspective.
+
+321
+00:17:34,140 --> 00:17:37,680
+From a cybernetic perspective, free speech is an observability condition.
+
+322
+00:17:37,880 --> 00:17:41,000
+Meaning if you don't have it, you can't observe the state.
+
+323
+00:17:41,000 --> 00:17:41,600
+Exactly.
+
+324
+00:17:41,600 --> 00:17:47,520
+If a government suppresses independent journalists, or if it defunds scientific research it doesn't
+
+325
+00:17:47,520 --> 00:17:52,660
+like, or if it silences political opposition, it is mathematically reducing the dimensionality
+
+326
+00:17:52,660 --> 00:17:54,700
+of its own control system's brain.
+
+327
+00:17:54,700 --> 00:17:56,540
+Let's go back to our airplane pilot.
+
+328
+00:17:56,660 --> 00:17:58,400
+It's like a pilot who is flying through a storm.
+
+329
+00:17:59,040 --> 00:18:03,220
+They look down at the altimeter, and the altimeter says they are losing altitude rapidly.
+
+330
+00:18:03,420 --> 00:18:05,560
+And the pilot doesn't like what the altimeter is saying.
+
+331
+00:18:05,720 --> 00:18:06,760
+It makes them feel anxious.
+
+332
+00:18:07,280 --> 00:18:12,620
+So they take a hammer and smash the glass, and then they turn around and smash the fuel
+
+333
+00:18:12,620 --> 00:18:17,860
+gauge, because they've decided the fuel gauge is spreading fake news about the plane being
+
+334
+00:18:17,860 --> 00:18:18,760
+low on gas.
+
+335
+00:18:19,060 --> 00:18:21,100
+Which is obviously a terrible idea.
+
+336
+00:18:21,100 --> 00:18:25,600
+Smashing the instruments might make the pilot feel incredibly powerful and secure for about
+
+337
+00:18:25,600 --> 00:18:28,680
+10 minutes, but it is mathematically suicidal.
+
+338
+00:18:28,780 --> 00:18:30,640
+Because the plane is still running out of gas.
+
+339
+00:18:30,880 --> 00:18:32,380
+It is still falling out of the sky.
+
+340
+00:18:32,640 --> 00:18:35,320
+The pilot just won't see the mountain coming until they crash into it.
+
+341
+00:18:35,520 --> 00:18:39,240
+That analogy perfectly captures the mechanics of authoritarianism.
+
+342
+00:18:39,980 --> 00:18:46,760
+Censorship, state propaganda, and institutional secrecy literally reduce the rank of the observation
+
+343
+00:18:46,760 --> 00:18:47,300
+operator.
+
+344
+00:18:47,300 --> 00:18:51,000
+The central controller, meaning the government, continues to act, of course.
+
+345
+00:18:51,100 --> 00:18:56,820
+It keeps passing laws and deploying police, but its internal estimate of reality rapidly
+
+346
+00:18:56,820 --> 00:18:58,860
+diverges from actual reality.
+
+347
+00:18:58,860 --> 00:19:01,620
+The control actions become completely maladaptive.
+
+348
+00:19:01,980 --> 00:19:06,200
+They start solving problems that don't exist and ignoring crises that are actually tearing
+
+349
+00:19:06,200 --> 00:19:07,180
+the society apart.
+
+350
+00:19:07,680 --> 00:19:13,580
+A government that destroys its distributed observer network will eventually destabilize, regardless
+
+351
+00:19:13,580 --> 00:19:19,280
+of how many tanks it has or how brutal its police force is, simply because it has intentionally
+
+352
+00:19:19,280 --> 00:19:20,320
+blinded itself.
+
+353
+00:19:20,320 --> 00:19:25,160
+So an open society isn't just morally superior, it is mathematically more robust because it
+
+354
+00:19:25,160 --> 00:19:27,220
+has more active sensors gathering data.
+
+355
+00:19:28,040 --> 00:19:31,680
+But that introduces a massive new headache, doesn't it?
+
+356
+00:19:31,760 --> 00:19:32,520
+It really does.
+
+357
+00:19:32,760 --> 00:19:35,160
+Let's say a society is doing great on human rights.
+
+358
+00:19:35,660 --> 00:19:38,800
+It has a thriving, completely free network of sensors.
+
+359
+00:19:39,220 --> 00:19:40,140
+We have economists.
+
+360
+00:19:40,500 --> 00:19:41,420
+We have everyday citizens.
+
+361
+00:19:41,600 --> 00:19:42,160
+We have doctors.
+
+362
+00:19:42,340 --> 00:19:43,080
+We have urban planners.
+
+363
+00:19:43,080 --> 00:19:46,640
+All constantly gathering data and shouting it up to the helmsman.
+
+364
+00:19:46,700 --> 00:19:47,720
+Sounds great on paper.
+
+365
+00:19:47,920 --> 00:19:50,800
+But what happens when none of those sensors speak the same language?
+
+366
+00:19:50,800 --> 00:19:55,980
+This is where we run into the limits of just gathering data, and it introduces what the
+
+367
+00:19:55,980 --> 00:19:57,880
+monograph calls the Babel Protocol.
+
+368
+00:19:58,320 --> 00:19:59,460
+The Babel Protocol.
+
+369
+00:19:59,460 --> 00:20:01,140
+That sounds very dramatic.
+
+370
+00:20:01,140 --> 00:20:04,640
+Well, we aren't talking about simple linguistic translation here.
+
+371
+00:20:04,740 --> 00:20:08,860
+It's not just about someone speaking English and someone else speaking Mandarin, where you
+
+372
+00:20:08,860 --> 00:20:10,940
+just need a dictionary to swap the words.
+
+373
+00:20:11,260 --> 00:20:12,640
+Okay, what kind of translation is it?
+
+374
+00:20:12,820 --> 00:20:18,860
+The Babel Protocol is dealing with entirely incompatible representational frameworks, or what the text
+
+375
+00:20:18,860 --> 00:20:22,300
+mathematically refers to as semantic manifolds.
+
+376
+00:20:22,660 --> 00:20:23,640
+Semantic manifolds.
+
+377
+00:20:23,640 --> 00:20:29,100
+I think I need an example of a semantic manifold, because this sounds like we are all living in
+
+378
+00:20:29,100 --> 00:20:29,860
+different realities.
+
+379
+00:20:30,100 --> 00:20:30,880
+We kind of are.
+
+380
+00:20:31,080 --> 00:20:31,700
+Let me try this.
+
+381
+00:20:32,540 --> 00:20:35,060
+An economist looks at a period of high inflation.
+
+382
+00:20:35,660 --> 00:20:36,380
+They pull up a chart.
+
+383
+00:20:37,120 --> 00:20:41,800
+Their semantic manifold is made of numbers, money supply curves, and interest rate adjustments.
+
+384
+00:20:42,620 --> 00:20:46,940
+They see inflation as a macroeconomic variable that needs a 2% adjustment.
+
+385
+00:20:47,120 --> 00:20:47,940
+Perfect example.
+
+386
+00:20:48,100 --> 00:20:52,340
+But a citizen who just walked out of a grocery store doesn't see a macroeconomic chart.
+
+387
+00:20:52,340 --> 00:20:54,060
+They don't experience a 2% variable.
+
+388
+00:20:54,060 --> 00:20:58,620
+No, their semantic manifold is a narrative of their purchasing power disappearing.
+
+389
+00:20:59,260 --> 00:21:02,740
+They experience visceral anxiety about feeding their children.
+
+390
+00:21:03,060 --> 00:21:03,300
+Exactly.
+
+391
+00:21:03,640 --> 00:21:09,200
+Or, like, a doctor looking at a pandemic sees biological viral loads and spike proteins,
+
+392
+00:21:09,460 --> 00:21:14,000
+while an architect looking at the exact same pandemic sees building ventilation systems
+
+393
+00:21:14,000 --> 00:21:15,060
+and airflow constraints.
+
+394
+00:21:15,900 --> 00:21:17,380
+Are those semantic manifolds?
+
+395
+00:21:17,760 --> 00:21:18,860
+They absolutely are.
+
+396
+00:21:18,940 --> 00:21:22,220
+These different observers don't just possess different vocabularies.
+
+397
+00:21:22,340 --> 00:21:25,260
+They possess entirely different ontologies.
+
+398
+00:21:25,560 --> 00:21:29,820
+Different ontologies, meaning they categorize reality in fundamentally different ways.
+
+399
+00:21:29,940 --> 00:21:30,320
+Exactly.
+
+400
+00:21:30,720 --> 00:21:33,600
+The architect isn't just using different words than the doctor.
+
+401
+00:21:33,940 --> 00:21:36,820
+They are measuring completely different properties of the universe.
+
+402
+00:21:37,520 --> 00:21:39,480
+So how does the Babel Protocol fix this?
+
+403
+00:21:39,760 --> 00:21:45,060
+Well, the Babel Protocol is the theoretical architecture required for a government to translate
+
+404
+00:21:45,060 --> 00:21:50,940
+between these spaces, but it's incredibly difficult because it's not a literal dictionary you can
+
+405
+00:21:50,940 --> 00:21:51,600
+just look up.
+
+406
+00:21:51,660 --> 00:21:54,200
+There's no Google Translate for semantic manifold.
+
+407
+00:21:54,360 --> 00:21:54,560
+Nope.
+
+408
+00:21:55,060 --> 00:21:59,860
+The text actually brings up some brilliant sci-fi examples to illustrate how complex this is,
+
+409
+00:21:59,980 --> 00:22:03,800
+like the Babel Fish from Douglas Adams' The Hitchhiker's Guide to the Galaxy,
+
+410
+00:22:03,800 --> 00:22:06,320
+or the aliens in the movie Arrival.
+
+411
+00:22:06,700 --> 00:22:09,420
+Oh, Arrival is the perfect cultural touchstone for this.
+
+412
+00:22:09,520 --> 00:22:10,260
+It really is.
+
+413
+00:22:10,260 --> 00:22:14,540
+In that movie, without spoiling too much, the challenge wasn't just pointing to a tree
+
+414
+00:22:14,540 --> 00:22:16,640
+and learning what alien sound meant, tree.
+
+415
+00:22:17,440 --> 00:22:22,900
+The aliens, the heptapods, experienced the flow of time in a completely non-linear way.
+
+416
+00:22:23,100 --> 00:22:23,400
+Right.
+
+417
+00:22:23,620 --> 00:22:26,080
+They saw the past, present, and future simultaneously.
+
+418
+00:22:26,080 --> 00:22:32,320
+Their entire conceptual geometry, their semantic manifold, was fundamentally alien.
+
+419
+00:22:32,900 --> 00:22:36,700
+To actually translate their language and communicate with them, the human linguist,
+
+420
+00:22:36,820 --> 00:22:41,940
+played by Amy Adams, had to literally rewire the neural pathways in her own brain
+
+421
+00:22:41,940 --> 00:22:44,540
+to understand their geometry of time.
+
+422
+00:22:44,680 --> 00:22:46,040
+She couldn't just learn their words.
+
+423
+00:22:46,160 --> 00:22:47,640
+She had to learn their reality.
+
+424
+00:22:47,900 --> 00:22:48,140
+Exactly.
+
+425
+00:22:48,300 --> 00:22:49,360
+And that's exactly it.
+
+426
+00:22:49,360 --> 00:22:53,400
+A true, universal translator, if one could even exist,
+
+427
+00:22:53,840 --> 00:22:56,900
+wouldn't just be an algorithm that swaps English for heptapod.
+
+428
+00:22:57,320 --> 00:23:00,000
+It would have to account for the entire state of the observer.
+
+429
+00:23:00,260 --> 00:23:01,300
+Meaning what, exactly?
+
+430
+00:23:01,380 --> 00:23:03,900
+It would have to know who is speaking, who is listening,
+
+431
+00:23:04,420 --> 00:23:08,520
+their deep historical context, their unstated cultural assumptions,
+
+432
+00:23:09,180 --> 00:23:12,900
+their current emotional state, and the structural limitations of their brain.
+
+433
+00:23:13,400 --> 00:23:15,060
+Meaning, does not live in a vacuum.
+
+434
+00:23:15,240 --> 00:23:16,620
+It doesn't just float around in the air?
+
+435
+00:23:16,620 --> 00:23:19,920
+No, meaning lives in the entire state of the observer.
+
+436
+00:23:20,460 --> 00:23:23,420
+So when we talk about the Babel Protocol in government,
+
+437
+00:23:23,840 --> 00:23:29,360
+we are talking about the ongoing, incredibly difficult, and deeply imperfect process
+
+438
+00:23:29,360 --> 00:23:35,560
+of creating coordinate transformations between these radically different conceptual spaces
+
+439
+00:23:35,560 --> 00:23:37,660
+within a single society.
+
+440
+00:23:37,960 --> 00:23:41,920
+The monograph uses this phrase, language is deictic control.
+
+441
+00:23:42,140 --> 00:23:42,520
+Yes.
+
+442
+00:23:42,580 --> 00:23:43,600
+If I'm understanding that right.
+
+443
+00:23:43,600 --> 00:23:48,240
+It basically means we don't use language to perfectly describe absolute truth.
+
+444
+00:23:48,560 --> 00:23:52,480
+We use language to create temporary shared coordinate systems,
+
+445
+00:23:52,600 --> 00:23:55,980
+just so we can solve a specific problem together.
+
+446
+00:23:56,520 --> 00:23:59,000
+It's like setting up temporary scaffolding on the side of a building.
+
+447
+00:23:59,840 --> 00:24:02,740
+We don't live on the scaffolding, but we need it to fix the window.
+
+448
+00:24:02,900 --> 00:24:04,200
+That's a great way to visualize it.
+
+449
+00:24:04,420 --> 00:24:09,020
+And this realization completely redefines how we should look at political gridlock.
+
+450
+00:24:09,160 --> 00:24:09,960
+Oh, how so?
+
+451
+00:24:09,960 --> 00:24:13,540
+Well, we look at a paralyzed legislature, say the U.S. Congress,
+
+452
+00:24:13,940 --> 00:24:17,720
+and we usually assume the gridlock is a clash of fundamental moral values,
+
+453
+00:24:17,920 --> 00:24:19,840
+or just petty partisan stubbornness.
+
+454
+00:24:20,040 --> 00:24:24,160
+We think they're looking at the same problem and just refusing to agree on a solution.
+
+455
+00:24:24,380 --> 00:24:26,200
+That's definitely what it looks like on cable news.
+
+456
+00:24:26,440 --> 00:24:30,740
+But from a cybernetic view, much of what we call political gridlock
+
+457
+00:24:30,740 --> 00:24:35,280
+is actually a catastrophic, epistemic failure of the Babel Protocol.
+
+458
+00:24:35,280 --> 00:24:39,840
+The participants are arguing over completely different projections of reality
+
+459
+00:24:39,840 --> 00:24:41,820
+using incompatible geometries.
+
+460
+00:24:42,180 --> 00:24:44,200
+So they aren't disagreeing on the solution to the problem.
+
+461
+00:24:44,320 --> 00:24:46,640
+They are disagreeing on what the problem actually is,
+
+462
+00:24:46,700 --> 00:24:49,740
+because their maps of reality don't overlap at all.
+
+463
+00:24:49,880 --> 00:24:50,300
+Exactly.
+
+464
+00:24:50,480 --> 00:24:52,540
+Let's say they are debating a housing crisis.
+
+465
+00:24:53,380 --> 00:24:57,620
+A developer's map says the problem is zoning regulations stopping supply.
+
+466
+00:24:58,140 --> 00:25:02,160
+A local tenant's map says the problem is predatory corporate landlords.
+
+467
+00:25:02,160 --> 00:25:07,480
+An environmentalist's map says the problem is urban sprawl destroying wetlands.
+
+468
+00:25:07,880 --> 00:25:09,740
+And they are all experiencing the housing crisis,
+
+469
+00:25:10,080 --> 00:25:12,940
+but they are trying to shout instructions to the helmsman
+
+470
+00:25:12,940 --> 00:25:15,200
+using completely different coordinate systems.
+
+471
+00:25:15,480 --> 00:25:19,360
+But this raises a really daunting question for you, the listener, and for me.
+
+472
+00:25:20,060 --> 00:25:23,560
+If we are all operating in these different semantic coordinate systems,
+
+473
+00:25:23,800 --> 00:25:28,640
+if the lawyer and the scientist and the citizen literally categorize reality differently,
+
+474
+00:25:28,640 --> 00:25:32,220
+how do we ever agree on what the actual state of the world is?
+
+475
+00:25:32,320 --> 00:25:33,500
+It's a huge challenge.
+
+476
+00:25:33,860 --> 00:25:38,360
+Don't we just end up talking past each other forever until the system collapses?
+
+477
+00:25:38,740 --> 00:25:43,680
+We absolutely would if we demanded perfect, permanent, conceptual uniformity.
+
+478
+00:25:43,940 --> 00:25:47,160
+If we demanded that everyone see the world exactly the same way,
+
+479
+00:25:47,520 --> 00:25:49,100
+society would fracture instantly.
+
+480
+00:25:49,360 --> 00:25:49,660
+Right.
+
+481
+00:25:50,020 --> 00:25:53,180
+But the Babel Protocol isn't about making everyone think the same way.
+
+482
+00:25:53,280 --> 00:25:56,420
+It's about achieving semantic interoperability.
+
+483
+00:25:56,620 --> 00:25:57,820
+Semantic interoperability.
+
+484
+00:25:57,820 --> 00:26:01,900
+You don't need the citizen to become a trained macroeconomist,
+
+485
+00:26:01,940 --> 00:26:04,460
+and you don't need the environmental lawyer to become an architect.
+
+486
+00:26:04,740 --> 00:26:08,900
+You just need to build a temporary bridge, a shared estimation space,
+
+487
+00:26:09,100 --> 00:26:13,680
+where the citizen's lived experience of poverty can be translated into data
+
+488
+00:26:13,680 --> 00:26:16,160
+the economist can actually plug into their model.
+
+489
+00:26:16,520 --> 00:26:19,120
+And the economist model can be translated into a policy
+
+490
+00:26:19,120 --> 00:26:21,300
+that actually relieves the citizen's anxiety.
+
+491
+00:26:21,700 --> 00:26:22,000
+Yes.
+
+492
+00:26:22,000 --> 00:26:27,400
+It's a constant, messy, exhausting, ongoing negotiation of temporary standards.
+
+493
+00:26:27,820 --> 00:26:33,920
+When that negotiation fails, the distributed estimation network fragments into isolated echo chambers.
+
+494
+00:26:34,080 --> 00:26:37,700
+And the central government entirely loses the ability to act coherently.
+
+495
+00:26:37,840 --> 00:26:38,240
+Precisely.
+
+496
+00:26:38,240 --> 00:26:43,840
+Okay, so before we can steer the ship, we have to agree on a temporary map that we can all read.
+
+497
+00:26:44,320 --> 00:26:49,020
+But in human society, the government isn't just reading a map that was handed to it by God.
+
+498
+00:26:49,420 --> 00:26:52,620
+The government is drawing the map while it sails the ship.
+
+499
+00:26:52,800 --> 00:26:53,060
+Right.
+
+500
+00:26:53,060 --> 00:26:58,320
+Which takes us into how the government decides what is even worth measuring in the first place.
+
+501
+00:26:58,320 --> 00:27:01,320
+This gets into the deep epistemology of government.
+
+502
+00:27:01,820 --> 00:27:04,580
+We just talked about how different observers use different maps,
+
+503
+00:27:04,820 --> 00:27:09,060
+but who decides what goes on the official map that the central controller uses?
+
+504
+00:27:09,320 --> 00:27:09,460
+Right.
+
+505
+00:27:10,040 --> 00:27:12,540
+Flyxion points out that the variables a government tracks,
+
+506
+00:27:12,660 --> 00:27:16,640
+things like unemployment, inflation, mental illness, or poverty,
+
+507
+00:27:16,640 --> 00:27:20,460
+are not natural facts just waiting out in the wild to be discovered,
+
+508
+00:27:20,740 --> 00:27:24,160
+like a new species of bird or a rock formation.
+
+509
+00:27:24,280 --> 00:27:25,980
+They are representational constructs.
+
+510
+00:27:26,020 --> 00:27:27,440
+They are invented categories.
+
+511
+00:27:27,600 --> 00:27:30,380
+The text cites the friend philosopher Michel Foucault here,
+
+512
+00:27:30,760 --> 00:27:32,960
+specifically his history of psychiatry.
+
+513
+00:27:32,960 --> 00:27:34,660
+Which I think is a brilliant connection.
+
+514
+00:27:35,660 --> 00:27:39,120
+Foucault argued that the way we classify madness or mental illness
+
+515
+00:27:39,120 --> 00:27:43,140
+isn't just a purely objective, neutral scientific discovery.
+
+516
+00:27:43,680 --> 00:27:47,620
+The category of mental illness was created by human institutions.
+
+517
+00:27:47,880 --> 00:27:51,220
+By the medical establishment, the legal system, public administration.
+
+518
+00:27:51,660 --> 00:27:51,860
+Right.
+
+519
+00:27:52,220 --> 00:27:54,200
+And once you invent a category like that,
+
+520
+00:27:54,260 --> 00:27:55,940
+and once you put it on the official map,
+
+521
+00:27:56,300 --> 00:27:59,640
+it completely alters the cybernetic control loop of society.
+
+522
+00:27:59,880 --> 00:28:02,480
+You start building specialized asylums and hospitals.
+
+523
+00:28:02,860 --> 00:28:05,020
+You pass laws about who can be committed.
+
+524
+00:28:05,500 --> 00:28:07,520
+You redirect billions of dollars in funding.
+
+525
+00:28:07,520 --> 00:28:10,060
+The category creates a new reality.
+
+526
+00:28:10,380 --> 00:28:12,120
+Let's look at an even more universal example.
+
+527
+00:28:12,820 --> 00:28:13,300
+Unemployment.
+
+528
+00:28:13,440 --> 00:28:14,160
+That's a great one.
+
+529
+00:28:14,260 --> 00:28:16,560
+Before the late 19th and early 20th centuries,
+
+530
+00:28:17,080 --> 00:28:22,580
+the concept of unemployment as a standardized, measurable, statistical category
+
+531
+00:28:22,580 --> 00:28:25,220
+didn't really exist in the way we think of it today.
+
+532
+00:28:25,360 --> 00:28:28,740
+People were poor, or they were itinerant, or they were idle,
+
+533
+00:28:29,000 --> 00:28:32,940
+but the government didn't have a monthly unemployment rate dashboard on CNN.
+
+534
+00:28:33,420 --> 00:28:35,960
+Because it wasn't formalized as a state variable,
+
+535
+00:28:35,960 --> 00:28:37,920
+governments didn't try to control it.
+
+536
+00:28:38,320 --> 00:28:42,640
+If you were out of work, it was a local, moral failing, or just bad luck.
+
+537
+00:28:42,640 --> 00:28:45,880
+But once the government formalized the category of unemployment,
+
+538
+00:28:46,800 --> 00:28:50,440
+it fundamentally changed the state space of governance.
+
+539
+00:28:50,980 --> 00:28:52,280
+It became a target for policy?
+
+540
+00:28:52,280 --> 00:28:52,760
+Yes.
+
+541
+00:28:53,320 --> 00:28:55,840
+The government began tracking it, estimating it,
+
+542
+00:28:55,960 --> 00:29:00,000
+and passing sweeping macroeconomic controls to manipulate it.
+
+543
+00:29:00,560 --> 00:29:04,180
+The government is continually constructing the coordinate system
+
+544
+00:29:04,180 --> 00:29:06,560
+through which society becomes observable.
+
+545
+00:29:06,780 --> 00:29:09,580
+So, we build the map, we invent the categories,
+
+546
+00:29:09,780 --> 00:29:11,220
+and we gather the messy data.
+
+547
+00:29:11,620 --> 00:29:12,440
+We turn the wheel.
+
+548
+00:29:12,980 --> 00:29:15,940
+But how do we know if our steering is actually working?
+
+549
+00:29:16,400 --> 00:29:19,900
+How do we measure the actual strength or capacity of the government
+
+550
+00:29:19,900 --> 00:29:21,140
+to act in a crisis?
+
+551
+00:29:21,140 --> 00:29:23,800
+This is where we get to fiscal reachability.
+
+552
+00:29:24,000 --> 00:29:24,200
+Yes.
+
+553
+00:29:24,500 --> 00:29:27,380
+This is where I encountered the concept of fiscal reachability,
+
+554
+00:29:27,540 --> 00:29:30,220
+and it completely blew up my understanding of economics.
+
+555
+00:29:30,480 --> 00:29:30,860
+I agree.
+
+556
+00:29:30,960 --> 00:29:33,040
+It is a totally paradigm-shifting concept.
+
+557
+00:29:33,340 --> 00:29:36,040
+Traditional economics usually evaluates the health of a government
+
+558
+00:29:36,040 --> 00:29:38,800
+by looking at isolated, instantaneous states.
+
+559
+00:29:39,060 --> 00:29:41,300
+Like, a pundit will go on television and ask,
+
+560
+00:29:41,660 --> 00:29:43,060
+what is the current budget deficit?
+
+561
+00:29:43,440 --> 00:29:46,380
+What is the national debt-to-GDP ratio right this second?
+
+562
+00:29:46,680 --> 00:29:48,120
+What is the inflation rate this month?
+
+563
+00:29:48,120 --> 00:29:49,300
+They look at a snapshot.
+
+564
+00:29:50,200 --> 00:29:53,180
+But control theory tells us that looking at a single point in time
+
+565
+00:29:53,180 --> 00:29:57,200
+is essentially useless for understanding the resilience of a dynamic system.
+
+566
+00:29:57,200 --> 00:29:58,740
+So, what should we be looking at?
+
+567
+00:29:59,140 --> 00:30:02,340
+You have to look at the volume of future states a government can reach
+
+568
+00:30:02,340 --> 00:30:04,480
+without exhausting its control authority.
+
+569
+00:30:05,100 --> 00:30:08,900
+That mathematical volume of possibilities is fiscal reachability.
+
+570
+00:30:08,900 --> 00:30:10,900
+Let me bring back the airplane analogy,
+
+571
+00:30:11,100 --> 00:30:14,100
+because when I mapped fiscal reachability onto aviation,
+
+572
+00:30:14,720 --> 00:30:16,240
+it instantly clicked for me.
+
+573
+00:30:16,360 --> 00:30:16,980
+Let's hear it.
+
+574
+00:30:17,360 --> 00:30:22,320
+Imagine two passenger airplanes flying side-by-side at 1,000 feet,
+
+575
+00:30:22,880 --> 00:30:25,740
+both traveling at exactly 500 miles an hour.
+
+576
+00:30:26,460 --> 00:30:28,940
+If you just look at their isolated state,
+
+577
+00:30:29,420 --> 00:30:30,780
+their altitude, and their speed,
+
+578
+00:30:31,220 --> 00:30:32,000
+they look identical.
+
+579
+00:30:32,220 --> 00:30:33,280
+They're perfectly matched.
+
+580
+00:30:33,340 --> 00:30:33,580
+Right.
+
+581
+00:30:33,580 --> 00:30:36,920
+This is like looking at two nations that both have a GDP of $2 trillion
+
+582
+00:30:36,920 --> 00:30:39,720
+and a debt-to-GDP ratio of 80%.
+
+583
+00:30:39,720 --> 00:30:41,280
+On paper, they are identical.
+
+584
+00:30:41,420 --> 00:30:41,760
+Exactly.
+
+585
+00:30:42,200 --> 00:30:43,600
+But, if you look closer,
+
+586
+00:30:44,140 --> 00:30:44,820
+under the hood,
+
+587
+00:30:45,240 --> 00:30:47,400
+plane A has completely full fuel tanks,
+
+588
+00:30:47,760 --> 00:30:48,780
+a well-rested crew,
+
+589
+00:30:49,260 --> 00:30:50,600
+fully functioning hydraulics,
+
+590
+00:30:50,760 --> 00:30:52,420
+and strong structural integrity.
+
+591
+00:30:52,800 --> 00:30:53,620
+Plane B, however,
+
+592
+00:30:53,820 --> 00:30:54,980
+is running on fumes,
+
+593
+00:30:55,440 --> 00:30:56,560
+the flaps are jammed,
+
+594
+00:30:56,800 --> 00:30:58,260
+the co-pilot is exhausted,
+
+595
+00:30:58,260 --> 00:31:01,440
+and there's a slow-burning electrical fire in the cargo hold.
+
+596
+00:31:01,680 --> 00:31:02,020
+Yikes.
+
+597
+00:31:02,180 --> 00:31:05,640
+Plane B might be cruising comfortably at 30,000 feet right now,
+
+598
+00:31:05,760 --> 00:31:11,040
+but its reachable set of future trajectories is basically just straight down.
+
+599
+00:31:11,400 --> 00:31:13,720
+Plane A has a massive reachable set.
+
+600
+00:31:13,860 --> 00:31:17,060
+It can decide to fly to Paris or Tokyo or New York.
+
+601
+00:31:17,180 --> 00:31:18,940
+It can climb to avoid a storm.
+
+602
+00:31:19,120 --> 00:31:21,740
+While plane B has exhausted its control authority,
+
+603
+00:31:22,100 --> 00:31:24,060
+it is fundamentally crashing,
+
+604
+00:31:24,360 --> 00:31:26,220
+even though the altitude gauge hasn't moved yet.
+
+605
+00:31:26,400 --> 00:31:28,000
+That is precisely the difference.
+
+606
+00:31:28,000 --> 00:31:30,920
+Plane B is experiencing actuator saturation.
+
+607
+00:31:31,260 --> 00:31:33,780
+Its steering wheel no longer controls the rudder.
+
+608
+00:31:34,460 --> 00:31:35,940
+So, when we evaluate a government,
+
+609
+00:31:36,080 --> 00:31:37,760
+we shouldn't just look at a spreadsheet and ask,
+
+610
+00:31:37,860 --> 00:31:39,020
+is the budget balanced today?
+
+611
+00:31:39,100 --> 00:31:39,900
+We should be asking,
+
+612
+00:31:40,420 --> 00:31:42,380
+how many admissible future trajectories
+
+613
+00:31:42,380 --> 00:31:44,440
+does this government still have access to?
+
+614
+00:31:44,760 --> 00:31:47,240
+Basically, what are our options if things go wrong?
+
+615
+00:31:47,360 --> 00:31:47,740
+Exactly.
+
+616
+00:31:47,920 --> 00:31:50,220
+If a massive, unpredictable crisis hits tomorrow,
+
+617
+00:31:50,560 --> 00:31:52,440
+a new pandemic, a global war,
+
+618
+00:31:52,860 --> 00:31:54,820
+a catastrophic financial collapse,
+
+619
+00:31:55,340 --> 00:31:57,740
+does this government have the administrative capacity
+
+620
+00:31:57,740 --> 00:31:58,500
+to respond?
+
+621
+00:31:58,500 --> 00:32:01,220
+Does it have the public trust required
+
+622
+00:32:01,220 --> 00:32:03,520
+to ask citizens to make sacrifices?
+
+623
+00:32:03,520 --> 00:32:06,800
+Does it have the borrowing power in international markets?
+
+624
+00:32:07,120 --> 00:32:09,920
+Does it have the legal flexibility to maneuver?
+
+625
+00:32:10,600 --> 00:32:11,800
+Or is it like Plane B,
+
+626
+00:32:12,100 --> 00:32:15,100
+where every resource is already tapped out
+
+627
+00:32:15,100 --> 00:32:17,760
+just to maintain the illusion of level flight?
+
+628
+00:32:17,760 --> 00:32:20,380
+This totally flips the traditional political debate
+
+629
+00:32:20,380 --> 00:32:22,640
+on austerity versus government spending.
+
+630
+00:32:23,140 --> 00:32:25,360
+I feel like we've been having the wrong argument for decades.
+
+631
+00:32:25,540 --> 00:32:26,220
+We really have.
+
+632
+00:32:26,580 --> 00:32:27,860
+Austerity cutting budgets,
+
+633
+00:32:28,340 --> 00:32:30,340
+slashing services to balance the books,
+
+634
+00:32:30,540 --> 00:32:33,020
+is usually framed in political speeches
+
+635
+00:32:33,020 --> 00:32:34,540
+as a moral virtue.
+
+636
+00:32:35,020 --> 00:32:37,540
+It's talked about like a household tightening its belt
+
+637
+00:32:37,540 --> 00:32:38,360
+to be responsible.
+
+638
+00:32:38,600 --> 00:32:39,300
+And on the flip side,
+
+639
+00:32:39,460 --> 00:32:40,680
+strategic government borrowing
+
+640
+00:32:40,680 --> 00:32:42,500
+is framed as an economic stimulus,
+
+641
+00:32:42,840 --> 00:32:44,200
+putting money in people's pockets.
+
+642
+00:32:44,200 --> 00:32:46,740
+But under the lens of constitutional cybernetics,
+
+643
+00:32:47,080 --> 00:32:48,680
+neither of these are moral choices.
+
+644
+00:32:49,440 --> 00:32:51,320
+They are purely mathematical maneuvers
+
+645
+00:32:51,320 --> 00:32:53,440
+to either expand or preserve
+
+646
+00:32:53,440 --> 00:32:55,280
+future admissible trajectories.
+
+647
+00:32:55,400 --> 00:32:56,020
+Yes, exactly.
+
+648
+00:32:56,060 --> 00:32:58,620
+If a government enforces brutal austerity,
+
+649
+00:32:58,980 --> 00:33:00,080
+and in the process,
+
+650
+00:33:00,340 --> 00:33:02,000
+they destroy their physical infrastructure,
+
+651
+00:33:02,560 --> 00:33:03,800
+let their bridges collapse,
+
+652
+00:33:04,180 --> 00:33:05,660
+and gut their education system,
+
+653
+00:33:05,960 --> 00:33:07,500
+they are drastically shrinking
+
+654
+00:33:07,500 --> 00:33:09,140
+their future reachable states.
+
+655
+00:33:09,440 --> 00:33:11,400
+Because a population that isn't educated
+
+656
+00:33:11,400 --> 00:33:13,460
+can't pivot to a new tech economy.
+
+657
+00:33:13,940 --> 00:33:16,040
+They might have a beautifully balanced budget
+
+658
+00:33:16,040 --> 00:33:17,080
+and zero debt,
+
+659
+00:33:17,180 --> 00:33:19,120
+but their future options are gone.
+
+660
+00:33:19,500 --> 00:33:20,060
+Cardversely,
+
+661
+00:33:20,400 --> 00:33:22,620
+if a government borrows a massive amount of money
+
+662
+00:33:22,620 --> 00:33:23,760
+to build resilient,
+
+663
+00:33:24,240 --> 00:33:25,640
+next-generation infrastructure
+
+664
+00:33:25,640 --> 00:33:26,980
+and green energy grids,
+
+665
+00:33:27,220 --> 00:33:28,560
+they might look irresponsible
+
+666
+00:33:28,560 --> 00:33:29,860
+on today's balance sheet.
+
+667
+00:33:29,960 --> 00:33:31,560
+But they are massively expanding
+
+668
+00:33:31,560 --> 00:33:33,140
+their future maneuverability
+
+669
+00:33:33,140 --> 00:33:34,600
+when climate shocks hit.
+
+670
+00:33:34,600 --> 00:33:35,860
+You've perfectly captured
+
+671
+00:33:35,860 --> 00:33:37,820
+the cybernetic view of fiscal policy.
+
+672
+00:33:38,320 --> 00:33:39,260
+A government collapses
+
+673
+00:33:39,260 --> 00:33:41,440
+when its reachable set contracts to zero.
+
+674
+00:33:42,000 --> 00:33:43,540
+It simply runs out of options.
+
+675
+00:33:43,860 --> 00:33:44,420
+It doesn't matter
+
+676
+00:33:44,420 --> 00:33:46,120
+if its current economic indicators
+
+677
+00:33:46,120 --> 00:33:48,080
+look fine to the pundits on TV.
+
+678
+00:33:48,680 --> 00:33:50,240
+If every resource is tapped out,
+
+679
+00:33:50,340 --> 00:33:52,260
+if public trust is completely eroded,
+
+680
+00:33:52,660 --> 00:33:54,380
+and if institutional capability
+
+681
+00:33:54,380 --> 00:33:55,380
+has rusted away,
+
+682
+00:33:55,740 --> 00:33:57,460
+the slightest external disturbance
+
+683
+00:33:57,460 --> 00:33:58,460
+will push the system
+
+684
+00:33:58,460 --> 00:34:00,140
+outside the admissible manifold
+
+685
+00:34:00,140 --> 00:34:01,560
+and the society will fracture.
+
+686
+00:34:01,900 --> 00:34:03,520
+Which brings us to the ultimate
+
+687
+00:34:03,520 --> 00:34:05,220
+structural backstop
+
+688
+00:34:05,220 --> 00:34:06,540
+of this entire system.
+
+689
+00:34:06,540 --> 00:34:08,960
+How do we prevent the helmsman
+
+690
+00:34:08,960 --> 00:34:11,120
+from intentionally or accidentally
+
+691
+00:34:11,120 --> 00:34:13,040
+driving us into a state
+
+692
+00:34:13,040 --> 00:34:14,400
+of zero options?
+
+693
+00:34:14,700 --> 00:34:14,820
+Right.
+
+694
+00:34:15,080 --> 00:34:15,940
+Because if the government
+
+695
+00:34:15,940 --> 00:34:17,100
+is this massive,
+
+696
+00:34:17,600 --> 00:34:18,940
+powerful control loop,
+
+697
+00:34:19,560 --> 00:34:20,760
+constantly steering,
+
+698
+00:34:20,980 --> 00:34:22,680
+reallocating billions of dollars
+
+699
+00:34:22,680 --> 00:34:24,640
+and constructing the map of reality,
+
+700
+00:34:25,100 --> 00:34:27,540
+what stops it from overcorrecting?
+
+701
+00:34:27,880 --> 00:34:29,540
+What stops a panicked helmsman
+
+702
+00:34:29,540 --> 00:34:30,840
+from spinning the wheel
+
+703
+00:34:30,840 --> 00:34:32,340
+so hard and so fast
+
+704
+00:34:32,340 --> 00:34:33,460
+that they rip the rudder
+
+705
+00:34:33,460 --> 00:34:34,220
+right off the ship
+
+706
+00:34:34,220 --> 00:34:35,180
+and drown everyone?
+
+707
+00:34:35,180 --> 00:34:36,660
+In physical control engineering,
+
+708
+00:34:36,880 --> 00:34:38,040
+every system has strict,
+
+709
+00:34:38,240 --> 00:34:39,760
+unforgiving operational limits.
+
+710
+00:34:40,360 --> 00:34:41,260
+An airplane has
+
+711
+00:34:41,260 --> 00:34:42,220
+structural load limits.
+
+712
+00:34:42,600 --> 00:34:43,780
+You can pull back on the yoke
+
+713
+00:34:43,780 --> 00:34:44,600
+as hard as you want,
+
+714
+00:34:44,680 --> 00:34:46,100
+but if you pull too many Gs,
+
+715
+00:34:46,220 --> 00:34:47,040
+the physical wings
+
+716
+00:34:47,040 --> 00:34:49,140
+will simply snap off the fuselage.
+
+717
+00:34:49,180 --> 00:34:50,060
+And a nuclear reactor
+
+718
+00:34:50,060 --> 00:34:51,080
+has thermal limits.
+
+719
+00:34:51,300 --> 00:34:52,160
+Push it too hot,
+
+720
+00:34:52,740 --> 00:34:53,720
+and it melts down.
+
+721
+00:34:53,900 --> 00:34:54,860
+These limits aren't goals
+
+722
+00:34:54,860 --> 00:34:56,080
+that the system is trying to achieve.
+
+723
+00:34:56,200 --> 00:34:57,800
+They are invariant constraints.
+
+724
+00:34:58,340 --> 00:34:59,180
+You can fly the plane
+
+725
+00:34:59,180 --> 00:35:00,160
+anywhere you want
+
+726
+00:35:00,160 --> 00:35:01,300
+as long as you don't exceed
+
+727
+00:35:01,300 --> 00:35:02,200
+the structural limits
+
+728
+00:35:02,200 --> 00:35:02,900
+of the airframe.
+
+729
+00:35:02,900 --> 00:35:04,380
+Flyxion proposes
+
+730
+00:35:04,380 --> 00:35:05,600
+a radical idea here.
+
+731
+00:35:05,760 --> 00:35:07,200
+A constitution is the exact
+
+732
+00:35:07,200 --> 00:35:08,480
+same mathematical object
+
+733
+00:35:08,480 --> 00:35:09,640
+for a human society.
+
+734
+00:35:09,640 --> 00:35:11,740
+So a constitution isn't just
+
+735
+00:35:11,740 --> 00:35:13,820
+a sacred historical document
+
+736
+00:35:13,820 --> 00:35:14,800
+written on parchment
+
+737
+00:35:14,800 --> 00:35:15,660
+by our ancestors.
+
+738
+00:35:15,880 --> 00:35:17,420
+It's not just a social contract.
+
+739
+00:35:17,860 --> 00:35:18,520
+In this theory,
+
+740
+00:35:18,660 --> 00:35:20,240
+it's an invariant manifold.
+
+741
+00:35:20,680 --> 00:35:21,740
+Mathematically defining
+
+742
+00:35:21,740 --> 00:35:23,500
+the absolute structural limits
+
+743
+00:35:23,500 --> 00:35:25,160
+within which all control laws
+
+744
+00:35:25,160 --> 00:35:26,680
+must operate
+
+745
+00:35:26,680 --> 00:35:27,720
+to prevent the system
+
+746
+00:35:27,720 --> 00:35:28,800
+from destroying itself.
+
+747
+00:35:28,940 --> 00:35:29,320
+Correct.
+
+748
+00:35:29,320 --> 00:35:31,580
+Ordinary, everyday laws
+
+749
+00:35:31,580 --> 00:35:32,880
+like tax codes,
+
+750
+00:35:33,020 --> 00:35:33,640
+speed limits,
+
+751
+00:35:33,740 --> 00:35:35,040
+or environmental regulations
+
+752
+00:35:35,040 --> 00:35:36,560
+are just localized
+
+753
+00:35:36,560 --> 00:35:37,620
+control actions
+
+754
+00:35:37,620 --> 00:35:38,320
+taking place
+
+755
+00:35:38,320 --> 00:35:39,380
+inside the allowed
+
+756
+00:35:39,380 --> 00:35:40,320
+safe space.
+
+757
+00:35:40,320 --> 00:35:41,540
+But the constitution
+
+758
+00:35:41,540 --> 00:35:43,240
+defines the rigid boundaries
+
+759
+00:35:43,240 --> 00:35:44,640
+of the space itself.
+
+760
+00:35:44,760 --> 00:35:45,040
+It says,
+
+761
+00:35:45,520 --> 00:35:47,160
+you cannot steer past this point
+
+762
+00:35:47,160 --> 00:35:48,140
+or the wings come off.
+
+763
+00:35:48,200 --> 00:35:48,700
+Exactly.
+
+764
+00:35:49,100 --> 00:35:50,200
+And this leads to
+
+765
+00:35:50,200 --> 00:35:50,940
+what I think
+
+766
+00:35:50,940 --> 00:35:52,200
+is the most provocative part
+
+767
+00:35:52,200 --> 00:35:53,140
+of the entire monograph.
+
+768
+00:35:53,780 --> 00:35:55,220
+It's a completely wild
+
+769
+00:35:55,220 --> 00:35:56,140
+reinterpretation
+
+770
+00:35:56,140 --> 00:35:56,760
+of human rights.
+
+771
+00:35:57,000 --> 00:35:57,820
+It really challenges
+
+772
+00:35:57,820 --> 00:35:59,160
+how we talk about rights.
+
+773
+00:35:59,460 --> 00:36:00,100
+Because usually
+
+774
+00:36:00,100 --> 00:36:01,220
+when we talk about human rights,
+
+775
+00:36:01,280 --> 00:36:02,520
+we use one of two frameworks.
+
+776
+00:36:03,080 --> 00:36:04,440
+We say rights are natural,
+
+777
+00:36:04,860 --> 00:36:06,100
+God-given moral entitlement
+
+778
+00:36:06,100 --> 00:36:06,840
+that you possess
+
+779
+00:36:06,840 --> 00:36:08,420
+just by being born human.
+
+780
+00:36:08,560 --> 00:36:08,900
+Or,
+
+781
+00:36:09,080 --> 00:36:10,380
+if we are more legally minded,
+
+782
+00:36:10,780 --> 00:36:11,960
+we say they are civic gifts
+
+783
+00:36:11,960 --> 00:36:12,920
+granted by the state.
+
+784
+00:36:13,240 --> 00:36:14,180
+But Flyxion says
+
+785
+00:36:14,180 --> 00:36:14,860
+human rights
+
+786
+00:36:14,860 --> 00:36:16,500
+are invariant constraints
+
+787
+00:36:16,500 --> 00:36:17,920
+specifically designed
+
+788
+00:36:17,920 --> 00:36:18,480
+to protect
+
+789
+00:36:18,480 --> 00:36:20,040
+the distributed observer network.
+
+790
+00:36:20,340 --> 00:36:20,640
+Yes.
+
+791
+00:36:21,300 --> 00:36:22,060
+Let's look at
+
+792
+00:36:22,060 --> 00:36:23,140
+some specific rights
+
+793
+00:36:23,140 --> 00:36:24,980
+through this cybernetic lens
+
+794
+00:36:24,980 --> 00:36:25,620
+because I want to see
+
+795
+00:36:25,620 --> 00:36:26,280
+if this holds up.
+
+796
+00:36:26,640 --> 00:36:27,540
+Let's start with
+
+797
+00:36:27,540 --> 00:36:28,480
+freedom of speech.
+
+798
+00:36:28,480 --> 00:36:29,720
+Under this framework,
+
+799
+00:36:29,900 --> 00:36:30,760
+freedom of speech
+
+800
+00:36:30,760 --> 00:36:32,440
+isn't just an abstract
+
+801
+00:36:32,440 --> 00:36:33,700
+philosophical liberty
+
+802
+00:36:33,700 --> 00:36:34,820
+to express yourself.
+
+803
+00:36:35,120 --> 00:36:36,200
+It is the core
+
+804
+00:36:36,200 --> 00:36:37,500
+mechanical mechanism
+
+805
+00:36:37,500 --> 00:36:38,320
+that preserves
+
+806
+00:36:38,320 --> 00:36:39,040
+the transmission
+
+807
+00:36:39,040 --> 00:36:40,000
+of vital data
+
+808
+00:36:40,000 --> 00:36:41,040
+throughout the entire
+
+809
+00:36:41,040 --> 00:36:42,020
+estimation network.
+
+810
+00:36:42,080 --> 00:36:42,320
+Right.
+
+811
+00:36:42,500 --> 00:36:43,580
+If you restrict speech,
+
+812
+00:36:44,200 --> 00:36:45,400
+the localized censors,
+
+813
+00:36:45,580 --> 00:36:46,040
+the citizens,
+
+814
+00:36:46,380 --> 00:36:46,820
+the journalists,
+
+815
+00:36:46,960 --> 00:36:47,400
+the scientists,
+
+816
+00:36:47,900 --> 00:36:48,860
+cannot send their data
+
+817
+00:36:48,860 --> 00:36:50,080
+back to the central controller.
+
+818
+00:36:50,300 --> 00:36:51,560
+The state goes blind.
+
+819
+00:36:51,700 --> 00:36:52,140
+Exactly.
+
+820
+00:36:52,140 --> 00:36:53,300
+What about due process?
+
+821
+00:36:53,940 --> 00:36:55,200
+The right to a fair trial,
+
+822
+00:36:55,420 --> 00:36:55,860
+a jury,
+
+823
+00:36:56,300 --> 00:36:57,160
+a defense attorney?
+
+824
+00:36:57,360 --> 00:36:58,480
+Due process acts
+
+825
+00:36:58,480 --> 00:37:00,720
+as a required structural constraint
+
+826
+00:37:00,720 --> 00:37:02,780
+on irreversible control actions.
+
+827
+00:37:02,920 --> 00:37:04,280
+Explain what an irreversible
+
+828
+00:37:04,280 --> 00:37:05,380
+control action is.
+
+829
+00:37:05,680 --> 00:37:06,440
+When the government
+
+830
+00:37:06,440 --> 00:37:07,640
+coerces someone,
+
+831
+00:37:08,040 --> 00:37:09,100
+when it locks a citizen
+
+832
+00:37:09,100 --> 00:37:10,020
+in a prison cell
+
+833
+00:37:10,020 --> 00:37:11,080
+or executes them
+
+834
+00:37:11,080 --> 00:37:12,340
+or seizes their property,
+
+835
+00:37:12,520 --> 00:37:13,740
+that is a massive,
+
+836
+00:37:13,940 --> 00:37:14,660
+highly localized
+
+837
+00:37:14,660 --> 00:37:15,580
+control action.
+
+838
+00:37:15,620 --> 00:37:16,760
+And you can't undo it easily.
+
+839
+00:37:17,160 --> 00:37:17,440
+Right.
+
+840
+00:37:18,020 --> 00:37:19,440
+Due process introduces
+
+841
+00:37:19,440 --> 00:37:21,480
+a mandatory algorithmic delay
+
+842
+00:37:21,480 --> 00:37:22,920
+and a multi-stage
+
+843
+00:37:22,920 --> 00:37:24,060
+verification step
+
+844
+00:37:24,060 --> 00:37:24,760
+to ensure that
+
+845
+00:37:24,760 --> 00:37:25,620
+the state's estimate
+
+846
+00:37:25,620 --> 00:37:26,300
+of reality,
+
+847
+00:37:26,980 --> 00:37:27,900
+basically their belief
+
+848
+00:37:27,900 --> 00:37:28,400
+that this person
+
+849
+00:37:28,400 --> 00:37:29,040
+committed a crime,
+
+850
+00:37:29,380 --> 00:37:30,700
+is actually accurate
+
+851
+00:37:30,700 --> 00:37:31,380
+before the government
+
+852
+00:37:31,380 --> 00:37:32,520
+is allowed to apply
+
+853
+00:37:32,520 --> 00:37:33,720
+irreversible force.
+
+854
+00:37:33,940 --> 00:37:34,900
+Let me try to deduce
+
+855
+00:37:34,900 --> 00:37:35,380
+another one.
+
+856
+00:37:35,520 --> 00:37:35,980
+Privacy.
+
+857
+00:37:36,780 --> 00:37:38,020
+The right to be secure
+
+858
+00:37:38,020 --> 00:37:39,020
+in your papers,
+
+859
+00:37:39,180 --> 00:37:39,580
+your home,
+
+860
+00:37:39,660 --> 00:37:40,480
+your digital data.
+
+861
+00:37:40,560 --> 00:37:40,940
+Go for it.
+
+862
+00:37:41,340 --> 00:37:42,120
+If the government
+
+863
+00:37:42,120 --> 00:37:42,920
+needs data
+
+864
+00:37:42,920 --> 00:37:43,840
+to steer the ship,
+
+865
+00:37:44,500 --> 00:37:45,240
+shouldn't it theoretically
+
+866
+00:37:45,240 --> 00:37:45,980
+want all the data?
+
+867
+00:37:46,680 --> 00:37:47,480
+Total surveillance.
+
+868
+00:37:48,480 --> 00:37:48,980
+But wait.
+
+869
+00:37:48,980 --> 00:37:50,020
+If privacy is
+
+870
+00:37:50,020 --> 00:37:50,800
+a fundamental right,
+
+871
+00:37:50,920 --> 00:37:51,540
+it must serve
+
+872
+00:37:51,540 --> 00:37:52,460
+a control function.
+
+873
+00:37:53,400 --> 00:37:53,900
+Is privacy
+
+874
+00:37:53,900 --> 00:37:54,580
+about preventing
+
+875
+00:37:54,580 --> 00:37:55,040
+the center
+
+876
+00:37:55,040 --> 00:37:55,720
+from overwhelming
+
+877
+00:37:55,720 --> 00:37:56,560
+the local nodes?
+
+878
+00:37:56,820 --> 00:37:57,340
+You hit the nail
+
+879
+00:37:57,340 --> 00:37:57,760
+on the head.
+
+880
+00:37:57,940 --> 00:37:58,880
+If the central controller
+
+881
+00:37:58,880 --> 00:37:59,760
+tries to perfectly
+
+882
+00:37:59,760 --> 00:38:00,500
+micromanage
+
+883
+00:38:00,500 --> 00:38:01,380
+every single aspect
+
+884
+00:38:01,380 --> 00:38:02,000
+of society,
+
+885
+00:38:02,140 --> 00:38:02,680
+it will suffer
+
+886
+00:38:02,680 --> 00:38:03,420
+from computational
+
+887
+00:38:03,420 --> 00:38:04,620
+explosion and collapse.
+
+888
+00:38:04,760 --> 00:38:05,260
+So privacy
+
+889
+00:38:05,260 --> 00:38:06,220
+acts as a barrier
+
+890
+00:38:06,220 --> 00:38:06,900
+that prevents
+
+891
+00:38:06,900 --> 00:38:07,880
+the central controller
+
+892
+00:38:07,880 --> 00:38:08,780
+from overriding
+
+893
+00:38:08,780 --> 00:38:09,580
+local autonomy.
+
+894
+00:38:09,820 --> 00:38:10,380
+It ensures
+
+895
+00:38:10,380 --> 00:38:11,120
+that not every
+
+896
+00:38:11,120 --> 00:38:12,000
+single aspect
+
+897
+00:38:12,000 --> 00:38:13,320
+of the distributed network
+
+898
+00:38:13,320 --> 00:38:14,540
+is perfectly legible
+
+899
+00:38:14,540 --> 00:38:15,140
+to the center,
+
+900
+00:38:15,500 --> 00:38:16,320
+which preserves
+
+901
+00:38:16,320 --> 00:38:17,100
+the localized,
+
+902
+00:38:17,340 --> 00:38:17,920
+decentralized
+
+903
+00:38:18,980 --> 00:38:20,280
+that is absolutely
+
+904
+00:38:20,280 --> 00:38:21,740
+necessary for complex
+
+905
+00:38:21,740 --> 00:38:22,620
+modern society
+
+906
+00:38:22,620 --> 00:38:23,560
+to function efficiently.
+
+907
+00:38:23,980 --> 00:38:24,700
+Okay, I followed
+
+908
+00:38:24,700 --> 00:38:25,180
+the logic,
+
+909
+00:38:25,580 --> 00:38:26,280
+but I have to plant
+
+910
+00:38:26,280 --> 00:38:27,100
+my flag here
+
+911
+00:38:27,100 --> 00:38:27,560
+and push back
+
+912
+00:38:27,560 --> 00:38:28,280
+hard on this.
+
+913
+00:38:29,140 --> 00:38:30,100
+I'm feeling
+
+914
+00:38:30,100 --> 00:38:31,400
+that unease again,
+
+915
+00:38:31,620 --> 00:38:33,680
+but ten times stronger.
+
+916
+00:38:33,760 --> 00:38:34,220
+I get it.
+
+917
+00:38:34,300 --> 00:38:35,080
+It sounds cold again.
+
+918
+00:38:35,080 --> 00:38:35,880
+This sounds
+
+919
+00:38:35,880 --> 00:38:36,980
+incredibly,
+
+920
+00:38:37,200 --> 00:38:38,680
+profoundly dystopian.
+
+921
+00:38:39,440 --> 00:38:40,040
+Are we really
+
+922
+00:38:40,040 --> 00:38:40,820
+sitting here saying
+
+923
+00:38:40,820 --> 00:38:41,720
+that human rights,
+
+924
+00:38:42,360 --> 00:38:43,240
+the right to exist,
+
+925
+00:38:43,360 --> 00:38:44,020
+the right to speak,
+
+926
+00:38:44,100 --> 00:38:45,000
+the right of a marginalized
+
+927
+00:38:45,000 --> 00:38:46,080
+group to not be
+
+928
+00:38:46,080 --> 00:38:47,440
+oppressed by a tyrant
+
+929
+00:38:47,440 --> 00:38:48,260
+are just
+
+930
+00:38:48,260 --> 00:38:49,440
+computational tools?
+
+931
+00:38:49,560 --> 00:38:50,100
+I know.
+
+932
+00:38:50,220 --> 00:38:50,660
+It sounds like
+
+933
+00:38:50,660 --> 00:38:51,300
+we're stripping away
+
+934
+00:38:51,300 --> 00:38:51,860
+the morality.
+
+935
+00:38:52,200 --> 00:38:53,300
+That minority rights
+
+936
+00:38:53,300 --> 00:38:54,100
+are just a convenient
+
+937
+00:38:54,100 --> 00:38:54,820
+way to keep
+
+938
+00:38:54,820 --> 00:38:55,660
+a math equation
+
+939
+00:38:55,660 --> 00:38:56,140
+balanced.
+
+940
+00:38:56,580 --> 00:38:57,240
+You're telling me
+
+941
+00:38:57,240 --> 00:38:58,120
+that all the blood,
+
+942
+00:38:58,300 --> 00:38:58,980
+sweat, and tears
+
+943
+00:38:58,980 --> 00:38:59,780
+of the civil rights
+
+944
+00:38:59,780 --> 00:39:00,560
+movement was just
+
+945
+00:39:00,560 --> 00:39:01,640
+a fight for a
+
+946
+00:39:01,640 --> 00:39:02,420
+higher dimensional
+
+947
+00:39:02,420 --> 00:39:03,400
+state space.
+
+948
+00:39:04,060 --> 00:39:04,820
+Doesn't this strip
+
+949
+00:39:04,820 --> 00:39:05,480
+the absolute
+
+950
+00:39:05,480 --> 00:39:06,220
+humanity,
+
+951
+00:39:06,480 --> 00:39:06,760
+dignity,
+
+952
+00:39:06,760 --> 00:39:07,580
+and morality
+
+953
+00:39:07,580 --> 00:39:09,000
+out of justice?
+
+954
+00:39:09,620 --> 00:39:10,700
+I cannot accept
+
+955
+00:39:10,700 --> 00:39:11,420
+that human dignity
+
+956
+00:39:11,420 --> 00:39:12,280
+is just a control
+
+957
+00:39:12,280 --> 00:39:12,720
+parameter.
+
+958
+00:39:12,720 --> 00:39:13,500
+That is the most
+
+959
+00:39:13,500 --> 00:39:14,360
+important pushback
+
+960
+00:39:14,360 --> 00:39:14,940
+you could offer,
+
+961
+00:39:15,080 --> 00:39:15,600
+and it's a critique
+
+962
+00:39:15,600 --> 00:39:16,720
+that any control
+
+963
+00:39:16,720 --> 00:39:17,440
+theoretic view
+
+964
+00:39:17,440 --> 00:39:18,000
+of society
+
+965
+00:39:18,000 --> 00:39:18,800
+has to answer.
+
+966
+00:39:19,320 --> 00:39:19,980
+But let's look
+
+967
+00:39:19,980 --> 00:39:20,460
+at what happens
+
+968
+00:39:20,460 --> 00:39:21,740
+when we rely solely
+
+969
+00:39:21,740 --> 00:39:22,980
+on moral arguments
+
+970
+00:39:22,980 --> 00:39:23,820
+for justice.
+
+971
+00:39:23,980 --> 00:39:24,780
+Okay, let's look at it.
+
+972
+00:39:25,020 --> 00:39:25,900
+Classical democratic
+
+973
+00:39:25,900 --> 00:39:26,640
+theory actually
+
+974
+00:39:26,640 --> 00:39:27,660
+struggles deeply
+
+975
+00:39:27,660 --> 00:39:28,360
+with the concept
+
+976
+00:39:28,360 --> 00:39:29,420
+of minority rights.
+
+977
+00:39:30,340 --> 00:39:30,960
+If democracy
+
+978
+00:39:30,960 --> 00:39:31,720
+is just about
+
+979
+00:39:31,720 --> 00:39:32,340
+what the most
+
+980
+00:39:32,340 --> 00:39:33,120
+people want,
+
+981
+00:39:33,560 --> 00:39:34,300
+if it's pure
+
+982
+00:39:34,300 --> 00:39:35,380
+majoritarianism,
+
+983
+00:39:35,840 --> 00:39:36,440
+why shouldn't
+
+984
+00:39:36,440 --> 00:39:37,760
+a 51% majority
+
+985
+00:39:37,760 --> 00:39:38,300
+just be able
+
+986
+00:39:38,300 --> 00:39:38,980
+to vote away
+
+987
+00:39:38,980 --> 00:39:39,440
+the rights
+
+988
+00:39:39,440 --> 00:39:41,020
+of the 49% minority?
+
+989
+00:39:41,260 --> 00:39:41,680
+If the majority
+
+990
+00:39:41,680 --> 00:39:42,800
+decides it's morally
+
+991
+00:39:42,800 --> 00:39:43,740
+right to oppress
+
+992
+00:39:43,740 --> 00:39:44,300
+a minority,
+
+993
+00:39:44,360 --> 00:39:45,320
+the purely
+
+994
+00:39:45,320 --> 00:39:46,360
+democratic argument
+
+995
+00:39:46,360 --> 00:39:47,280
+runs into a wall.
+
+996
+00:39:47,440 --> 00:39:47,960
+Exactly.
+
+997
+00:39:48,540 --> 00:39:49,260
+Constitutional
+
+998
+00:39:49,260 --> 00:39:49,780
+cybernetics
+
+999
+00:39:49,780 --> 00:39:50,600
+doesn't replace
+
+1000
+00:39:50,600 --> 00:39:51,480
+the moral argument
+
+1001
+00:39:51,480 --> 00:39:52,260
+for human dignity.
+
+1002
+00:39:52,880 --> 00:39:53,340
+It provides
+
+1003
+00:39:53,340 --> 00:39:54,220
+an unbreakable
+
+1004
+00:39:54,220 --> 00:39:55,540
+structural reinforcement
+
+1005
+00:39:55,540 --> 00:39:56,160
+for it.
+
+1006
+00:39:56,520 --> 00:39:57,100
+It says that
+
+1007
+00:39:57,100 --> 00:39:58,100
+cognitive diversity
+
+1008
+00:39:58,100 --> 00:39:59,000
+is the ultimate
+
+1009
+00:39:59,000 --> 00:40:00,280
+non-renewable
+
+1010
+00:40:00,280 --> 00:40:01,400
+epistemic resource
+
+1011
+00:40:01,400 --> 00:40:02,260
+of a society.
+
+1012
+00:40:02,480 --> 00:40:02,960
+How so.
+
+1013
+00:40:03,400 --> 00:40:04,040
+Minorities,
+
+1014
+00:40:04,220 --> 00:40:04,900
+whether racial,
+
+1015
+00:40:05,100 --> 00:40:05,400
+religious,
+
+1016
+00:40:05,620 --> 00:40:05,940
+economic,
+
+1017
+00:40:06,040 --> 00:40:06,720
+or ideological,
+
+1018
+00:40:07,440 --> 00:40:08,220
+occupy parts
+
+1019
+00:40:08,220 --> 00:40:08,940
+of the societal
+
+1020
+00:40:08,940 --> 00:40:09,680
+state space
+
+1021
+00:40:09,680 --> 00:40:10,420
+that the majority
+
+1022
+00:40:10,420 --> 00:40:11,800
+literally cannot see.
+
+1023
+00:40:12,080 --> 00:40:12,800
+They have entirely
+
+1024
+00:40:12,800 --> 00:40:13,340
+different lived
+
+1025
+00:40:13,340 --> 00:40:13,920
+experiences,
+
+1026
+00:40:14,160 --> 00:40:14,700
+they interact
+
+1027
+00:40:14,700 --> 00:40:15,380
+with the state's
+
+1028
+00:40:15,380 --> 00:40:16,080
+coercive power
+
+1029
+00:40:16,080 --> 00:40:16,560
+differently,
+
+1030
+00:40:16,880 --> 00:40:17,480
+they sense
+
+1031
+00:40:17,480 --> 00:40:18,200
+different economic
+
+1032
+00:40:18,200 --> 00:40:18,820
+vulnerabilities,
+
+1033
+00:40:18,820 --> 00:40:19,620
+and they hold
+
+1034
+00:40:19,620 --> 00:40:20,340
+different cultural
+
+1035
+00:40:20,340 --> 00:40:20,700
+memories.
+
+1036
+00:40:20,760 --> 00:40:21,400
+So if a majority
+
+1037
+00:40:21,400 --> 00:40:22,400
+suppresses a minority
+
+1038
+00:40:22,400 --> 00:40:22,780
+group,
+
+1039
+00:40:23,080 --> 00:40:23,720
+they aren't just
+
+1040
+00:40:23,720 --> 00:40:24,560
+committing a moral
+
+1041
+00:40:24,560 --> 00:40:25,060
+sin,
+
+1042
+00:40:25,420 --> 00:40:26,240
+they are literally
+
+1043
+00:40:26,240 --> 00:40:27,400
+blinding the government
+
+1044
+00:40:27,400 --> 00:40:29,020
+to a huge section
+
+1045
+00:40:29,020 --> 00:40:29,640
+of reality.
+
+1046
+00:40:30,020 --> 00:40:30,580
+They are taking
+
+1047
+00:40:30,580 --> 00:40:31,380
+a sledgehammer
+
+1048
+00:40:31,380 --> 00:40:32,000
+to their own
+
+1049
+00:40:32,000 --> 00:40:32,380
+sensors.
+
+1050
+00:40:32,780 --> 00:40:33,560
+They are voluntarily
+
+1051
+00:40:33,560 --> 00:40:34,640
+reducing the
+
+1052
+00:40:34,640 --> 00:40:35,400
+dimensionality
+
+1053
+00:40:35,400 --> 00:40:36,320
+and the intelligence
+
+1054
+00:40:36,320 --> 00:40:37,280
+of the collective
+
+1055
+00:40:37,280 --> 00:40:38,460
+brain of society.
+
+1056
+00:40:38,840 --> 00:40:40,300
+And in a complex,
+
+1057
+00:40:40,560 --> 00:40:41,440
+rapidly changing
+
+1058
+00:40:41,440 --> 00:40:41,980
+world,
+
+1059
+00:40:42,520 --> 00:40:43,540
+a society with
+
+1060
+00:40:43,540 --> 00:40:44,140
+a reduced
+
+1061
+00:40:44,140 --> 00:40:45,240
+collective brain
+
+1062
+00:40:45,240 --> 00:40:46,400
+cannot survive
+
+1063
+00:40:46,400 --> 00:40:46,960
+for long.
+
+1064
+00:40:47,520 --> 00:40:48,280
+Oppression is
+
+1065
+00:40:48,280 --> 00:40:49,540
+fundamentally a form
+
+1066
+00:40:49,540 --> 00:40:50,020
+of censor
+
+1067
+00:40:50,020 --> 00:40:50,520
+destruction.
+
+1068
+00:40:51,120 --> 00:40:51,740
+A government
+
+1069
+00:40:51,740 --> 00:40:53,040
+that marginalizes
+
+1070
+00:40:53,040 --> 00:40:53,780
+its minorities,
+
+1071
+00:40:53,980 --> 00:40:54,800
+that locks them
+
+1072
+00:40:54,800 --> 00:40:55,580
+out of the voting
+
+1073
+00:40:55,580 --> 00:40:56,780
+booth or the economy,
+
+1074
+00:40:57,320 --> 00:40:58,440
+loses the ability
+
+1075
+00:40:58,440 --> 00:41:00,040
+to accurately estimate
+
+1076
+00:41:00,040 --> 00:41:00,940
+its true state.
+
+1077
+00:41:01,540 --> 00:41:02,180
+So justice
+
+1078
+00:41:02,180 --> 00:41:02,960
+and mathematical
+
+1079
+00:41:02,960 --> 00:41:04,000
+stability turn out
+
+1080
+00:41:04,000 --> 00:41:04,560
+to be exactly
+
+1081
+00:41:04,560 --> 00:41:05,260
+the same thing.
+
+1082
+00:41:05,400 --> 00:41:06,060
+You protect
+
+1083
+00:41:06,060 --> 00:41:06,700
+the minority
+
+1084
+00:41:06,700 --> 00:41:07,660
+not just because
+
+1085
+00:41:07,660 --> 00:41:08,480
+it is a nice
+
+1086
+00:41:08,480 --> 00:41:09,820
+moral thing to do,
+
+1087
+00:41:09,940 --> 00:41:10,480
+but because the
+
+1088
+00:41:10,480 --> 00:41:11,400
+basic survival
+
+1089
+00:41:11,400 --> 00:41:12,220
+of the entire
+
+1090
+00:41:12,220 --> 00:41:13,500
+constitutional system
+
+1091
+00:41:13,500 --> 00:41:14,280
+depends on
+
+1092
+00:41:14,280 --> 00:41:15,120
+preserving the
+
+1093
+00:41:15,120 --> 00:41:16,160
+absolute maximum
+
+1094
+00:41:16,160 --> 00:41:16,900
+diversity of
+
+1095
+00:41:16,900 --> 00:41:17,500
+observation.
+
+1096
+00:41:18,420 --> 00:41:19,660
+A tyrannical system
+
+1097
+00:41:19,660 --> 00:41:20,520
+is mathematically
+
+1098
+00:41:20,520 --> 00:41:21,620
+doomed to collapse
+
+1099
+00:41:21,620 --> 00:41:22,380
+because it cannot
+
+1100
+00:41:22,380 --> 00:41:23,620
+perceive the reality
+
+1101
+00:41:23,620 --> 00:41:24,360
+it is trying to
+
+1102
+00:41:24,360 --> 00:41:24,720
+control.
+
+1103
+00:41:25,120 --> 00:41:25,800
+That is a staggering
+
+1104
+00:41:25,800 --> 00:41:26,580
+way to look at it.
+
+1105
+00:41:26,660 --> 00:41:26,840
+Yeah.
+
+1106
+00:41:26,920 --> 00:41:27,600
+It actually makes
+
+1107
+00:41:27,600 --> 00:41:28,380
+the defense of
+
+1108
+00:41:28,380 --> 00:41:28,940
+human rights
+
+1109
+00:41:28,940 --> 00:41:29,560
+stronger.
+
+1110
+00:41:30,040 --> 00:41:30,880
+Because it removes
+
+1111
+00:41:30,880 --> 00:41:31,760
+the tyrant's excuse
+
+1112
+00:41:31,760 --> 00:41:32,420
+that oppression
+
+1113
+00:41:32,420 --> 00:41:33,460
+is necessary
+
+1114
+00:41:33,460 --> 00:41:34,260
+for stability.
+
+1115
+00:41:34,700 --> 00:41:35,060
+Oppression
+
+1116
+00:41:35,060 --> 00:41:35,860
+is instability.
+
+1117
+00:41:36,300 --> 00:41:36,860
+Okay, let's take
+
+1118
+00:41:36,860 --> 00:41:37,160
+stock.
+
+1119
+00:41:37,820 --> 00:41:38,760
+We know how the
+
+1120
+00:41:38,760 --> 00:41:39,420
+ship is steered
+
+1121
+00:41:39,420 --> 00:41:39,820
+through the
+
+1122
+00:41:39,820 --> 00:41:40,540
+cybernetic loop.
+
+1123
+00:41:41,000 --> 00:41:41,640
+We know the
+
+1124
+00:41:41,640 --> 00:41:42,380
+structural limits
+
+1125
+00:41:42,380 --> 00:41:42,900
+of the hull,
+
+1126
+00:41:43,120 --> 00:41:43,460
+which is the
+
+1127
+00:41:43,460 --> 00:41:44,720
+constitution acting
+
+1128
+00:41:44,720 --> 00:41:45,480
+as an invariant
+
+1129
+00:41:45,480 --> 00:41:45,860
+manifold.
+
+1130
+00:41:46,360 --> 00:41:47,040
+We know the
+
+1131
+00:41:47,040 --> 00:41:47,660
+censors are the
+
+1132
+00:41:47,660 --> 00:41:48,500
+citizens, the
+
+1133
+00:41:48,500 --> 00:41:49,500
+markets, and the
+
+1134
+00:41:49,500 --> 00:41:50,720
+scientists, protected
+
+1135
+00:41:50,720 --> 00:41:51,420
+by human rights.
+
+1136
+00:41:51,900 --> 00:41:52,760
+But there is a
+
+1137
+00:41:52,760 --> 00:41:53,600
+massive missing
+
+1138
+00:41:53,600 --> 00:41:54,060
+piece.
+
+1139
+00:41:54,480 --> 00:41:55,420
+Who decides the
+
+1140
+00:41:55,420 --> 00:41:55,920
+destination?
+
+1141
+00:41:56,180 --> 00:41:56,820
+Who sets the
+
+1142
+00:41:56,820 --> 00:41:57,160
+GPS?
+
+1143
+00:41:57,560 --> 00:41:58,260
+Think back to the
+
+1144
+00:41:58,260 --> 00:41:59,200
+thermostat analogy.
+
+1145
+00:41:59,200 --> 00:42:00,720
+A thermostat is a
+
+1146
+00:42:00,720 --> 00:42:01,400
+brilliant control
+
+1147
+00:42:01,400 --> 00:42:02,440
+system, but it has
+
+1148
+00:42:02,440 --> 00:42:03,340
+no free will.
+
+1149
+00:42:03,680 --> 00:42:04,580
+It doesn't wake up
+
+1150
+00:42:04,580 --> 00:42:05,300
+and decide what the
+
+1151
+00:42:05,300 --> 00:42:05,820
+temperature of the
+
+1152
+00:42:05,820 --> 00:42:06,340
+room should be.
+
+1153
+00:42:06,720 --> 00:42:07,860
+A human being walks
+
+1154
+00:42:07,860 --> 00:42:08,980
+up to it and sets it
+
+1155
+00:42:08,980 --> 00:42:10,300
+to 72 degrees.
+
+1156
+00:42:10,400 --> 00:42:11,780
+The 72 degrees is an
+
+1157
+00:42:11,780 --> 00:42:12,660
+external reference
+
+1158
+00:42:12,660 --> 00:42:13,000
+point.
+
+1159
+00:42:13,240 --> 00:42:14,200
+But human societies
+
+1160
+00:42:14,200 --> 00:42:15,420
+have no external
+
+1161
+00:42:15,420 --> 00:42:15,880
+engineer.
+
+1162
+00:42:16,420 --> 00:42:17,300
+There is no outside
+
+1163
+00:42:17,300 --> 00:42:18,920
+force, no alien race
+
+1164
+00:42:18,920 --> 00:42:19,920
+telling us what the
+
+1165
+00:42:19,920 --> 00:42:20,980
+perfect society looks
+
+1166
+00:42:20,980 --> 00:42:21,300
+like.
+
+1167
+00:42:21,680 --> 00:42:22,680
+Therefore, we have to
+
+1168
+00:42:22,680 --> 00:42:23,520
+estimate our own
+
+1169
+00:42:23,520 --> 00:42:24,460
+desired destination
+
+1170
+00:42:24,460 --> 00:42:25,220
+from within.
+
+1171
+00:42:25,980 --> 00:42:26,940
+Flakeshin calls this
+
+1172
+00:42:26,940 --> 00:42:28,060
+process adaptive
+
+1173
+00:42:28,060 --> 00:42:29,160
+reference estimation.
+
+1174
+00:42:30,040 --> 00:42:30,440
+So while the
+
+1175
+00:42:30,440 --> 00:42:31,140
+everyday government
+
+1176
+00:42:31,140 --> 00:42:32,020
+bureaucracy is
+
+1177
+00:42:32,020 --> 00:42:32,720
+estimating the
+
+1178
+00:42:32,720 --> 00:42:33,320
+current state of
+
+1179
+00:42:33,320 --> 00:42:34,580
+society, how many
+
+1180
+00:42:34,580 --> 00:42:36,000
+people are sick, how
+
+1181
+00:42:36,000 --> 00:42:36,760
+much money is in the
+
+1182
+00:42:36,760 --> 00:42:38,840
+bank, democracy is
+
+1183
+00:42:38,840 --> 00:42:39,520
+the higher level
+
+1184
+00:42:39,520 --> 00:42:40,680
+process of estimating
+
+1185
+00:42:40,680 --> 00:42:41,640
+the desired reference
+
+1186
+00:42:41,640 --> 00:42:42,260
+trajectory.
+
+1187
+00:42:42,760 --> 00:42:43,040
+Exactly.
+
+1188
+00:42:43,240 --> 00:42:44,240
+It's how we update
+
+1189
+00:42:44,240 --> 00:42:45,280
+the ultimate goals of
+
+1190
+00:42:45,280 --> 00:42:46,820
+society based on new
+
+1191
+00:42:46,820 --> 00:42:47,980
+science, new moral
+
+1192
+00:42:47,980 --> 00:42:49,060
+awakenings, new
+
+1193
+00:42:49,060 --> 00:42:50,300
+technology, and
+
+1194
+00:42:50,300 --> 00:42:51,180
+cultural shifts.
+
+1195
+00:42:51,180 --> 00:42:52,140
+This reframes
+
+1196
+00:42:52,140 --> 00:42:53,380
+democracy entirely.
+
+1197
+00:42:54,260 --> 00:42:55,280
+Democracy is not just
+
+1198
+00:42:55,280 --> 00:42:56,380
+a mechanical procedure
+
+1199
+00:42:56,380 --> 00:42:57,580
+for picking which
+
+1200
+00:42:57,580 --> 00:42:58,880
+politician gets to sit
+
+1201
+00:42:58,880 --> 00:42:59,760
+in a leather chair for
+
+1202
+00:42:59,760 --> 00:43:00,400
+four years.
+
+1203
+00:43:00,860 --> 00:43:01,880
+It is a massive
+
+1204
+00:43:01,880 --> 00:43:03,880
+society-wide recursive
+
+1205
+00:43:03,880 --> 00:43:04,740
+process of goal
+
+1206
+00:43:04,740 --> 00:43:05,060
+finding.
+
+1207
+00:43:05,520 --> 00:43:06,560
+Elections, public
+
+1208
+00:43:06,560 --> 00:43:07,780
+debates, street
+
+1209
+00:43:07,780 --> 00:43:09,300
+protests, investigative
+
+1210
+00:43:09,300 --> 00:43:10,460
+journalism, art,
+
+1211
+00:43:10,940 --> 00:43:12,660
+culture, these are all
+
+1212
+00:43:12,660 --> 00:43:14,120
+mechanisms for the
+
+1213
+00:43:14,120 --> 00:43:15,600
+distributed observer
+
+1214
+00:43:15,600 --> 00:43:17,320
+network to collectively
+
+1215
+00:43:17,320 --> 00:43:18,380
+calibrate the compass.
+
+1216
+00:43:18,800 --> 00:43:19,640
+Because the reference
+
+1217
+00:43:19,640 --> 00:43:20,760
+trajectory of a society
+
+1218
+00:43:20,760 --> 00:43:21,700
+has to evolve.
+
+1219
+00:43:22,140 --> 00:43:22,780
+Think about how the
+
+1220
+00:43:22,780 --> 00:43:23,940
+scientific discovery of
+
+1221
+00:43:23,940 --> 00:43:25,380
+germ theory or the
+
+1222
+00:43:25,380 --> 00:43:26,080
+invention of the
+
+1223
+00:43:26,080 --> 00:43:27,360
+internet or the moral
+
+1224
+00:43:27,360 --> 00:43:28,100
+awakening of the
+
+1225
+00:43:28,100 --> 00:43:28,760
+civil rights movement
+
+1226
+00:43:28,760 --> 00:43:30,320
+completely changed what
+
+1227
+00:43:30,320 --> 00:43:31,520
+society deemed as its
+
+1228
+00:43:31,520 --> 00:43:32,340
+desired future.
+
+1229
+00:43:32,540 --> 00:43:33,360
+Democracy is the
+
+1230
+00:43:33,360 --> 00:43:34,380
+algorithm that allows
+
+1231
+00:43:34,380 --> 00:43:35,400
+the system to change
+
+1232
+00:43:35,400 --> 00:43:36,560
+its own goals without
+
+1233
+00:43:36,560 --> 00:43:37,580
+destroying itself.
+
+1234
+00:43:37,680 --> 00:43:38,420
+So what does this all
+
+1235
+00:43:38,420 --> 00:43:39,160
+mean for the listener
+
+1236
+00:43:39,160 --> 00:43:39,880
+when they go to the
+
+1237
+00:43:39,880 --> 00:43:40,380
+ballot box?
+
+1238
+00:43:40,520 --> 00:43:41,720
+It means voting isn't a
+
+1239
+00:43:41,720 --> 00:43:42,720
+multiple choice test where
+
+1240
+00:43:42,720 --> 00:43:43,440
+you just pick the winner
+
+1241
+00:43:43,440 --> 00:43:44,040
+and go home.
+
+1242
+00:43:44,040 --> 00:43:44,920
+It's a continuous
+
+1243
+00:43:44,920 --> 00:43:45,820
+calibration of the
+
+1244
+00:43:45,820 --> 00:43:46,100
+system.
+
+1245
+00:43:46,280 --> 00:43:47,300
+But this leads to a
+
+1246
+00:43:47,300 --> 00:43:47,780
+question about
+
+1247
+00:43:47,780 --> 00:43:48,360
+legitimacy.
+
+1248
+00:43:49,200 --> 00:43:50,680
+If legitimacy isn't
+
+1249
+00:43:50,680 --> 00:43:51,620
+just about the fact that
+
+1250
+00:43:51,620 --> 00:43:52,880
+we held an election or
+
+1251
+00:43:52,880 --> 00:43:54,220
+the historical idea that
+
+1252
+00:43:54,220 --> 00:43:55,860
+our ancestors signed a
+
+1253
+00:43:55,860 --> 00:43:56,860
+social contract like
+
+1254
+00:43:56,860 --> 00:43:57,880
+John Locke talked about,
+
+1255
+00:43:58,340 --> 00:43:59,380
+what actually makes a
+
+1256
+00:43:59,380 --> 00:44:00,080
+government legitimate
+
+1257
+00:44:00,080 --> 00:44:00,560
+today?
+
+1258
+00:44:00,960 --> 00:44:01,880
+Legitimacy gets a
+
+1259
+00:44:01,880 --> 00:44:03,020
+fascinating geometric
+
+1260
+00:44:03,020 --> 00:44:04,320
+reformulation in this
+
+1261
+00:44:04,320 --> 00:44:04,720
+text.
+
+1262
+00:44:05,300 --> 00:44:06,320
+Flyxion argues that a
+
+1263
+00:44:06,320 --> 00:44:07,180
+government is legitimate
+
+1264
+00:44:07,180 --> 00:44:09,020
+if and only if it
+
+1265
+00:44:09,020 --> 00:44:10,780
+preserves or expands the
+
+1266
+00:44:10,780 --> 00:44:12,520
+future reachability, the
+
+1267
+00:44:12,520 --> 00:44:14,120
+future option sets of its
+
+1268
+00:44:14,120 --> 00:44:15,220
+distributed observers.
+
+1269
+00:44:15,920 --> 00:44:17,020
+In other words, do the
+
+1270
+00:44:17,020 --> 00:44:17,980
+actions of the state
+
+1271
+00:44:17,980 --> 00:44:18,980
+expand the possible
+
+1272
+00:44:18,980 --> 00:44:20,240
+futures available to the
+
+1273
+00:44:20,240 --> 00:44:21,420
+citizens or do they
+
+1274
+00:44:21,420 --> 00:44:22,060
+collapse them?
+
+1275
+00:44:22,060 --> 00:44:23,060
+Which provides a
+
+1276
+00:44:23,060 --> 00:44:24,120
+mathematical definition
+
+1277
+00:44:24,120 --> 00:44:24,960
+of coercion.
+
+1278
+00:44:25,400 --> 00:44:26,560
+Coercion is defined here
+
+1279
+00:44:26,560 --> 00:44:27,400
+as the unnecessary
+
+1280
+00:44:27,400 --> 00:44:28,940
+collapse of a citizen's
+
+1281
+00:44:28,940 --> 00:44:30,120
+future trajectories.
+
+1282
+00:44:30,280 --> 00:44:31,220
+If the state arrests you
+
+1283
+00:44:31,220 --> 00:44:32,260
+and locks you in a cage
+
+1284
+00:44:32,260 --> 00:44:33,960
+without due process, your
+
+1285
+00:44:33,960 --> 00:44:35,120
+infinite future reachable
+
+1286
+00:44:35,120 --> 00:44:36,300
+states just violently
+
+1287
+00:44:36,300 --> 00:44:37,400
+shrank to the physical
+
+1288
+00:44:37,400 --> 00:44:38,580
+size of a jail cell.
+
+1289
+00:44:39,060 --> 00:44:40,120
+That is pure coercion.
+
+1290
+00:44:40,400 --> 00:44:41,880
+But if the state taxes
+
+1291
+00:44:41,880 --> 00:44:43,440
+you, which some people view
+
+1292
+00:44:43,440 --> 00:44:45,320
+as coercion, to build a
+
+1293
+00:44:45,320 --> 00:44:46,680
+public university system,
+
+1294
+00:44:47,240 --> 00:44:48,240
+they might be slightly
+
+1295
+00:44:48,240 --> 00:44:49,260
+reducing your personal
+
+1296
+00:44:49,260 --> 00:44:50,740
+financial trajectory today,
+
+1297
+00:44:50,860 --> 00:44:52,400
+but they are massively,
+
+1298
+00:44:52,840 --> 00:44:54,560
+exponentially expanding the
+
+1299
+00:44:54,560 --> 00:44:56,020
+future reachable trajectories
+
+1300
+00:44:56,020 --> 00:44:57,260
+of millions of students,
+
+1301
+00:44:57,760 --> 00:44:58,820
+increasing the overall
+
+1302
+00:44:58,820 --> 00:45:00,000
+maneuverability and
+
+1303
+00:45:00,000 --> 00:45:01,440
+intelligence of the entire
+
+1304
+00:45:01,440 --> 00:45:02,120
+society.
+
+1305
+00:45:02,260 --> 00:45:02,860
+Exactly.
+
+1306
+00:45:03,700 --> 00:45:04,720
+Legitimacy isn't about
+
+1307
+00:45:04,720 --> 00:45:05,800
+looking backward at
+
+1308
+00:45:05,800 --> 00:45:06,820
+historical consent.
+
+1309
+00:45:07,460 --> 00:45:08,200
+It isn't about whether
+
+1310
+00:45:08,200 --> 00:45:09,700
+people 200 years ago
+
+1311
+00:45:09,700 --> 00:45:10,700
+agreed to a document.
+
+1312
+00:45:11,420 --> 00:45:12,740
+Legitimacy is entirely about
+
+1313
+00:45:12,740 --> 00:45:13,640
+preserving future
+
+1314
+00:45:13,640 --> 00:45:14,260
+continuation.
+
+1315
+00:45:14,260 --> 00:45:16,040
+A legitimate system ensures
+
+1316
+00:45:16,040 --> 00:45:17,140
+that the people living in it
+
+1317
+00:45:17,140 --> 00:45:18,640
+today have the capacity
+
+1318
+00:45:18,640 --> 00:45:20,200
+to keep adapting, keep
+
+1319
+00:45:20,200 --> 00:45:21,320
+learning, and keep
+
+1320
+00:45:21,320 --> 00:45:22,260
+correcting their course
+
+1321
+00:45:22,260 --> 00:45:22,660
+tomorrow.
+
+1322
+00:45:22,780 --> 00:45:23,480
+But even the most
+
+1323
+00:45:23,480 --> 00:45:25,260
+legitimate, most well-designed
+
+1324
+00:45:25,260 --> 00:45:26,360
+cybernetic systems can
+
+1325
+00:45:26,360 --> 00:45:26,720
+crash.
+
+1326
+00:45:26,940 --> 00:45:28,040
+We see it in history all the
+
+1327
+00:45:28,040 --> 00:45:28,300
+time.
+
+1328
+00:45:28,660 --> 00:45:29,420
+Empires fall.
+
+1329
+00:45:29,740 --> 00:45:30,600
+Democracies crumble.
+
+1330
+00:45:31,040 --> 00:45:32,320
+If this control loop is so
+
+1331
+00:45:32,320 --> 00:45:33,780
+elegant, why does it fail?
+
+1332
+00:45:34,180 --> 00:45:35,340
+Because human institutions
+
+1333
+00:45:35,340 --> 00:45:37,100
+are built on fragile, noisy
+
+1334
+00:45:37,100 --> 00:45:37,720
+foundations.
+
+1335
+00:45:38,460 --> 00:45:39,980
+Systems rarely fail overnight
+
+1336
+00:45:39,980 --> 00:45:41,180
+in a sudden explosion.
+
+1337
+00:45:41,820 --> 00:45:43,400
+They fail through cascading,
+
+1338
+00:45:43,400 --> 00:45:45,040
+positive feedback loops of
+
+1339
+00:45:45,040 --> 00:45:46,020
+estimation errors.
+
+1340
+00:45:46,460 --> 00:45:48,080
+It's a slow accumulation of
+
+1341
+00:45:48,080 --> 00:45:48,380
+rot.
+
+1342
+00:45:48,600 --> 00:45:49,300
+What are the main failure
+
+1343
+00:45:49,300 --> 00:45:49,620
+modes?
+
+1344
+00:45:49,980 --> 00:45:51,560
+The text identifies several
+
+1345
+00:45:51,560 --> 00:45:52,980
+key failure modes that should
+
+1346
+00:45:52,980 --> 00:45:54,540
+sound terrifyingly familiar.
+
+1347
+00:45:55,400 --> 00:45:56,380
+First, there is
+
+1348
+00:45:56,380 --> 00:45:57,360
+observational delay.
+
+1349
+00:45:57,940 --> 00:45:58,860
+This is when the government
+
+1350
+00:45:58,860 --> 00:46:00,240
+is making critical decisions
+
+1351
+00:46:00,240 --> 00:46:01,820
+based on data that is six
+
+1352
+00:46:01,820 --> 00:46:03,220
+months or two years old.
+
+1353
+00:46:03,500 --> 00:46:04,700
+By the time the control
+
+1354
+00:46:04,700 --> 00:46:06,220
+action is applied, the
+
+1355
+00:46:06,220 --> 00:46:07,720
+reality has already moved on
+
+1356
+00:46:07,720 --> 00:46:09,860
+and the cure actually harms
+
+1357
+00:46:09,860 --> 00:46:10,620
+the new reality.
+
+1358
+00:46:10,800 --> 00:46:12,080
+Second, there is distortion,
+
+1359
+00:46:12,320 --> 00:46:12,960
+which we talked about
+
+1360
+00:46:12,960 --> 00:46:13,340
+earlier.
+
+1361
+00:46:13,760 --> 00:46:15,420
+The sensors become biased or
+
+1362
+00:46:15,420 --> 00:46:16,760
+corrupted by political pressure,
+
+1363
+00:46:17,280 --> 00:46:19,140
+constantly feeding bad,
+
+1364
+00:46:19,320 --> 00:46:20,780
+artificially rosy data into
+
+1365
+00:46:20,780 --> 00:46:21,580
+the control loop.
+
+1366
+00:46:21,940 --> 00:46:23,140
+Third, there is semantic
+
+1367
+00:46:23,140 --> 00:46:23,640
+drift.
+
+1368
+00:46:24,320 --> 00:46:25,240
+This is insidious.
+
+1369
+00:46:25,920 --> 00:46:27,480
+The Babel protocol completely
+
+1370
+00:46:27,480 --> 00:46:28,160
+breaks down.
+
+1371
+00:46:28,820 --> 00:46:29,980
+Institutions use the same
+
+1372
+00:46:29,980 --> 00:46:31,680
+words, but the words lose all
+
+1373
+00:46:31,680 --> 00:46:32,620
+connection to reality.
+
+1374
+00:46:32,780 --> 00:46:33,920
+I want to pause on semantic
+
+1375
+00:46:33,920 --> 00:46:35,080
+drift because I think I've seen
+
+1376
+00:46:35,080 --> 00:46:35,960
+this happen in real life.
+
+1377
+00:46:36,300 --> 00:46:37,240
+Let's look at a massive
+
+1378
+00:46:37,240 --> 00:46:38,140
+healthcare bureaucracy.
+
+1379
+00:46:39,020 --> 00:46:40,500
+They might define quality of
+
+1380
+00:46:40,500 --> 00:46:42,520
+care as a specific set of
+
+1381
+00:46:42,520 --> 00:46:43,420
+measurable outcomes.
+
+1382
+00:46:43,600 --> 00:46:45,240
+Let's say how fast a patient
+
+1383
+00:46:45,240 --> 00:46:46,080
+is discharged.
+
+1384
+00:46:46,600 --> 00:46:47,680
+Over time, the hospital
+
+1385
+00:46:47,680 --> 00:46:49,280
+administrators become obsessed
+
+1386
+00:46:49,280 --> 00:46:49,920
+with the metric.
+
+1387
+00:46:50,340 --> 00:46:51,700
+They optimize everything to get
+
+1388
+00:46:51,700 --> 00:46:53,520
+patients out the door faster to
+
+1389
+00:46:53,520 --> 00:46:54,640
+make the numbers look good.
+
+1390
+00:46:54,960 --> 00:46:56,920
+And the metric of quality of
+
+1391
+00:46:56,920 --> 00:46:59,240
+care drifts away from actual
+
+1392
+00:46:59,240 --> 00:47:01,180
+human health and becomes purely
+
+1393
+00:47:01,180 --> 00:47:02,680
+about administrative speed.
+
+1394
+00:47:03,240 --> 00:47:05,000
+The institution thinks it's
+
+1395
+00:47:05,000 --> 00:47:06,500
+succeeding wildly because the
+
+1396
+00:47:06,500 --> 00:47:07,820
+chart is going up, but the
+
+1397
+00:47:07,820 --> 00:47:09,660
+actual patients are dying at
+
+1398
+00:47:09,660 --> 00:47:09,980
+home.
+
+1399
+00:47:10,280 --> 00:47:11,760
+That is the perfect example of
+
+1400
+00:47:11,760 --> 00:47:12,560
+semantic drift.
+
+1401
+00:47:13,340 --> 00:47:15,200
+The map completely detaches from
+
+1402
+00:47:15,200 --> 00:47:16,420
+the territory, but the
+
+1403
+00:47:16,420 --> 00:47:18,700
+institution keeps worshiping the
+
+1404
+00:47:18,700 --> 00:47:18,960
+map.
+
+1405
+00:47:19,300 --> 00:47:21,480
+And the final major failure mode is
+
+1406
+00:47:21,480 --> 00:47:22,940
+institutional memory loss.
+
+1407
+00:47:23,640 --> 00:47:25,400
+The system literally forgets how
+
+1408
+00:47:25,400 --> 00:47:27,160
+it solved complex problems in the
+
+1409
+00:47:27,160 --> 00:47:27,600
+past.
+
+1410
+00:47:27,920 --> 00:47:29,500
+The experienced engineers retire.
+
+1411
+00:47:29,980 --> 00:47:31,360
+The old pandemic playbooks are
+
+1412
+00:47:31,360 --> 00:47:32,180
+thrown in the trash.
+
+1413
+00:47:32,600 --> 00:47:33,860
+The cultural knowledge of how to
+
+1414
+00:47:33,860 --> 00:47:35,340
+build infrastructure is lost.
+
+1415
+00:47:35,500 --> 00:47:37,280
+When a crisis hits, the system has
+
+1416
+00:47:37,280 --> 00:47:39,820
+to painfully reinvent the wheel, and
+
+1417
+00:47:39,820 --> 00:47:41,080
+it usually doesn't have the time to
+
+1418
+00:47:41,080 --> 00:47:42,420
+do so before it crashes.
+
+1419
+00:47:42,740 --> 00:47:44,500
+And when all these errors, the
+
+1420
+00:47:44,500 --> 00:47:46,160
+delay, the distortion, the drift,
+
+1421
+00:47:46,240 --> 00:47:48,200
+the amnesia accumulate, the
+
+1422
+00:47:48,200 --> 00:47:49,760
+system starts to lose a critical
+
+1423
+00:47:49,760 --> 00:47:51,660
+property called Lyapunov stability.
+
+1424
+00:47:51,900 --> 00:47:52,200
+Yes.
+
+1425
+00:47:52,580 --> 00:47:54,420
+Lyapunov stability is a profound
+
+1426
+00:47:54,420 --> 00:47:56,320
+concept from dynamical systems
+
+1427
+00:47:56,320 --> 00:47:56,700
+theory.
+
+1428
+00:47:57,280 --> 00:47:58,900
+True stability doesn't mean standing
+
+1429
+00:47:58,900 --> 00:48:00,460
+perfectly still like a statue.
+
+1430
+00:48:00,760 --> 00:48:01,940
+It doesn't mean a society never
+
+1431
+00:48:01,940 --> 00:48:03,820
+faces crises or never wobbles.
+
+1432
+00:48:04,320 --> 00:48:06,020
+Stability means that when the system
+
+1433
+00:48:06,020 --> 00:48:08,680
+is disturbed, hit by a massive shock
+
+1434
+00:48:08,680 --> 00:48:10,400
+like a recession or a natural
+
+1435
+00:48:10,400 --> 00:48:12,900
+disaster, the resulting trajectory
+
+1436
+00:48:12,900 --> 00:48:15,080
+remains bounded within a recoverable
+
+1437
+00:48:15,080 --> 00:48:15,540
+region.
+
+1438
+00:48:16,200 --> 00:48:18,400
+It might wobble violently, but the
+
+1439
+00:48:18,400 --> 00:48:19,980
+control loops eventually pull it back
+
+1440
+00:48:19,980 --> 00:48:20,480
+to safety.
+
+1441
+00:48:20,820 --> 00:48:21,660
+It stabilizes.
+
+1442
+00:48:22,080 --> 00:48:24,260
+A loss of Lyapunov stability means the
+
+1443
+00:48:24,260 --> 00:48:26,300
+system has entered a state where every
+
+1444
+00:48:26,300 --> 00:48:28,100
+single correction the government makes,
+
+1445
+00:48:28,180 --> 00:48:29,640
+no matter how well intentioned,
+
+1446
+00:48:29,960 --> 00:48:32,000
+actually pushes the system further away
+
+1447
+00:48:32,000 --> 00:48:33,500
+from safety.
+
+1448
+00:48:33,500 --> 00:48:35,160
+The feedback loop turns negative.
+
+1449
+00:48:35,660 --> 00:48:37,580
+It's like a driver hitting a patch of
+
+1450
+00:48:37,580 --> 00:48:38,840
+black ice on the highway.
+
+1451
+00:48:39,380 --> 00:48:40,680
+The car starts sliding left.
+
+1452
+00:48:40,880 --> 00:48:42,880
+The driver panics and yanks the steering
+
+1453
+00:48:42,880 --> 00:48:44,040
+wheel hard to the right.
+
+1454
+00:48:44,400 --> 00:48:46,100
+The tires catch for a second, but because
+
+1455
+00:48:46,100 --> 00:48:47,880
+they overcorrected, the car snaps and
+
+1456
+00:48:47,880 --> 00:48:49,440
+slides even faster to the right.
+
+1457
+00:48:49,900 --> 00:48:51,480
+So they yank the wheel back left.
+
+1458
+00:48:51,920 --> 00:48:53,640
+The oscillations get bigger and bigger until
+
+1459
+00:48:53,640 --> 00:48:55,180
+the car spins out into the ditch.
+
+1460
+00:48:55,320 --> 00:48:57,200
+The driver's attempts to save the car are
+
+1461
+00:48:57,200 --> 00:48:58,580
+exactly what caused the crash.
+
+1462
+00:48:58,580 --> 00:49:00,380
+And in government, according to
+
+1463
+00:49:00,380 --> 00:49:02,500
+Flyxion, this societal spin-out is
+
+1464
+00:49:02,500 --> 00:49:04,080
+usually caused by something called
+
+1465
+00:49:04,080 --> 00:49:05,440
+model rigidity.
+
+1466
+00:49:05,840 --> 00:49:08,200
+Model rigidity is a deadly disease for
+
+1467
+00:49:08,200 --> 00:49:08,720
+governments.
+
+1468
+00:49:09,480 --> 00:49:12,080
+Institutions become incredibly arrogantly
+
+1469
+00:49:12,080 --> 00:49:13,940
+confident in the models that brought them
+
+1470
+00:49:13,940 --> 00:49:15,060
+success in the past.
+
+1471
+00:49:15,540 --> 00:49:17,520
+They cling to them like religious dogma.
+
+1472
+00:49:18,040 --> 00:49:20,280
+But the environment is always mutating.
+
+1473
+00:49:20,620 --> 00:49:22,540
+Imagine an administration trying to
+
+1474
+00:49:22,540 --> 00:49:25,660
+regulate the 21st century digital economy.
+
+1475
+00:49:26,300 --> 00:49:27,820
+Artificial intelligence, cryptocurrency,
+
+1476
+00:49:27,820 --> 00:49:31,440
+gig work using the analog, 1930s bureaucratic
+
+1477
+00:49:31,440 --> 00:49:33,740
+models designed for factories, and radio
+
+1478
+00:49:33,740 --> 00:49:34,380
+broadcasting.
+
+1479
+00:49:34,600 --> 00:49:36,660
+The institutions refuse to update their
+
+1480
+00:49:36,660 --> 00:49:38,700
+representations of reality, so they keep
+
+1481
+00:49:38,700 --> 00:49:40,760
+applying regulatory control actions that
+
+1482
+00:49:40,760 --> 00:49:41,960
+used to work in 1935.
+
+1483
+00:49:42,340 --> 00:49:44,980
+But today, those exact same actions have
+
+1484
+00:49:44,980 --> 00:49:47,740
+totally unintended disastrous consequences
+
+1485
+00:49:47,740 --> 00:49:50,320
+because the underlying reality has shifted.
+
+1486
+00:49:50,400 --> 00:49:51,820
+They turn in the steering wheel, but the
+
+1487
+00:49:51,820 --> 00:49:53,240
+rudder is no longer in the water.
+
+1488
+00:49:53,400 --> 00:49:55,080
+And here's the really terrifying part, the
+
+1489
+00:49:55,080 --> 00:49:56,400
+thing that will keep me up at night.
+
+1490
+00:49:56,400 --> 00:49:59,860
+A perfectly constitutional, legally compliant
+
+1491
+00:49:59,860 --> 00:50:02,540
+government can still utterly collapse.
+
+1492
+00:50:02,860 --> 00:50:04,560
+It can obey every single law in the books,
+
+1493
+00:50:05,120 --> 00:50:07,060
+follow every bureaucratic procedure, hold
+
+1494
+00:50:07,060 --> 00:50:09,060
+every election right on time, and still
+
+1495
+00:50:09,060 --> 00:50:12,580
+completely lose Lepunov stability if it slowly
+
+1496
+00:50:12,580 --> 00:50:14,720
+exhausts its future maneuverability through
+
+1497
+00:50:14,720 --> 00:50:15,560
+model rigidity.
+
+1498
+00:50:15,960 --> 00:50:18,100
+Legality does not equal stability.
+
+1499
+00:50:18,600 --> 00:50:21,880
+You can legally, meticulously, constitutionally,
+
+1500
+00:50:22,180 --> 00:50:23,740
+drive your car straight off a cliff.
+
+1501
+00:50:23,740 --> 00:50:26,200
+We have to break the illusion of SACI and
+
+1502
+00:50:26,200 --> 00:50:26,640
+procedure.
+
+1503
+00:50:27,340 --> 00:50:29,740
+A constitutional crisis isn't always a dramatic
+
+1504
+00:50:29,740 --> 00:50:32,060
+military coup d'etat with tanks in the
+
+1505
+00:50:32,060 --> 00:50:32,360
+streets.
+
+1506
+00:50:32,580 --> 00:50:35,120
+It is far more often this silent, invisible
+
+1507
+00:50:35,120 --> 00:50:37,020
+contraction of the admissible region.
+
+1508
+00:50:37,560 --> 00:50:40,340
+It is the slow exhaustion of options until
+
+1509
+00:50:40,340 --> 00:50:43,000
+disturbances that used to be easily absorbed
+
+1510
+00:50:43,000 --> 00:50:45,800
+by the society become unrecoverable shocks.
+
+1511
+00:50:45,800 --> 00:50:49,360
+The control authority quietly saturates.
+
+1512
+00:50:49,780 --> 00:50:51,600
+The government is issuing commands, the politicians
+
+1513
+00:50:51,600 --> 00:50:53,780
+are giving speeches, the courts are passing down
+
+1514
+00:50:53,780 --> 00:50:56,720
+rulings, but the ship is no longer responding to
+
+1515
+00:50:56,720 --> 00:50:57,140
+the rudder.
+
+1516
+00:50:57,460 --> 00:51:00,000
+It is just drifting on the current toward the rocks.
+
+1517
+00:51:00,340 --> 00:51:01,520
+That's a sobering thought.
+
+1518
+00:51:01,880 --> 00:51:04,020
+Okay, let's take a deep breath and zoom all the way out.
+
+1519
+00:51:04,560 --> 00:51:07,300
+We've been on a seriously mind-bending journey today.
+
+1520
+00:51:07,640 --> 00:51:10,000
+We started standing in an empty field, looking at a
+
+1521
+00:51:10,000 --> 00:51:12,200
+blank slate, asking how to build a government.
+
+1522
+00:51:12,200 --> 00:51:14,360
+And we've learned that government isn't a static
+
+1523
+00:51:14,360 --> 00:51:16,640
+authority sitting on a throne issuing moral
+
+1524
+00:51:16,640 --> 00:51:17,060
+commands.
+
+1525
+00:51:17,320 --> 00:51:20,360
+It is a living, breathing, desperately vulnerable
+
+1526
+00:51:20,360 --> 00:51:21,980
+cybernetic feedback loop.
+
+1527
+00:51:22,340 --> 00:51:25,900
+It is a massive decentralized network of censors.
+
+1528
+00:51:26,360 --> 00:51:29,460
+You, me, the financial markets, the courtrooms, the
+
+1529
+00:51:29,460 --> 00:51:32,280
+scientific laboratories, all desperately trying to
+
+1530
+00:51:32,280 --> 00:51:35,820
+translate messy data bound by the rigid structural
+
+1531
+00:51:35,820 --> 00:51:38,680
+limits of a constitution, trying to steer the human
+
+1532
+00:51:38,680 --> 00:51:41,240
+trajectory toward a future that preserves our
+
+1533
+00:51:41,240 --> 00:51:41,760
+possibilities.
+
+1534
+00:51:41,760 --> 00:51:44,280
+I think the ultimate takeaway here is that we have to
+
+1535
+00:51:44,280 --> 00:51:46,780
+fundamentally change how we evaluate our societies.
+
+1536
+00:51:47,400 --> 00:51:49,660
+We have to stop judging our governments by asking if they
+
+1537
+00:51:49,660 --> 00:51:53,560
+have achieved some perfect, final, utopian state, because
+
+1538
+00:51:53,560 --> 00:51:55,100
+that state does not exist.
+
+1539
+00:51:55,580 --> 00:51:58,620
+We have to evaluate them by asking if they retain the
+
+1540
+00:51:58,620 --> 00:52:01,200
+capacity to keep correcting their inevitable errors.
+
+1541
+00:52:01,460 --> 00:52:03,560
+Do we still have a working steering wheel?
+
+1542
+00:52:03,880 --> 00:52:07,320
+Are our censors or journalists or minorities or scientists
+
+1543
+00:52:07,320 --> 00:52:10,600
+still allowed to tell the absolute truth about what they see?
+
+1544
+00:52:10,600 --> 00:52:15,340
+Are we preserving the future option space or are we burning it to stay warm
+
+1545
+00:52:15,340 --> 00:52:15,620
+today?
+
+1546
+00:52:15,620 --> 00:52:17,020
+I want you to look around tomorrow.
+
+1547
+00:52:17,020 --> 00:52:18,500
+I want you to look around tomorrow, look at the morning news, look at the
+
+1548
+00:52:18,500 --> 00:52:22,740
+fluctuations of the stock market, read about the latest Supreme Court rulings, and even
+
+1549
+00:52:22,740 --> 00:52:25,980
+look at your own messy conversations with your neighbors on social media.
+
+1550
+00:52:26,520 --> 00:52:30,000
+Try not to see them as just isolated, frustrating political events.
+
+1551
+00:52:30,400 --> 00:52:35,660
+Try to see them as millions of specialized sensors pinging raw, vital data back to the central
+
+1552
+00:52:35,660 --> 00:52:42,220
+processor, all of us trying to keep the human trajectory viable in a chaotic, unpredictable
+
+1553
+00:52:42,220 --> 00:52:42,780
+universe.
+
+1554
+00:52:42,780 --> 00:52:45,660
+You aren't just a passive citizen waiting to be ruled.
+
+1555
+00:52:45,940 --> 00:52:50,100
+You are a vital, load-bearing node in the estimation network.
+
+1556
+00:52:50,160 --> 00:52:50,640
+Absolutely.
+
+1557
+00:52:51,040 --> 00:52:53,820
+And I'll leave you with this final provocative thought to chew on.
+
+1558
+00:52:53,820 --> 00:53:00,800
+If democracy is the algorithm we use to update our society's GPS, and new technology like
+
+1559
+00:53:00,800 --> 00:53:06,760
+artificial intelligence is currently extending our state space, creating entirely new trajectories,
+
+1560
+00:53:07,100 --> 00:53:11,940
+new realities, and new existential threats faster than human cognition can even comprehend,
+
+1561
+00:53:12,520 --> 00:53:17,340
+is our current human speed babble protocol actually capable of translating this new reality?
+
+1562
+00:53:17,340 --> 00:53:23,420
+Or are we standing at the helm navigating a hyper-complex 21st century ocean with a 19th century wooden
+
+1563
+00:53:23,420 --> 00:53:23,920
+compass?
+
+1564
+00:53:24,240 --> 00:53:28,340
+Think about that the next time you cast a vote, read a headline, or look out at that vast,
+
+1565
+00:53:28,460 --> 00:53:30,360
+unpredictable ocean we were all sailing together.
+

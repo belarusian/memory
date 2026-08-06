@@ -1,0 +1,73 @@
+\chapter{Two Ways for a Rule-Based System to Fail}
+
+Machine intelligence's earliest serious attempt rested on an assumption worth stating plainly before testing it: that reasoning which is exact must also be reasoning that scales, that getting every step provably right is a matter of the same discipline as getting to an answer at all. This chapter tests that assumption directly, with a program small enough to run yourself, and finds it false in a specific, measurable way.
+
+\section*{What Expert Systems Promised}
+
+By the early 1980s, a new kind of software had convinced a great many serious people that machine intelligence was close at hand. Systems like MYCIN, built to recommend antibiotic treatments, and DENDRAL, built to infer chemical structures from mass spectrometry data, did something that looked, from the outside, exactly like expertise. You gave them facts. They gave you conclusions, and they could explain, step by step, exactly how they got there. No black box, no guessing. Every inference could be traced back through an explicit chain of rules to the facts that triggered it.
+
+This was the core appeal of what came to be called expert systems: a large collection of if-then rules, hand-written by engineers working alongside human domain experts, chained together by an inference engine that applied them mechanically and exhaustively until nothing new could be derived. If the rules were correct, the conclusions were guaranteed to be correct. There was no approximation, no statistical hedging, no sense in which the system might be "mostly right." It was either a valid inference or it wasn't.
+
+That guarantee is worth taking seriously, because it is genuinely valuable and because later chapters will spend a great deal of time on architectures that give it up entirely. It is worth seeing, concretely, what exact symbolic inference looks like and why people believed it would scale.
+
+\section*{A Small Working Example}
+
+The program below is a Maxima script, \texttt{non\_sequitur.mac}. It does one thing: given a list of premises and a proposed conclusion, all written in ordinary propositional logic, it determines whether the conclusion actually follows. If it does, the program says so. If it doesn't, the program hands back a counterexample: a specific assignment of true and false to every variable involved, under which every premise holds and the conclusion still fails.
+
+\begin{Verbatim}[fontsize=\small, frame=single, xleftmargin=1em, xrightmargin=1em]
+non_sequitur(
+    [impl(p,q), p],
+    q
+);
+\end{Verbatim}
+
+This is modus ponens. The program checks every possible assignment of \texttt{p} and \texttt{q}, finds that whenever \texttt{impl(p,q)} and \texttt{p} are both true, \texttt{q} is true as well, and reports the argument valid. No exception exists, so none is found.
+
+\begin{Verbatim}[fontsize=\small, frame=single, xleftmargin=1em, xrightmargin=1em]
+non_sequitur(
+    [impl(p,q), q],
+    p
+);
+\end{Verbatim}
+
+This looks similar but isn't. It is the classic fallacy of affirming the consequent. The program searches the same small space of assignments and this time finds a counterexample: \texttt{p} false, \texttt{q} true. Both premises hold under that assignment, \texttt{impl(p,q)} is true because a false antecedent makes any implication true, and \texttt{q} is true by assumption, but the supposed conclusion \texttt{p} is false. The argument is invalid, and the program can show you exactly why, in one line.
+
+Run it yourself and you'll see the appeal immediately. There's no ambiguity to argue about, no sense in which the system is being evasive or approximate. It is either right or provably wrong, and when it's wrong it hands you the exact case that breaks it.
+
+\section*{How the Program Actually Works}
+
+Under the hood, \texttt{non\_sequitur} does nothing clever. It collects every propositional variable appearing anywhere in the premises or the conclusion, then walks through every possible combination of true and false values those variables could take. For each combination, it checks whether all the premises come out true. If they do, it checks the conclusion. The first time it finds a combination where every premise holds but the conclusion fails, it stops and reports that case as a counterexample. If it exhausts every combination without finding one, the argument is valid.
+
+This is exhaustive verification in the most literal sense. The program doesn't reason about the structure of the argument the way a human logician might, spotting the fallacy pattern by eye. It simply tries everything.
+
+\section*{Where the Guarantee Breaks Down}
+
+Here is the problem, and it is visible the moment you count. If an argument involves \texttt{n} distinct propositional variables, there are \texttt{2\textasciicircum{}n} possible combinations of true and false to check. Ten variables: 1,024 combinations, instantaneous. Twenty variables: over a million, still fast on modern hardware. Forty variables: over a trillion. Every additional variable doubles the work. This is combinatorial explosion, and it is not a flaw in this particular implementation — it is a property of exhaustive search over propositional assignments. No amount of clever coding makes \texttt{2\textasciicircum{}n} grow any slower.
+
+A real diagnostic or planning system doesn't reason about two or three variables. It reasons about hundreds or thousands of facts, symptoms, and rules interacting at once. Exhaustive truth-table verification of an argument at that scale is not merely slow. It is not something any computer, now or in the foreseeable future, will finish before the sun burns out.
+
+This is worth separating cleanly from a second, unrelated problem that expert systems also ran into, because the two are often blurred together and they call for entirely different fixes.
+
+The first problem, the one \texttt{non\_sequitur.mac} makes visible, is computational: exhaustive reasoning over a large rule base costs more than any amount of hardware can pay for. The second problem is about where the rules come from in the first place. MYCIN's rules had to be extracted, one at a time, through extensive interviews with physicians, then encoded, tested, and maintained by engineers as medical knowledge changed. This is the knowledge acquisition bottleneck, and it has nothing to do with how fast a computer can search. A system with all the computational power in the world is still only as good as the rules a human bothered to write down, and every rule not written down is a case the system simply cannot handle. Expert systems were narrow not because search was slow inside their domain, but because outside their domain there was no knowledge at all, encoded or otherwise.
+
+Keep these two failures distinct. The chapters ahead will show statistical and neural approaches solving the knowledge acquisition problem, learning patterns from data instead of requiring an engineer to write each one down by hand, largely independently of how those same approaches handle computational cost. Conflating the two failures now would blur a distinction that matters again later, when deep networks solve one of these problems dramatically and the other, in a different form, resurfaces as a live concern in the largest language models.
+
+\section*{A Sidebar: When the Verifier Needs Verifying}
+
+There is one more lesson worth drawing out before moving on, and it did not need to be invented for the purpose. The first version of \texttt{non\_sequitur.mac} used to teach this chapter did not work correctly. It contained two bugs, and both are worth walking through, because they say something sharper about exact reasoning than any hypothetical example would.
+
+The first bug was immediate and loud. The function that collects a formula's variables passed ordinary lists to Maxima's \texttt{union} operation, which requires actual sets. The program crashed on the first example, before it could check a single valuation. This kind of failure is the easy kind: it announces itself, and it gets fixed before anyone mistakes the program's silence for correctness.
+
+The second bug was quieter, and more dangerous for exactly that reason. Three separate functions used the pattern "loop through a list, and return early the moment you find what you're looking for, otherwise fall through to a default." In Maxima, an early \texttt{return} inside a \texttt{for} loop only escapes the loop, not the surrounding block, unless that loop happens to be the very last statement the block contains. In all three functions here, it wasn't. There was always a fallback statement written after the loop: an error message, a default value of \texttt{true}, a block that prints "Result: VALID." Every one of those fallbacks silently overrode the early return. The practical effect was that the function meant to check whether every premise holds under a given valuation always reported \texttt{true}, no matter what the premises actually said, and the main search loop, even after finding and printing a genuine counterexample, would fall through and announce "Result: VALID" immediately afterward, contradicting the counterexample it had just shown you.
+
+That is worth sitting with. A program built specifically to demonstrate exact, mechanical, unambiguous inference was, until corrected, silently wrong about whether its own inferences were valid. It never crashed. It never complained. It printed confident, well-formatted output every time, including output that flatly contradicted itself two lines apart. Nothing about propositional logic was at fault. The rules the program was checking were exactly the rules described earlier in this chapter, and they were exactly right. The failure lived entirely in the software implementing those rules, in a control-flow detail so easy to miss that it survived being written, read, and executed against three worked examples before showing up as a contradiction.
+
+This is the deeper version of the chapter's point. Exact symbolic reasoning gives you a guarantee about the relationship between premises and conclusions inside a formal system. It gives you no guarantee at all about whether the machine executing that reasoning is doing what its author believes it is doing. Trusting a system because it is deterministic and rule-based, rather than statistical and approximate, only pushes the trust problem down one level, to the correctness of the rules and the code that applies them. That problem does not go away as the field moves toward learned, statistical methods in the chapters ahead. It changes shape, and in some ways it gets harder, because a model's internal reasoning is no longer written down in a form a human can read line by line and check against a specification. But it was never absent, not even here, not even in the simplest, most exact, most explainable kind of system this field has produced.
+
+\section*{A Postscript on Modern Solvers}
+
+It would be a mistake to conclude from any of this that exhaustive symbolic reasoning was simply a dead end that statistical learning made obsolete. The truth is closer to the opposite: symbolic reasoning kept improving on its own track, and that track is still active and important today.
+
+\texttt{non\_sequitur.mac} checks every one of the \texttt{2\textasciicircum{}n} assignments because that is the clearest possible way to teach the idea. It is not how a serious modern solver works. Beginning with the DPLL algorithm in the 1960s and maturing into the CDCL (conflict-driven clause learning) solvers used today, symbolic satisfiability engines learned to avoid exploring most of the search space rather than avoiding the problem's underlying difficulty. Unit propagation forces the values of variables that are already determined by the current partial assignment, without guessing. Clause learning records the specific combination of choices that led to a contradiction, so the solver never repeats that exact mistake again. The worst-case complexity of Boolean satisfiability is still, and will likely always be, NP-complete: no known algorithm avoids exponential blowup in the worst case. But the practical difference is enormous. Modern SAT and SMT solvers routinely handle problems with millions of variables, verifying hardware designs, checking software for security vulnerabilities, and solving planning problems that a brute-force truth table, run on any computer that will ever be built, could never finish.
+
+The lesson to carry forward is not that symbolic methods failed and statistical methods won. It is that exact reasoning and scalable reasoning are different properties, satisfied independently, and this chapter's program had one without the other; exhaustive search and clever search are different things, and the history of both symbolic and statistical AI is, in large part, a history of finding ways to avoid looking at most of a search space while still finding what you're looking for in it. That theme returns, in a very different guise, when we reach scaling laws and the training of very large models.

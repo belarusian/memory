@@ -1,0 +1,72 @@
+\hypertarget{appendix-d-glossary-of-notation-and-terms}{%
+\chapter{Glossary of Notation and Terms}\label{appendix-d-glossary-of-notation-and-terms}}
+
+This glossary was compiled by scanning the manuscript's own recurring terms and notation rather than written independently of it, in keeping with the recommendation that it be produced early enough to catch drift before the editorial pass. Each entry points back to the chapter or chapters where the term is introduced or most fully discussed.
+
+\hypertarget{a-note-on-the-consistency-check}{%
+\section{A Note on the Consistency Check}\label{a-note-on-the-consistency-check}}
+
+A pass across all twenty-two chapters and Appendix A found the manuscript's core vocabulary consistent: engine names (\texttt{LuaLaTeX}, \texttt{XeLaTeX}, \texttt{pdfTeX}), package names, and the book's recurring concepts (fragile/robust commands, expansion versus execution, the modularity threshold, the shared-resource pattern applied to notation/bibliography/style) are used the same way everywhere they recur. Two points are worth noting, neither of which needs correction:
+
+\texttt{pdfLaTeX} and \texttt{pdfTeX} are used deliberately as distinct terms, \texttt{pdfTeX} for the underlying engine, \texttt{pdfLaTeX} for LaTeX running on it, and this distinction is intentional rather than an inconsistency.
+
+Chapter 7's discussion of key-value interfaces covers \texttt{pgfkeys} and \texttt{l3keys} specifically rather than \texttt{xparse}, which is introduced instead in Chapter 6 for argument specification. The two topics are adjacent but distinct, and the manuscript's actual chapter contents are more precise on this point than the original outline's phrasing suggested; no change is needed, but a reader cross-checking this glossary against the outline in the table of contents should trust the chapters themselves.
+
+\hypertarget{glossary}{%
+\section{Glossary}\label{glossary}}
+
+\textbf{admissible / inadmissible state} --- A document state that does (or does not) compile to valid, intended output. Used in Chapter 19 to frame debugging as finding the minimal repair back to an admissible state, and referenced in Chapter 13 as a worked example term for index and glossary construction.
+
+\textbf{arara} --- A build-automation tool driven by directives written as comments inside the \texttt{.tex} file itself, offered in Chapter 5 as an alternative to \texttt{latexmk} for projects needing per-file build variation, and revisited in Chapter 21 as part of the coordinated toolchain.
+
+\textbf{biber / BibTeX / BibLaTeX} --- \texttt{BibTeX} is the original external bibliography processor, reading a \texttt{.bib} database and a style file to produce formatted citations. \texttt{Biber}, paired with the \texttt{BibLaTeX} package, is its more capable modern successor. Chapter 12 frames the choice between this pairing and \texttt{thebibliography} as a portability-versus-scale threshold.
+
+\textbf{box (\texttt{\textbackslash{}hbox}, \texttt{\textbackslash{}vbox}, \texttt{\textbackslash{}vtop})} --- A rectangular region of fixed width, height, and depth; TeX's primitive unit of typeset material. Introduced in Chapter 1, treated in full in Appendix A.9.
+
+\textbf{category code} --- The classification (one of sixteen categories) TeX assigns to each character at the moment it is read, determining whether it behaves as a letter, a control-sequence marker, a comment character, and so on. Introduced in Chapter 1, given in full in Appendix A.1.
+
+\textbf{corpus (shared resource pattern)} --- This book's term for a body of related books or essays sharing notation, bibliography, and style conventions. The recurring pattern, introduced with the shared notation file in Chapter 10 and extended to bibliographies (Ch. 12), nomenclature (Ch. 13), document classes (Ch. 16), and an explicit editorial style guide (Ch. 20), is to maintain such resources once, centrally, rather than reinvent them per document.
+
+\textbf{expansion vs.~execution} --- The distinction between a token being rewritten into further tokens (expansion) versus a primitive being carried out with a side effect (execution). Central to Chapters 1, 2, and 6; given in full in Appendix A.3.
+
+\textbf{fontspec} --- The \texttt{LuaLaTeX}/\texttt{XeLaTeX} interface for loading OpenType and TrueType fonts directly, including their feature sets (ligatures, small capitals, old-style figures). Covered in Chapter 9 and extended to custom and multilingual fonts in Chapter 10.
+
+\textbf{fragile / robust command} --- A command is fragile if it does not survive being written to an auxiliary file and reprocessed (as section titles and captions are); it is robust if it does. Introduced in Chapter 2 as a place LaTeX's abstraction leaks, addressed directly in Chapter 8.
+
+\textbf{glue} --- A flexible space with a natural width plus stretch and shrink components, used throughout TeX for justification and vertical spacing. Introduced in Chapter 1, given in full in Appendix A.6.
+
+\textbf{key-value interface} --- An argument-passing convention (\texttt{option=value,\ option=value}) letting a macro's settings be named explicitly rather than positional. Covered in Chapter 7 via \texttt{pgfkeys} and \texttt{l3keys}, designed with the same discipline as a small API: defaults, validation, composability.
+
+\textbf{\texttt{l3keys} / \texttt{pgfkeys}} --- Two implementations of the key-value pattern; \texttt{pgfkeys} originates with PGF/TikZ, \texttt{l3keys} is the LaTeX3 kernel's own version. Chapter 7.
+
+\textbf{latexmk} --- A build-automation tool that inspects a project's dependencies and runs the correct sequence of compiler and auxiliary-tool passes automatically, including a continuous ``preview'' mode for drafting. Chapter 5; revisited as part of the coordinated toolchain in Chapter 21.
+
+\textbf{macro as rewrite rule (macro as term)} --- This book's framing of a LaTeX macro not as a procedure call but as a rewrite rule operating on token streams, following directly from TeX's expansion model. Introduced in Chapter 1, developed through Chapters 2 and 6.
+
+\textbf{minted} --- A syntax-highlighting package for code listings, notable for depending on the external Pygments tool rather than being self-contained within the TeX ecosystem. Chapter 15's use for verified listings; Chapter 21's use as the example of an external, non-TeX dependency that still needs documenting for reproducibility.
+
+\textbf{modularity threshold} --- The point at which splitting a project into more files stops improving maintainability and starts fragmenting it. Introduced in Chapter 3 at the level of an individual project, revisited in Chapter 20 at the scale of a full monograph.
+
+\textbf{namespacing (macro prefixing)} --- The convention of prefixing project-specific macro names (\texttt{\textbackslash{}rsvpfield} rather than \texttt{\textbackslash{}field}) to avoid collisions with package-defined names. Chapter 8.
+
+\textbf{nomenclature} --- A listing of symbol meanings, distinct from a glossary of terms, generated from the same shared notation file a project already maintains rather than kept as a separate list. Chapter 13.
+
+\textbf{notation system (private/shared)} --- A deliberately designed, consistently reused set of symbols and operators for a recurring technical framework, maintained as a single shared file across a corpus rather than invented per document. Chapter 10, extended by Chapter 11's discussion of theorem styles and delimiters and Chapter 20's terminology audits.
+
+\textbf{output routine} --- The token list, customizable via \texttt{\textbackslash{}output}, responsible for finalizing each page (headers, footers, page numbers) once the page builder has decided where a page break occurs. Appendix A.9; the mechanism behind packages like \texttt{fancyhdr}.
+
+\textbf{penalty} --- A signed integer attached to a candidate line or page break, discouraging, encouraging, or forcing a break there. Introduced in Chapter 1, given in full alongside the Knuth-Plass line-breaking algorithm in Appendix A.7.
+
+\textbf{publishing pipeline (source tree as primary artifact)} --- This book's framing, developed across Chapters 14, 15, and 18, of a project's repository, not any single rendered PDF, as the actual authoritative artifact, with every output (book, website, excerpt) a derived rendering of it.
+
+\textbf{reproducibility} --- The property that a project, checked out at any point in its history, can be rebuilt into the output it originally produced, by anyone, given a documented environment. Introduced in Chapter 4, extended to package management and containerized builds in Chapter 21.
+
+\textbf{superuser} --- This book's term, used throughout and reflected in its title, for a reader who already knows ordinary LaTeX usage and is extending that knowledge into project architecture, macro design, and long-term maintenance.
+
+\textbf{\texttt{tikz-cd}} --- A \texttt{TikZ}-based package for typesetting commutative diagrams, treated in Chapter 11 as a directly useful practical tool independent of the book's occasional category-theoretic framing, and given a short conceptual grounding in Appendix B.
+
+\textbf{\texttt{\textbackslash{}tracingmacros} / \texttt{\textbackslash{}show}} --- Diagnostic primitives for observing macro expansion directly, \texttt{\textbackslash{}tracingmacros} for a full trace, \texttt{\textbackslash{}show} for a single targeted query. Chapter 19.
+
+\textbf{\texttt{unicode-math}} --- The \texttt{fontspec}-layered package for loading a dedicated OpenType math font, keeping text and mathematics typographically consistent. Chapter 9.
+
+\textbf{\texttt{xparse}} --- The LaTeX3-kernel package providing compact argument specifiers (\texttt{m}, \texttt{o}, \texttt{s}, \texttt{d}, and others) for defining a macro's calling convention explicitly. Chapter 6.

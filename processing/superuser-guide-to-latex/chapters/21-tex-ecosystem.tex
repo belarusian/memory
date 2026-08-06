@@ -1,0 +1,43 @@
+\hypertarget{chapter-21-the-tex-ecosystem}{%
+\chapter{The TeX Ecosystem}\label{chapter-21-the-tex-ecosystem}}
+
+LaTeX itself occupies only one layer of a modern publishing workflow. Around the compiler exists an ecosystem of supporting tools responsible for bibliography management, indexing, glossary generation, syntax highlighting, build orchestration, package installation, and environment management. Beginners often encounter these utilities individually, adding them only when a particular feature requires them. The superuser instead regards them as components of a single publishing infrastructure whose behaviour should be understood, documented, and reproduced as carefully as the source itself. A document is therefore not merely a collection of \texttt{.tex} files, but a complete computational environment capable of regenerating the publication from first principles.
+
+\hypertarget{the-compiler-adjacent-tools-as-a-coherent-set}{%
+\section{The Compiler-Adjacent Tools as a Coherent Set}\label{the-compiler-adjacent-tools-as-a-coherent-set}}
+
+Earlier chapters introduced tools such as \texttt{latexmk}, \texttt{arara}, \texttt{biber}, \texttt{makeindex}, \texttt{glossaries}, and \texttt{minted} as they became necessary within the publishing process. At book scale, however, they cease to be isolated utilities and instead form a coordinated toolchain. Each contributes one stage to the transformation from source files to a finished publication, and each should therefore be configured as part of the project rather than as an incidental property of an individual workstation.
+
+Build orchestration tools such as \texttt{latexmk} and \texttt{arara} determine how compilation proceeds. They encode the dependency graph of the project, ensuring that bibliography generation, index creation, glossary processing, and repeated compilation occur in the correct order without requiring manual intervention. Rather than remembering a sequence of compiler invocations, the project itself records the build procedure. This transforms compilation from a collection of commands into a reproducible specification.
+
+Bibliography processors and indexing utilities occupy the next layer. Their outputs are not independent artefacts but intermediate representations consumed by subsequent compilation passes. They therefore belong within the documented build pipeline rather than being treated as optional post-processing steps. A project whose bibliography only builds correctly on the author's machine has failed to capture an essential component of its own construction.
+
+The \texttt{minted} package illustrates another important principle. Unlike most LaTeX packages, \texttt{minted} depends upon software external to the TeX ecosystem, namely the Pygments syntax highlighter. Successful compilation therefore requires more than a correctly installed TeX distribution. It requires the presence of compatible Python software and a functioning external execution environment. The lesson extends beyond \texttt{minted} itself. Every external dependency becomes part of the publishing system and must therefore be documented, versioned, and considered during long-term maintenance. Reproducibility extends beyond TeX Live alone to encompass the complete computational environment.
+
+\hypertarget{package-management-and-cross-machine-reproducibility}{%
+\section{Package Management and Cross-Machine Reproducibility}\label{package-management-and-cross-machine-reproducibility}}
+
+Package management is often regarded as routine maintenance. For long-lived publishing projects it instead becomes an editorial concern. Updating every installed package immediately upon release may provide access to new functionality, but it also introduces unnecessary uncertainty into documents intended to remain buildable for many years. A project whose output changes unpredictably following unrelated package updates cannot reasonably be described as reproducible.
+
+The distinction between TeX Live and MiKTeX matters less than maintaining a documented, consistent environment throughout the life of a project. Whatever distribution is chosen should become part of the project's specification. Version numbers, compiler engines, package revisions, and auxiliary tools should be recorded alongside the source so that future builds occur under substantially the same conditions as earlier ones.
+
+Utilities such as \texttt{tlmgr} provide the practical means to manage this stability. Rather than treating package updates as continuous background activity, the superuser upgrades deliberately, verifies that existing projects continue to compile correctly, and records significant environmental changes within version control. The build environment becomes another component of the project subject to the same discipline as the manuscript itself.
+
+The strongest guarantee of reproducibility comes from containerized builds. A container image containing a known TeX Live release, together with every external dependency required by the project, transforms environmental assumptions into executable specifications. Instead of relying upon written instructions describing how a system should be configured, the configuration itself becomes part of the reproducible artefact. Future compilation therefore depends less upon reconstructing an historical workstation and more upon executing a preserved environment.
+
+For most long-term projects, remarkably few tools are actually necessary. A carefully selected compiler, a build manager, a bibliography processor, an indexing utility, a syntax-highlighting system where required, and a stable package distribution are sufficient for the overwhelming majority of technical books. Standardizing upon this modest collection across an entire corpus simplifies maintenance, reduces unexpected interactions, and allows improvements to propagate consistently between projects.
+
+\hypertarget{choosing-packages-for-longevity-not-novelty}{%
+\section{Choosing Packages for Longevity, Not Novelty}\label{choosing-packages-for-longevity-not-novelty}}
+
+The richness of CTAN encourages experimentation, but large publishing projects reward conservatism. Every package introduced into a manuscript becomes another long-term dependency whose continued maintenance directly affects the buildability of the document. Selecting packages therefore resembles selecting software libraries for production systems rather than experimenting with isolated examples.
+
+Several characteristics distinguish mature packages from transient ones. Widely adopted packages are typically incorporated into standard distributions, maintained over many years, documented thoroughly, and used as dependencies by numerous other packages. Their interfaces evolve cautiously because changes affect a substantial portion of the LaTeX ecosystem. Such packages acquire stability through sustained community use rather than temporary popularity.
+
+Conversely, some packages exhibit warning signs from the outset. They may depend upon undocumented implementation details of a particular engine, receive little ongoing maintenance, or derive their popularity primarily from recent online tutorials rather than long-term adoption. These characteristics do not necessarily imply poor quality, but they do increase the risk that future projects will inherit unnecessary maintenance burdens.
+
+The consequences of choosing poorly often emerge only after considerable investment. Once a package becomes deeply integrated into a large manuscript, replacing it requires revisiting macros, document structure, and accumulated assumptions spread throughout hundreds of pages. Alternatively, the abandoned package may need to be incorporated directly into the project and maintained locally, transferring responsibility for its continued operation from the original author to the publisher of the manuscript. Neither outcome is attractive.
+
+For this reason, experienced LaTeX users tend toward deliberate conservatism. Novel packages should justify their inclusion through substantial, enduring benefit rather than incremental convenience. A mature, well-supported solution that remains functional for decades is generally preferable to a fashionable alternative whose long-term viability remains uncertain. The objective is not to minimize innovation but to maximize the lifespan of the publishing system itself. When viewed over the lifetime of a corpus rather than a single document, stability is itself a valuable feature.
+
+The final chapter draws these threads together, situating LaTeX itself as one stage of a larger continuous workflow that begins with editing and ends with publication.

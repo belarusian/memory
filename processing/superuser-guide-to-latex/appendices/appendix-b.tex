@@ -1,0 +1,57 @@
+\hypertarget{appendix-b-a-category-theory-primer}{%
+\chapter{A Category Theory Primer}\label{appendix-b-a-category-theory-primer}}
+
+This appendix is scoped narrowly. It exists to make two things in the main text precise for a reader who wants that precision: the commutative-diagram notation introduced practically in Chapter 11, and the gluing intuition offered as an aside in Chapter 3. It is not a general introduction to category theory, and nothing in the main chapters requires having read it. A reader who is comfortable simply drawing a \texttt{tikz-cd} diagram and trusting that ``the two paths agree'' is the right way to read it can skip this appendix entirely without losing anything Chapters 1 through 22 depend on.
+
+\hypertarget{b.1-objects-and-morphisms}{%
+\section{Objects and Morphisms}\label{b.1-objects-and-morphisms}}
+
+A category consists of a collection of objects and, between certain pairs of objects, arrows called morphisms. A morphism from an object \(A\) to an object \(B\), written \(f : A \to B\), should be thought of as a structure-respecting way of getting from \(A\) to \(B\), though what ``structure-respecting'' means depends entirely on which category is under discussion. This is deliberately abstract, and the abstraction is the point: the same small set of rules, described below, applies whether the objects are sets and the morphisms are functions, or the objects are TeX's layout primitives from Chapter 1 and the morphisms are ways of combining them.
+
+Concretely, for the layout model from Chapter 1: take boxes as objects. A morphism from one box to another can be thought of as a way of placing the first box so that it becomes part of the second, a horizontal concatenation, a vertical stack, a nesting. This is not a rigorous formalization of TeX's box model, and this appendix does not attempt one; it is offered only as a concrete anchor, so that ``object'' and ``morphism'' mean something a LaTeX-familiar reader can picture rather than remaining purely abstract from the outset.
+
+\hypertarget{b.2-composition-and-identity}{%
+\section{Composition and Identity}\label{b.2-composition-and-identity}}
+
+Two morphisms \(f : A \to B\) and \(g : B \to C\) compose into a single morphism \(g \circ f : A \to C\), read ``\(g\) after \(f\)'': first travel the arrow \(f\), then the arrow \(g\). Composition is required to be associative, \((h \circ g) \circ f = h \circ (g \circ f)\), meaning that when three morphisms are chained together, it does not matter whether the first two are composed before the third is added or the last two are composed before the first is added; the result is the same morphism either way.
+
+Every object \(A\) has an identity morphism \(\mathrm{id}_A : A \to A\), which does nothing: composing it with any morphism leaves that morphism unchanged, \(f \circ \mathrm{id}_A = f\) and \(\mathrm{id}_B \circ f = f\) for \(f : A \to B\). This is the categorical analogue of a no-op, and it exists in essentially every concrete category one could construct, boxes placed nowhere relative to themselves, a function returning its own input unchanged, a macro that expands to exactly its own argument.
+
+These two properties, associative composition and an identity for every object, are the entire definition of a category. Everything else in this appendix is built from applying that definition to specific, useful examples.
+
+\hypertarget{b.3-reading-a-commutative-diagram}{%
+\section{Reading a Commutative Diagram}\label{b.3-reading-a-commutative-diagram}}
+
+A diagram, in this sense, is a picture of some objects and some of the morphisms between them. A diagram commutes if every pair of paths between the same two objects, following the arrows in the direction they point, compose to the same overall morphism. This is the entire content of the word ``commutative'' in ``commutative diagram,'' and it is worth stating plainly because the word sounds more mysterious than the idea actually is: it just means every route from here to there gets you to the same place, in the same way.
+
+Chapter 11 introduced the \texttt{tikz-cd} syntax for a two-by-two square:
+
+\begin{verbatim}
+\begin{tikzcd}
+A \arrow[r, "f"] \arrow[d, "g"'] & B \arrow[d, "h"] \\
+C \arrow[r, "k"'] & D
+\end{tikzcd}
+\end{verbatim}
+
+This diagram asserts, by being drawn as a commutative square (the convention, unless stated otherwise, in most mathematical writing that uses this notation), that going from \(A\) to \(D\) by first applying \(f\) then \(h\) gives the same result as going from \(A\) to \(D\) by first applying \(g\) then \(k\): \(h \circ f = k \circ g\). A diagram with more objects and arrows asserts the same thing for every pair of paths it contains between any two objects appearing in it, not merely the outer boundary. This is why diagrams are useful for the kind of argument Chapter 11 mentioned, diagram chasing, tracing an element or a relationship through several routes and confirming, or using, the fact that they must agree: the diagram itself is a compact assertion of exactly which routes are claimed to agree, and a proof ``by diagram chase'' is typically an argument that walks through the diagram's commutativity to derive something not immediately obvious from any single arrow alone.
+
+\hypertarget{b.4-functors}{%
+\section{Functors}\label{b.4-functors}}
+
+A functor is a structure-preserving map from one category to another: it sends each object of the source category to an object of the target category, and each morphism to a morphism, in a way that respects composition and identity, \(F(g \circ f) = F(g) \circ F(f)\) and \(F(\mathrm{id}_A) = \mathrm{id}_{F(A)}\). Informally, a functor is a way of translating an entire category, objects and the relationships between them, into another category without breaking any of those relationships in the process.
+
+Chapter 10's discussion of custom notation and font loading offers a concrete, LaTeX-relevant instance of this idea, stated there without the formal vocabulary: take a category whose objects are the semantic tokens a document's notation distinguishes (a variable, an operator, a boundary), and whose morphisms capture how those tokens can combine or relate to each other in the document's own notational conventions. A font, together with the macros mapping notation to glyphs, can be read as a functor from that category into a category of rendered marks on a page, sending each semantic token to the glyph or glyph-combination that represents it, in a way that preserves the relationships between tokens (an operator applied to two variables renders as those two variable-glyphs combined via the operator's glyph, not as something unrelated to either). This is offered as an interpretation, not a proof; the value of stating it this way is that it makes precise something Chapter 10 already argued informally, that changing a document's notation system, in the sense of swapping which functor is being used, is a different and more tractable kind of change than rewriting the document's actual mathematical content, because the underlying category of semantic tokens and their relationships can stay fixed while only the target category (the specific glyphs and rendering) changes.
+
+\hypertarget{b.5-the-gluing-intuition-stated-more-precisely}{%
+\section{The Gluing Intuition, Stated More Precisely}\label{b.5-the-gluing-intuition-stated-more-precisely}}
+
+Chapter 3 offered an aside, kept deliberately informal in the main text, that a book-length document's chapters are pieces that must agree with each other wherever they touch, and that a broken cross-reference is a failure of exactly that agreement. The precise version of this intuition belongs to sheaf theory, a further layer of structure built on top of category theory, and is worth sketching briefly here for the reader who wants to see where the informal statement actually comes from, without this appendix attempting a full treatment of sheaves, which would go considerably beyond what the main text needs.
+
+Informally: imagine covering a document by its constituent chapter files, each an open piece of the whole. Assign to each piece the data it actually contains, its labels, its definitions, its notation. A presheaf is simply this assignment, piece by piece, together with a consistent way of restricting a larger piece's data down to a smaller piece contained within it (the whole book's accumulated labels, restricted to just what Chapter 5 itself defines). A presheaf satisfies the sheaf condition, becomes a sheaf, when data that agrees on every overlap between pieces can always be glued into a single, consistent piece of data on the union of those pieces; the gluing axiom is precisely the requirement that local agreement is sufficient for global consistency, with no further obstruction. A broken \texttt{\textbackslash{}ref}, in this language, is exactly a failure of that gluing condition: some label's data, as recorded by the chapter that defines it, disagrees with (or is entirely missing from) what a different chapter's reference to it expects, and LaTeX's two-pass compilation, described mechanically in Chapter 5 and Appendix A, is the concrete procedure by which the document's build process checks, and where possible enforces, that this gluing condition actually holds before producing final output.
+
+This is offered, as Chapter 3 itself notes, as an intuition rather than a formal claim the book depends on; nothing about actually fixing a broken cross-reference requires understanding sheaves, and the practical fix, described in Chapter 3, is simply to find where two pieces of the document have drifted out of agreement and reconcile them. The formal language is included here only because, for a reader who already thinks in these terms, it names precisely what ``agreement'' and ``gluing'' mean in a way that ``the pieces have to match'' leaves only informal.
+
+\hypertarget{b.6-where-to-go-further}{%
+\section{Where to Go Further}\label{b.6-where-to-go-further}}
+
+This appendix has covered exactly enough to read a \texttt{tikz-cd} diagram with genuine understanding of what commutativity asserts, and to see precisely what the informal gluing language in Chapter 3 is gesturing at. For a reader who wants to go further into category theory itself, independent of anything this book needs, a standard first text such as Riehl's \emph{Category Theory in Context}~\cite{riehl2016category} or Awodey's \emph{Category Theory}~\cite{awodey2010category} covers the material here in full rigor and continues considerably further, into limits, adjunctions, and the broader machinery that a single appendix scoped to two chapters' worth of asides was never trying to replace.

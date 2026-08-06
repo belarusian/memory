@@ -1,0 +1,31 @@
+% notation/notation.tex
+% Shared semantic macros for The Superuser Guide to LaTeX.
+%
+% Chapter 10 argues for a notation system decided once and reused
+% consistently rather than invented ad hoc per chapter. This book's own
+% "notation" is not mathematical, it is the semantic markup a book about
+% LaTeX should itself be using: distinguishing a package name from a
+% control sequence from a filename from an environment, rather than
+% flattening all of them into \texttt{} the way a first pandoc pass does.
+% \input this file from the class or preamble before any chapter content.
+
+% A package name, e.g. \pkg{fontspec}
+\newcommand{\pkg}[1]{\textsf{#1}}
+
+% A control sequence, printed with its leading backslash, e.g. \cs{newcommand}
+\newcommand{\cs}[1]{\texttt{\textbackslash#1}}
+
+% A LaTeX environment name, e.g. \env{tikzcd}
+\newcommand{\env}[1]{\texttt{#1}}
+
+% A file or path, e.g. \file{main.tex}
+\newcommand{\file}[1]{\texttt{#1}}
+
+% A document class, e.g. \Class{superuserguide}
+\newcommand{\Class}[1]{\textsf{#1}}
+
+% An external, non-LaTeX program or tool, e.g. \Pgm{git}, \Pgm{Pygments}
+\newcommand{\Pgm}[1]{\textsc{#1}}
+
+% This book's own recurring term for its intended reader.
+\newcommand{\superuser}{superuser}

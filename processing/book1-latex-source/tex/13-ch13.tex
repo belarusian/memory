@@ -1,0 +1,69 @@
+\chapter{Large Language Models}
+
+\section*{What "Large Language Model" Actually Names}
+
+By this point in the book, every piece needed to define a large language model has already been built separately. Chapter 11 gave the architecture: self-attention, letting every position in a sequence draw information from every other position in a single step, stacked into a transformer. Chapter 12 gave the scaling recipe: train that architecture at whatever size a fixed compute budget allows, balanced against a correspondingly large amount of data, and expect its loss to fall in a predictable way. A large language model is what you get when you take a transformer, set it up to predict the next token in a sequence given everything before it, and apply Chapter 12's scaling recipe about as far as anyone has been willing to fund. There's no separate secret architecture behind the name. The name mostly describes an amount, applied to ideas already on the table by Chapter 11.
+
+That simplicity is worth sitting with for a moment, because it raises an immediate question the rest of this chapter has to answer. If the recipe is really just "attention, scaled up, predicting the next token," why does scale, on its own, produce something that can hold a conversation, follow instructions, or write working code, when a small version of the same recipe plainly can't? Part of the answer is Chapter 12's territory, better loss means better next-token prediction, and better next-token prediction over a large and varied enough training set means implicitly modeling an enormous amount of structure about language, facts, and reasoning patterns embedded in that text. But there's a second, more specific reason worth making concrete, and it goes back to a very old problem this book has already met once, in Chapter 1.
+
+\section*{The Simplest Possible Language Model, and Why It Can't Scale}
+
+Before there were transformers, the standard way to build a language model was to count. Given a fixed-length context, some number of preceding characters or words, tabulate, from a training corpus, how often each possible next character or word followed that exact context. To generate text, look up the current context in that table and sample from whatever followed it historically. This is an n-gram model, and it is worth building one directly, because its specific failure mode is the clearest possible motivation for everything transformers do differently.
+
+\begin{Verbatim}[fontsize=\small, frame=single, xleftmargin=1em, xrightmargin=1em]
+def train_ngram(text, n):
+    model = defaultdict(Counter)
+    for i in range(len(text) - n + 1):
+        context = text[i:i+n-1]
+        next_char = text[i+n-1]
+        model[context][next_char] += 1
+    return model
+\end{Verbatim}
+
+Trained on a few hundred characters of simple text and used to generate new text, context length matters enormously:
+
+\begin{Verbatim}[fontsize=\small, frame=single, xleftmargin=1em, xrightmargin=1em]
+--- order 1 model (context length 0) ---
+  sample: 'the  ewtr tktuthuve odo .ta eh seow rttenu oi sn...'
+
+--- order 2 model (context length 1) ---
+  sample: 'the thes br the fow. fove snd bruie quman aysmar...'
+
+--- order 3 model (context length 2) ---
+  sample: 'the lazy dog rarm. the forest the house forest wind is at the house...'
+
+--- order 4 model (context length 3) ---
+  sample: 'the lazy dog barks at the house is good into the house. the snows the lazy dog bark...'
+
+--- order 6 model (context length 5) ---
+  sample: 'the dog rarely meet in winter. winter brings cold wind and quiet. a quiet...'
+\end{Verbatim}
+
+With no context at all, gibberish. With five characters of context, something close to fluent, if repetitive, English. This is exactly the intuition behind "more context helps," and it's tempting to conclude the whole problem is solved: just keep extending the context length. Here is why that doesn't work.
+
+\begin{Verbatim}[fontsize=\small, frame=single, xleftmargin=1em, xrightmargin=1em]
+How many of ALL possible contexts of each length were ever actually seen:
+  alphabet size: 28 distinct characters
+  context length 1: 28 seen / 28 possible (100.0000% coverage)
+  context length 2: 133 seen / 784 possible (16.9643% coverage)
+  context length 3: 215 seen / 21952 possible (0.9794% coverage)
+  context length 4: 260 seen / 614656 possible (0.0423% coverage)
+\end{Verbatim}
+
+This is Chapter 1's combinatorial explosion, showing up again in an entirely different setting. The number of possible contexts of a given length grows exponentially with that length, twenty-eight possibilities for a one-character context, over six hundred thousand for a four-character one, and an n-gram model can only ever say something useful about a context it saw, verbatim, during training. By context length four, this tiny corpus has only ever encountered four hundredths of one percent of the contexts that could exist. Scale the corpus up to something realistic, real language has an effective vocabulary of tens of thousands of words rather than twenty-eight characters, and a useful context length is dozens of words long, not five characters, and the fraction of possible contexts any training set could ever cover doesn't just stay small. It becomes, for all practical purposes, zero. An n-gram model with a long enough context to be genuinely useful would need a training set larger than any that could ever be assembled, encountering an unseen, unmemorized context on nearly every sentence it was asked to continue.
+
+\section*{What a Transformer Does Differently}
+
+A transformer sidesteps this entirely, and the reason connects directly back to Chapter 9's central lesson about learned representations. The n-gram model treats context as a discrete symbol: either this exact sequence of characters was seen before, in which case there's a table entry, or it wasn't, in which case there's nothing. A transformer instead represents context as a continuous, learned vector, the kind of representation Chapter 4's hidden layer first demonstrated and Chapter 9's convolutional filters extended to raw pixels. Two contexts that never appeared verbatim in training, "the quick fox" and "the swift fox," can still end up nearby each other in that continuous space if the network has learned that "quick" and "swift" behave similarly, and nearby points in that space produce similar predictions. The model never needs to have seen a context exactly before. It needs to have seen something close enough, in a space where distance is learned rather than being exact string equality. Put plainly: a language model does not retrieve knowledge one fact at a time. It synthesizes responses from distributed statistical representations learned over enormous corpora, the same resolution to the feature-engineering bottleneck that Chapter 9 demonstrated for images, now arriving at language: instead of a combinatorially exploding table of exact contexts, a smoothly generalizing space of learned representations, exactly what Chapter 11's attention mechanism computes over.
+
+There's a practical layer sitting between raw characters and what a real large language model actually processes, worth naming even briefly. Characters are too fine-grained, forcing extremely long sequences and straining the quadratic attention cost Chapter 11 flagged; whole words are too coarse, since a working vocabulary would need an entry for every word form in every language a model is trained on, an unbounded and highly imbalanced set. The practical middle ground, called subword tokenization, breaks text into a fixed vocabulary of a few tens of thousands of frequently recurring chunks, sometimes whole words, sometimes word fragments, learned automatically from the training corpus so that common words stay whole and rare ones get split into smaller, still-meaningful pieces. Every large language model discussed in this book operates on sequences of these tokens, not raw characters, though the character-level demonstration above illustrates the underlying combinatorial problem more directly than tokens would.
+
+\section*{Autoregressive Generation and Emergent Behavior}
+
+Training objective and generation procedure are the same idea run in two directions. During training, the model sees real text and is scored on how well it predicts each next token given everything before it, exactly the setup this chapter's n-gram model used, just with a continuous representation instead of a lookup table. During generation, the model repeats that same next-token prediction, but instead of comparing against a known correct answer, it samples from its own predicted distribution, appends the result to the context, and repeats, one token at a time, each new token generated conditioned on everything generated so far. Nothing about this process is more sophisticated in kind than the n-gram generation loop earlier in this chapter. What differs is entirely what happens inside the prediction step: a discrete table lookup, versus a full transformer forward pass over a learned, generalizing representation of the entire preceding context.
+
+Trained at large enough scale, models built this way display behavior that goes beyond what "predict the next word well" seems to imply on its face: following an instruction stated only once in the prompt, solving a novel arithmetic problem, adapting to a task described by a handful of examples given at inference time with no additional training, called in-context learning. Some researchers describe these as emergent abilities, capabilities that appear fairly abruptly at particular scales rather than improving gradually alongside the smooth loss curves of Chapter 12. Others have argued that at least some of this apparent abruptness is an artifact of how a capability happens to be measured, an all-or-nothing scoring metric can look like a sudden jump even when the underlying model quality is improving smoothly underneath it, rather than genuine discontinuity in what the model can do. Both positions are actively argued in the current literature, and this book won't adjudicate between them, but the underlying observation motivating the debate is not in question: models built exactly as this chapter describes, once trained at sufficient scale, do things that smaller versions of the identical architecture and training objective simply cannot.
+
+\section*{What Scale and Architecture Don't Guarantee}
+
+None of what this chapter has described puts any constraint on whether a trained model's outputs are true, safe, helpful, or consistent with what the person prompting it actually wants. The training objective throughout this chapter has been exactly one thing: predict the next token as it actually appeared in a large corpus of existing text. A model that does this extremely well has learned to produce plausible continuations of text, which is a different goal from producing correct, honest, or useful ones, and the gap between those two goals doesn't close on its own as scale increases. Closing it, deliberately, is the subject of Chapter 14.

@@ -1,0 +1,58 @@
+\hypertarget{chapter-22-latex-as-one-stage-of-a-larger-pipeline}{%
+\chapter{LaTeX as One Stage of a Larger Pipeline}\label{chapter-22-latex-as-one-stage-of-a-larger-pipeline}}
+
+The central argument of this book has been that LaTeX is best understood not as an isolated typesetting language but as one component of a larger publishing system. Throughout the preceding chapters we have examined document architecture, macro programming, typography, bibliographic management, graphics generation, automation, and reproducible builds. Each contributes to a single objective: transforming structured knowledge into a durable publication. That objective cannot be achieved by LaTeX alone. Every finished document originates from an editing environment, often depends upon external computation, and ultimately passes through a reproducible publishing pipeline. Understanding those surrounding stages completes the superuser's view of document production.
+
+\hypertarget{editing-vim-as-the-input-layer}{%
+\section{Editing: Vim as the Input Layer}\label{editing-vim-as-the-input-layer}}
+
+Every publishing system begins with editing. Source files are created, revised, reorganized, and reviewed long before the compiler is invoked. For the superuser, the editor is therefore not merely a place to enter text but the environment in which the structure of the project is constructed.
+
+A modal editor such as Vim complements LaTeX particularly well because both systems assume that structured text deserves structured manipulation. Multi-file navigation, rapid movement between chapters, powerful search and substitution facilities, macros for repetitive editing tasks, and programmable commands allow large manuscripts to remain manageable without requiring the author to leave the keyboard. A chapter ceases to be a static document and instead becomes another source file within a navigable project tree.
+
+The correspondence extends further. LaTeX encourages semantic markup rather than visual formatting, while modal editing encourages operations upon syntactic structure rather than individual characters. The combination naturally supports large technical manuscripts in which consistency, repeatability, and navigation matter more than interactive page layout. The editing environment therefore serves as the input layer of the publishing pipeline, producing structured source suitable for subsequent computation rather than polished presentation.
+
+\hypertarget{building-rust-as-the-computation-layer}{%
+\section{Building: Rust as the Computation Layer}\label{building-rust-as-the-computation-layer}}
+
+Modern technical publications frequently contain material that cannot reasonably be maintained by hand. Figures originate from numerical simulations, tables summarize experimental results, benchmarks evolve as software changes, and diagrams may themselves be generated programmatically. Between editing and publishing therefore lies computation.
+
+Earlier chapters presented graphics pipelines, automated table generation, and build-time processing as practical techniques. Here they become part of a broader architectural view. Programs written in Rust, Python, Julia, R, or similar languages consume structured input, perform computation, and generate intermediate artefacts destined for inclusion within the document. The publication itself becomes the final presentation layer of a computational process rather than an independent description of that process.
+
+For computational tasks upon which the correctness of the document depends, reliability becomes an editorial concern rather than merely a programming concern. Languages that encourage explicit error handling, deterministic behaviour, and strong static guarantees reduce the likelihood that incorrect results propagate silently into published work. The computational layer therefore deserves the same engineering discipline applied throughout the rest of the publishing system.
+
+\hypertarget{publishing-latex-as-the-output-layer}{%
+\section{Publishing: LaTeX as the Output Layer}\label{publishing-latex-as-the-output-layer}}
+
+Only after editing and computation have completed does LaTeX assume responsibility for publication. At this stage, structured text, generated figures, bibliographic data, glossaries, indexes, and computed results are assembled into a coherent document whose typography communicates the underlying ideas clearly and consistently.
+
+Earlier chapters argued that the source tree rather than the PDF should be regarded as the primary artefact of a publishing project. That principle now acquires its full significance. LaTeX occupies the final transformation within a sequence of representations. Editing produces structured source. Computation produces validated results. Publication integrates both into a finished work intended for readers rather than authors or software systems.
+
+The boundaries between these stages should remain explicit. Editors manipulate ideas expressed as structured text. Computational programs manipulate data and produce derived artefacts. LaTeX manipulates presentation, pagination, references, typography, and layout. When each stage remains responsible for its own concerns, the entire workflow becomes easier to understand, maintain, and extend.
+
+\hypertarget{one-continuous-workflow}{%
+\section{One Continuous Workflow}\label{one-continuous-workflow}}
+
+The superuser therefore experiences publishing not as a sequence of unrelated tasks but as a single continuous pipeline. A change introduced during editing propagates naturally through computation into publication without requiring manual intervention. Version control records every modification, build systems coordinate every dependency, continuous integration verifies every revision, and the publishing environment regenerates every affected output automatically.
+
+Consider a simulation whose numerical parameters change following a theoretical refinement. The revised source is committed to version control. The build system recompiles the computational program, producing updated datasets. Those datasets regenerate figures and tables consumed by the LaTeX manuscript. The document recompiles, cross references stabilize, bibliographies regenerate where necessary, and a new PDF emerges whose contents reflect the revised computation. At no stage is information copied manually between programs. Every transformation remains documented, reproducible, and recoverable through the project's recorded history.
+
+It is worth tracing this example through the specific mechanics established earlier in the book, since the continuity being described is not an abstraction but a concrete chain of already-introduced tools. The parameter change lands in a single, logically scoped commit, per the discipline of Chapter 4. A \texttt{make\ figures} target, of the kind described in Chapter 5 and extended in Chapters 14 and 15, invokes the Rust program, writes its output as CSV alongside any computed values destined for inline macros, and a dependent \texttt{make\ book} target then runs \texttt{latexmk}, which in turn triggers PGFPlots and \texttt{pgfplotstable} to read the regenerated CSV directly, exactly as Chapter 14 described. Nothing in this chain requires a human to notice that a number has changed and manually update a table; the table is wrong only until the next build, and correct again the moment it runs. Wired into continuous integration as in Chapter 15 and Chapter 18, the same sequence fires on every push, so a parameter change that quietly breaks a downstream figure, rather than merely updating it, is caught within minutes rather than discovered by a reader months later. This is the concrete shape ``the pipeline'' takes once every earlier chapter's individual technique is allowed to compose with the others rather than being applied in isolation.
+
+This continuity distinguishes a publishing pipeline from an editing workflow. The former describes the complete movement of information from initial conception to finished publication. Each stage accepts structured input, performs a well-defined transformation, and produces output suitable for the next stage. Because every transformation is recorded, the entire process remains reproducible long after the original work has been completed.
+
+\hypertarget{closing-thesis}{%
+\section{Closing Thesis}\label{closing-thesis}}
+
+The opening chapter argued that LaTeX should not be understood as a sophisticated word processor. The chapters that followed have attempted to justify that claim from progressively broader perspectives. Document architecture and version control demonstrated that large publications benefit from software-engineering principles. Macro programming showed that documents are programmable systems rather than static text. Typography illustrated that presentation itself can be specified precisely rather than adjusted interactively. Bibliographic management established the importance of traceability and consistency. Graphics, automation, and computation transformed figures and tables from manually maintained artefacts into reproducible products of documented pipelines. Document engineering extended these principles to projects spanning multiple books, editions, and years of development.
+
+This final chapter places those ideas within a single framework. Editing provides structured input. Computation derives validated results. LaTeX publishes both through a programmable, reproducible typesetting system. None of these stages is sufficient in isolation, yet together they form an environment capable of producing technical documents whose content, presentation, and history remain transparent, maintainable, and repeatable.
+
+The superuser therefore learns far more than a collection of commands or packages. They learn to design publishing systems. Once that perspective has been adopted, LaTeX ceases to be the destination of the workflow and instead becomes one carefully engineered stage within a larger process of transforming ideas into enduring, professionally published knowledge.
+
+\hypertarget{beyond-this-book}{%
+\section{Beyond This Book}\label{beyond-this-book}}
+
+Several threads in the preceding chapters lead further than this book itself goes, and are worth naming directly rather than leaving implicit. The appendices exist for the reader who wants the internals behind a technique rather than only the technique: TeX's own primitive layer beneath the macros this book spent most of its time on, and just enough category theory and type theory to make precise the handful of asides, in Chapters 3, 6, 7, and 11, that leaned on that language. Neither appendix is required to use anything covered in the main chapters; both exist for the reader who finds that the ``why'' behind a working technique is itself worth understanding.
+
+The editing and computation layers introduced in this chapter are, correspondingly, each the subject of their own dedicated treatment elsewhere: what it means to think in a modal editor rather than merely operate one, and what it means to write computation with the same reliability discipline this book has asked of a publishing pipeline. Read together with those companion volumes, the three describe a single continuous practice, input, computation, and publication, rather than three unrelated skills that happen to be useful in adjacent contexts. This book has tried to earn its place as the last of the three: not the most visible stage of the work, but the one responsible for making everything that came before it legible, durable, and worth having written down.

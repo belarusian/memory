@@ -1,0 +1,84 @@
+\chapter{Probabilistic Graphical Models}
+
+\section*{What Naive Bayes Assumed Away}
+
+Chapter 5's spam filter made a strong simplifying assumption: every word's presence is independent of every other word's presence, given the class. That assumption is exactly what makes Naive Bayes unable to do something this chapter's model can: let one piece of evidence compete with another to explain the same outcome, rather than simply piling evidence up. The assumption bought a great deal of simplicity, and it worked well enough for the toy example, but it is also, transparently, false. Words are not independent. "Free" and "prize" show up together far more often than chance would predict, precisely because spam is written by people reusing the same small vocabulary of manipulative phrases. A model that cannot represent that dependency at all is missing something real about how language, and the world more generally, actually works.
+
+Probabilistic graphical models exist to fix exactly this. Instead of assuming every variable is independent of every other variable given the class, a graphical model lets you specify, directly and explicitly, which variables actually influence which other ones, and leaves everything else independent by default. The graph is the specification. An edge from one variable to another means "this one directly influences that one." The absence of an edge is itself a claim: "these two don't influence each other directly, only through whatever they're both connected to."
+
+\section*{A Small Network, Built by Hand}
+
+Here is one of the field's standard teaching examples, small enough to reason about completely. Three variables: whether it rained, whether the sprinkler ran, and whether the grass is wet. Rain influences whether the sprinkler needed to run (nobody turns the sprinkler on in a downpour), and both rain and the sprinkler directly influence whether the grass ends up wet.
+
+\begin{Verbatim}[fontsize=\small, frame=single, xleftmargin=1em, xrightmargin=1em]
+P_RAIN = {True: 0.2, False: 0.8}
+
+P_SPRINKLER_GIVEN_RAIN = {
+    True:  {True: 0.01, False: 0.99},
+    False: {True: 0.40, False: 0.60},
+}
+
+P_WETGRASS_GIVEN_SPRINKLER_RAIN = {
+    (True,  True):  {True: 0.99, False: 0.01},
+    (True,  False): {True: 0.90, False: 0.10},
+    (False, True):  {True: 0.90, False: 0.10},
+    (False, False): {True: 0.00, False: 1.00},
+}
+
+def joint_prob(rain, sprinkler, wetgrass):
+    return (P_RAIN[rain]
+            * P_SPRINKLER_GIVEN_RAIN[rain][sprinkler]
+            * P_WETGRASS_GIVEN_SPRINKLER_RAIN[(sprinkler, rain)][wetgrass])
+\end{Verbatim}
+
+Every number here is a probability someone had to supply, based on domain knowledge, not learned from data. That's worth flagging immediately, and the chapter will come back to it. But notice what the structure already buys you before any inference happens: the joint probability of all three variables factors into exactly three small, manageable pieces, one per variable, each conditioned only on its direct causes in the graph, rather than one enormous table covering every combination of every variable at once. That factorization is the graphical model's central mechanical idea, and it's what makes exact inference tractable for networks with far more than three variables, as long as the graph stays reasonably sparse.
+
+Querying the network means asking for the probability of some variable given whatever you've observed, summing out everything else:
+
+\begin{Verbatim}[fontsize=\small, frame=single, xleftmargin=1em, xrightmargin=1em]
+def enumerate_query(query_var, evidence):
+    variables = ["rain", "sprinkler", "wetgrass"]
+    results = {}
+    for query_val in (True, False):
+        total = 0.0
+        assignment = dict(evidence)
+        assignment[query_var] = query_val
+        free_vars = [v for v in variables if v not in assignment]
+        for combo in product([True, False], repeat=len(free_vars)):
+            full = dict(assignment)
+            full.update(zip(free_vars, combo))
+            total += joint_prob(full["rain"], full["sprinkler"], full["wetgrass"])
+        results[query_val] = total
+    z = results[True] + results[False]
+    return {k: v / z for k, v in results.items()}
+\end{Verbatim}
+
+\section*{Explaining Away}
+
+Here is where the payoff shows up, and it's a genuinely different kind of reasoning than anything in Chapter 5. Start with no evidence at all. The prior probability of rain is simply 0.2, exactly what was specified going in.
+
+Now observe that the grass is wet, and nothing else:
+
+\begin{Verbatim}[fontsize=\small, frame=single, xleftmargin=1em, xrightmargin=1em]
+Query 1: P(Rain | WetGrass=True)
+  P(Rain=True  | WetGrass=True) = 0.3849
+  P(Rain=False | WetGrass=True) = 0.6151
+\end{Verbatim}
+
+Unsurprising so far: wet grass is evidence for rain, so the probability of rain nearly doubles from its 0.2 prior to 0.3849. Now add a second piece of evidence. Suppose you also learn that the sprinkler was running.
+
+\begin{Verbatim}[fontsize=\small, frame=single, xleftmargin=1em, xrightmargin=1em]
+Query 2: P(Rain | WetGrass=True, Sprinkler=True)  -- 'explaining away'
+  P(Rain=True  | WetGrass=True, Sprinkler=True) = 0.0068
+  P(Rain=False | WetGrass=True, Sprinkler=True) = 0.9932
+\end{Verbatim}
+
+The probability of rain doesn't just fail to go up further. It collapses, down to well under a percent, lower even than the original 0.2 prior. Once the sprinkler alone is sufficient to explain the wet grass, the wet grass stops being much evidence for rain at all. This effect, called explaining away, is a real pattern in how evidence should combine, and it is exactly the kind of reasoning a flat, everything-is-independent model like Naive Bayes structurally cannot produce. Naive Bayes has no notion that two pieces of evidence might compete to explain a third; every word's contribution to the final probability is computed and added in complete isolation from every other word's contribution. The graph in this chapter's model isn't decoration. It's what makes this specific, correct inference pattern possible at all.
+
+\section*{What Still Has to Be Supplied by Hand}
+
+Return to where \texttt{P\_RAIN}, \texttt{P\_SPRINKLER\_GIVEN\_RAIN}, and \texttt{P\_WETGRASS\_GIVEN\_SPRINKLER\_RAIN} came from. They were written into the code directly, by a person, based on prior knowledge about rain, sprinklers, and grass. So was the graph structure itself: the decision that rain influences the sprinkler and not the other way around, and that both influence the grass, rather than some other arrangement of edges. Nothing in this chapter's approach discovered that structure from data. A human looked at the problem, decided which variables mattered and how they related to each other, and encoded that understanding directly into the model, one conditional probability table at a time.
+
+This should sound familiar. Chapter 1's expert systems asked a human to hand-write if-then rules. This chapter asks a human to hand-write a graph and a set of conditional probability tables instead. The representation is more expressive and more mathematically principled, capable of the explaining-away reasoning that flat rule sets and flat independence assumptions both miss. But the underlying dependency on a human supplying structured domain knowledge in advance never went away. It's still there, one more time, in a new and considerably more elegant notation.
+
+It is possible to learn the numbers in a graphical model's conditional probability tables from data, given a fixed structure; that part of the problem is genuinely more tractable than it might look. Learning the graph structure itself from data, deciding which variables should have an edge between them at all, is a much harder problem, and one the field never fully solved within this paradigm at the scale needed for problems like raw images or free-form text. Both statistical learning's feature-engineering bottleneck from Chapter 5 and the structure-and-parameter bottleneck this chapter has just described point at the same underlying gap: every method covered since Chapter 1 depends, in some form, on a human deciding in advance what the relevant variables, features, or dependencies are. Chapter 8 is where that dependency finally breaks, not because anyone found a cleverer way to hand-specify structure, but because deep networks turned out not to need it specified at all.
