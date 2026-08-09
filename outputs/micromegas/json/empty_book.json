@@ -1,0 +1,2652 @@
+{
+  "name": "micromegas_empty_book",
+  "seed": 1776,
+  "family": "empty_book",
+  "metadata": {
+    "style": "sample",
+    "complexity": 4,
+    "invariants": {
+      "all_pages_blank": true,
+      "blank_content_value": ""
+    },
+    "page_count": 56
+  },
+  "materials": {
+    "brass": {
+      "name": "brass",
+      "base_color": [
+        0.73,
+        0.58,
+        0.24
+      ],
+      "metallic": 0.85,
+      "roughness": 0.25
+    },
+    "obsidian": {
+      "name": "obsidian",
+      "base_color": [
+        0.08,
+        0.08,
+        0.1
+      ],
+      "metallic": 0.2,
+      "roughness": 0.15
+    },
+    "ivory": {
+      "name": "ivory",
+      "base_color": [
+        0.92,
+        0.91,
+        0.84
+      ],
+      "metallic": 0.05,
+      "roughness": 0.65
+    },
+    "emerald": {
+      "name": "emerald",
+      "base_color": [
+        0.1,
+        0.45,
+        0.3
+      ],
+      "metallic": 0.1,
+      "roughness": 0.35
+    },
+    "silver": {
+      "name": "silver",
+      "base_color": [
+        0.75,
+        0.75,
+        0.78
+      ],
+      "metallic": 0.95,
+      "roughness": 0.12
+    },
+    "ceramic": {
+      "name": "ceramic",
+      "base_color": [
+        0.86,
+        0.86,
+        0.9
+      ],
+      "metallic": 0.0,
+      "roughness": 0.7
+    }
+  },
+  "objects": [
+    {
+      "name": "empty_volume",
+      "primitive": null,
+      "transform": {
+        "location": [
+          0.0,
+          0.0,
+          0.0
+        ],
+        "rotation": [
+          0.0,
+          0.0,
+          0.0
+        ],
+        "scale": [
+          1.0,
+          1.0,
+          1.0
+        ]
+      },
+      "material": null,
+      "metadata": {},
+      "children": [
+        {
+          "name": "cover",
+          "primitive": {
+            "kind": "box",
+            "params": {
+              "x": 1.6,
+              "y": 0.2,
+              "z": 2.2
+            }
+          },
+          "transform": {
+            "location": [
+              0.0,
+              0.0,
+              0.0
+            ],
+            "rotation": [
+              0.0,
+              0.0,
+              0.0
+            ],
+            "scale": [
+              1.0,
+              1.0,
+              1.0
+            ]
+          },
+          "material": "obsidian",
+          "metadata": {},
+          "children": []
+        },
+        {
+          "name": "clasps",
+          "primitive": null,
+          "transform": {
+            "location": [
+              0.0,
+              0.0,
+              0.0
+            ],
+            "rotation": [
+              0.0,
+              0.0,
+              0.0
+            ],
+            "scale": [
+              1.0,
+              1.0,
+              1.0
+            ]
+          },
+          "material": null,
+          "metadata": {},
+          "children": [
+            {
+              "name": "clasp_0",
+              "primitive": {
+                "kind": "cylinder",
+                "params": {
+                  "radius": 0.05,
+                  "depth": 0.4
+                }
+              },
+              "transform": {
+                "location": [
+                  -0.6,
+                  0.1,
+                  1.15
+                ],
+                "rotation": [
+                  1.5708,
+                  0.0,
+                  0.0
+                ],
+                "scale": [
+                  1.0,
+                  1.0,
+                  1.0
+                ]
+              },
+              "material": "brass",
+              "metadata": {},
+              "children": []
+            }
+          ]
+        },
+        {
+          "name": "hinges",
+          "primitive": null,
+          "transform": {
+            "location": [
+              0.0,
+              0.0,
+              0.0
+            ],
+            "rotation": [
+              0.0,
+              0.0,
+              0.0
+            ],
+            "scale": [
+              1.0,
+              1.0,
+              1.0
+            ]
+          },
+          "material": null,
+          "metadata": {},
+          "children": [
+            {
+              "name": "hinge_0",
+              "primitive": {
+                "kind": "sphere",
+                "params": {
+                  "radius": 0.04
+                }
+              },
+              "transform": {
+                "location": [
+                  -0.8,
+                  0.05,
+                  -1.1
+                ],
+                "rotation": [
+                  0.0,
+                  0.0,
+                  0.0
+                ],
+                "scale": [
+                  1.0,
+                  1.0,
+                  1.0
+                ]
+              },
+              "material": "silver",
+              "metadata": {},
+              "children": []
+            },
+            {
+              "name": "hinge_1",
+              "primitive": {
+                "kind": "sphere",
+                "params": {
+                  "radius": 0.04
+                }
+              },
+              "transform": {
+                "location": [
+                  -0.8,
+                  0.12000000000000001,
+                  -1.1
+                ],
+                "rotation": [
+                  0.0,
+                  0.0,
+                  0.0
+                ],
+                "scale": [
+                  1.0,
+                  1.0,
+                  1.0
+                ]
+              },
+              "material": "silver",
+              "metadata": {},
+              "children": []
+            },
+            {
+              "name": "hinge_2",
+              "primitive": {
+                "kind": "sphere",
+                "params": {
+                  "radius": 0.04
+                }
+              },
+              "transform": {
+                "location": [
+                  -0.8,
+                  0.19,
+                  -1.1
+                ],
+                "rotation": [
+                  0.0,
+                  0.0,
+                  0.0
+                ],
+                "scale": [
+                  1.0,
+                  1.0,
+                  1.0
+                ]
+              },
+              "material": "silver",
+              "metadata": {},
+              "children": []
+            },
+            {
+              "name": "hinge_3",
+              "primitive": {
+                "kind": "sphere",
+                "params": {
+                  "radius": 0.04
+                }
+              },
+              "transform": {
+                "location": [
+                  -0.8,
+                  0.26,
+                  -1.1
+                ],
+                "rotation": [
+                  0.0,
+                  0.0,
+                  0.0
+                ],
+                "scale": [
+                  1.0,
+                  1.0,
+                  1.0
+                ]
+              },
+              "material": "silver",
+              "metadata": {},
+              "children": []
+            }
+          ]
+        },
+        {
+          "name": "page_block",
+          "primitive": null,
+          "transform": {
+            "location": [
+              0.0,
+              0.0,
+              0.0
+            ],
+            "rotation": [
+              0.0,
+              0.0,
+              0.0
+            ],
+            "scale": [
+              1.0,
+              1.0,
+              1.0
+            ]
+          },
+          "material": null,
+          "metadata": {},
+          "children": [
+            {
+              "name": "page_0",
+              "primitive": {
+                "kind": "box",
+                "params": {
+                  "x": 1.0465307857343091,
+                  "y": 0.0248148227488244,
+                  "z": 1.2361030291959432
+                }
+              },
+              "transform": {
+                "location": [
+                  0.0,
+                  0.0,
+                  0.0
+                ],
+                "rotation": [
+                  0.0,
+                  0.0,
+                  0.0
+                ],
+                "scale": [
+                  1.0,
+                  1.0,
+                  1.0
+                ]
+              },
+              "material": "ivory",
+              "metadata": {
+                "content": "",
+                "is_blank": true
+              },
+              "children": []
+            },
+            {
+              "name": "page_1",
+              "primitive": {
+                "kind": "box",
+                "params": {
+                  "x": 0.9448115103447315,
+                  "y": 0.017069465375947158,
+                  "z": 1.2884125962341273
+                }
+              },
+              "transform": {
+                "location": [
+                  0.0,
+                  0.012,
+                  0.0
+                ],
+                "rotation": [
+                  0.0,
+                  0.0,
+                  0.0
+                ],
+                "scale": [
+                  1.0,
+                  1.0,
+                  1.0
+                ]
+              },
+              "material": "ivory",
+              "metadata": {
+                "content": "",
+                "is_blank": true
+              },
+              "children": []
+            },
+            {
+              "name": "page_2",
+              "primitive": {
+                "kind": "box",
+                "params": {
+                  "x": 1.01740546023966,
+                  "y": 0.016257954365086803,
+                  "z": 1.6826934159433198
+                }
+              },
+              "transform": {
+                "location": [
+                  0.0,
+                  0.024,
+                  0.0
+                ],
+                "rotation": [
+                  0.0,
+                  0.0,
+                  0.0
+                ],
+                "scale": [
+                  1.0,
+                  1.0,
+                  1.0
+                ]
+              },
+              "material": "ivory",
+              "metadata": {
+                "content": "",
+                "is_blank": true
+              },
+              "children": []
+            },
+            {
+              "name": "page_3",
+              "primitive": {
+                "kind": "box",
+                "params": {
+                  "x": 1.2839029813187754,
+                  "y": 0.017639079248307692,
+                  "z": 1.282718652092835
+                }
+              },
+              "transform": {
+                "location": [
+                  0.0,
+                  0.036000000000000004,
+                  0.0
+                ],
+                "rotation": [
+                  0.0,
+                  0.0,
+                  0.0
+                ],
+                "scale": [
+                  1.0,
+                  1.0,
+                  1.0
+                ]
+              },
+              "material": "ivory",
+              "metadata": {
+                "content": "",
+                "is_blank": true
+              },
+              "children": []
+            },
+            {
+              "name": "page_4",
+              "primitive": {
+                "kind": "box",
+                "params": {
+                  "x": 1.2027750883955521,
+                  "y": 0.02545795950669781,
+                  "z": 1.7991916366363943
+                }
+              },
+              "transform": {
+                "location": [
+                  0.0,
+                  0.048,
+                  0.0
+                ],
+                "rotation": [
+                  0.0,
+                  0.0,
+                  0.0
+                ],
+                "scale": [
+                  1.0,
+                  1.0,
+                  1.0
+                ]
+              },
+              "material": "ivory",
+              "metadata": {
+                "content": "",
+                "is_blank": true
+              },
+              "children": []
+            },
+            {
+              "name": "page_5",
+              "primitive": {
+                "kind": "box",
+                "params": {
+                  "x": 1.2219992937572046,
+                  "y": 0.026312592948496465,
+                  "z": 1.570567175150714
+                }
+              },
+              "transform": {
+                "location": [
+                  0.0,
+                  0.06,
+                  0.0
+                ],
+                "rotation": [
+                  0.0,
+                  0.0,
+                  0.0
+                ],
+                "scale": [
+                  1.0,
+                  1.0,
+                  1.0
+                ]
+              },
+              "material": "ivory",
+              "metadata": {
+                "content": "",
+                "is_blank": true
+              },
+              "children": []
+            },
+            {
+              "name": "page_6",
+              "primitive": {
+                "kind": "box",
+                "params": {
+                  "x": 1.1799749086458746,
+                  "y": 0.012063485366248235,
+                  "z": 1.3774666635221118
+                }
+              },
+              "transform": {
+                "location": [
+                  0.0,
+                  0.07200000000000001,
+                  0.0
+                ],
+                "rotation": [
+                  0.0,
+                  0.0,
+                  0.0
+                ],
+                "scale": [
+                  1.0,
+                  1.0,
+                  1.0
+                ]
+              },
+              "material": "ivory",
+              "metadata": {
+                "content": "",
+                "is_blank": true
+              },
+              "children": []
+            },
+            {
+              "name": "page_7",
+              "primitive": {
+                "kind": "box",
+                "params": {
+                  "x": 1.192378282679284,
+                  "y": 0.024701469344497663,
+                  "z": 1.6648638601673484
+                }
+              },
+              "transform": {
+                "location": [
+                  0.0,
+                  0.084,
+                  0.0
+                ],
+                "rotation": [
+                  0.0,
+                  0.0,
+                  0.0
+                ],
+                "scale": [
+                  1.0,
+                  1.0,
+                  1.0
+                ]
+              },
+              "material": "ivory",
+              "metadata": {
+                "content": "",
+                "is_blank": true
+              },
+              "children": []
+            },
+            {
+              "name": "page_8",
+              "primitive": {
+                "kind": "box",
+                "params": {
+                  "x": 1.0358613092371625,
+                  "y": 0.014027743933164548,
+                  "z": 1.7567031091266796
+                }
+              },
+              "transform": {
+                "location": [
+                  0.0,
+                  0.096,
+                  0.0
+                ],
+                "rotation": [
+                  0.0,
+                  0.0,
+                  0.0
+                ],
+                "scale": [
+                  1.0,
+                  1.0,
+                  1.0
+                ]
+              },
+              "material": "ivory",
+              "metadata": {
+                "content": "",
+                "is_blank": true
+              },
+              "children": []
+            },
+            {
+              "name": "page_9",
+              "primitive": {
+                "kind": "box",
+                "params": {
+                  "x": 0.897127542278284,
+                  "y": 0.028778404757347067,
+                  "z": 1.4489897097770574
+                }
+              },
+              "transform": {
+                "location": [
+                  0.0,
+                  0.108,
+                  0.0
+                ],
+                "rotation": [
+                  0.0,
+                  0.0,
+                  0.0
+                ],
+                "scale": [
+                  1.0,
+                  1.0,
+                  1.0
+                ]
+              },
+              "material": "ivory",
+              "metadata": {
+                "content": "",
+                "is_blank": true
+              },
+              "children": []
+            },
+            {
+              "name": "page_10",
+              "primitive": {
+                "kind": "box",
+                "params": {
+                  "x": 1.2647432243742354,
+                  "y": 0.023345704199169703,
+                  "z": 1.4422835045280011
+                }
+              },
+              "transform": {
+                "location": [
+                  0.0,
+                  0.12,
+                  0.0
+                ],
+                "rotation": [
+                  0.0,
+                  0.0,
+                  0.0
+                ],
+                "scale": [
+                  1.0,
+                  1.0,
+                  1.0
+                ]
+              },
+              "material": "ivory",
+              "metadata": {
+                "content": "",
+                "is_blank": true
+              },
+              "children": []
+            },
+            {
+              "name": "page_11",
+              "primitive": {
+                "kind": "box",
+                "params": {
+                  "x": 1.0810638336195448,
+                  "y": 0.02287416599312196,
+                  "z": 1.568842769469413
+                }
+              },
+              "transform": {
+                "location": [
+                  0.0,
+                  0.132,
+                  0.0
+                ],
+                "rotation": [
+                  0.0,
+                  0.0,
+                  0.0
+                ],
+                "scale": [
+                  1.0,
+                  1.0,
+                  1.0
+                ]
+              },
+              "material": "ivory",
+              "metadata": {
+                "content": "",
+                "is_blank": true
+              },
+              "children": []
+            },
+            {
+              "name": "page_12",
+              "primitive": {
+                "kind": "box",
+                "params": {
+                  "x": 1.1639194608469265,
+                  "y": 0.011747922589063445,
+                  "z": 1.526145302682324
+                }
+              },
+              "transform": {
+                "location": [
+                  0.0,
+                  0.14400000000000002,
+                  0.0
+                ],
+                "rotation": [
+                  0.0,
+                  0.0,
+                  0.0
+                ],
+                "scale": [
+                  1.0,
+                  1.0,
+                  1.0
+                ]
+              },
+              "material": "ivory",
+              "metadata": {
+                "content": "",
+                "is_blank": true
+              },
+              "children": []
+            },
+            {
+              "name": "page_13",
+              "primitive": {
+                "kind": "box",
+                "params": {
+                  "x": 0.9275510741158988,
+                  "y": 0.027539313910037333,
+                  "z": 1.5897244205359875
+                }
+              },
+              "transform": {
+                "location": [
+                  0.0,
+                  0.156,
+                  0.0
+                ],
+                "rotation": [
+                  0.0,
+                  0.0,
+                  0.0
+                ],
+                "scale": [
+                  1.0,
+                  1.0,
+                  1.0
+                ]
+              },
+              "material": "ivory",
+              "metadata": {
+                "content": "",
+                "is_blank": true
+              },
+              "children": []
+            },
+            {
+              "name": "page_14",
+              "primitive": {
+                "kind": "box",
+                "params": {
+                  "x": 0.8881564544556428,
+                  "y": 0.027783907560629262,
+                  "z": 1.7743733231549799
+                }
+              },
+              "transform": {
+                "location": [
+                  0.0,
+                  0.168,
+                  0.0
+                ],
+                "rotation": [
+                  0.0,
+                  0.0,
+                  0.0
+                ],
+                "scale": [
+                  1.0,
+                  1.0,
+                  1.0
+                ]
+              },
+              "material": "ivory",
+              "metadata": {
+                "content": "",
+                "is_blank": true
+              },
+              "children": []
+            },
+            {
+              "name": "page_15",
+              "primitive": {
+                "kind": "box",
+                "params": {
+                  "x": 1.03581836373779,
+                  "y": 0.0182121041083841,
+                  "z": 1.323011391314004
+                }
+              },
+              "transform": {
+                "location": [
+                  0.0,
+                  0.18,
+                  0.0
+                ],
+                "rotation": [
+                  0.0,
+                  0.0,
+                  0.0
+                ],
+                "scale": [
+                  1.0,
+                  1.0,
+                  1.0
+                ]
+              },
+              "material": "ivory",
+              "metadata": {
+                "content": "",
+                "is_blank": true
+              },
+              "children": []
+            },
+            {
+              "name": "page_16",
+              "primitive": {
+                "kind": "box",
+                "params": {
+                  "x": 1.0186446498056663,
+                  "y": 0.02548684330835769,
+                  "z": 1.2866254929233585
+                }
+              },
+              "transform": {
+                "location": [
+                  0.0,
+                  0.192,
+                  0.0
+                ],
+                "rotation": [
+                  0.0,
+                  0.0,
+                  0.0
+                ],
+                "scale": [
+                  1.0,
+                  1.0,
+                  1.0
+                ]
+              },
+              "material": "ivory",
+              "metadata": {
+                "content": "",
+                "is_blank": true
+              },
+              "children": []
+            },
+            {
+              "name": "page_17",
+              "primitive": {
+                "kind": "box",
+                "params": {
+                  "x": 0.8566030829723711,
+                  "y": 0.022016726943740593,
+                  "z": 1.4500817795610859
+                }
+              },
+              "transform": {
+                "location": [
+                  0.0,
+                  0.20400000000000001,
+                  0.0
+                ],
+                "rotation": [
+                  0.0,
+                  0.0,
+                  0.0
+                ],
+                "scale": [
+                  1.0,
+                  1.0,
+                  1.0
+                ]
+              },
+              "material": "ivory",
+              "metadata": {
+                "content": "",
+                "is_blank": true
+              },
+              "children": []
+            },
+            {
+              "name": "page_18",
+              "primitive": {
+                "kind": "box",
+                "params": {
+                  "x": 0.8431375965619183,
+                  "y": 0.02689477916890006,
+                  "z": 1.7862977463236032
+                }
+              },
+              "transform": {
+                "location": [
+                  0.0,
+                  0.216,
+                  0.0
+                ],
+                "rotation": [
+                  0.0,
+                  0.0,
+                  0.0
+                ],
+                "scale": [
+                  1.0,
+                  1.0,
+                  1.0
+                ]
+              },
+              "material": "ivory",
+              "metadata": {
+                "content": "",
+                "is_blank": true
+              },
+              "children": []
+            },
+            {
+              "name": "page_19",
+              "primitive": {
+                "kind": "box",
+                "params": {
+                  "x": 0.9447333494835766,
+                  "y": 0.02084264194327408,
+                  "z": 1.6650654906082392
+                }
+              },
+              "transform": {
+                "location": [
+                  0.0,
+                  0.228,
+                  0.0
+                ],
+                "rotation": [
+                  0.0,
+                  0.0,
+                  0.0
+                ],
+                "scale": [
+                  1.0,
+                  1.0,
+                  1.0
+                ]
+              },
+              "material": "ivory",
+              "metadata": {
+                "content": "",
+                "is_blank": true
+              },
+              "children": []
+            },
+            {
+              "name": "page_20",
+              "primitive": {
+                "kind": "box",
+                "params": {
+                  "x": 1.1955624015547799,
+                  "y": 0.02753275429220306,
+                  "z": 1.6730099378920738
+                }
+              },
+              "transform": {
+                "location": [
+                  0.0,
+                  0.24,
+                  0.0
+                ],
+                "rotation": [
+                  0.0,
+                  0.0,
+                  0.0
+                ],
+                "scale": [
+                  1.0,
+                  1.0,
+                  1.0
+                ]
+              },
+              "material": "ivory",
+              "metadata": {
+                "content": "",
+                "is_blank": true
+              },
+              "children": []
+            },
+            {
+              "name": "page_21",
+              "primitive": {
+                "kind": "box",
+                "params": {
+                  "x": 1.2169570336076296,
+                  "y": 0.01606014545789306,
+                  "z": 1.678825123594081
+                }
+              },
+              "transform": {
+                "location": [
+                  0.0,
+                  0.252,
+                  0.0
+                ],
+                "rotation": [
+                  0.0,
+                  0.0,
+                  0.0
+                ],
+                "scale": [
+                  1.0,
+                  1.0,
+                  1.0
+                ]
+              },
+              "material": "ivory",
+              "metadata": {
+                "content": "",
+                "is_blank": true
+              },
+              "children": []
+            },
+            {
+              "name": "page_22",
+              "primitive": {
+                "kind": "box",
+                "params": {
+                  "x": 1.0257708965375372,
+                  "y": 0.011238648514716298,
+                  "z": 1.66339014777735
+                }
+              },
+              "transform": {
+                "location": [
+                  0.0,
+                  0.264,
+                  0.0
+                ],
+                "rotation": [
+                  0.0,
+                  0.0,
+                  0.0
+                ],
+                "scale": [
+                  1.0,
+                  1.0,
+                  1.0
+                ]
+              },
+              "material": "ivory",
+              "metadata": {
+                "content": "",
+                "is_blank": true
+              },
+              "children": []
+            },
+            {
+              "name": "page_23",
+              "primitive": {
+                "kind": "box",
+                "params": {
+                  "x": 0.8004088256619769,
+                  "y": 0.013922874331046189,
+                  "z": 1.4418656352981922
+                }
+              },
+              "transform": {
+                "location": [
+                  0.0,
+                  0.276,
+                  0.0
+                ],
+                "rotation": [
+                  0.0,
+                  0.0,
+                  0.0
+                ],
+                "scale": [
+                  1.0,
+                  1.0,
+                  1.0
+                ]
+              },
+              "material": "ivory",
+              "metadata": {
+                "content": "",
+                "is_blank": true
+              },
+              "children": []
+            },
+            {
+              "name": "page_24",
+              "primitive": {
+                "kind": "box",
+                "params": {
+                  "x": 1.1121359096326506,
+                  "y": 0.013064821831158932,
+                  "z": 1.7733455721586977
+                }
+              },
+              "transform": {
+                "location": [
+                  0.0,
+                  0.28800000000000003,
+                  0.0
+                ],
+                "rotation": [
+                  0.0,
+                  0.0,
+                  0.0
+                ],
+                "scale": [
+                  1.0,
+                  1.0,
+                  1.0
+                ]
+              },
+              "material": "ivory",
+              "metadata": {
+                "content": "",
+                "is_blank": true
+              },
+              "children": []
+            },
+            {
+              "name": "page_25",
+              "primitive": {
+                "kind": "box",
+                "params": {
+                  "x": 0.8159072286841822,
+                  "y": 0.019687446213491062,
+                  "z": 1.4399357335282819
+                }
+              },
+              "transform": {
+                "location": [
+                  0.0,
+                  0.3,
+                  0.0
+                ],
+                "rotation": [
+                  0.0,
+                  0.0,
+                  0.0
+                ],
+                "scale": [
+                  1.0,
+                  1.0,
+                  1.0
+                ]
+              },
+              "material": "ivory",
+              "metadata": {
+                "content": "",
+                "is_blank": true
+              },
+              "children": []
+            },
+            {
+              "name": "page_26",
+              "primitive": {
+                "kind": "box",
+                "params": {
+                  "x": 0.9069958234073858,
+                  "y": 0.016002457023825613,
+                  "z": 1.201347391232605
+                }
+              },
+              "transform": {
+                "location": [
+                  0.0,
+                  0.312,
+                  0.0
+                ],
+                "rotation": [
+                  0.0,
+                  0.0,
+                  0.0
+                ],
+                "scale": [
+                  1.0,
+                  1.0,
+                  1.0
+                ]
+              },
+              "material": "ivory",
+              "metadata": {
+                "content": "",
+                "is_blank": true
+              },
+              "children": []
+            },
+            {
+              "name": "page_27",
+              "primitive": {
+                "kind": "box",
+                "params": {
+                  "x": 0.9950005255345826,
+                  "y": 0.014288643250400426,
+                  "z": 1.7655592634770179
+                }
+              },
+              "transform": {
+                "location": [
+                  0.0,
+                  0.324,
+                  0.0
+                ],
+                "rotation": [
+                  0.0,
+                  0.0,
+                  0.0
+                ],
+                "scale": [
+                  1.0,
+                  1.0,
+                  1.0
+                ]
+              },
+              "material": "ivory",
+              "metadata": {
+                "content": "",
+                "is_blank": true
+              },
+              "children": []
+            },
+            {
+              "name": "page_28",
+              "primitive": {
+                "kind": "box",
+                "params": {
+                  "x": 0.9561840003881379,
+                  "y": 0.017940873706277522,
+                  "z": 1.339781857947307
+                }
+              },
+              "transform": {
+                "location": [
+                  0.0,
+                  0.336,
+                  0.0
+                ],
+                "rotation": [
+                  0.0,
+                  0.0,
+                  0.0
+                ],
+                "scale": [
+                  1.0,
+                  1.0,
+                  1.0
+                ]
+              },
+              "material": "ivory",
+              "metadata": {
+                "content": "",
+                "is_blank": true
+              },
+              "children": []
+            },
+            {
+              "name": "page_29",
+              "primitive": {
+                "kind": "box",
+                "params": {
+                  "x": 0.8128405360320787,
+                  "y": 0.023728175140120693,
+                  "z": 1.224190212844011
+                }
+              },
+              "transform": {
+                "location": [
+                  0.0,
+                  0.34800000000000003,
+                  0.0
+                ],
+                "rotation": [
+                  0.0,
+                  0.0,
+                  0.0
+                ],
+                "scale": [
+                  1.0,
+                  1.0,
+                  1.0
+                ]
+              },
+              "material": "ivory",
+              "metadata": {
+                "content": "",
+                "is_blank": true
+              },
+              "children": []
+            },
+            {
+              "name": "page_30",
+              "primitive": {
+                "kind": "box",
+                "params": {
+                  "x": 1.0379679931102395,
+                  "y": 0.02130123291072804,
+                  "z": 1.389873074870867
+                }
+              },
+              "transform": {
+                "location": [
+                  0.0,
+                  0.36,
+                  0.0
+                ],
+                "rotation": [
+                  0.0,
+                  0.0,
+                  0.0
+                ],
+                "scale": [
+                  1.0,
+                  1.0,
+                  1.0
+                ]
+              },
+              "material": "ivory",
+              "metadata": {
+                "content": "",
+                "is_blank": true
+              },
+              "children": []
+            },
+            {
+              "name": "page_31",
+              "primitive": {
+                "kind": "box",
+                "params": {
+                  "x": 1.0919616034753963,
+                  "y": 0.020474607982638643,
+                  "z": 1.4089439454619965
+                }
+              },
+              "transform": {
+                "location": [
+                  0.0,
+                  0.372,
+                  0.0
+                ],
+                "rotation": [
+                  0.0,
+                  0.0,
+                  0.0
+                ],
+                "scale": [
+                  1.0,
+                  1.0,
+                  1.0
+                ]
+              },
+              "material": "ivory",
+              "metadata": {
+                "content": "",
+                "is_blank": true
+              },
+              "children": []
+            },
+            {
+              "name": "page_32",
+              "primitive": {
+                "kind": "box",
+                "params": {
+                  "x": 1.150652388055103,
+                  "y": 0.015953131404642024,
+                  "z": 1.6824887349209274
+                }
+              },
+              "transform": {
+                "location": [
+                  0.0,
+                  0.384,
+                  0.0
+                ],
+                "rotation": [
+                  0.0,
+                  0.0,
+                  0.0
+                ],
+                "scale": [
+                  1.0,
+                  1.0,
+                  1.0
+                ]
+              },
+              "material": "ivory",
+              "metadata": {
+                "content": "",
+                "is_blank": true
+              },
+              "children": []
+            },
+            {
+              "name": "page_33",
+              "primitive": {
+                "kind": "box",
+                "params": {
+                  "x": 0.9501922780834842,
+                  "y": 0.026452587369323183,
+                  "z": 1.7044289690580203
+                }
+              },
+              "transform": {
+                "location": [
+                  0.0,
+                  0.396,
+                  0.0
+                ],
+                "rotation": [
+                  0.0,
+                  0.0,
+                  0.0
+                ],
+                "scale": [
+                  1.0,
+                  1.0,
+                  1.0
+                ]
+              },
+              "material": "ivory",
+              "metadata": {
+                "content": "",
+                "is_blank": true
+              },
+              "children": []
+            },
+            {
+              "name": "page_34",
+              "primitive": {
+                "kind": "box",
+                "params": {
+                  "x": 1.1239713841578152,
+                  "y": 0.02501180086606227,
+                  "z": 1.3027509245038873
+                }
+              },
+              "transform": {
+                "location": [
+                  0.0,
+                  0.40800000000000003,
+                  0.0
+                ],
+                "rotation": [
+                  0.0,
+                  0.0,
+                  0.0
+                ],
+                "scale": [
+                  1.0,
+                  1.0,
+                  1.0
+                ]
+              },
+              "material": "ivory",
+              "metadata": {
+                "content": "",
+                "is_blank": true
+              },
+              "children": []
+            },
+            {
+              "name": "page_35",
+              "primitive": {
+                "kind": "box",
+                "params": {
+                  "x": 0.9859353786276789,
+                  "y": 0.014392754571973598,
+                  "z": 1.4415286154488076
+                }
+              },
+              "transform": {
+                "location": [
+                  0.0,
+                  0.42,
+                  0.0
+                ],
+                "rotation": [
+                  0.0,
+                  0.0,
+                  0.0
+                ],
+                "scale": [
+                  1.0,
+                  1.0,
+                  1.0
+                ]
+              },
+              "material": "ivory",
+              "metadata": {
+                "content": "",
+                "is_blank": true
+              },
+              "children": []
+            },
+            {
+              "name": "page_36",
+              "primitive": {
+                "kind": "box",
+                "params": {
+                  "x": 0.9335855507814226,
+                  "y": 0.026959173569655596,
+                  "z": 1.4985252768717396
+                }
+              },
+              "transform": {
+                "location": [
+                  0.0,
+                  0.432,
+                  0.0
+                ],
+                "rotation": [
+                  0.0,
+                  0.0,
+                  0.0
+                ],
+                "scale": [
+                  1.0,
+                  1.0,
+                  1.0
+                ]
+              },
+              "material": "ivory",
+              "metadata": {
+                "content": "",
+                "is_blank": true
+              },
+              "children": []
+            },
+            {
+              "name": "page_37",
+              "primitive": {
+                "kind": "box",
+                "params": {
+                  "x": 1.0789127790642086,
+                  "y": 0.02023861952349873,
+                  "z": 1.3846413367527428
+                }
+              },
+              "transform": {
+                "location": [
+                  0.0,
+                  0.444,
+                  0.0
+                ],
+                "rotation": [
+                  0.0,
+                  0.0,
+                  0.0
+                ],
+                "scale": [
+                  1.0,
+                  1.0,
+                  1.0
+                ]
+              },
+              "material": "ivory",
+              "metadata": {
+                "content": "",
+                "is_blank": true
+              },
+              "children": []
+            },
+            {
+              "name": "page_38",
+              "primitive": {
+                "kind": "box",
+                "params": {
+                  "x": 1.2203475367925654,
+                  "y": 0.01600630769402856,
+                  "z": 1.2072725627998664
+                }
+              },
+              "transform": {
+                "location": [
+                  0.0,
+                  0.456,
+                  0.0
+                ],
+                "rotation": [
+                  0.0,
+                  0.0,
+                  0.0
+                ],
+                "scale": [
+                  1.0,
+                  1.0,
+                  1.0
+                ]
+              },
+              "material": "ivory",
+              "metadata": {
+                "content": "",
+                "is_blank": true
+              },
+              "children": []
+            },
+            {
+              "name": "page_39",
+              "primitive": {
+                "kind": "box",
+                "params": {
+                  "x": 1.141594531893995,
+                  "y": 0.02246799658594697,
+                  "z": 1.578628215848798
+                }
+              },
+              "transform": {
+                "location": [
+                  0.0,
+                  0.468,
+                  0.0
+                ],
+                "rotation": [
+                  0.0,
+                  0.0,
+                  0.0
+                ],
+                "scale": [
+                  1.0,
+                  1.0,
+                  1.0
+                ]
+              },
+              "material": "ivory",
+              "metadata": {
+                "content": "",
+                "is_blank": true
+              },
+              "children": []
+            },
+            {
+              "name": "page_40",
+              "primitive": {
+                "kind": "box",
+                "params": {
+                  "x": 1.1262320653714006,
+                  "y": 0.022171949840992175,
+                  "z": 1.6380295565577883
+                }
+              },
+              "transform": {
+                "location": [
+                  0.0,
+                  0.48,
+                  0.0
+                ],
+                "rotation": [
+                  0.0,
+                  0.0,
+                  0.0
+                ],
+                "scale": [
+                  1.0,
+                  1.0,
+                  1.0
+                ]
+              },
+              "material": "ivory",
+              "metadata": {
+                "content": "",
+                "is_blank": true
+              },
+              "children": []
+            },
+            {
+              "name": "page_41",
+              "primitive": {
+                "kind": "box",
+                "params": {
+                  "x": 1.164841578758999,
+                  "y": 0.011426593558362728,
+                  "z": 1.4596204883285604
+                }
+              },
+              "transform": {
+                "location": [
+                  0.0,
+                  0.492,
+                  0.0
+                ],
+                "rotation": [
+                  0.0,
+                  0.0,
+                  0.0
+                ],
+                "scale": [
+                  1.0,
+                  1.0,
+                  1.0
+                ]
+              },
+              "material": "ivory",
+              "metadata": {
+                "content": "",
+                "is_blank": true
+              },
+              "children": []
+            },
+            {
+              "name": "page_42",
+              "primitive": {
+                "kind": "box",
+                "params": {
+                  "x": 1.198433427073974,
+                  "y": 0.013258714525328294,
+                  "z": 1.2331792768755023
+                }
+              },
+              "transform": {
+                "location": [
+                  0.0,
+                  0.504,
+                  0.0
+                ],
+                "rotation": [
+                  0.0,
+                  0.0,
+                  0.0
+                ],
+                "scale": [
+                  1.0,
+                  1.0,
+                  1.0
+                ]
+              },
+              "material": "ivory",
+              "metadata": {
+                "content": "",
+                "is_blank": true
+              },
+              "children": []
+            },
+            {
+              "name": "page_43",
+              "primitive": {
+                "kind": "box",
+                "params": {
+                  "x": 0.9292200999002556,
+                  "y": 0.022140925812093176,
+                  "z": 1.7173264909816384
+                }
+              },
+              "transform": {
+                "location": [
+                  0.0,
+                  0.516,
+                  0.0
+                ],
+                "rotation": [
+                  0.0,
+                  0.0,
+                  0.0
+                ],
+                "scale": [
+                  1.0,
+                  1.0,
+                  1.0
+                ]
+              },
+              "material": "ivory",
+              "metadata": {
+                "content": "",
+                "is_blank": true
+              },
+              "children": []
+            },
+            {
+              "name": "page_44",
+              "primitive": {
+                "kind": "box",
+                "params": {
+                  "x": 0.8501204126453332,
+                  "y": 0.022993141043387306,
+                  "z": 1.772908364063937
+                }
+              },
+              "transform": {
+                "location": [
+                  0.0,
+                  0.528,
+                  0.0
+                ],
+                "rotation": [
+                  0.0,
+                  0.0,
+                  0.0
+                ],
+                "scale": [
+                  1.0,
+                  1.0,
+                  1.0
+                ]
+              },
+              "material": "ivory",
+              "metadata": {
+                "content": "",
+                "is_blank": true
+              },
+              "children": []
+            },
+            {
+              "name": "page_45",
+              "primitive": {
+                "kind": "box",
+                "params": {
+                  "x": 1.1613118543897225,
+                  "y": 0.012912936264290022,
+                  "z": 1.7974851815306427
+                }
+              },
+              "transform": {
+                "location": [
+                  0.0,
+                  0.54,
+                  0.0
+                ],
+                "rotation": [
+                  0.0,
+                  0.0,
+                  0.0
+                ],
+                "scale": [
+                  1.0,
+                  1.0,
+                  1.0
+                ]
+              },
+              "material": "ivory",
+              "metadata": {
+                "content": "",
+                "is_blank": true
+              },
+              "children": []
+            },
+            {
+              "name": "page_46",
+              "primitive": {
+                "kind": "box",
+                "params": {
+                  "x": 0.8691481264280303,
+                  "y": 0.017890674580986705,
+                  "z": 1.3997059510810839
+                }
+              },
+              "transform": {
+                "location": [
+                  0.0,
+                  0.552,
+                  0.0
+                ],
+                "rotation": [
+                  0.0,
+                  0.0,
+                  0.0
+                ],
+                "scale": [
+                  1.0,
+                  1.0,
+                  1.0
+                ]
+              },
+              "material": "ivory",
+              "metadata": {
+                "content": "",
+                "is_blank": true
+              },
+              "children": []
+            },
+            {
+              "name": "page_47",
+              "primitive": {
+                "kind": "box",
+                "params": {
+                  "x": 1.2451761253783453,
+                  "y": 0.011698845319510124,
+                  "z": 1.6310823813466842
+                }
+              },
+              "transform": {
+                "location": [
+                  0.0,
+                  0.5640000000000001,
+                  0.0
+                ],
+                "rotation": [
+                  0.0,
+                  0.0,
+                  0.0
+                ],
+                "scale": [
+                  1.0,
+                  1.0,
+                  1.0
+                ]
+              },
+              "material": "ivory",
+              "metadata": {
+                "content": "",
+                "is_blank": true
+              },
+              "children": []
+            },
+            {
+              "name": "page_48",
+              "primitive": {
+                "kind": "box",
+                "params": {
+                  "x": 0.8329374455307326,
+                  "y": 0.02389875028619239,
+                  "z": 1.7275611700955646
+                }
+              },
+              "transform": {
+                "location": [
+                  0.0,
+                  0.5760000000000001,
+                  0.0
+                ],
+                "rotation": [
+                  0.0,
+                  0.0,
+                  0.0
+                ],
+                "scale": [
+                  1.0,
+                  1.0,
+                  1.0
+                ]
+              },
+              "material": "ivory",
+              "metadata": {
+                "content": "",
+                "is_blank": true
+              },
+              "children": []
+            },
+            {
+              "name": "page_49",
+              "primitive": {
+                "kind": "box",
+                "params": {
+                  "x": 1.1429605480735232,
+                  "y": 0.01521949205778996,
+                  "z": 1.4379619670881487
+                }
+              },
+              "transform": {
+                "location": [
+                  0.0,
+                  0.588,
+                  0.0
+                ],
+                "rotation": [
+                  0.0,
+                  0.0,
+                  0.0
+                ],
+                "scale": [
+                  1.0,
+                  1.0,
+                  1.0
+                ]
+              },
+              "material": "ivory",
+              "metadata": {
+                "content": "",
+                "is_blank": true
+              },
+              "children": []
+            },
+            {
+              "name": "page_50",
+              "primitive": {
+                "kind": "box",
+                "params": {
+                  "x": 1.2547459626937874,
+                  "y": 0.013775695153099229,
+                  "z": 1.3279930586040036
+                }
+              },
+              "transform": {
+                "location": [
+                  0.0,
+                  0.6,
+                  0.0
+                ],
+                "rotation": [
+                  0.0,
+                  0.0,
+                  0.0
+                ],
+                "scale": [
+                  1.0,
+                  1.0,
+                  1.0
+                ]
+              },
+              "material": "ivory",
+              "metadata": {
+                "content": "",
+                "is_blank": true
+              },
+              "children": []
+            },
+            {
+              "name": "page_51",
+              "primitive": {
+                "kind": "box",
+                "params": {
+                  "x": 0.8725657261860349,
+                  "y": 0.021313847102977426,
+                  "z": 1.7772814446877028
+                }
+              },
+              "transform": {
+                "location": [
+                  0.0,
+                  0.612,
+                  0.0
+                ],
+                "rotation": [
+                  0.0,
+                  0.0,
+                  0.0
+                ],
+                "scale": [
+                  1.0,
+                  1.0,
+                  1.0
+                ]
+              },
+              "material": "ivory",
+              "metadata": {
+                "content": "",
+                "is_blank": true
+              },
+              "children": []
+            },
+            {
+              "name": "page_52",
+              "primitive": {
+                "kind": "box",
+                "params": {
+                  "x": 1.0850919319377192,
+                  "y": 0.015566723770491356,
+                  "z": 1.3699424142622576
+                }
+              },
+              "transform": {
+                "location": [
+                  0.0,
+                  0.624,
+                  0.0
+                ],
+                "rotation": [
+                  0.0,
+                  0.0,
+                  0.0
+                ],
+                "scale": [
+                  1.0,
+                  1.0,
+                  1.0
+                ]
+              },
+              "material": "ivory",
+              "metadata": {
+                "content": "",
+                "is_blank": true
+              },
+              "children": []
+            },
+            {
+              "name": "page_53",
+              "primitive": {
+                "kind": "box",
+                "params": {
+                  "x": 1.122971915487776,
+                  "y": 0.015410680013660314,
+                  "z": 1.5833959569250484
+                }
+              },
+              "transform": {
+                "location": [
+                  0.0,
+                  0.636,
+                  0.0
+                ],
+                "rotation": [
+                  0.0,
+                  0.0,
+                  0.0
+                ],
+                "scale": [
+                  1.0,
+                  1.0,
+                  1.0
+                ]
+              },
+              "material": "ivory",
+              "metadata": {
+                "content": "",
+                "is_blank": true
+              },
+              "children": []
+            },
+            {
+              "name": "page_54",
+              "primitive": {
+                "kind": "box",
+                "params": {
+                  "x": 0.8682325930133361,
+                  "y": 0.01905187774138074,
+                  "z": 1.294618461742227
+                }
+              },
+              "transform": {
+                "location": [
+                  0.0,
+                  0.648,
+                  0.0
+                ],
+                "rotation": [
+                  0.0,
+                  0.0,
+                  0.0
+                ],
+                "scale": [
+                  1.0,
+                  1.0,
+                  1.0
+                ]
+              },
+              "material": "ivory",
+              "metadata": {
+                "content": "",
+                "is_blank": true
+              },
+              "children": []
+            },
+            {
+              "name": "page_55",
+              "primitive": {
+                "kind": "box",
+                "params": {
+                  "x": 0.9135347222965127,
+                  "y": 0.022465284347652388,
+                  "z": 1.2351292246590373
+                }
+              },
+              "transform": {
+                "location": [
+                  0.0,
+                  0.66,
+                  0.0
+                ],
+                "rotation": [
+                  0.0,
+                  0.0,
+                  0.0
+                ],
+                "scale": [
+                  1.0,
+                  1.0,
+                  1.0
+                ]
+              },
+              "material": "ivory",
+              "metadata": {
+                "content": "",
+                "is_blank": true
+              },
+              "children": []
+            }
+          ]
+        },
+        {
+          "name": "empty_book_ornament",
+          "primitive": null,
+          "transform": {
+            "location": [
+              0.0,
+              0.0,
+              0.0
+            ],
+            "rotation": [
+              0.0,
+              0.0,
+              0.0
+            ],
+            "scale": [
+              1.0,
+              1.0,
+              1.0
+            ]
+          },
+          "material": null,
+          "metadata": {},
+          "children": [
+            {
+              "name": "empty_book_ornament_sphere_0",
+              "primitive": {
+                "kind": "sphere",
+                "params": {
+                  "radius": 0.1837068301698977
+                }
+              },
+              "transform": {
+                "location": [
+                  -0.30013335045608613,
+                  -2.8793833166552387,
+                  2.3117103990394416
+                ],
+                "rotation": [
+                  0.0,
+                  0.0,
+                  0.0
+                ],
+                "scale": [
+                  1.0,
+                  1.0,
+                  1.0
+                ]
+              },
+              "material": "emerald",
+              "metadata": {},
+              "children": []
+            },
+            {
+              "name": "empty_book_ornament_cone_1",
+              "primitive": {
+                "kind": "cone",
+                "params": {
+                  "radius1": 0.08422424098442609,
+                  "radius2": 0.0,
+                  "depth": 0.1965868624244071
+                }
+              },
+              "transform": {
+                "location": [
+                  2.2543105234207745,
+                  2.678971895837684,
+                  1.0073041046395983
+                ],
+                "rotation": [
+                  0.0,
+                  0.0,
+                  0.0
+                ],
+                "scale": [
+                  1.0,
+                  1.0,
+                  1.0
+                ]
+              },
+              "material": "ivory",
+              "metadata": {},
+              "children": []
+            },
+            {
+              "name": "empty_book_ornament_cone_2",
+              "primitive": {
+                "kind": "cone",
+                "params": {
+                  "radius1": 0.043556380372097976,
+                  "radius2": 0.0,
+                  "depth": 0.22135178214501822
+                }
+              },
+              "transform": {
+                "location": [
+                  -1.9772336879570527,
+                  1.329582695598079,
+                  1.0171208008658188
+                ],
+                "rotation": [
+                  0.0,
+                  0.0,
+                  0.0
+                ],
+                "scale": [
+                  1.0,
+                  1.0,
+                  1.0
+                ]
+              },
+              "material": "ivory",
+              "metadata": {},
+              "children": []
+            },
+            {
+              "name": "empty_book_ornament_torus_3",
+              "primitive": {
+                "kind": "torus",
+                "params": {
+                  "major_radius": 0.13012212166763143,
+                  "minor_radius": 0.04257666730412372
+                }
+              },
+              "transform": {
+                "location": [
+                  1.0752457512421412,
+                  0.09249216169943608,
+                  -0.8212741133946593
+                ],
+                "rotation": [
+                  0.0,
+                  0.0,
+                  0.0
+                ],
+                "scale": [
+                  1.0,
+                  1.0,
+                  1.0
+                ]
+              },
+              "material": "silver",
+              "metadata": {},
+              "children": []
+            },
+            {
+              "name": "empty_book_ornament_sphere_4",
+              "primitive": {
+                "kind": "sphere",
+                "params": {
+                  "radius": 0.056661445146174695
+                }
+              },
+              "transform": {
+                "location": [
+                  -2.207855182651361,
+                  -1.6330274650638985,
+                  0.16292955575680867
+                ],
+                "rotation": [
+                  0.0,
+                  0.0,
+                  0.0
+                ],
+                "scale": [
+                  1.0,
+                  1.0,
+                  1.0
+                ]
+              },
+              "material": "emerald",
+              "metadata": {},
+              "children": []
+            },
+            {
+              "name": "empty_book_ornament_sphere_5",
+              "primitive": {
+                "kind": "sphere",
+                "params": {
+                  "radius": 0.13722701440164203
+                }
+              },
+              "transform": {
+                "location": [
+                  0.5135675605465386,
+                  2.9812511431996995,
+                  -0.48605757487083423
+                ],
+                "rotation": [
+                  0.0,
+                  0.0,
+                  0.0
+                ],
+                "scale": [
+                  1.0,
+                  1.0,
+                  1.0
+                ]
+              },
+              "material": "emerald",
+              "metadata": {},
+              "children": []
+            },
+            {
+              "name": "empty_book_ornament_torus_6",
+              "primitive": {
+                "kind": "torus",
+                "params": {
+                  "major_radius": 0.17898267865334766,
+                  "minor_radius": 0.01742132839409256
+                }
+              },
+              "transform": {
+                "location": [
+                  -0.04033072545469407,
+                  1.9983999011790612,
+                  -0.6111366791308877
+                ],
+                "rotation": [
+                  0.0,
+                  0.0,
+                  0.0
+                ],
+                "scale": [
+                  1.0,
+                  1.0,
+                  1.0
+                ]
+              },
+              "material": "silver",
+              "metadata": {},
+              "children": []
+            },
+            {
+              "name": "empty_book_ornament_sphere_7",
+              "primitive": {
+                "kind": "sphere",
+                "params": {
+                  "radius": 0.05423890812677813
+                }
+              },
+              "transform": {
+                "location": [
+                  2.003701501951608,
+                  -0.5434300141990889,
+                  0.8278838549512129
+                ],
+                "rotation": [
+                  0.0,
+                  0.0,
+                  0.0
+                ],
+                "scale": [
+                  1.0,
+                  1.0,
+                  1.0
+                ]
+              },
+              "material": "emerald",
+              "metadata": {},
+              "children": []
+            }
+          ]
+        },
+        {
+          "name": "cover_magnitudes",
+          "primitive": null,
+          "transform": {
+            "location": [
+              0.0,
+              0.0,
+              0.0
+            ],
+            "rotation": [
+              0.0,
+              0.0,
+              0.0
+            ],
+            "scale": [
+              1.0,
+              1.0,
+              1.0
+            ]
+          },
+          "material": null,
+          "metadata": {},
+          "children": [
+            {
+              "name": "cover_x1",
+              "primitive": {
+                "kind": "box",
+                "params": {
+                  "x": 1.6,
+                  "y": 0.2,
+                  "z": 2.2
+                }
+              },
+              "transform": {
+                "location": [
+                  0.0,
+                  0.0,
+                  0.0
+                ],
+                "rotation": [
+                  0.0,
+                  0.0,
+                  0.0
+                ],
+                "scale": [
+                  1.0,
+                  1.0,
+                  1.0
+                ]
+              },
+              "material": "obsidian",
+              "metadata": {
+                "scale_operation": "magnify",
+                "factor": 1.0,
+                "scale_index": 0
+              },
+              "children": []
+            },
+            {
+              "name": "cover_x2",
+              "primitive": {
+                "kind": "box",
+                "params": {
+                  "x": 1.6,
+                  "y": 0.2,
+                  "z": 2.2
+                }
+              },
+              "transform": {
+                "location": [
+                  0.0,
+                  3.5,
+                  0.0
+                ],
+                "rotation": [
+                  0.0,
+                  0.0,
+                  0.0
+                ],
+                "scale": [
+                  2.0,
+                  2.0,
+                  2.0
+                ]
+              },
+              "material": "obsidian",
+              "metadata": {
+                "scale_operation": "magnify",
+                "factor": 2.0,
+                "scale_index": 1
+              },
+              "children": []
+            },
+            {
+              "name": "cover_x4",
+              "primitive": {
+                "kind": "box",
+                "params": {
+                  "x": 1.6,
+                  "y": 0.2,
+                  "z": 2.2
+                }
+              },
+              "transform": {
+                "location": [
+                  0.0,
+                  11.0,
+                  0.0
+                ],
+                "rotation": [
+                  0.0,
+                  0.0,
+                  0.0
+                ],
+                "scale": [
+                  4.0,
+                  4.0,
+                  4.0
+                ]
+              },
+              "material": "obsidian",
+              "metadata": {
+                "scale_operation": "magnify",
+                "factor": 4.0,
+                "scale_index": 2
+              },
+              "children": []
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

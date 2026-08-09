@@ -9,6 +9,7 @@ if str(ROOT) not in sys.path:
 
 from micromegas.cli import GeneratorConfig
 from micromegas.geometry import Scene, SceneObject, Transform, Vec3, box, sphere
+from micromegas.mechanisms import decorative_geometric_structures
 from micromegas.randomness import SeededRng
 from micromegas.scale import make_reference_object, miniaturize, nest, repeat_at_scale
 
@@ -24,7 +25,8 @@ def _reliquary_layer(rng: SeededRng, layer: int) -> SceneObject:
         material=rng.choice(["obsidian", "brass", "silver"]),
     )
     core = sphere(f"reliquary_core_{layer}", radius=0.2 + layer * 0.1, material=rng.choice(["emerald", "ivory"]))
-    return SceneObject(name=f"reliquary_layer_{layer}").add(shell, core)
+    ornaments = decorative_geometric_structures(rng.split("ornament"), f"reliquary_{layer}", complexity=rng.randint(1, 3))
+    return SceneObject(name=f"reliquary_layer_{layer}").add(shell, core, ornaments)
 
 
 def build_scene(config: GeneratorConfig, rng: SeededRng) -> Scene:

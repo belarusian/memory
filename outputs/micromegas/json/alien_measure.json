@@ -1,0 +1,2798 @@
+{
+  "name": "micromegas_alien_measure",
+  "seed": 2024,
+  "family": "alien_measure",
+  "metadata": {
+    "style": "sample",
+    "complexity": 4
+  },
+  "materials": {
+    "brass": {
+      "name": "brass",
+      "base_color": [
+        0.73,
+        0.58,
+        0.24
+      ],
+      "metallic": 0.85,
+      "roughness": 0.25
+    },
+    "obsidian": {
+      "name": "obsidian",
+      "base_color": [
+        0.08,
+        0.08,
+        0.1
+      ],
+      "metallic": 0.2,
+      "roughness": 0.15
+    },
+    "ivory": {
+      "name": "ivory",
+      "base_color": [
+        0.92,
+        0.91,
+        0.84
+      ],
+      "metallic": 0.05,
+      "roughness": 0.65
+    },
+    "emerald": {
+      "name": "emerald",
+      "base_color": [
+        0.1,
+        0.45,
+        0.3
+      ],
+      "metallic": 0.1,
+      "roughness": 0.35
+    },
+    "silver": {
+      "name": "silver",
+      "base_color": [
+        0.75,
+        0.75,
+        0.78
+      ],
+      "metallic": 0.95,
+      "roughness": 0.12
+    },
+    "ceramic": {
+      "name": "ceramic",
+      "base_color": [
+        0.86,
+        0.86,
+        0.9
+      ],
+      "metallic": 0.0,
+      "roughness": 0.7
+    }
+  },
+  "objects": [
+    {
+      "name": "alien_measurement_stack",
+      "primitive": null,
+      "transform": {
+        "location": [
+          0.0,
+          0.0,
+          0.0
+        ],
+        "rotation": [
+          0.0,
+          0.0,
+          0.0
+        ],
+        "scale": [
+          1.0,
+          1.0,
+          1.0
+        ]
+      },
+      "material": null,
+      "metadata": {},
+      "children": [
+        {
+          "name": "spine",
+          "primitive": {
+            "kind": "cylinder",
+            "params": {
+              "radius": 0.12,
+              "depth": 3.316254011606998
+            }
+          },
+          "transform": {
+            "location": [
+              0.0,
+              0.0,
+              0.0
+            ],
+            "rotation": [
+              1.5708,
+              0.0,
+              0.0
+            ],
+            "scale": [
+              1.0,
+              1.0,
+              1.0
+            ]
+          },
+          "material": "brass",
+          "metadata": {},
+          "children": []
+        },
+        {
+          "name": "caliper_frame",
+          "primitive": {
+            "kind": "box",
+            "params": {
+              "x": 1.3826114331385662,
+              "y": 0.14,
+              "z": 1.0430010867130861
+            }
+          },
+          "transform": {
+            "location": [
+              0.0,
+              0.0,
+              0.0
+            ],
+            "rotation": [
+              0.0,
+              0.0,
+              0.0
+            ],
+            "scale": [
+              1.0,
+              1.0,
+              1.0
+            ]
+          },
+          "material": "silver",
+          "metadata": {},
+          "children": []
+        },
+        {
+          "name": "sextant_arc",
+          "primitive": {
+            "kind": "torus",
+            "params": {
+              "major_radius": 1.3098386152000119,
+              "minor_radius": 0.04
+            }
+          },
+          "transform": {
+            "location": [
+              0.0,
+              0.0,
+              0.0
+            ],
+            "rotation": [
+              0.0,
+              0.0,
+              0.0
+            ],
+            "scale": [
+              1.0,
+              1.0,
+              1.0
+            ]
+          },
+          "material": "obsidian",
+          "metadata": {},
+          "children": []
+        },
+        {
+          "name": "alien_measure_measurement_rings",
+          "primitive": null,
+          "transform": {
+            "location": [
+              0.0,
+              0.0,
+              0.0
+            ],
+            "rotation": [
+              0.0,
+              0.0,
+              0.0
+            ],
+            "scale": [
+              1.0,
+              1.0,
+              1.0
+            ]
+          },
+          "material": null,
+          "metadata": {},
+          "children": [
+            {
+              "name": "alien_measure_0_calibration",
+              "primitive": null,
+              "transform": {
+                "location": [
+                  0.0,
+                  0.0,
+                  0.0
+                ],
+                "rotation": [
+                  1.8230697572830346,
+                  3.1105190140317878,
+                  0.3725553756375375
+                ],
+                "scale": [
+                  1.0,
+                  1.0,
+                  1.0
+                ]
+              },
+              "material": null,
+              "metadata": {},
+              "children": [
+                {
+                  "name": "alien_measure_0_calibration_ring",
+                  "primitive": {
+                    "kind": "torus",
+                    "params": {
+                      "major_radius": 0.9670758208642471,
+                      "minor_radius": 0.02
+                    }
+                  },
+                  "transform": {
+                    "location": [
+                      0.0,
+                      0.0,
+                      0.0
+                    ],
+                    "rotation": [
+                      0.0,
+                      0.0,
+                      0.0
+                    ],
+                    "scale": [
+                      1.0,
+                      1.0,
+                      1.0
+                    ]
+                  },
+                  "material": "brass",
+                  "metadata": {},
+                  "children": []
+                },
+                {
+                  "name": "alien_measure_0_glyphs",
+                  "primitive": null,
+                  "transform": {
+                    "location": [
+                      0.0,
+                      0.0,
+                      0.0
+                    ],
+                    "rotation": [
+                      0.0,
+                      0.0,
+                      0.0
+                    ],
+                    "scale": [
+                      1.0,
+                      1.0,
+                      1.0
+                    ]
+                  },
+                  "material": null,
+                  "metadata": {},
+                  "children": [
+                    {
+                      "name": "alien_measure_0_glyph_marker_0",
+                      "primitive": {
+                        "kind": "cone",
+                        "params": {
+                          "radius1": 0.03,
+                          "radius2": 0.0,
+                          "depth": 0.08
+                        }
+                      },
+                      "transform": {
+                        "location": [
+                          0.0,
+                          0.9670758208642471,
+                          0.0
+                        ],
+                        "rotation": [
+                          0.0,
+                          0.0,
+                          0.0
+                        ],
+                        "scale": [
+                          1.0,
+                          1.0,
+                          1.0
+                        ]
+                      },
+                      "material": "silver",
+                      "metadata": {
+                        "glyph": "Rigel"
+                      },
+                      "children": []
+                    },
+                    {
+                      "name": "alien_measure_0_glyph_marker_1",
+                      "primitive": {
+                        "kind": "cone",
+                        "params": {
+                          "radius1": 0.03,
+                          "radius2": 0.0,
+                          "depth": 0.08
+                        }
+                      },
+                      "transform": {
+                        "location": [
+                          0.0,
+                          0.9670758208642471,
+                          0.0
+                        ],
+                        "rotation": [
+                          0.0,
+                          0.0,
+                          0.44879857142857144
+                        ],
+                        "scale": [
+                          1.0,
+                          1.0,
+                          1.0
+                        ]
+                      },
+                      "material": "silver",
+                      "metadata": {
+                        "glyph": "Sirius"
+                      },
+                      "children": []
+                    },
+                    {
+                      "name": "alien_measure_0_glyph_marker_2",
+                      "primitive": {
+                        "kind": "cone",
+                        "params": {
+                          "radius1": 0.03,
+                          "radius2": 0.0,
+                          "depth": 0.08
+                        }
+                      },
+                      "transform": {
+                        "location": [
+                          0.0,
+                          0.9670758208642471,
+                          0.0
+                        ],
+                        "rotation": [
+                          0.0,
+                          0.0,
+                          0.8975971428571429
+                        ],
+                        "scale": [
+                          1.0,
+                          1.0,
+                          1.0
+                        ]
+                      },
+                      "material": "silver",
+                      "metadata": {
+                        "glyph": "Aldebaran"
+                      },
+                      "children": []
+                    },
+                    {
+                      "name": "alien_measure_0_glyph_marker_3",
+                      "primitive": {
+                        "kind": "cone",
+                        "params": {
+                          "radius1": 0.03,
+                          "radius2": 0.0,
+                          "depth": 0.08
+                        }
+                      },
+                      "transform": {
+                        "location": [
+                          0.0,
+                          0.9670758208642471,
+                          0.0
+                        ],
+                        "rotation": [
+                          0.0,
+                          0.0,
+                          1.3463957142857144
+                        ],
+                        "scale": [
+                          1.0,
+                          1.0,
+                          1.0
+                        ]
+                      },
+                      "material": "silver",
+                      "metadata": {
+                        "glyph": "Canopus"
+                      },
+                      "children": []
+                    },
+                    {
+                      "name": "alien_measure_0_glyph_marker_4",
+                      "primitive": {
+                        "kind": "cone",
+                        "params": {
+                          "radius1": 0.03,
+                          "radius2": 0.0,
+                          "depth": 0.08
+                        }
+                      },
+                      "transform": {
+                        "location": [
+                          0.0,
+                          0.9670758208642471,
+                          0.0
+                        ],
+                        "rotation": [
+                          0.0,
+                          0.0,
+                          1.7951942857142857
+                        ],
+                        "scale": [
+                          1.0,
+                          1.0,
+                          1.0
+                        ]
+                      },
+                      "material": "silver",
+                      "metadata": {
+                        "glyph": "Rigel"
+                      },
+                      "children": []
+                    },
+                    {
+                      "name": "alien_measure_0_glyph_marker_5",
+                      "primitive": {
+                        "kind": "cone",
+                        "params": {
+                          "radius1": 0.03,
+                          "radius2": 0.0,
+                          "depth": 0.08
+                        }
+                      },
+                      "transform": {
+                        "location": [
+                          0.0,
+                          0.9670758208642471,
+                          0.0
+                        ],
+                        "rotation": [
+                          0.0,
+                          0.0,
+                          2.243992857142857
+                        ],
+                        "scale": [
+                          1.0,
+                          1.0,
+                          1.0
+                        ]
+                      },
+                      "material": "silver",
+                      "metadata": {
+                        "glyph": "Vega"
+                      },
+                      "children": []
+                    },
+                    {
+                      "name": "alien_measure_0_glyph_marker_6",
+                      "primitive": {
+                        "kind": "cone",
+                        "params": {
+                          "radius1": 0.03,
+                          "radius2": 0.0,
+                          "depth": 0.08
+                        }
+                      },
+                      "transform": {
+                        "location": [
+                          0.0,
+                          0.9670758208642471,
+                          0.0
+                        ],
+                        "rotation": [
+                          0.0,
+                          0.0,
+                          2.6927914285714287
+                        ],
+                        "scale": [
+                          1.0,
+                          1.0,
+                          1.0
+                        ]
+                      },
+                      "material": "silver",
+                      "metadata": {
+                        "glyph": "Aldebaran"
+                      },
+                      "children": []
+                    },
+                    {
+                      "name": "alien_measure_0_glyph_marker_7",
+                      "primitive": {
+                        "kind": "cone",
+                        "params": {
+                          "radius1": 0.03,
+                          "radius2": 0.0,
+                          "depth": 0.08
+                        }
+                      },
+                      "transform": {
+                        "location": [
+                          0.0,
+                          0.9670758208642471,
+                          0.0
+                        ],
+                        "rotation": [
+                          0.0,
+                          0.0,
+                          3.14159
+                        ],
+                        "scale": [
+                          1.0,
+                          1.0,
+                          1.0
+                        ]
+                      },
+                      "material": "silver",
+                      "metadata": {
+                        "glyph": "Vega"
+                      },
+                      "children": []
+                    },
+                    {
+                      "name": "alien_measure_0_glyph_marker_8",
+                      "primitive": {
+                        "kind": "cone",
+                        "params": {
+                          "radius1": 0.03,
+                          "radius2": 0.0,
+                          "depth": 0.08
+                        }
+                      },
+                      "transform": {
+                        "location": [
+                          0.0,
+                          0.9670758208642471,
+                          0.0
+                        ],
+                        "rotation": [
+                          0.0,
+                          0.0,
+                          3.5903885714285715
+                        ],
+                        "scale": [
+                          1.0,
+                          1.0,
+                          1.0
+                        ]
+                      },
+                      "material": "silver",
+                      "metadata": {
+                        "glyph": "Vega"
+                      },
+                      "children": []
+                    },
+                    {
+                      "name": "alien_measure_0_glyph_marker_9",
+                      "primitive": {
+                        "kind": "cone",
+                        "params": {
+                          "radius1": 0.03,
+                          "radius2": 0.0,
+                          "depth": 0.08
+                        }
+                      },
+                      "transform": {
+                        "location": [
+                          0.0,
+                          0.9670758208642471,
+                          0.0
+                        ],
+                        "rotation": [
+                          0.0,
+                          0.0,
+                          4.039187142857143
+                        ],
+                        "scale": [
+                          1.0,
+                          1.0,
+                          1.0
+                        ]
+                      },
+                      "material": "silver",
+                      "metadata": {
+                        "glyph": "Sirius"
+                      },
+                      "children": []
+                    },
+                    {
+                      "name": "alien_measure_0_glyph_marker_10",
+                      "primitive": {
+                        "kind": "cone",
+                        "params": {
+                          "radius1": 0.03,
+                          "radius2": 0.0,
+                          "depth": 0.08
+                        }
+                      },
+                      "transform": {
+                        "location": [
+                          0.0,
+                          0.9670758208642471,
+                          0.0
+                        ],
+                        "rotation": [
+                          0.0,
+                          0.0,
+                          4.487985714285714
+                        ],
+                        "scale": [
+                          1.0,
+                          1.0,
+                          1.0
+                        ]
+                      },
+                      "material": "silver",
+                      "metadata": {
+                        "glyph": "Rigel"
+                      },
+                      "children": []
+                    },
+                    {
+                      "name": "alien_measure_0_glyph_marker_11",
+                      "primitive": {
+                        "kind": "cone",
+                        "params": {
+                          "radius1": 0.03,
+                          "radius2": 0.0,
+                          "depth": 0.08
+                        }
+                      },
+                      "transform": {
+                        "location": [
+                          0.0,
+                          0.9670758208642471,
+                          0.0
+                        ],
+                        "rotation": [
+                          0.0,
+                          0.0,
+                          4.936784285714285
+                        ],
+                        "scale": [
+                          1.0,
+                          1.0,
+                          1.0
+                        ]
+                      },
+                      "material": "silver",
+                      "metadata": {
+                        "glyph": "Vega"
+                      },
+                      "children": []
+                    },
+                    {
+                      "name": "alien_measure_0_glyph_marker_12",
+                      "primitive": {
+                        "kind": "cone",
+                        "params": {
+                          "radius1": 0.03,
+                          "radius2": 0.0,
+                          "depth": 0.08
+                        }
+                      },
+                      "transform": {
+                        "location": [
+                          0.0,
+                          0.9670758208642471,
+                          0.0
+                        ],
+                        "rotation": [
+                          0.0,
+                          0.0,
+                          5.3855828571428574
+                        ],
+                        "scale": [
+                          1.0,
+                          1.0,
+                          1.0
+                        ]
+                      },
+                      "material": "silver",
+                      "metadata": {
+                        "glyph": "Polaris"
+                      },
+                      "children": []
+                    },
+                    {
+                      "name": "alien_measure_0_glyph_marker_13",
+                      "primitive": {
+                        "kind": "cone",
+                        "params": {
+                          "radius1": 0.03,
+                          "radius2": 0.0,
+                          "depth": 0.08
+                        }
+                      },
+                      "transform": {
+                        "location": [
+                          0.0,
+                          0.9670758208642471,
+                          0.0
+                        ],
+                        "rotation": [
+                          0.0,
+                          0.0,
+                          5.834381428571429
+                        ],
+                        "scale": [
+                          1.0,
+                          1.0,
+                          1.0
+                        ]
+                      },
+                      "material": "silver",
+                      "metadata": {
+                        "glyph": "Aldebaran"
+                      },
+                      "children": []
+                    }
+                  ]
+                }
+              ]
+            },
+            {
+              "name": "alien_measure_1_calibration",
+              "primitive": null,
+              "transform": {
+                "location": [
+                  0.0,
+                  0.0,
+                  0.0
+                ],
+                "rotation": [
+                  1.31039349998414,
+                  1.155435609004842,
+                  2.12540296526719
+                ],
+                "scale": [
+                  1.0,
+                  1.0,
+                  1.0
+                ]
+              },
+              "material": null,
+              "metadata": {},
+              "children": [
+                {
+                  "name": "alien_measure_1_calibration_ring",
+                  "primitive": {
+                    "kind": "torus",
+                    "params": {
+                      "major_radius": 0.9156535826453572,
+                      "minor_radius": 0.02
+                    }
+                  },
+                  "transform": {
+                    "location": [
+                      0.0,
+                      0.0,
+                      0.0
+                    ],
+                    "rotation": [
+                      0.0,
+                      0.0,
+                      0.0
+                    ],
+                    "scale": [
+                      1.0,
+                      1.0,
+                      1.0
+                    ]
+                  },
+                  "material": "brass",
+                  "metadata": {},
+                  "children": []
+                },
+                {
+                  "name": "alien_measure_1_glyphs",
+                  "primitive": null,
+                  "transform": {
+                    "location": [
+                      0.0,
+                      0.0,
+                      0.0
+                    ],
+                    "rotation": [
+                      0.0,
+                      0.0,
+                      0.0
+                    ],
+                    "scale": [
+                      1.0,
+                      1.0,
+                      1.0
+                    ]
+                  },
+                  "material": null,
+                  "metadata": {},
+                  "children": [
+                    {
+                      "name": "alien_measure_1_glyph_marker_0",
+                      "primitive": {
+                        "kind": "cone",
+                        "params": {
+                          "radius1": 0.03,
+                          "radius2": 0.0,
+                          "depth": 0.08
+                        }
+                      },
+                      "transform": {
+                        "location": [
+                          0.0,
+                          0.9156535826453572,
+                          0.0
+                        ],
+                        "rotation": [
+                          0.0,
+                          0.0,
+                          0.0
+                        ],
+                        "scale": [
+                          1.0,
+                          1.0,
+                          1.0
+                        ]
+                      },
+                      "material": "silver",
+                      "metadata": {
+                        "glyph": "Sirius"
+                      },
+                      "children": []
+                    },
+                    {
+                      "name": "alien_measure_1_glyph_marker_1",
+                      "primitive": {
+                        "kind": "cone",
+                        "params": {
+                          "radius1": 0.03,
+                          "radius2": 0.0,
+                          "depth": 0.08
+                        }
+                      },
+                      "transform": {
+                        "location": [
+                          0.0,
+                          0.9156535826453572,
+                          0.0
+                        ],
+                        "rotation": [
+                          0.0,
+                          0.0,
+                          0.44879857142857144
+                        ],
+                        "scale": [
+                          1.0,
+                          1.0,
+                          1.0
+                        ]
+                      },
+                      "material": "silver",
+                      "metadata": {
+                        "glyph": "Aldebaran"
+                      },
+                      "children": []
+                    },
+                    {
+                      "name": "alien_measure_1_glyph_marker_2",
+                      "primitive": {
+                        "kind": "cone",
+                        "params": {
+                          "radius1": 0.03,
+                          "radius2": 0.0,
+                          "depth": 0.08
+                        }
+                      },
+                      "transform": {
+                        "location": [
+                          0.0,
+                          0.9156535826453572,
+                          0.0
+                        ],
+                        "rotation": [
+                          0.0,
+                          0.0,
+                          0.8975971428571429
+                        ],
+                        "scale": [
+                          1.0,
+                          1.0,
+                          1.0
+                        ]
+                      },
+                      "material": "silver",
+                      "metadata": {
+                        "glyph": "Vega"
+                      },
+                      "children": []
+                    },
+                    {
+                      "name": "alien_measure_1_glyph_marker_3",
+                      "primitive": {
+                        "kind": "cone",
+                        "params": {
+                          "radius1": 0.03,
+                          "radius2": 0.0,
+                          "depth": 0.08
+                        }
+                      },
+                      "transform": {
+                        "location": [
+                          0.0,
+                          0.9156535826453572,
+                          0.0
+                        ],
+                        "rotation": [
+                          0.0,
+                          0.0,
+                          1.3463957142857144
+                        ],
+                        "scale": [
+                          1.0,
+                          1.0,
+                          1.0
+                        ]
+                      },
+                      "material": "silver",
+                      "metadata": {
+                        "glyph": "Sirius"
+                      },
+                      "children": []
+                    },
+                    {
+                      "name": "alien_measure_1_glyph_marker_4",
+                      "primitive": {
+                        "kind": "cone",
+                        "params": {
+                          "radius1": 0.03,
+                          "radius2": 0.0,
+                          "depth": 0.08
+                        }
+                      },
+                      "transform": {
+                        "location": [
+                          0.0,
+                          0.9156535826453572,
+                          0.0
+                        ],
+                        "rotation": [
+                          0.0,
+                          0.0,
+                          1.7951942857142857
+                        ],
+                        "scale": [
+                          1.0,
+                          1.0,
+                          1.0
+                        ]
+                      },
+                      "material": "silver",
+                      "metadata": {
+                        "glyph": "Vega"
+                      },
+                      "children": []
+                    },
+                    {
+                      "name": "alien_measure_1_glyph_marker_5",
+                      "primitive": {
+                        "kind": "cone",
+                        "params": {
+                          "radius1": 0.03,
+                          "radius2": 0.0,
+                          "depth": 0.08
+                        }
+                      },
+                      "transform": {
+                        "location": [
+                          0.0,
+                          0.9156535826453572,
+                          0.0
+                        ],
+                        "rotation": [
+                          0.0,
+                          0.0,
+                          2.243992857142857
+                        ],
+                        "scale": [
+                          1.0,
+                          1.0,
+                          1.0
+                        ]
+                      },
+                      "material": "silver",
+                      "metadata": {
+                        "glyph": "Polaris"
+                      },
+                      "children": []
+                    },
+                    {
+                      "name": "alien_measure_1_glyph_marker_6",
+                      "primitive": {
+                        "kind": "cone",
+                        "params": {
+                          "radius1": 0.03,
+                          "radius2": 0.0,
+                          "depth": 0.08
+                        }
+                      },
+                      "transform": {
+                        "location": [
+                          0.0,
+                          0.9156535826453572,
+                          0.0
+                        ],
+                        "rotation": [
+                          0.0,
+                          0.0,
+                          2.6927914285714287
+                        ],
+                        "scale": [
+                          1.0,
+                          1.0,
+                          1.0
+                        ]
+                      },
+                      "material": "silver",
+                      "metadata": {
+                        "glyph": "Rigel"
+                      },
+                      "children": []
+                    },
+                    {
+                      "name": "alien_measure_1_glyph_marker_7",
+                      "primitive": {
+                        "kind": "cone",
+                        "params": {
+                          "radius1": 0.03,
+                          "radius2": 0.0,
+                          "depth": 0.08
+                        }
+                      },
+                      "transform": {
+                        "location": [
+                          0.0,
+                          0.9156535826453572,
+                          0.0
+                        ],
+                        "rotation": [
+                          0.0,
+                          0.0,
+                          3.14159
+                        ],
+                        "scale": [
+                          1.0,
+                          1.0,
+                          1.0
+                        ]
+                      },
+                      "material": "silver",
+                      "metadata": {
+                        "glyph": "Vega"
+                      },
+                      "children": []
+                    },
+                    {
+                      "name": "alien_measure_1_glyph_marker_8",
+                      "primitive": {
+                        "kind": "cone",
+                        "params": {
+                          "radius1": 0.03,
+                          "radius2": 0.0,
+                          "depth": 0.08
+                        }
+                      },
+                      "transform": {
+                        "location": [
+                          0.0,
+                          0.9156535826453572,
+                          0.0
+                        ],
+                        "rotation": [
+                          0.0,
+                          0.0,
+                          3.5903885714285715
+                        ],
+                        "scale": [
+                          1.0,
+                          1.0,
+                          1.0
+                        ]
+                      },
+                      "material": "silver",
+                      "metadata": {
+                        "glyph": "Sirius"
+                      },
+                      "children": []
+                    },
+                    {
+                      "name": "alien_measure_1_glyph_marker_9",
+                      "primitive": {
+                        "kind": "cone",
+                        "params": {
+                          "radius1": 0.03,
+                          "radius2": 0.0,
+                          "depth": 0.08
+                        }
+                      },
+                      "transform": {
+                        "location": [
+                          0.0,
+                          0.9156535826453572,
+                          0.0
+                        ],
+                        "rotation": [
+                          0.0,
+                          0.0,
+                          4.039187142857143
+                        ],
+                        "scale": [
+                          1.0,
+                          1.0,
+                          1.0
+                        ]
+                      },
+                      "material": "silver",
+                      "metadata": {
+                        "glyph": "Aldebaran"
+                      },
+                      "children": []
+                    },
+                    {
+                      "name": "alien_measure_1_glyph_marker_10",
+                      "primitive": {
+                        "kind": "cone",
+                        "params": {
+                          "radius1": 0.03,
+                          "radius2": 0.0,
+                          "depth": 0.08
+                        }
+                      },
+                      "transform": {
+                        "location": [
+                          0.0,
+                          0.9156535826453572,
+                          0.0
+                        ],
+                        "rotation": [
+                          0.0,
+                          0.0,
+                          4.487985714285714
+                        ],
+                        "scale": [
+                          1.0,
+                          1.0,
+                          1.0
+                        ]
+                      },
+                      "material": "silver",
+                      "metadata": {
+                        "glyph": "Aldebaran"
+                      },
+                      "children": []
+                    },
+                    {
+                      "name": "alien_measure_1_glyph_marker_11",
+                      "primitive": {
+                        "kind": "cone",
+                        "params": {
+                          "radius1": 0.03,
+                          "radius2": 0.0,
+                          "depth": 0.08
+                        }
+                      },
+                      "transform": {
+                        "location": [
+                          0.0,
+                          0.9156535826453572,
+                          0.0
+                        ],
+                        "rotation": [
+                          0.0,
+                          0.0,
+                          4.936784285714285
+                        ],
+                        "scale": [
+                          1.0,
+                          1.0,
+                          1.0
+                        ]
+                      },
+                      "material": "silver",
+                      "metadata": {
+                        "glyph": "Polaris"
+                      },
+                      "children": []
+                    },
+                    {
+                      "name": "alien_measure_1_glyph_marker_12",
+                      "primitive": {
+                        "kind": "cone",
+                        "params": {
+                          "radius1": 0.03,
+                          "radius2": 0.0,
+                          "depth": 0.08
+                        }
+                      },
+                      "transform": {
+                        "location": [
+                          0.0,
+                          0.9156535826453572,
+                          0.0
+                        ],
+                        "rotation": [
+                          0.0,
+                          0.0,
+                          5.3855828571428574
+                        ],
+                        "scale": [
+                          1.0,
+                          1.0,
+                          1.0
+                        ]
+                      },
+                      "material": "silver",
+                      "metadata": {
+                        "glyph": "Aldebaran"
+                      },
+                      "children": []
+                    },
+                    {
+                      "name": "alien_measure_1_glyph_marker_13",
+                      "primitive": {
+                        "kind": "cone",
+                        "params": {
+                          "radius1": 0.03,
+                          "radius2": 0.0,
+                          "depth": 0.08
+                        }
+                      },
+                      "transform": {
+                        "location": [
+                          0.0,
+                          0.9156535826453572,
+                          0.0
+                        ],
+                        "rotation": [
+                          0.0,
+                          0.0,
+                          5.834381428571429
+                        ],
+                        "scale": [
+                          1.0,
+                          1.0,
+                          1.0
+                        ]
+                      },
+                      "material": "silver",
+                      "metadata": {
+                        "glyph": "Sirius"
+                      },
+                      "children": []
+                    }
+                  ]
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "name": "ticks",
+          "primitive": null,
+          "transform": {
+            "location": [
+              0.0,
+              0.0,
+              0.0
+            ],
+            "rotation": [
+              0.0,
+              0.0,
+              0.0
+            ],
+            "scale": [
+              1.0,
+              1.0,
+              1.0
+            ]
+          },
+          "material": null,
+          "metadata": {},
+          "children": [
+            {
+              "name": "tick_0",
+              "primitive": {
+                "kind": "box",
+                "params": {
+                  "x": 0.02,
+                  "y": 0.10300519697489594,
+                  "z": 0.02
+                }
+              },
+              "transform": {
+                "location": [
+                  0.0,
+                  1.258625874409237,
+                  0.0
+                ],
+                "rotation": [
+                  0.0,
+                  0.0,
+                  0.0
+                ],
+                "scale": [
+                  1.0,
+                  1.0,
+                  1.0
+                ]
+              },
+              "material": "ivory",
+              "metadata": {
+                "unit": "745-sir"
+              },
+              "children": []
+            },
+            {
+              "name": "tick_1",
+              "primitive": {
+                "kind": "box",
+                "params": {
+                  "x": 0.02,
+                  "y": 0.06716166544355712,
+                  "z": 0.02
+                }
+              },
+              "transform": {
+                "location": [
+                  0.0,
+                  1.3125816265884214,
+                  0.0
+                ],
+                "rotation": [
+                  0.0,
+                  0.0,
+                  0.17453277777777776
+                ],
+                "scale": [
+                  1.0,
+                  1.0,
+                  1.0
+                ]
+              },
+              "material": "ivory",
+              "metadata": {
+                "unit": "710-sir"
+              },
+              "children": []
+            },
+            {
+              "name": "tick_2",
+              "primitive": {
+                "kind": "box",
+                "params": {
+                  "x": 0.02,
+                  "y": 0.07479206516676432,
+                  "z": 0.02
+                }
+              },
+              "transform": {
+                "location": [
+                  0.0,
+                  1.0273293236476118,
+                  0.0
+                ],
+                "rotation": [
+                  0.0,
+                  0.0,
+                  0.3490655555555555
+                ],
+                "scale": [
+                  1.0,
+                  1.0,
+                  1.0
+                ]
+              },
+              "material": "ivory",
+              "metadata": {
+                "unit": "830-sir"
+              },
+              "children": []
+            },
+            {
+              "name": "tick_3",
+              "primitive": {
+                "kind": "box",
+                "params": {
+                  "x": 0.02,
+                  "y": 0.11742747534266784,
+                  "z": 0.02
+                }
+              },
+              "transform": {
+                "location": [
+                  0.0,
+                  0.8095292116987097,
+                  0.0
+                ],
+                "rotation": [
+                  0.0,
+                  0.0,
+                  0.5235983333333333
+                ],
+                "scale": [
+                  1.0,
+                  1.0,
+                  1.0
+                ]
+              },
+              "material": "ivory",
+              "metadata": {
+                "unit": "538-sir"
+              },
+              "children": []
+            },
+            {
+              "name": "tick_4",
+              "primitive": {
+                "kind": "box",
+                "params": {
+                  "x": 0.02,
+                  "y": 0.08635455060919409,
+                  "z": 0.02
+                }
+              },
+              "transform": {
+                "location": [
+                  0.0,
+                  1.2313600836275067,
+                  0.0
+                ],
+                "rotation": [
+                  0.0,
+                  0.0,
+                  0.698131111111111
+                ],
+                "scale": [
+                  1.0,
+                  1.0,
+                  1.0
+                ]
+              },
+              "material": "ivory",
+              "metadata": {
+                "unit": "411-sir"
+              },
+              "children": []
+            },
+            {
+              "name": "tick_5",
+              "primitive": {
+                "kind": "box",
+                "params": {
+                  "x": 0.02,
+                  "y": 0.09824557850272467,
+                  "z": 0.02
+                }
+              },
+              "transform": {
+                "location": [
+                  0.0,
+                  1.227687928591171,
+                  0.0
+                ],
+                "rotation": [
+                  0.0,
+                  0.0,
+                  0.8726638888888889
+                ],
+                "scale": [
+                  1.0,
+                  1.0,
+                  1.0
+                ]
+              },
+              "material": "ivory",
+              "metadata": {
+                "unit": "868-sir"
+              },
+              "children": []
+            },
+            {
+              "name": "tick_6",
+              "primitive": {
+                "kind": "box",
+                "params": {
+                  "x": 0.02,
+                  "y": 0.0603859981686814,
+                  "z": 0.02
+                }
+              },
+              "transform": {
+                "location": [
+                  0.0,
+                  0.712611070777931,
+                  0.0
+                ],
+                "rotation": [
+                  0.0,
+                  0.0,
+                  1.0471966666666666
+                ],
+                "scale": [
+                  1.0,
+                  1.0,
+                  1.0
+                ]
+              },
+              "material": "ivory",
+              "metadata": {
+                "unit": "621-sir"
+              },
+              "children": []
+            },
+            {
+              "name": "tick_7",
+              "primitive": {
+                "kind": "box",
+                "params": {
+                  "x": 0.02,
+                  "y": 0.11854408021341228,
+                  "z": 0.02
+                }
+              },
+              "transform": {
+                "location": [
+                  0.0,
+                  1.2706890132236848,
+                  0.0
+                ],
+                "rotation": [
+                  0.0,
+                  0.0,
+                  1.2217294444444444
+                ],
+                "scale": [
+                  1.0,
+                  1.0,
+                  1.0
+                ]
+              },
+              "material": "ivory",
+              "metadata": {
+                "unit": "843-sir"
+              },
+              "children": []
+            },
+            {
+              "name": "tick_8",
+              "primitive": {
+                "kind": "box",
+                "params": {
+                  "x": 0.02,
+                  "y": 0.0791599461630858,
+                  "z": 0.02
+                }
+              },
+              "transform": {
+                "location": [
+                  0.0,
+                  0.6241835186281561,
+                  0.0
+                ],
+                "rotation": [
+                  0.0,
+                  0.0,
+                  1.396262222222222
+                ],
+                "scale": [
+                  1.0,
+                  1.0,
+                  1.0
+                ]
+              },
+              "material": "ivory",
+              "metadata": {
+                "unit": "342-sir"
+              },
+              "children": []
+            },
+            {
+              "name": "tick_9",
+              "primitive": {
+                "kind": "box",
+                "params": {
+                  "x": 0.02,
+                  "y": 0.10339678200258473,
+                  "z": 0.02
+                }
+              },
+              "transform": {
+                "location": [
+                  0.0,
+                  0.8903060356589125,
+                  0.0
+                ],
+                "rotation": [
+                  0.0,
+                  0.0,
+                  1.570795
+                ],
+                "scale": [
+                  1.0,
+                  1.0,
+                  1.0
+                ]
+              },
+              "material": "ivory",
+              "metadata": {
+                "unit": "553-sir"
+              },
+              "children": []
+            },
+            {
+              "name": "tick_10",
+              "primitive": {
+                "kind": "box",
+                "params": {
+                  "x": 0.02,
+                  "y": 0.10555609840214497,
+                  "z": 0.02
+                }
+              },
+              "transform": {
+                "location": [
+                  0.0,
+                  0.8254827367276465,
+                  0.0
+                ],
+                "rotation": [
+                  0.0,
+                  0.0,
+                  1.7453277777777778
+                ],
+                "scale": [
+                  1.0,
+                  1.0,
+                  1.0
+                ]
+              },
+              "material": "ivory",
+              "metadata": {
+                "unit": "624-sir"
+              },
+              "children": []
+            },
+            {
+              "name": "tick_11",
+              "primitive": {
+                "kind": "box",
+                "params": {
+                  "x": 0.02,
+                  "y": 0.07215178973777729,
+                  "z": 0.02
+                }
+              },
+              "transform": {
+                "location": [
+                  0.0,
+                  0.7140570722896056,
+                  0.0
+                ],
+                "rotation": [
+                  0.0,
+                  0.0,
+                  1.9198605555555557
+                ],
+                "scale": [
+                  1.0,
+                  1.0,
+                  1.0
+                ]
+              },
+              "material": "ivory",
+              "metadata": {
+                "unit": "616-sir"
+              },
+              "children": []
+            },
+            {
+              "name": "tick_12",
+              "primitive": {
+                "kind": "box",
+                "params": {
+                  "x": 0.02,
+                  "y": 0.06603721316392999,
+                  "z": 0.02
+                }
+              },
+              "transform": {
+                "location": [
+                  0.0,
+                  0.5404870491468078,
+                  0.0
+                ],
+                "rotation": [
+                  0.0,
+                  0.0,
+                  2.094393333333333
+                ],
+                "scale": [
+                  1.0,
+                  1.0,
+                  1.0
+                ]
+              },
+              "material": "ivory",
+              "metadata": {
+                "unit": "430-sir"
+              },
+              "children": []
+            },
+            {
+              "name": "tick_13",
+              "primitive": {
+                "kind": "box",
+                "params": {
+                  "x": 0.02,
+                  "y": 0.1033342590284307,
+                  "z": 0.02
+                }
+              },
+              "transform": {
+                "location": [
+                  0.0,
+                  1.4710555141077366,
+                  0.0
+                ],
+                "rotation": [
+                  0.0,
+                  0.0,
+                  2.268926111111111
+                ],
+                "scale": [
+                  1.0,
+                  1.0,
+                  1.0
+                ]
+              },
+              "material": "ivory",
+              "metadata": {
+                "unit": "465-sir"
+              },
+              "children": []
+            },
+            {
+              "name": "tick_14",
+              "primitive": {
+                "kind": "box",
+                "params": {
+                  "x": 0.02,
+                  "y": 0.10907710861708836,
+                  "z": 0.02
+                }
+              },
+              "transform": {
+                "location": [
+                  0.0,
+                  0.8192238641709455,
+                  0.0
+                ],
+                "rotation": [
+                  0.0,
+                  0.0,
+                  2.443458888888889
+                ],
+                "scale": [
+                  1.0,
+                  1.0,
+                  1.0
+                ]
+              },
+              "material": "ivory",
+              "metadata": {
+                "unit": "783-sir"
+              },
+              "children": []
+            },
+            {
+              "name": "tick_15",
+              "primitive": {
+                "kind": "box",
+                "params": {
+                  "x": 0.02,
+                  "y": 0.10630669474125644,
+                  "z": 0.02
+                }
+              },
+              "transform": {
+                "location": [
+                  0.0,
+                  0.9210491971201178,
+                  0.0
+                ],
+                "rotation": [
+                  0.0,
+                  0.0,
+                  2.6179916666666667
+                ],
+                "scale": [
+                  1.0,
+                  1.0,
+                  1.0
+                ]
+              },
+              "material": "ivory",
+              "metadata": {
+                "unit": "314-sir"
+              },
+              "children": []
+            },
+            {
+              "name": "tick_16",
+              "primitive": {
+                "kind": "box",
+                "params": {
+                  "x": 0.02,
+                  "y": 0.07317890524561625,
+                  "z": 0.02
+                }
+              },
+              "transform": {
+                "location": [
+                  0.0,
+                  1.1527288526795727,
+                  0.0
+                ],
+                "rotation": [
+                  0.0,
+                  0.0,
+                  2.792524444444444
+                ],
+                "scale": [
+                  1.0,
+                  1.0,
+                  1.0
+                ]
+              },
+              "material": "ivory",
+              "metadata": {
+                "unit": "436-sir"
+              },
+              "children": []
+            },
+            {
+              "name": "tick_17",
+              "primitive": {
+                "kind": "box",
+                "params": {
+                  "x": 0.02,
+                  "y": 0.06652561813336638,
+                  "z": 0.02
+                }
+              },
+              "transform": {
+                "location": [
+                  0.0,
+                  0.9642641348072181,
+                  0.0
+                ],
+                "rotation": [
+                  0.0,
+                  0.0,
+                  2.967057222222222
+                ],
+                "scale": [
+                  1.0,
+                  1.0,
+                  1.0
+                ]
+              },
+              "material": "ivory",
+              "metadata": {
+                "unit": "339-sir"
+              },
+              "children": []
+            },
+            {
+              "name": "tick_18",
+              "primitive": {
+                "kind": "box",
+                "params": {
+                  "x": 0.02,
+                  "y": 0.06421646688740358,
+                  "z": 0.02
+                }
+              },
+              "transform": {
+                "location": [
+                  0.0,
+                  0.9933417781851223,
+                  0.0
+                ],
+                "rotation": [
+                  0.0,
+                  0.0,
+                  3.14159
+                ],
+                "scale": [
+                  1.0,
+                  1.0,
+                  1.0
+                ]
+              },
+              "material": "ivory",
+              "metadata": {
+                "unit": "843-sir"
+              },
+              "children": []
+            },
+            {
+              "name": "tick_19",
+              "primitive": {
+                "kind": "box",
+                "params": {
+                  "x": 0.02,
+                  "y": 0.05989779895793869,
+                  "z": 0.02
+                }
+              },
+              "transform": {
+                "location": [
+                  0.0,
+                  0.8872716696831847,
+                  0.0
+                ],
+                "rotation": [
+                  0.0,
+                  0.0,
+                  3.3161227777777778
+                ],
+                "scale": [
+                  1.0,
+                  1.0,
+                  1.0
+                ]
+              },
+              "material": "ivory",
+              "metadata": {
+                "unit": "545-sir"
+              },
+              "children": []
+            },
+            {
+              "name": "tick_20",
+              "primitive": {
+                "kind": "box",
+                "params": {
+                  "x": 0.02,
+                  "y": 0.0734850819841296,
+                  "z": 0.02
+                }
+              },
+              "transform": {
+                "location": [
+                  0.0,
+                  1.20852767675493,
+                  0.0
+                ],
+                "rotation": [
+                  0.0,
+                  0.0,
+                  3.4906555555555556
+                ],
+                "scale": [
+                  1.0,
+                  1.0,
+                  1.0
+                ]
+              },
+              "material": "ivory",
+              "metadata": {
+                "unit": "676-sir"
+              },
+              "children": []
+            },
+            {
+              "name": "tick_21",
+              "primitive": {
+                "kind": "box",
+                "params": {
+                  "x": 0.02,
+                  "y": 0.11028646366214066,
+                  "z": 0.02
+                }
+              },
+              "transform": {
+                "location": [
+                  0.0,
+                  1.1840743846862742,
+                  0.0
+                ],
+                "rotation": [
+                  0.0,
+                  0.0,
+                  3.665188333333333
+                ],
+                "scale": [
+                  1.0,
+                  1.0,
+                  1.0
+                ]
+              },
+              "material": "ivory",
+              "metadata": {
+                "unit": "335-sir"
+              },
+              "children": []
+            },
+            {
+              "name": "tick_22",
+              "primitive": {
+                "kind": "box",
+                "params": {
+                  "x": 0.02,
+                  "y": 0.07322693969843236,
+                  "z": 0.02
+                }
+              },
+              "transform": {
+                "location": [
+                  0.0,
+                  0.7069106443302405,
+                  0.0
+                ],
+                "rotation": [
+                  0.0,
+                  0.0,
+                  3.8397211111111114
+                ],
+                "scale": [
+                  1.0,
+                  1.0,
+                  1.0
+                ]
+              },
+              "material": "ivory",
+              "metadata": {
+                "unit": "267-sir"
+              },
+              "children": []
+            },
+            {
+              "name": "tick_23",
+              "primitive": {
+                "kind": "box",
+                "params": {
+                  "x": 0.02,
+                  "y": 0.05685935360103193,
+                  "z": 0.02
+                }
+              },
+              "transform": {
+                "location": [
+                  0.0,
+                  1.343557172818019,
+                  0.0
+                ],
+                "rotation": [
+                  0.0,
+                  0.0,
+                  4.014253888888889
+                ],
+                "scale": [
+                  1.0,
+                  1.0,
+                  1.0
+                ]
+              },
+              "material": "ivory",
+              "metadata": {
+                "unit": "204-sir"
+              },
+              "children": []
+            },
+            {
+              "name": "tick_24",
+              "primitive": {
+                "kind": "box",
+                "params": {
+                  "x": 0.02,
+                  "y": 0.11299087874998243,
+                  "z": 0.02
+                }
+              },
+              "transform": {
+                "location": [
+                  0.0,
+                  0.9381380208122739,
+                  0.0
+                ],
+                "rotation": [
+                  0.0,
+                  0.0,
+                  4.188786666666666
+                ],
+                "scale": [
+                  1.0,
+                  1.0,
+                  1.0
+                ]
+              },
+              "material": "ivory",
+              "metadata": {
+                "unit": "441-sir"
+              },
+              "children": []
+            },
+            {
+              "name": "tick_25",
+              "primitive": {
+                "kind": "box",
+                "params": {
+                  "x": 0.02,
+                  "y": 0.0745199840962748,
+                  "z": 0.02
+                }
+              },
+              "transform": {
+                "location": [
+                  0.0,
+                  0.5814388334426789,
+                  0.0
+                ],
+                "rotation": [
+                  0.0,
+                  0.0,
+                  4.3633194444444445
+                ],
+                "scale": [
+                  1.0,
+                  1.0,
+                  1.0
+                ]
+              },
+              "material": "ivory",
+              "metadata": {
+                "unit": "491-sir"
+              },
+              "children": []
+            },
+            {
+              "name": "tick_26",
+              "primitive": {
+                "kind": "box",
+                "params": {
+                  "x": 0.02,
+                  "y": 0.0667499446023476,
+                  "z": 0.02
+                }
+              },
+              "transform": {
+                "location": [
+                  0.0,
+                  0.9611645832784806,
+                  0.0
+                ],
+                "rotation": [
+                  0.0,
+                  0.0,
+                  4.537852222222222
+                ],
+                "scale": [
+                  1.0,
+                  1.0,
+                  1.0
+                ]
+              },
+              "material": "ivory",
+              "metadata": {
+                "unit": "469-sir"
+              },
+              "children": []
+            },
+            {
+              "name": "tick_27",
+              "primitive": {
+                "kind": "box",
+                "params": {
+                  "x": 0.02,
+                  "y": 0.0837432218839146,
+                  "z": 0.02
+                }
+              },
+              "transform": {
+                "location": [
+                  0.0,
+                  1.3795329960883933,
+                  0.0
+                ],
+                "rotation": [
+                  0.0,
+                  0.0,
+                  4.712385
+                ],
+                "scale": [
+                  1.0,
+                  1.0,
+                  1.0
+                ]
+              },
+              "material": "ivory",
+              "metadata": {
+                "unit": "879-sir"
+              },
+              "children": []
+            },
+            {
+              "name": "tick_28",
+              "primitive": {
+                "kind": "box",
+                "params": {
+                  "x": 0.02,
+                  "y": 0.11804103202405074,
+                  "z": 0.02
+                }
+              },
+              "transform": {
+                "location": [
+                  0.0,
+                  0.7009357872808629,
+                  0.0
+                ],
+                "rotation": [
+                  0.0,
+                  0.0,
+                  4.886917777777778
+                ],
+                "scale": [
+                  1.0,
+                  1.0,
+                  1.0
+                ]
+              },
+              "material": "ivory",
+              "metadata": {
+                "unit": "272-sir"
+              },
+              "children": []
+            },
+            {
+              "name": "tick_29",
+              "primitive": {
+                "kind": "box",
+                "params": {
+                  "x": 0.02,
+                  "y": 0.0710962069867186,
+                  "z": 0.02
+                }
+              },
+              "transform": {
+                "location": [
+                  0.0,
+                  0.7784251655322842,
+                  0.0
+                ],
+                "rotation": [
+                  0.0,
+                  0.0,
+                  5.061450555555556
+                ],
+                "scale": [
+                  1.0,
+                  1.0,
+                  1.0
+                ]
+              },
+              "material": "ivory",
+              "metadata": {
+                "unit": "778-sir"
+              },
+              "children": []
+            },
+            {
+              "name": "tick_30",
+              "primitive": {
+                "kind": "box",
+                "params": {
+                  "x": 0.02,
+                  "y": 0.09631230086976117,
+                  "z": 0.02
+                }
+              },
+              "transform": {
+                "location": [
+                  0.0,
+                  0.7500272954055229,
+                  0.0
+                ],
+                "rotation": [
+                  0.0,
+                  0.0,
+                  5.235983333333333
+                ],
+                "scale": [
+                  1.0,
+                  1.0,
+                  1.0
+                ]
+              },
+              "material": "ivory",
+              "metadata": {
+                "unit": "303-sir"
+              },
+              "children": []
+            },
+            {
+              "name": "tick_31",
+              "primitive": {
+                "kind": "box",
+                "params": {
+                  "x": 0.02,
+                  "y": 0.08466535043200885,
+                  "z": 0.02
+                }
+              },
+              "transform": {
+                "location": [
+                  0.0,
+                  1.3910130947488581,
+                  0.0
+                ],
+                "rotation": [
+                  0.0,
+                  0.0,
+                  5.410516111111111
+                ],
+                "scale": [
+                  1.0,
+                  1.0,
+                  1.0
+                ]
+              },
+              "material": "ivory",
+              "metadata": {
+                "unit": "597-sir"
+              },
+              "children": []
+            },
+            {
+              "name": "tick_32",
+              "primitive": {
+                "kind": "box",
+                "params": {
+                  "x": 0.02,
+                  "y": 0.062328265578067005,
+                  "z": 0.02
+                }
+              },
+              "transform": {
+                "location": [
+                  0.0,
+                  1.3501721562686329,
+                  0.0
+                ],
+                "rotation": [
+                  0.0,
+                  0.0,
+                  5.585048888888888
+                ],
+                "scale": [
+                  1.0,
+                  1.0,
+                  1.0
+                ]
+              },
+              "material": "ivory",
+              "metadata": {
+                "unit": "527-sir"
+              },
+              "children": []
+            },
+            {
+              "name": "tick_33",
+              "primitive": {
+                "kind": "box",
+                "params": {
+                  "x": 0.02,
+                  "y": 0.07482278669259637,
+                  "z": 0.02
+                }
+              },
+              "transform": {
+                "location": [
+                  0.0,
+                  1.20254540362515,
+                  0.0
+                ],
+                "rotation": [
+                  0.0,
+                  0.0,
+                  5.759581666666666
+                ],
+                "scale": [
+                  1.0,
+                  1.0,
+                  1.0
+                ]
+              },
+              "material": "ivory",
+              "metadata": {
+                "unit": "246-sir"
+              },
+              "children": []
+            },
+            {
+              "name": "tick_34",
+              "primitive": {
+                "kind": "box",
+                "params": {
+                  "x": 0.02,
+                  "y": 0.09052010449070043,
+                  "z": 0.02
+                }
+              },
+              "transform": {
+                "location": [
+                  0.0,
+                  1.4320335513205897,
+                  0.0
+                ],
+                "rotation": [
+                  0.0,
+                  0.0,
+                  5.934114444444444
+                ],
+                "scale": [
+                  1.0,
+                  1.0,
+                  1.0
+                ]
+              },
+              "material": "ivory",
+              "metadata": {
+                "unit": "757-sir"
+              },
+              "children": []
+            },
+            {
+              "name": "tick_35",
+              "primitive": {
+                "kind": "box",
+                "params": {
+                  "x": 0.02,
+                  "y": 0.07638699409014904,
+                  "z": 0.02
+                }
+              },
+              "transform": {
+                "location": [
+                  0.0,
+                  1.2413983696733588,
+                  0.0
+                ],
+                "rotation": [
+                  0.0,
+                  0.0,
+                  6.1086472222222215
+                ],
+                "scale": [
+                  1.0,
+                  1.0,
+                  1.0
+                ]
+              },
+              "material": "ivory",
+              "metadata": {
+                "unit": "848-sir"
+              },
+              "children": []
+            },
+            {
+              "name": "tick_36",
+              "primitive": {
+                "kind": "box",
+                "params": {
+                  "x": 0.02,
+                  "y": 0.05513574896975266,
+                  "z": 0.02
+                }
+              },
+              "transform": {
+                "location": [
+                  0.0,
+                  0.7295483727437735,
+                  0.0
+                ],
+                "rotation": [
+                  0.0,
+                  0.0,
+                  6.28318
+                ],
+                "scale": [
+                  1.0,
+                  1.0,
+                  1.0
+                ]
+              },
+              "material": "ivory",
+              "metadata": {
+                "unit": "730-sir"
+              },
+              "children": []
+            },
+            {
+              "name": "tick_37",
+              "primitive": {
+                "kind": "box",
+                "params": {
+                  "x": 0.02,
+                  "y": 0.05878313762071548,
+                  "z": 0.02
+                }
+              },
+              "transform": {
+                "location": [
+                  0.0,
+                  1.329545089678772,
+                  0.0
+                ],
+                "rotation": [
+                  0.0,
+                  0.0,
+                  6.457712777777777
+                ],
+                "scale": [
+                  1.0,
+                  1.0,
+                  1.0
+                ]
+              },
+              "material": "ivory",
+              "metadata": {
+                "unit": "850-sir"
+              },
+              "children": []
+            },
+            {
+              "name": "tick_38",
+              "primitive": {
+                "kind": "box",
+                "params": {
+                  "x": 0.02,
+                  "y": 0.09304624188442906,
+                  "z": 0.02
+                }
+              },
+              "transform": {
+                "location": [
+                  0.0,
+                  0.5878734510127458,
+                  0.0
+                ],
+                "rotation": [
+                  0.0,
+                  0.0,
+                  6.6322455555555555
+                ],
+                "scale": [
+                  1.0,
+                  1.0,
+                  1.0
+                ]
+              },
+              "material": "ivory",
+              "metadata": {
+                "unit": "716-sir"
+              },
+              "children": []
+            },
+            {
+              "name": "tick_39",
+              "primitive": {
+                "kind": "box",
+                "params": {
+                  "x": 0.02,
+                  "y": 0.0621631237606529,
+                  "z": 0.02
+                }
+              },
+              "transform": {
+                "location": [
+                  0.0,
+                  0.988049809515,
+                  0.0
+                ],
+                "rotation": [
+                  0.0,
+                  0.0,
+                  6.806778333333333
+                ],
+                "scale": [
+                  1.0,
+                  1.0,
+                  1.0
+                ]
+              },
+              "material": "ivory",
+              "metadata": {
+                "unit": "369-sir"
+              },
+              "children": []
+            },
+            {
+              "name": "tick_40",
+              "primitive": {
+                "kind": "box",
+                "params": {
+                  "x": 0.02,
+                  "y": 0.06134249199982866,
+                  "z": 0.02
+                }
+              },
+              "transform": {
+                "location": [
+                  0.0,
+                  0.625315000249349,
+                  0.0
+                ],
+                "rotation": [
+                  0.0,
+                  0.0,
+                  6.981311111111111
+                ],
+                "scale": [
+                  1.0,
+                  1.0,
+                  1.0
+                ]
+              },
+              "material": "ivory",
+              "metadata": {
+                "unit": "306-sir"
+              },
+              "children": []
+            },
+            {
+              "name": "tick_41",
+              "primitive": {
+                "kind": "box",
+                "params": {
+                  "x": 0.02,
+                  "y": 0.10679706041553474,
+                  "z": 0.02
+                }
+              },
+              "transform": {
+                "location": [
+                  0.0,
+                  1.0941701498752545,
+                  0.0
+                ],
+                "rotation": [
+                  0.0,
+                  0.0,
+                  7.155843888888888
+                ],
+                "scale": [
+                  1.0,
+                  1.0,
+                  1.0
+                ]
+              },
+              "material": "ivory",
+              "metadata": {
+                "unit": "818-sir"
+              },
+              "children": []
+            }
+          ]
+        },
+        {
+          "name": "alien_measure_celestial_pointer",
+          "primitive": null,
+          "transform": {
+            "location": [
+              0.0,
+              0.0,
+              0.0
+            ],
+            "rotation": [
+              0.0,
+              0.0,
+              0.0
+            ],
+            "scale": [
+              1.0,
+              1.0,
+              1.0
+            ]
+          },
+          "material": null,
+          "metadata": {
+            "target": "Vega"
+          },
+          "children": [
+            {
+              "name": "alien_measure_pointer_shaft",
+              "primitive": {
+                "kind": "box",
+                "params": {
+                  "x": 0.04,
+                  "y": 0.4,
+                  "z": 0.04
+                }
+              },
+              "transform": {
+                "location": [
+                  0.0,
+                  0.0,
+                  0.0
+                ],
+                "rotation": [
+                  0.0,
+                  0.0,
+                  0.0
+                ],
+                "scale": [
+                  1.0,
+                  1.0,
+                  1.0
+                ]
+              },
+              "material": "silver",
+              "metadata": {},
+              "children": []
+            },
+            {
+              "name": "alien_measure_pointer_tip",
+              "primitive": {
+                "kind": "cone",
+                "params": {
+                  "radius1": 0.06,
+                  "radius2": 0.0,
+                  "depth": 0.2
+                }
+              },
+              "transform": {
+                "location": [
+                  0.0,
+                  0.3,
+                  0.0
+                ],
+                "rotation": [
+                  1.5708,
+                  0.0,
+                  0.0
+                ],
+                "scale": [
+                  1.0,
+                  1.0,
+                  1.0
+                ]
+              },
+              "material": "emerald",
+              "metadata": {},
+              "children": []
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}
