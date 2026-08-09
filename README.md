@@ -16,4 +16,7 @@
 
 [Beyond Optimal Foraging](https://standardgalactic.github.io/memory/beyond-optimal-foraging.pdf)
 
+
+* [Micromegas Visualizer](https://standardgalactic.github.io/memory/micromegas/visualizer.html)
+
 ![](persistent-worlds.png)
