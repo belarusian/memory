@@ -54,12 +54,44 @@
       return response.json();
     }
 
-    function artifactCard(artifact, data) {
+    function resolveManifestPath(path) {
+      if (!path) return '';
+      if (/^(?:https?:)?\/\//.test(path) || path.startsWith('data:') || path.startsWith('/')) {
+        return path;
+      }
+      return `../${path.replace(/^\.\//, '')}`;
+    }
+
+    async function findArtifactImage(artifact) {
+      const candidates = [];
+      if (typeof artifact.image === 'string' && artifact.image.trim()) {
+        candidates.push(artifact.image.trim());
+      }
+      candidates.push(`outputs/micromegas/images/${artifact.name}.png`);
+
+      const seen = new Set();
+      for (const candidate of candidates) {
+        if (seen.has(candidate)) continue;
+        seen.add(candidate);
+        const path = resolveManifestPath(candidate);
+        try {
+          const headResponse = await fetch(path, { method: 'HEAD' });
+          if (headResponse.ok) return path;
+        } catch (_) {}
+        try {
+          const getResponse = await fetch(path, { cache: 'no-store' });
+          if (getResponse.ok) return path;
+        } catch (_) {}
+      }
+      return null;
+    }
+
+    function artifactCard(artifact, data, imagePath) {
       const card = document.createElement('article');
       card.className = 'card';
       const primitives = summarizePrimitives(data.objects || []);
 
-      const image = artifact.image ? `<img src="../${artifact.image}" alt="${artifact.name} sample render" />` : '<div class="meta">No Blender image found for this artifact.</div>';
+      const image = imagePath ? `<img src="${imagePath}" alt="${artifact.name} sample render" />` : '<div class="meta">No Blender image found for this artifact.</div>';
       card.innerHTML = `
         <h2>${artifact.name}</h2>
         <div class="meta">seed=${artifact.seed} • family=${data.family || 'unknown'} • objects=${(data.objects || []).length}</div>
@@ -87,8 +119,9 @@
       let loaded = 0;
       for (const artifact of artifacts) {
         try {
-          const sceneData = await fetchJson(`../${artifact.json}`);
-          gallery.appendChild(artifactCard(artifact, sceneData));
+          const sceneData = await fetchJson(resolveManifestPath(artifact.json));
+          const imagePath = await findArtifactImage(artifact);
+          gallery.appendChild(artifactCard(artifact, sceneData, imagePath));
           loaded += 1;
         } catch (err) {
           const failed = document.createElement('article');
