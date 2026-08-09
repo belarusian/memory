@@ -1,0 +1,3688 @@
+{
+  "name": "micromegas_great_microscope",
+  "seed": 1847,
+  "family": "great_microscope",
+  "metadata": {
+    "style": "sample",
+    "complexity": 4,
+    "grammar": [
+      "primary_optical_axis",
+      "articulated_support_arms",
+      "specimen_chamber",
+      "nested_lens_assemblies",
+      "measurement_rings",
+      "astronomical_calibration_mechanism",
+      "inaccessible_control_surfaces",
+      "decorative_geometric_structures"
+    ]
+  },
+  "materials": {
+    "brass": {
+      "name": "brass",
+      "base_color": [
+        0.73,
+        0.58,
+        0.24
+      ],
+      "metallic": 0.85,
+      "roughness": 0.25
+    },
+    "obsidian": {
+      "name": "obsidian",
+      "base_color": [
+        0.08,
+        0.08,
+        0.1
+      ],
+      "metallic": 0.2,
+      "roughness": 0.15
+    },
+    "ivory": {
+      "name": "ivory",
+      "base_color": [
+        0.92,
+        0.91,
+        0.84
+      ],
+      "metallic": 0.05,
+      "roughness": 0.65
+    },
+    "emerald": {
+      "name": "emerald",
+      "base_color": [
+        0.1,
+        0.45,
+        0.3
+      ],
+      "metallic": 0.1,
+      "roughness": 0.35
+    },
+    "silver": {
+      "name": "silver",
+      "base_color": [
+        0.75,
+        0.75,
+        0.78
+      ],
+      "metallic": 0.95,
+      "roughness": 0.12
+    },
+    "ceramic": {
+      "name": "ceramic",
+      "base_color": [
+        0.86,
+        0.86,
+        0.9
+      ],
+      "metallic": 0.0,
+      "roughness": 0.7
+    }
+  },
+  "objects": [
+    {
+      "name": "great_microscope_instrument",
+      "primitive": null,
+      "transform": {
+        "location": [
+          0.0,
+          0.0,
+          0.0
+        ],
+        "rotation": [
+          0.0,
+          0.0,
+          0.0
+        ],
+        "scale": [
+          1.0,
+          1.0,
+          1.0
+        ]
+      },
+      "material": null,
+      "metadata": {},
+      "children": [
+        {
+          "name": "microscope_optical_axis",
+          "primitive": {
+            "kind": "cylinder",
+            "params": {
+              "radius": 0.2237823800535001,
+              "depth": 4.525051722650257
+            }
+          },
+          "transform": {
+            "location": [
+              0.0,
+              0.0,
+              0.0
+            ],
+            "rotation": [
+              1.5708,
+              0.0,
+              0.0
+            ],
+            "scale": [
+              1.0,
+              1.0,
+              1.0
+            ]
+          },
+          "material": "brass",
+          "metadata": {},
+          "children": []
+        },
+        {
+          "name": "microscope_support_arms",
+          "primitive": null,
+          "transform": {
+            "location": [
+              0.0,
+              0.0,
+              0.0
+            ],
+            "rotation": [
+              0.0,
+              0.0,
+              0.0
+            ],
+            "scale": [
+              1.0,
+              1.0,
+              1.0
+            ]
+          },
+          "material": null,
+          "metadata": {},
+          "children": [
+            {
+              "name": "microscope_arm_0",
+              "primitive": null,
+              "transform": {
+                "location": [
+                  -1.4581346399921666,
+                  -1.489111178275476,
+                  0.44804083845651665
+                ],
+                "rotation": [
+                  0.03447939442553305,
+                  -0.6132106090738152,
+                  0.021723225197188167
+                ],
+                "scale": [
+                  1.0,
+                  1.0,
+                  1.0
+                ]
+              },
+              "material": null,
+              "metadata": {},
+              "children": [
+                {
+                  "name": "microscope_arm_0_segment_0",
+                  "primitive": {
+                    "kind": "box",
+                    "params": {
+                      "x": 0.1385484174365977,
+                      "y": 1.1258717496138586,
+                      "z": 0.10469593219962524
+                    }
+                  },
+                  "transform": {
+                    "location": [
+                      0.0,
+                      0.0,
+                      0.0
+                    ],
+                    "rotation": [
+                      0.0,
+                      0.0,
+                      0.5997243776659036
+                    ],
+                    "scale": [
+                      1.0,
+                      1.0,
+                      1.0
+                    ]
+                  },
+                  "material": "silver",
+                  "metadata": {},
+                  "children": []
+                },
+                {
+                  "name": "microscope_arm_0_joint_0",
+                  "primitive": {
+                    "kind": "sphere",
+                    "params": {
+                      "radius": 0.08463141133292643
+                    }
+                  },
+                  "transform": {
+                    "location": [
+                      0.0,
+                      0.0,
+                      0.0
+                    ],
+                    "rotation": [
+                      0.0,
+                      0.0,
+                      0.0
+                    ],
+                    "scale": [
+                      1.0,
+                      1.0,
+                      1.0
+                    ]
+                  },
+                  "material": "silver",
+                  "metadata": {},
+                  "children": []
+                },
+                {
+                  "name": "microscope_arm_0_segment_1",
+                  "primitive": {
+                    "kind": "box",
+                    "params": {
+                      "x": 0.08785558538997532,
+                      "y": 1.1258717496138586,
+                      "z": 0.11232739256417582
+                    }
+                  },
+                  "transform": {
+                    "location": [
+                      0.0,
+                      0.9569909871717798,
+                      0.0
+                    ],
+                    "rotation": [
+                      0.0,
+                      0.0,
+                      0.33859793454712195
+                    ],
+                    "scale": [
+                      1.0,
+                      1.0,
+                      1.0
+                    ]
+                  },
+                  "material": "silver",
+                  "metadata": {},
+                  "children": []
+                },
+                {
+                  "name": "microscope_arm_0_joint_1",
+                  "primitive": {
+                    "kind": "sphere",
+                    "params": {
+                      "radius": 0.13364488271582753
+                    }
+                  },
+                  "transform": {
+                    "location": [
+                      0.0,
+                      0.9569909871717798,
+                      0.0
+                    ],
+                    "rotation": [
+                      0.0,
+                      0.0,
+                      0.0
+                    ],
+                    "scale": [
+                      1.0,
+                      1.0,
+                      1.0
+                    ]
+                  },
+                  "material": "silver",
+                  "metadata": {},
+                  "children": []
+                },
+                {
+                  "name": "microscope_arm_0_segment_2",
+                  "primitive": {
+                    "kind": "box",
+                    "params": {
+                      "x": 0.16052335187942293,
+                      "y": 1.1258717496138586,
+                      "z": 0.14768922933500317
+                    }
+                  },
+                  "transform": {
+                    "location": [
+                      0.0,
+                      1.9139819743435595,
+                      0.0
+                    ],
+                    "rotation": [
+                      0.0,
+                      0.0,
+                      0.07450994741170636
+                    ],
+                    "scale": [
+                      1.0,
+                      1.0,
+                      1.0
+                    ]
+                  },
+                  "material": "silver",
+                  "metadata": {},
+                  "children": []
+                },
+                {
+                  "name": "microscope_arm_0_joint_2",
+                  "primitive": {
+                    "kind": "sphere",
+                    "params": {
+                      "radius": 0.14702556890388682
+                    }
+                  },
+                  "transform": {
+                    "location": [
+                      0.0,
+                      1.9139819743435595,
+                      0.0
+                    ],
+                    "rotation": [
+                      0.0,
+                      0.0,
+                      0.0
+                    ],
+                    "scale": [
+                      1.0,
+                      1.0,
+                      1.0
+                    ]
+                  },
+                  "material": "silver",
+                  "metadata": {},
+                  "children": []
+                }
+              ]
+            },
+            {
+              "name": "microscope_arm_1",
+              "primitive": null,
+              "transform": {
+                "location": [
+                  -1.3270267391555883,
+                  -0.8173680019973393,
+                  0.17465020319097724
+                ],
+                "rotation": [
+                  -0.989123158335856,
+                  -0.536638396785982,
+                  -2.9502577444843885
+                ],
+                "scale": [
+                  1.0,
+                  1.0,
+                  1.0
+                ]
+              },
+              "material": null,
+              "metadata": {},
+              "children": [
+                {
+                  "name": "microscope_arm_1_segment_0",
+                  "primitive": {
+                    "kind": "box",
+                    "params": {
+                      "x": 0.09222700010982865,
+                      "y": 1.436144580272309,
+                      "z": 0.11762843331852774
+                    }
+                  },
+                  "transform": {
+                    "location": [
+                      0.0,
+                      0.0,
+                      0.0
+                    ],
+                    "rotation": [
+                      0.0,
+                      0.0,
+                      0.20435239819361584
+                    ],
+                    "scale": [
+                      1.0,
+                      1.0,
+                      1.0
+                    ]
+                  },
+                  "material": "silver",
+                  "metadata": {},
+                  "children": []
+                },
+                {
+                  "name": "microscope_arm_1_joint_0",
+                  "primitive": {
+                    "kind": "sphere",
+                    "params": {
+                      "radius": 0.08766229069885484
+                    }
+                  },
+                  "transform": {
+                    "location": [
+                      0.0,
+                      0.0,
+                      0.0
+                    ],
+                    "rotation": [
+                      0.0,
+                      0.0,
+                      0.0
+                    ],
+                    "scale": [
+                      1.0,
+                      1.0,
+                      1.0
+                    ]
+                  },
+                  "material": "silver",
+                  "metadata": {},
+                  "children": []
+                },
+                {
+                  "name": "microscope_arm_1_segment_1",
+                  "primitive": {
+                    "kind": "box",
+                    "params": {
+                      "x": 0.09427464929709782,
+                      "y": 1.436144580272309,
+                      "z": 0.08750897170489237
+                    }
+                  },
+                  "transform": {
+                    "location": [
+                      0.0,
+                      1.2207228932314627,
+                      0.0
+                    ],
+                    "rotation": [
+                      0.0,
+                      0.0,
+                      0.6532526624983848
+                    ],
+                    "scale": [
+                      1.0,
+                      1.0,
+                      1.0
+                    ]
+                  },
+                  "material": "silver",
+                  "metadata": {},
+                  "children": []
+                },
+                {
+                  "name": "microscope_arm_1_joint_1",
+                  "primitive": {
+                    "kind": "sphere",
+                    "params": {
+                      "radius": 0.1522336054905684
+                    }
+                  },
+                  "transform": {
+                    "location": [
+                      0.0,
+                      1.2207228932314627,
+                      0.0
+                    ],
+                    "rotation": [
+                      0.0,
+                      0.0,
+                      0.0
+                    ],
+                    "scale": [
+                      1.0,
+                      1.0,
+                      1.0
+                    ]
+                  },
+                  "material": "silver",
+                  "metadata": {},
+                  "children": []
+                }
+              ]
+            },
+            {
+              "name": "microscope_arm_2",
+              "primitive": null,
+              "transform": {
+                "location": [
+                  0.7185813656988627,
+                  -1.0981139981054993,
+                  -0.690870278582319
+                ],
+                "rotation": [
+                  0.14946064917746282,
+                  -0.37896107829299086,
+                  1.7827350462286389
+                ],
+                "scale": [
+                  1.0,
+                  1.0,
+                  1.0
+                ]
+              },
+              "material": null,
+              "metadata": {},
+              "children": [
+                {
+                  "name": "microscope_arm_2_segment_0",
+                  "primitive": {
+                    "kind": "box",
+                    "params": {
+                      "x": 0.1615072925133398,
+                      "y": 1.4891026558036926,
+                      "z": 0.13336718299601688
+                    }
+                  },
+                  "transform": {
+                    "location": [
+                      0.0,
+                      0.0,
+                      0.0
+                    ],
+                    "rotation": [
+                      0.0,
+                      0.0,
+                      0.4653344100519352
+                    ],
+                    "scale": [
+                      1.0,
+                      1.0,
+                      1.0
+                    ]
+                  },
+                  "material": "silver",
+                  "metadata": {},
+                  "children": []
+                },
+                {
+                  "name": "microscope_arm_2_joint_0",
+                  "primitive": {
+                    "kind": "sphere",
+                    "params": {
+                      "radius": 0.09854553167187895
+                    }
+                  },
+                  "transform": {
+                    "location": [
+                      0.0,
+                      0.0,
+                      0.0
+                    ],
+                    "rotation": [
+                      0.0,
+                      0.0,
+                      0.0
+                    ],
+                    "scale": [
+                      1.0,
+                      1.0,
+                      1.0
+                    ]
+                  },
+                  "material": "silver",
+                  "metadata": {},
+                  "children": []
+                },
+                {
+                  "name": "microscope_arm_2_segment_1",
+                  "primitive": {
+                    "kind": "box",
+                    "params": {
+                      "x": 0.11297870409674009,
+                      "y": 1.4891026558036926,
+                      "z": 0.10387914080738744
+                    }
+                  },
+                  "transform": {
+                    "location": [
+                      0.0,
+                      1.2657372574331387,
+                      0.0
+                    ],
+                    "rotation": [
+                      0.0,
+                      0.0,
+                      -0.43127202590504254
+                    ],
+                    "scale": [
+                      1.0,
+                      1.0,
+                      1.0
+                    ]
+                  },
+                  "material": "silver",
+                  "metadata": {},
+                  "children": []
+                },
+                {
+                  "name": "microscope_arm_2_joint_1",
+                  "primitive": {
+                    "kind": "sphere",
+                    "params": {
+                      "radius": 0.13105482852809222
+                    }
+                  },
+                  "transform": {
+                    "location": [
+                      0.0,
+                      1.2657372574331387,
+                      0.0
+                    ],
+                    "rotation": [
+                      0.0,
+                      0.0,
+                      0.0
+                    ],
+                    "scale": [
+                      1.0,
+                      1.0,
+                      1.0
+                    ]
+                  },
+                  "material": "silver",
+                  "metadata": {},
+                  "children": []
+                },
+                {
+                  "name": "microscope_arm_2_segment_2",
+                  "primitive": {
+                    "kind": "box",
+                    "params": {
+                      "x": 0.11432477040541443,
+                      "y": 1.4891026558036926,
+                      "z": 0.16127063035582112
+                    }
+                  },
+                  "transform": {
+                    "location": [
+                      0.0,
+                      2.5314745148662774,
+                      0.0
+                    ],
+                    "rotation": [
+                      0.0,
+                      0.0,
+                      -0.11689975597735403
+                    ],
+                    "scale": [
+                      1.0,
+                      1.0,
+                      1.0
+                    ]
+                  },
+                  "material": "silver",
+                  "metadata": {},
+                  "children": []
+                },
+                {
+                  "name": "microscope_arm_2_joint_2",
+                  "primitive": {
+                    "kind": "sphere",
+                    "params": {
+                      "radius": 0.15971699304873407
+                    }
+                  },
+                  "transform": {
+                    "location": [
+                      0.0,
+                      2.5314745148662774,
+                      0.0
+                    ],
+                    "rotation": [
+                      0.0,
+                      0.0,
+                      0.0
+                    ],
+                    "scale": [
+                      1.0,
+                      1.0,
+                      1.0
+                    ]
+                  },
+                  "material": "silver",
+                  "metadata": {},
+                  "children": []
+                },
+                {
+                  "name": "microscope_arm_2_segment_3",
+                  "primitive": {
+                    "kind": "box",
+                    "params": {
+                      "x": 0.1695900644209948,
+                      "y": 1.4891026558036926,
+                      "z": 0.1306289961418179
+                    }
+                  },
+                  "transform": {
+                    "location": [
+                      0.0,
+                      3.7972117722994163,
+                      0.0
+                    ],
+                    "rotation": [
+                      0.0,
+                      0.0,
+                      0.6304393688031478
+                    ],
+                    "scale": [
+                      1.0,
+                      1.0,
+                      1.0
+                    ]
+                  },
+                  "material": "silver",
+                  "metadata": {},
+                  "children": []
+                },
+                {
+                  "name": "microscope_arm_2_joint_3",
+                  "primitive": {
+                    "kind": "sphere",
+                    "params": {
+                      "radius": 0.08866845501666706
+                    }
+                  },
+                  "transform": {
+                    "location": [
+                      0.0,
+                      3.7972117722994163,
+                      0.0
+                    ],
+                    "rotation": [
+                      0.0,
+                      0.0,
+                      0.0
+                    ],
+                    "scale": [
+                      1.0,
+                      1.0,
+                      1.0
+                    ]
+                  },
+                  "material": "silver",
+                  "metadata": {},
+                  "children": []
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "name": "microscope_specimen_chamber",
+          "primitive": null,
+          "transform": {
+            "location": [
+              0.0,
+              0.0,
+              0.0
+            ],
+            "rotation": [
+              0.0,
+              0.0,
+              0.0
+            ],
+            "scale": [
+              1.0,
+              1.0,
+              1.0
+            ]
+          },
+          "material": null,
+          "metadata": {},
+          "children": [
+            {
+              "name": "microscope_chamber_shell",
+              "primitive": {
+                "kind": "sphere",
+                "params": {
+                  "radius": 1.117010322752924
+                }
+              },
+              "transform": {
+                "location": [
+                  0.0,
+                  0.0,
+                  0.0
+                ],
+                "rotation": [
+                  0.0,
+                  0.0,
+                  0.0
+                ],
+                "scale": [
+                  1.0,
+                  1.0,
+                  1.0
+                ]
+              },
+              "material": "brass",
+              "metadata": {
+                "hollow": true
+              },
+              "children": []
+            },
+            {
+              "name": "microscope_chamber_cradle",
+              "primitive": {
+                "kind": "torus",
+                "params": {
+                  "major_radius": 0.428668032592132,
+                  "minor_radius": 0.05
+                }
+              },
+              "transform": {
+                "location": [
+                  0.0,
+                  0.0,
+                  0.0
+                ],
+                "rotation": [
+                  0.0,
+                  0.0,
+                  0.0
+                ],
+                "scale": [
+                  1.0,
+                  1.0,
+                  1.0
+                ]
+              },
+              "material": "silver",
+              "metadata": {},
+              "children": []
+            },
+            {
+              "name": "microscope_specimen_planet",
+              "primitive": {
+                "kind": "sphere",
+                "params": {
+                  "radius": 0.316504620022238
+                }
+              },
+              "transform": {
+                "location": [
+                  0.0,
+                  0.0,
+                  0.0
+                ],
+                "rotation": [
+                  0.0,
+                  0.0,
+                  0.0
+                ],
+                "scale": [
+                  1.0,
+                  1.0,
+                  1.0
+                ]
+              },
+              "material": "ivory",
+              "metadata": {
+                "role": "specimen"
+              },
+              "children": []
+            }
+          ]
+        },
+        {
+          "name": "microscope_lens_assemblies",
+          "primitive": null,
+          "transform": {
+            "location": [
+              0.0,
+              0.0,
+              0.0
+            ],
+            "rotation": [
+              0.0,
+              0.0,
+              0.0
+            ],
+            "scale": [
+              1.0,
+              1.0,
+              1.0
+            ]
+          },
+          "material": null,
+          "metadata": {},
+          "children": [
+            {
+              "name": "microscope_lens_0",
+              "primitive": {
+                "kind": "torus",
+                "params": {
+                  "major_radius": 0.5418602949349378,
+                  "minor_radius": 0.07213323815405014
+                }
+              },
+              "transform": {
+                "location": [
+                  0.0,
+                  0.0,
+                  0.0
+                ],
+                "rotation": [
+                  0.37800207790615387,
+                  0.5074154387667187,
+                  1.1330666151477846
+                ],
+                "scale": [
+                  1.0,
+                  1.0,
+                  1.0
+                ]
+              },
+              "material": "silver",
+              "metadata": {},
+              "children": []
+            },
+            {
+              "name": "microscope_lens_1",
+              "primitive": {
+                "kind": "torus",
+                "params": {
+                  "major_radius": 0.6253635467267844,
+                  "minor_radius": 0.0776930979590712
+                }
+              },
+              "transform": {
+                "location": [
+                  0.0,
+                  0.0,
+                  0.0
+                ],
+                "rotation": [
+                  0.7406451481532283,
+                  0.21066164440087104,
+                  0.09937609762553294
+                ],
+                "scale": [
+                  1.0,
+                  1.0,
+                  1.0
+                ]
+              },
+              "material": "silver",
+              "metadata": {},
+              "children": []
+            },
+            {
+              "name": "microscope_lens_2",
+              "primitive": {
+                "kind": "torus",
+                "params": {
+                  "major_radius": 0.7620968453001387,
+                  "minor_radius": 0.035339303742450874
+                }
+              },
+              "transform": {
+                "location": [
+                  0.0,
+                  0.0,
+                  0.0
+                ],
+                "rotation": [
+                  0.9750359849358385,
+                  0.2767156888948418,
+                  0.04781234080102501
+                ],
+                "scale": [
+                  1.0,
+                  1.0,
+                  1.0
+                ]
+              },
+              "material": "silver",
+              "metadata": {},
+              "children": []
+            },
+            {
+              "name": "microscope_lens_3",
+              "primitive": {
+                "kind": "torus",
+                "params": {
+                  "major_radius": 1.0615969797193503,
+                  "minor_radius": 0.061027275092822825
+                }
+              },
+              "transform": {
+                "location": [
+                  0.0,
+                  0.0,
+                  0.0
+                ],
+                "rotation": [
+                  0.6504858932721624,
+                  0.27669276294256057,
+                  0.8337027206668405
+                ],
+                "scale": [
+                  1.0,
+                  1.0,
+                  1.0
+                ]
+              },
+              "material": "silver",
+              "metadata": {},
+              "children": []
+            },
+            {
+              "name": "microscope_lens_4",
+              "primitive": {
+                "kind": "torus",
+                "params": {
+                  "major_radius": 0.8703461440273523,
+                  "minor_radius": 0.057635616526315755
+                }
+              },
+              "transform": {
+                "location": [
+                  0.0,
+                  0.0,
+                  0.0
+                ],
+                "rotation": [
+                  0.7465414028524028,
+                  0.592286692974488,
+                  0.4416121608690492
+                ],
+                "scale": [
+                  1.0,
+                  1.0,
+                  1.0
+                ]
+              },
+              "material": "silver",
+              "metadata": {},
+              "children": []
+            }
+          ]
+        },
+        {
+          "name": "microscope_measurement_rings",
+          "primitive": null,
+          "transform": {
+            "location": [
+              0.0,
+              0.0,
+              0.0
+            ],
+            "rotation": [
+              0.0,
+              0.0,
+              0.0
+            ],
+            "scale": [
+              1.0,
+              1.0,
+              1.0
+            ]
+          },
+          "material": null,
+          "metadata": {},
+          "children": [
+            {
+              "name": "microscope_0_calibration",
+              "primitive": null,
+              "transform": {
+                "location": [
+                  0.0,
+                  0.0,
+                  0.0
+                ],
+                "rotation": [
+                  0.31805110529954517,
+                  1.412430690870639,
+                  0.2813774938901499
+                ],
+                "scale": [
+                  1.0,
+                  1.0,
+                  1.0
+                ]
+              },
+              "material": null,
+              "metadata": {},
+              "children": [
+                {
+                  "name": "microscope_0_calibration_ring",
+                  "primitive": {
+                    "kind": "torus",
+                    "params": {
+                      "major_radius": 0.5608698880889416,
+                      "minor_radius": 0.02
+                    }
+                  },
+                  "transform": {
+                    "location": [
+                      0.0,
+                      0.0,
+                      0.0
+                    ],
+                    "rotation": [
+                      0.0,
+                      0.0,
+                      0.0
+                    ],
+                    "scale": [
+                      1.0,
+                      1.0,
+                      1.0
+                    ]
+                  },
+                  "material": "brass",
+                  "metadata": {},
+                  "children": []
+                },
+                {
+                  "name": "microscope_0_glyphs",
+                  "primitive": null,
+                  "transform": {
+                    "location": [
+                      0.0,
+                      0.0,
+                      0.0
+                    ],
+                    "rotation": [
+                      0.0,
+                      0.0,
+                      0.0
+                    ],
+                    "scale": [
+                      1.0,
+                      1.0,
+                      1.0
+                    ]
+                  },
+                  "material": null,
+                  "metadata": {},
+                  "children": [
+                    {
+                      "name": "microscope_0_glyph_marker_0",
+                      "primitive": {
+                        "kind": "cone",
+                        "params": {
+                          "radius1": 0.03,
+                          "radius2": 0.0,
+                          "depth": 0.08
+                        }
+                      },
+                      "transform": {
+                        "location": [
+                          0.0,
+                          0.5608698880889416,
+                          0.0
+                        ],
+                        "rotation": [
+                          0.0,
+                          0.0,
+                          0.0
+                        ],
+                        "scale": [
+                          1.0,
+                          1.0,
+                          1.0
+                        ]
+                      },
+                      "material": "silver",
+                      "metadata": {
+                        "glyph": "Polaris"
+                      },
+                      "children": []
+                    },
+                    {
+                      "name": "microscope_0_glyph_marker_1",
+                      "primitive": {
+                        "kind": "cone",
+                        "params": {
+                          "radius1": 0.03,
+                          "radius2": 0.0,
+                          "depth": 0.08
+                        }
+                      },
+                      "transform": {
+                        "location": [
+                          0.0,
+                          0.5608698880889416,
+                          0.0
+                        ],
+                        "rotation": [
+                          0.0,
+                          0.0,
+                          0.3490655555555555
+                        ],
+                        "scale": [
+                          1.0,
+                          1.0,
+                          1.0
+                        ]
+                      },
+                      "material": "silver",
+                      "metadata": {
+                        "glyph": "Vega"
+                      },
+                      "children": []
+                    },
+                    {
+                      "name": "microscope_0_glyph_marker_2",
+                      "primitive": {
+                        "kind": "cone",
+                        "params": {
+                          "radius1": 0.03,
+                          "radius2": 0.0,
+                          "depth": 0.08
+                        }
+                      },
+                      "transform": {
+                        "location": [
+                          0.0,
+                          0.5608698880889416,
+                          0.0
+                        ],
+                        "rotation": [
+                          0.0,
+                          0.0,
+                          0.698131111111111
+                        ],
+                        "scale": [
+                          1.0,
+                          1.0,
+                          1.0
+                        ]
+                      },
+                      "material": "silver",
+                      "metadata": {
+                        "glyph": "Canopus"
+                      },
+                      "children": []
+                    },
+                    {
+                      "name": "microscope_0_glyph_marker_3",
+                      "primitive": {
+                        "kind": "cone",
+                        "params": {
+                          "radius1": 0.03,
+                          "radius2": 0.0,
+                          "depth": 0.08
+                        }
+                      },
+                      "transform": {
+                        "location": [
+                          0.0,
+                          0.5608698880889416,
+                          0.0
+                        ],
+                        "rotation": [
+                          0.0,
+                          0.0,
+                          1.0471966666666666
+                        ],
+                        "scale": [
+                          1.0,
+                          1.0,
+                          1.0
+                        ]
+                      },
+                      "material": "silver",
+                      "metadata": {
+                        "glyph": "Vega"
+                      },
+                      "children": []
+                    },
+                    {
+                      "name": "microscope_0_glyph_marker_4",
+                      "primitive": {
+                        "kind": "cone",
+                        "params": {
+                          "radius1": 0.03,
+                          "radius2": 0.0,
+                          "depth": 0.08
+                        }
+                      },
+                      "transform": {
+                        "location": [
+                          0.0,
+                          0.5608698880889416,
+                          0.0
+                        ],
+                        "rotation": [
+                          0.0,
+                          0.0,
+                          1.396262222222222
+                        ],
+                        "scale": [
+                          1.0,
+                          1.0,
+                          1.0
+                        ]
+                      },
+                      "material": "silver",
+                      "metadata": {
+                        "glyph": "Sirius"
+                      },
+                      "children": []
+                    },
+                    {
+                      "name": "microscope_0_glyph_marker_5",
+                      "primitive": {
+                        "kind": "cone",
+                        "params": {
+                          "radius1": 0.03,
+                          "radius2": 0.0,
+                          "depth": 0.08
+                        }
+                      },
+                      "transform": {
+                        "location": [
+                          0.0,
+                          0.5608698880889416,
+                          0.0
+                        ],
+                        "rotation": [
+                          0.0,
+                          0.0,
+                          1.7453277777777776
+                        ],
+                        "scale": [
+                          1.0,
+                          1.0,
+                          1.0
+                        ]
+                      },
+                      "material": "silver",
+                      "metadata": {
+                        "glyph": "Polaris"
+                      },
+                      "children": []
+                    },
+                    {
+                      "name": "microscope_0_glyph_marker_6",
+                      "primitive": {
+                        "kind": "cone",
+                        "params": {
+                          "radius1": 0.03,
+                          "radius2": 0.0,
+                          "depth": 0.08
+                        }
+                      },
+                      "transform": {
+                        "location": [
+                          0.0,
+                          0.5608698880889416,
+                          0.0
+                        ],
+                        "rotation": [
+                          0.0,
+                          0.0,
+                          2.094393333333333
+                        ],
+                        "scale": [
+                          1.0,
+                          1.0,
+                          1.0
+                        ]
+                      },
+                      "material": "silver",
+                      "metadata": {
+                        "glyph": "Rigel"
+                      },
+                      "children": []
+                    },
+                    {
+                      "name": "microscope_0_glyph_marker_7",
+                      "primitive": {
+                        "kind": "cone",
+                        "params": {
+                          "radius1": 0.03,
+                          "radius2": 0.0,
+                          "depth": 0.08
+                        }
+                      },
+                      "transform": {
+                        "location": [
+                          0.0,
+                          0.5608698880889416,
+                          0.0
+                        ],
+                        "rotation": [
+                          0.0,
+                          0.0,
+                          2.4434588888888884
+                        ],
+                        "scale": [
+                          1.0,
+                          1.0,
+                          1.0
+                        ]
+                      },
+                      "material": "silver",
+                      "metadata": {
+                        "glyph": "Sirius"
+                      },
+                      "children": []
+                    },
+                    {
+                      "name": "microscope_0_glyph_marker_8",
+                      "primitive": {
+                        "kind": "cone",
+                        "params": {
+                          "radius1": 0.03,
+                          "radius2": 0.0,
+                          "depth": 0.08
+                        }
+                      },
+                      "transform": {
+                        "location": [
+                          0.0,
+                          0.5608698880889416,
+                          0.0
+                        ],
+                        "rotation": [
+                          0.0,
+                          0.0,
+                          2.792524444444444
+                        ],
+                        "scale": [
+                          1.0,
+                          1.0,
+                          1.0
+                        ]
+                      },
+                      "material": "silver",
+                      "metadata": {
+                        "glyph": "Rigel"
+                      },
+                      "children": []
+                    },
+                    {
+                      "name": "microscope_0_glyph_marker_9",
+                      "primitive": {
+                        "kind": "cone",
+                        "params": {
+                          "radius1": 0.03,
+                          "radius2": 0.0,
+                          "depth": 0.08
+                        }
+                      },
+                      "transform": {
+                        "location": [
+                          0.0,
+                          0.5608698880889416,
+                          0.0
+                        ],
+                        "rotation": [
+                          0.0,
+                          0.0,
+                          3.14159
+                        ],
+                        "scale": [
+                          1.0,
+                          1.0,
+                          1.0
+                        ]
+                      },
+                      "material": "silver",
+                      "metadata": {
+                        "glyph": "Sirius"
+                      },
+                      "children": []
+                    },
+                    {
+                      "name": "microscope_0_glyph_marker_10",
+                      "primitive": {
+                        "kind": "cone",
+                        "params": {
+                          "radius1": 0.03,
+                          "radius2": 0.0,
+                          "depth": 0.08
+                        }
+                      },
+                      "transform": {
+                        "location": [
+                          0.0,
+                          0.5608698880889416,
+                          0.0
+                        ],
+                        "rotation": [
+                          0.0,
+                          0.0,
+                          3.490655555555555
+                        ],
+                        "scale": [
+                          1.0,
+                          1.0,
+                          1.0
+                        ]
+                      },
+                      "material": "silver",
+                      "metadata": {
+                        "glyph": "Aldebaran"
+                      },
+                      "children": []
+                    },
+                    {
+                      "name": "microscope_0_glyph_marker_11",
+                      "primitive": {
+                        "kind": "cone",
+                        "params": {
+                          "radius1": 0.03,
+                          "radius2": 0.0,
+                          "depth": 0.08
+                        }
+                      },
+                      "transform": {
+                        "location": [
+                          0.0,
+                          0.5608698880889416,
+                          0.0
+                        ],
+                        "rotation": [
+                          0.0,
+                          0.0,
+                          3.8397211111111105
+                        ],
+                        "scale": [
+                          1.0,
+                          1.0,
+                          1.0
+                        ]
+                      },
+                      "material": "silver",
+                      "metadata": {
+                        "glyph": "Rigel"
+                      },
+                      "children": []
+                    },
+                    {
+                      "name": "microscope_0_glyph_marker_12",
+                      "primitive": {
+                        "kind": "cone",
+                        "params": {
+                          "radius1": 0.03,
+                          "radius2": 0.0,
+                          "depth": 0.08
+                        }
+                      },
+                      "transform": {
+                        "location": [
+                          0.0,
+                          0.5608698880889416,
+                          0.0
+                        ],
+                        "rotation": [
+                          0.0,
+                          0.0,
+                          4.188786666666666
+                        ],
+                        "scale": [
+                          1.0,
+                          1.0,
+                          1.0
+                        ]
+                      },
+                      "material": "silver",
+                      "metadata": {
+                        "glyph": "Vega"
+                      },
+                      "children": []
+                    },
+                    {
+                      "name": "microscope_0_glyph_marker_13",
+                      "primitive": {
+                        "kind": "cone",
+                        "params": {
+                          "radius1": 0.03,
+                          "radius2": 0.0,
+                          "depth": 0.08
+                        }
+                      },
+                      "transform": {
+                        "location": [
+                          0.0,
+                          0.5608698880889416,
+                          0.0
+                        ],
+                        "rotation": [
+                          0.0,
+                          0.0,
+                          4.537852222222222
+                        ],
+                        "scale": [
+                          1.0,
+                          1.0,
+                          1.0
+                        ]
+                      },
+                      "material": "silver",
+                      "metadata": {
+                        "glyph": "Rigel"
+                      },
+                      "children": []
+                    },
+                    {
+                      "name": "microscope_0_glyph_marker_14",
+                      "primitive": {
+                        "kind": "cone",
+                        "params": {
+                          "radius1": 0.03,
+                          "radius2": 0.0,
+                          "depth": 0.08
+                        }
+                      },
+                      "transform": {
+                        "location": [
+                          0.0,
+                          0.5608698880889416,
+                          0.0
+                        ],
+                        "rotation": [
+                          0.0,
+                          0.0,
+                          4.886917777777777
+                        ],
+                        "scale": [
+                          1.0,
+                          1.0,
+                          1.0
+                        ]
+                      },
+                      "material": "silver",
+                      "metadata": {
+                        "glyph": "Sirius"
+                      },
+                      "children": []
+                    },
+                    {
+                      "name": "microscope_0_glyph_marker_15",
+                      "primitive": {
+                        "kind": "cone",
+                        "params": {
+                          "radius1": 0.03,
+                          "radius2": 0.0,
+                          "depth": 0.08
+                        }
+                      },
+                      "transform": {
+                        "location": [
+                          0.0,
+                          0.5608698880889416,
+                          0.0
+                        ],
+                        "rotation": [
+                          0.0,
+                          0.0,
+                          5.2359833333333325
+                        ],
+                        "scale": [
+                          1.0,
+                          1.0,
+                          1.0
+                        ]
+                      },
+                      "material": "silver",
+                      "metadata": {
+                        "glyph": "Canopus"
+                      },
+                      "children": []
+                    },
+                    {
+                      "name": "microscope_0_glyph_marker_16",
+                      "primitive": {
+                        "kind": "cone",
+                        "params": {
+                          "radius1": 0.03,
+                          "radius2": 0.0,
+                          "depth": 0.08
+                        }
+                      },
+                      "transform": {
+                        "location": [
+                          0.0,
+                          0.5608698880889416,
+                          0.0
+                        ],
+                        "rotation": [
+                          0.0,
+                          0.0,
+                          5.585048888888888
+                        ],
+                        "scale": [
+                          1.0,
+                          1.0,
+                          1.0
+                        ]
+                      },
+                      "material": "silver",
+                      "metadata": {
+                        "glyph": "Sirius"
+                      },
+                      "children": []
+                    },
+                    {
+                      "name": "microscope_0_glyph_marker_17",
+                      "primitive": {
+                        "kind": "cone",
+                        "params": {
+                          "radius1": 0.03,
+                          "radius2": 0.0,
+                          "depth": 0.08
+                        }
+                      },
+                      "transform": {
+                        "location": [
+                          0.0,
+                          0.5608698880889416,
+                          0.0
+                        ],
+                        "rotation": [
+                          0.0,
+                          0.0,
+                          5.934114444444444
+                        ],
+                        "scale": [
+                          1.0,
+                          1.0,
+                          1.0
+                        ]
+                      },
+                      "material": "silver",
+                      "metadata": {
+                        "glyph": "Polaris"
+                      },
+                      "children": []
+                    }
+                  ]
+                }
+              ]
+            },
+            {
+              "name": "microscope_1_calibration",
+              "primitive": null,
+              "transform": {
+                "location": [
+                  0.0,
+                  0.0,
+                  0.0
+                ],
+                "rotation": [
+                  1.1325494642581542,
+                  3.0417425571525882,
+                  2.2411298418851677
+                ],
+                "scale": [
+                  1.0,
+                  1.0,
+                  1.0
+                ]
+              },
+              "material": null,
+              "metadata": {},
+              "children": [
+                {
+                  "name": "microscope_1_calibration_ring",
+                  "primitive": {
+                    "kind": "torus",
+                    "params": {
+                      "major_radius": 0.6791692758008534,
+                      "minor_radius": 0.02
+                    }
+                  },
+                  "transform": {
+                    "location": [
+                      0.0,
+                      0.0,
+                      0.0
+                    ],
+                    "rotation": [
+                      0.0,
+                      0.0,
+                      0.0
+                    ],
+                    "scale": [
+                      1.0,
+                      1.0,
+                      1.0
+                    ]
+                  },
+                  "material": "brass",
+                  "metadata": {},
+                  "children": []
+                },
+                {
+                  "name": "microscope_1_glyphs",
+                  "primitive": null,
+                  "transform": {
+                    "location": [
+                      0.0,
+                      0.0,
+                      0.0
+                    ],
+                    "rotation": [
+                      0.0,
+                      0.0,
+                      0.0
+                    ],
+                    "scale": [
+                      1.0,
+                      1.0,
+                      1.0
+                    ]
+                  },
+                  "material": null,
+                  "metadata": {},
+                  "children": [
+                    {
+                      "name": "microscope_1_glyph_marker_0",
+                      "primitive": {
+                        "kind": "cone",
+                        "params": {
+                          "radius1": 0.03,
+                          "radius2": 0.0,
+                          "depth": 0.08
+                        }
+                      },
+                      "transform": {
+                        "location": [
+                          0.0,
+                          0.6791692758008534,
+                          0.0
+                        ],
+                        "rotation": [
+                          0.0,
+                          0.0,
+                          0.0
+                        ],
+                        "scale": [
+                          1.0,
+                          1.0,
+                          1.0
+                        ]
+                      },
+                      "material": "silver",
+                      "metadata": {
+                        "glyph": "Polaris"
+                      },
+                      "children": []
+                    },
+                    {
+                      "name": "microscope_1_glyph_marker_1",
+                      "primitive": {
+                        "kind": "cone",
+                        "params": {
+                          "radius1": 0.03,
+                          "radius2": 0.0,
+                          "depth": 0.08
+                        }
+                      },
+                      "transform": {
+                        "location": [
+                          0.0,
+                          0.6791692758008534,
+                          0.0
+                        ],
+                        "rotation": [
+                          0.0,
+                          0.0,
+                          0.3490655555555555
+                        ],
+                        "scale": [
+                          1.0,
+                          1.0,
+                          1.0
+                        ]
+                      },
+                      "material": "silver",
+                      "metadata": {
+                        "glyph": "Vega"
+                      },
+                      "children": []
+                    },
+                    {
+                      "name": "microscope_1_glyph_marker_2",
+                      "primitive": {
+                        "kind": "cone",
+                        "params": {
+                          "radius1": 0.03,
+                          "radius2": 0.0,
+                          "depth": 0.08
+                        }
+                      },
+                      "transform": {
+                        "location": [
+                          0.0,
+                          0.6791692758008534,
+                          0.0
+                        ],
+                        "rotation": [
+                          0.0,
+                          0.0,
+                          0.698131111111111
+                        ],
+                        "scale": [
+                          1.0,
+                          1.0,
+                          1.0
+                        ]
+                      },
+                      "material": "silver",
+                      "metadata": {
+                        "glyph": "Canopus"
+                      },
+                      "children": []
+                    },
+                    {
+                      "name": "microscope_1_glyph_marker_3",
+                      "primitive": {
+                        "kind": "cone",
+                        "params": {
+                          "radius1": 0.03,
+                          "radius2": 0.0,
+                          "depth": 0.08
+                        }
+                      },
+                      "transform": {
+                        "location": [
+                          0.0,
+                          0.6791692758008534,
+                          0.0
+                        ],
+                        "rotation": [
+                          0.0,
+                          0.0,
+                          1.0471966666666666
+                        ],
+                        "scale": [
+                          1.0,
+                          1.0,
+                          1.0
+                        ]
+                      },
+                      "material": "silver",
+                      "metadata": {
+                        "glyph": "Polaris"
+                      },
+                      "children": []
+                    },
+                    {
+                      "name": "microscope_1_glyph_marker_4",
+                      "primitive": {
+                        "kind": "cone",
+                        "params": {
+                          "radius1": 0.03,
+                          "radius2": 0.0,
+                          "depth": 0.08
+                        }
+                      },
+                      "transform": {
+                        "location": [
+                          0.0,
+                          0.6791692758008534,
+                          0.0
+                        ],
+                        "rotation": [
+                          0.0,
+                          0.0,
+                          1.396262222222222
+                        ],
+                        "scale": [
+                          1.0,
+                          1.0,
+                          1.0
+                        ]
+                      },
+                      "material": "silver",
+                      "metadata": {
+                        "glyph": "Aldebaran"
+                      },
+                      "children": []
+                    },
+                    {
+                      "name": "microscope_1_glyph_marker_5",
+                      "primitive": {
+                        "kind": "cone",
+                        "params": {
+                          "radius1": 0.03,
+                          "radius2": 0.0,
+                          "depth": 0.08
+                        }
+                      },
+                      "transform": {
+                        "location": [
+                          0.0,
+                          0.6791692758008534,
+                          0.0
+                        ],
+                        "rotation": [
+                          0.0,
+                          0.0,
+                          1.7453277777777776
+                        ],
+                        "scale": [
+                          1.0,
+                          1.0,
+                          1.0
+                        ]
+                      },
+                      "material": "silver",
+                      "metadata": {
+                        "glyph": "Rigel"
+                      },
+                      "children": []
+                    },
+                    {
+                      "name": "microscope_1_glyph_marker_6",
+                      "primitive": {
+                        "kind": "cone",
+                        "params": {
+                          "radius1": 0.03,
+                          "radius2": 0.0,
+                          "depth": 0.08
+                        }
+                      },
+                      "transform": {
+                        "location": [
+                          0.0,
+                          0.6791692758008534,
+                          0.0
+                        ],
+                        "rotation": [
+                          0.0,
+                          0.0,
+                          2.094393333333333
+                        ],
+                        "scale": [
+                          1.0,
+                          1.0,
+                          1.0
+                        ]
+                      },
+                      "material": "silver",
+                      "metadata": {
+                        "glyph": "Polaris"
+                      },
+                      "children": []
+                    },
+                    {
+                      "name": "microscope_1_glyph_marker_7",
+                      "primitive": {
+                        "kind": "cone",
+                        "params": {
+                          "radius1": 0.03,
+                          "radius2": 0.0,
+                          "depth": 0.08
+                        }
+                      },
+                      "transform": {
+                        "location": [
+                          0.0,
+                          0.6791692758008534,
+                          0.0
+                        ],
+                        "rotation": [
+                          0.0,
+                          0.0,
+                          2.4434588888888884
+                        ],
+                        "scale": [
+                          1.0,
+                          1.0,
+                          1.0
+                        ]
+                      },
+                      "material": "silver",
+                      "metadata": {
+                        "glyph": "Aldebaran"
+                      },
+                      "children": []
+                    },
+                    {
+                      "name": "microscope_1_glyph_marker_8",
+                      "primitive": {
+                        "kind": "cone",
+                        "params": {
+                          "radius1": 0.03,
+                          "radius2": 0.0,
+                          "depth": 0.08
+                        }
+                      },
+                      "transform": {
+                        "location": [
+                          0.0,
+                          0.6791692758008534,
+                          0.0
+                        ],
+                        "rotation": [
+                          0.0,
+                          0.0,
+                          2.792524444444444
+                        ],
+                        "scale": [
+                          1.0,
+                          1.0,
+                          1.0
+                        ]
+                      },
+                      "material": "silver",
+                      "metadata": {
+                        "glyph": "Vega"
+                      },
+                      "children": []
+                    },
+                    {
+                      "name": "microscope_1_glyph_marker_9",
+                      "primitive": {
+                        "kind": "cone",
+                        "params": {
+                          "radius1": 0.03,
+                          "radius2": 0.0,
+                          "depth": 0.08
+                        }
+                      },
+                      "transform": {
+                        "location": [
+                          0.0,
+                          0.6791692758008534,
+                          0.0
+                        ],
+                        "rotation": [
+                          0.0,
+                          0.0,
+                          3.14159
+                        ],
+                        "scale": [
+                          1.0,
+                          1.0,
+                          1.0
+                        ]
+                      },
+                      "material": "silver",
+                      "metadata": {
+                        "glyph": "Canopus"
+                      },
+                      "children": []
+                    },
+                    {
+                      "name": "microscope_1_glyph_marker_10",
+                      "primitive": {
+                        "kind": "cone",
+                        "params": {
+                          "radius1": 0.03,
+                          "radius2": 0.0,
+                          "depth": 0.08
+                        }
+                      },
+                      "transform": {
+                        "location": [
+                          0.0,
+                          0.6791692758008534,
+                          0.0
+                        ],
+                        "rotation": [
+                          0.0,
+                          0.0,
+                          3.490655555555555
+                        ],
+                        "scale": [
+                          1.0,
+                          1.0,
+                          1.0
+                        ]
+                      },
+                      "material": "silver",
+                      "metadata": {
+                        "glyph": "Aldebaran"
+                      },
+                      "children": []
+                    },
+                    {
+                      "name": "microscope_1_glyph_marker_11",
+                      "primitive": {
+                        "kind": "cone",
+                        "params": {
+                          "radius1": 0.03,
+                          "radius2": 0.0,
+                          "depth": 0.08
+                        }
+                      },
+                      "transform": {
+                        "location": [
+                          0.0,
+                          0.6791692758008534,
+                          0.0
+                        ],
+                        "rotation": [
+                          0.0,
+                          0.0,
+                          3.8397211111111105
+                        ],
+                        "scale": [
+                          1.0,
+                          1.0,
+                          1.0
+                        ]
+                      },
+                      "material": "silver",
+                      "metadata": {
+                        "glyph": "Rigel"
+                      },
+                      "children": []
+                    },
+                    {
+                      "name": "microscope_1_glyph_marker_12",
+                      "primitive": {
+                        "kind": "cone",
+                        "params": {
+                          "radius1": 0.03,
+                          "radius2": 0.0,
+                          "depth": 0.08
+                        }
+                      },
+                      "transform": {
+                        "location": [
+                          0.0,
+                          0.6791692758008534,
+                          0.0
+                        ],
+                        "rotation": [
+                          0.0,
+                          0.0,
+                          4.188786666666666
+                        ],
+                        "scale": [
+                          1.0,
+                          1.0,
+                          1.0
+                        ]
+                      },
+                      "material": "silver",
+                      "metadata": {
+                        "glyph": "Polaris"
+                      },
+                      "children": []
+                    },
+                    {
+                      "name": "microscope_1_glyph_marker_13",
+                      "primitive": {
+                        "kind": "cone",
+                        "params": {
+                          "radius1": 0.03,
+                          "radius2": 0.0,
+                          "depth": 0.08
+                        }
+                      },
+                      "transform": {
+                        "location": [
+                          0.0,
+                          0.6791692758008534,
+                          0.0
+                        ],
+                        "rotation": [
+                          0.0,
+                          0.0,
+                          4.537852222222222
+                        ],
+                        "scale": [
+                          1.0,
+                          1.0,
+                          1.0
+                        ]
+                      },
+                      "material": "silver",
+                      "metadata": {
+                        "glyph": "Polaris"
+                      },
+                      "children": []
+                    },
+                    {
+                      "name": "microscope_1_glyph_marker_14",
+                      "primitive": {
+                        "kind": "cone",
+                        "params": {
+                          "radius1": 0.03,
+                          "radius2": 0.0,
+                          "depth": 0.08
+                        }
+                      },
+                      "transform": {
+                        "location": [
+                          0.0,
+                          0.6791692758008534,
+                          0.0
+                        ],
+                        "rotation": [
+                          0.0,
+                          0.0,
+                          4.886917777777777
+                        ],
+                        "scale": [
+                          1.0,
+                          1.0,
+                          1.0
+                        ]
+                      },
+                      "material": "silver",
+                      "metadata": {
+                        "glyph": "Rigel"
+                      },
+                      "children": []
+                    },
+                    {
+                      "name": "microscope_1_glyph_marker_15",
+                      "primitive": {
+                        "kind": "cone",
+                        "params": {
+                          "radius1": 0.03,
+                          "radius2": 0.0,
+                          "depth": 0.08
+                        }
+                      },
+                      "transform": {
+                        "location": [
+                          0.0,
+                          0.6791692758008534,
+                          0.0
+                        ],
+                        "rotation": [
+                          0.0,
+                          0.0,
+                          5.2359833333333325
+                        ],
+                        "scale": [
+                          1.0,
+                          1.0,
+                          1.0
+                        ]
+                      },
+                      "material": "silver",
+                      "metadata": {
+                        "glyph": "Rigel"
+                      },
+                      "children": []
+                    },
+                    {
+                      "name": "microscope_1_glyph_marker_16",
+                      "primitive": {
+                        "kind": "cone",
+                        "params": {
+                          "radius1": 0.03,
+                          "radius2": 0.0,
+                          "depth": 0.08
+                        }
+                      },
+                      "transform": {
+                        "location": [
+                          0.0,
+                          0.6791692758008534,
+                          0.0
+                        ],
+                        "rotation": [
+                          0.0,
+                          0.0,
+                          5.585048888888888
+                        ],
+                        "scale": [
+                          1.0,
+                          1.0,
+                          1.0
+                        ]
+                      },
+                      "material": "silver",
+                      "metadata": {
+                        "glyph": "Canopus"
+                      },
+                      "children": []
+                    },
+                    {
+                      "name": "microscope_1_glyph_marker_17",
+                      "primitive": {
+                        "kind": "cone",
+                        "params": {
+                          "radius1": 0.03,
+                          "radius2": 0.0,
+                          "depth": 0.08
+                        }
+                      },
+                      "transform": {
+                        "location": [
+                          0.0,
+                          0.6791692758008534,
+                          0.0
+                        ],
+                        "rotation": [
+                          0.0,
+                          0.0,
+                          5.934114444444444
+                        ],
+                        "scale": [
+                          1.0,
+                          1.0,
+                          1.0
+                        ]
+                      },
+                      "material": "silver",
+                      "metadata": {
+                        "glyph": "Sirius"
+                      },
+                      "children": []
+                    }
+                  ]
+                }
+              ]
+            },
+            {
+              "name": "microscope_2_calibration",
+              "primitive": null,
+              "transform": {
+                "location": [
+                  0.0,
+                  0.0,
+                  0.0
+                ],
+                "rotation": [
+                  2.221296257877781,
+                  2.7978759259014354,
+                  1.371384261333786
+                ],
+                "scale": [
+                  1.0,
+                  1.0,
+                  1.0
+                ]
+              },
+              "material": null,
+              "metadata": {},
+              "children": [
+                {
+                  "name": "microscope_2_calibration_ring",
+                  "primitive": {
+                    "kind": "torus",
+                    "params": {
+                      "major_radius": 0.6083471926661489,
+                      "minor_radius": 0.02
+                    }
+                  },
+                  "transform": {
+                    "location": [
+                      0.0,
+                      0.0,
+                      0.0
+                    ],
+                    "rotation": [
+                      0.0,
+                      0.0,
+                      0.0
+                    ],
+                    "scale": [
+                      1.0,
+                      1.0,
+                      1.0
+                    ]
+                  },
+                  "material": "brass",
+                  "metadata": {},
+                  "children": []
+                },
+                {
+                  "name": "microscope_2_glyphs",
+                  "primitive": null,
+                  "transform": {
+                    "location": [
+                      0.0,
+                      0.0,
+                      0.0
+                    ],
+                    "rotation": [
+                      0.0,
+                      0.0,
+                      0.0
+                    ],
+                    "scale": [
+                      1.0,
+                      1.0,
+                      1.0
+                    ]
+                  },
+                  "material": null,
+                  "metadata": {},
+                  "children": [
+                    {
+                      "name": "microscope_2_glyph_marker_0",
+                      "primitive": {
+                        "kind": "cone",
+                        "params": {
+                          "radius1": 0.03,
+                          "radius2": 0.0,
+                          "depth": 0.08
+                        }
+                      },
+                      "transform": {
+                        "location": [
+                          0.0,
+                          0.6083471926661489,
+                          0.0
+                        ],
+                        "rotation": [
+                          0.0,
+                          0.0,
+                          0.0
+                        ],
+                        "scale": [
+                          1.0,
+                          1.0,
+                          1.0
+                        ]
+                      },
+                      "material": "silver",
+                      "metadata": {
+                        "glyph": "Polaris"
+                      },
+                      "children": []
+                    },
+                    {
+                      "name": "microscope_2_glyph_marker_1",
+                      "primitive": {
+                        "kind": "cone",
+                        "params": {
+                          "radius1": 0.03,
+                          "radius2": 0.0,
+                          "depth": 0.08
+                        }
+                      },
+                      "transform": {
+                        "location": [
+                          0.0,
+                          0.6083471926661489,
+                          0.0
+                        ],
+                        "rotation": [
+                          0.0,
+                          0.0,
+                          0.7853975
+                        ],
+                        "scale": [
+                          1.0,
+                          1.0,
+                          1.0
+                        ]
+                      },
+                      "material": "silver",
+                      "metadata": {
+                        "glyph": "Aldebaran"
+                      },
+                      "children": []
+                    },
+                    {
+                      "name": "microscope_2_glyph_marker_2",
+                      "primitive": {
+                        "kind": "cone",
+                        "params": {
+                          "radius1": 0.03,
+                          "radius2": 0.0,
+                          "depth": 0.08
+                        }
+                      },
+                      "transform": {
+                        "location": [
+                          0.0,
+                          0.6083471926661489,
+                          0.0
+                        ],
+                        "rotation": [
+                          0.0,
+                          0.0,
+                          1.570795
+                        ],
+                        "scale": [
+                          1.0,
+                          1.0,
+                          1.0
+                        ]
+                      },
+                      "material": "silver",
+                      "metadata": {
+                        "glyph": "Vega"
+                      },
+                      "children": []
+                    },
+                    {
+                      "name": "microscope_2_glyph_marker_3",
+                      "primitive": {
+                        "kind": "cone",
+                        "params": {
+                          "radius1": 0.03,
+                          "radius2": 0.0,
+                          "depth": 0.08
+                        }
+                      },
+                      "transform": {
+                        "location": [
+                          0.0,
+                          0.6083471926661489,
+                          0.0
+                        ],
+                        "rotation": [
+                          0.0,
+                          0.0,
+                          2.3561924999999997
+                        ],
+                        "scale": [
+                          1.0,
+                          1.0,
+                          1.0
+                        ]
+                      },
+                      "material": "silver",
+                      "metadata": {
+                        "glyph": "Polaris"
+                      },
+                      "children": []
+                    },
+                    {
+                      "name": "microscope_2_glyph_marker_4",
+                      "primitive": {
+                        "kind": "cone",
+                        "params": {
+                          "radius1": 0.03,
+                          "radius2": 0.0,
+                          "depth": 0.08
+                        }
+                      },
+                      "transform": {
+                        "location": [
+                          0.0,
+                          0.6083471926661489,
+                          0.0
+                        ],
+                        "rotation": [
+                          0.0,
+                          0.0,
+                          3.14159
+                        ],
+                        "scale": [
+                          1.0,
+                          1.0,
+                          1.0
+                        ]
+                      },
+                      "material": "silver",
+                      "metadata": {
+                        "glyph": "Polaris"
+                      },
+                      "children": []
+                    },
+                    {
+                      "name": "microscope_2_glyph_marker_5",
+                      "primitive": {
+                        "kind": "cone",
+                        "params": {
+                          "radius1": 0.03,
+                          "radius2": 0.0,
+                          "depth": 0.08
+                        }
+                      },
+                      "transform": {
+                        "location": [
+                          0.0,
+                          0.6083471926661489,
+                          0.0
+                        ],
+                        "rotation": [
+                          0.0,
+                          0.0,
+                          3.9269875
+                        ],
+                        "scale": [
+                          1.0,
+                          1.0,
+                          1.0
+                        ]
+                      },
+                      "material": "silver",
+                      "metadata": {
+                        "glyph": "Vega"
+                      },
+                      "children": []
+                    },
+                    {
+                      "name": "microscope_2_glyph_marker_6",
+                      "primitive": {
+                        "kind": "cone",
+                        "params": {
+                          "radius1": 0.03,
+                          "radius2": 0.0,
+                          "depth": 0.08
+                        }
+                      },
+                      "transform": {
+                        "location": [
+                          0.0,
+                          0.6083471926661489,
+                          0.0
+                        ],
+                        "rotation": [
+                          0.0,
+                          0.0,
+                          4.712384999999999
+                        ],
+                        "scale": [
+                          1.0,
+                          1.0,
+                          1.0
+                        ]
+                      },
+                      "material": "silver",
+                      "metadata": {
+                        "glyph": "Aldebaran"
+                      },
+                      "children": []
+                    },
+                    {
+                      "name": "microscope_2_glyph_marker_7",
+                      "primitive": {
+                        "kind": "cone",
+                        "params": {
+                          "radius1": 0.03,
+                          "radius2": 0.0,
+                          "depth": 0.08
+                        }
+                      },
+                      "transform": {
+                        "location": [
+                          0.0,
+                          0.6083471926661489,
+                          0.0
+                        ],
+                        "rotation": [
+                          0.0,
+                          0.0,
+                          5.4977825
+                        ],
+                        "scale": [
+                          1.0,
+                          1.0,
+                          1.0
+                        ]
+                      },
+                      "material": "silver",
+                      "metadata": {
+                        "glyph": "Polaris"
+                      },
+                      "children": []
+                    }
+                  ]
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "name": "microscope_astronomical_calibration",
+          "primitive": null,
+          "transform": {
+            "location": [
+              0.0,
+              0.0,
+              0.0
+            ],
+            "rotation": [
+              0.0,
+              0.0,
+              0.0
+            ],
+            "scale": [
+              1.0,
+              1.0,
+              1.0
+            ]
+          },
+          "material": null,
+          "metadata": {},
+          "children": [
+            {
+              "name": "microscope_gyro_core",
+              "primitive": {
+                "kind": "torus",
+                "params": {
+                  "major_radius": 0.6682359992422047,
+                  "minor_radius": 0.04
+                }
+              },
+              "transform": {
+                "location": [
+                  0.0,
+                  0.0,
+                  0.0
+                ],
+                "rotation": [
+                  0.0,
+                  0.0,
+                  0.0
+                ],
+                "scale": [
+                  1.0,
+                  1.0,
+                  1.0
+                ]
+              },
+              "material": "brass",
+              "metadata": {},
+              "children": []
+            },
+            {
+              "name": "microscope_gyro_spindle",
+              "primitive": {
+                "kind": "cylinder",
+                "params": {
+                  "radius": 0.03,
+                  "depth": 1.412828469504312
+                }
+              },
+              "transform": {
+                "location": [
+                  0.0,
+                  0.0,
+                  0.0
+                ],
+                "rotation": [
+                  1.5708,
+                  0.0,
+                  0.0
+                ],
+                "scale": [
+                  1.0,
+                  1.0,
+                  1.0
+                ]
+              },
+              "material": "silver",
+              "metadata": {},
+              "children": []
+            },
+            {
+              "name": "microscope_star_markers",
+              "primitive": null,
+              "transform": {
+                "location": [
+                  0.0,
+                  0.0,
+                  0.0
+                ],
+                "rotation": [
+                  0.0,
+                  0.0,
+                  0.0
+                ],
+                "scale": [
+                  1.0,
+                  1.0,
+                  1.0
+                ]
+              },
+              "material": null,
+              "metadata": {},
+              "children": [
+                {
+                  "name": "microscope_star_marker_0",
+                  "primitive": {
+                    "kind": "cone",
+                    "params": {
+                      "radius1": 0.05,
+                      "radius2": 0.0,
+                      "depth": 0.12
+                    }
+                  },
+                  "transform": {
+                    "location": [
+                      0.0,
+                      0.8640940328830211,
+                      0.0
+                    ],
+                    "rotation": [
+                      0.0,
+                      0.0,
+                      0.0
+                    ],
+                    "scale": [
+                      1.0,
+                      1.0,
+                      1.0
+                    ]
+                  },
+                  "material": "emerald",
+                  "metadata": {},
+                  "children": []
+                },
+                {
+                  "name": "microscope_star_marker_1",
+                  "primitive": {
+                    "kind": "cone",
+                    "params": {
+                      "radius1": 0.05,
+                      "radius2": 0.0,
+                      "depth": 0.12
+                    }
+                  },
+                  "transform": {
+                    "location": [
+                      0.0,
+                      0.8458303676399102,
+                      0.0
+                    ],
+                    "rotation": [
+                      0.0,
+                      0.0,
+                      0.698131111111111
+                    ],
+                    "scale": [
+                      1.0,
+                      1.0,
+                      1.0
+                    ]
+                  },
+                  "material": "emerald",
+                  "metadata": {},
+                  "children": []
+                },
+                {
+                  "name": "microscope_star_marker_2",
+                  "primitive": {
+                    "kind": "cone",
+                    "params": {
+                      "radius1": 0.05,
+                      "radius2": 0.0,
+                      "depth": 0.12
+                    }
+                  },
+                  "transform": {
+                    "location": [
+                      0.0,
+                      0.9198850569278596,
+                      0.0
+                    ],
+                    "rotation": [
+                      0.0,
+                      0.0,
+                      1.396262222222222
+                    ],
+                    "scale": [
+                      1.0,
+                      1.0,
+                      1.0
+                    ]
+                  },
+                  "material": "emerald",
+                  "metadata": {},
+                  "children": []
+                },
+                {
+                  "name": "microscope_star_marker_3",
+                  "primitive": {
+                    "kind": "cone",
+                    "params": {
+                      "radius1": 0.05,
+                      "radius2": 0.0,
+                      "depth": 0.12
+                    }
+                  },
+                  "transform": {
+                    "location": [
+                      0.0,
+                      0.5443978552003783,
+                      0.0
+                    ],
+                    "rotation": [
+                      0.0,
+                      0.0,
+                      2.094393333333333
+                    ],
+                    "scale": [
+                      1.0,
+                      1.0,
+                      1.0
+                    ]
+                  },
+                  "material": "emerald",
+                  "metadata": {},
+                  "children": []
+                },
+                {
+                  "name": "microscope_star_marker_4",
+                  "primitive": {
+                    "kind": "cone",
+                    "params": {
+                      "radius1": 0.05,
+                      "radius2": 0.0,
+                      "depth": 0.12
+                    }
+                  },
+                  "transform": {
+                    "location": [
+                      0.0,
+                      0.6728755605154471,
+                      0.0
+                    ],
+                    "rotation": [
+                      0.0,
+                      0.0,
+                      2.792524444444444
+                    ],
+                    "scale": [
+                      1.0,
+                      1.0,
+                      1.0
+                    ]
+                  },
+                  "material": "emerald",
+                  "metadata": {},
+                  "children": []
+                },
+                {
+                  "name": "microscope_star_marker_5",
+                  "primitive": {
+                    "kind": "cone",
+                    "params": {
+                      "radius1": 0.05,
+                      "radius2": 0.0,
+                      "depth": 0.12
+                    }
+                  },
+                  "transform": {
+                    "location": [
+                      0.0,
+                      0.9546344550642922,
+                      0.0
+                    ],
+                    "rotation": [
+                      0.0,
+                      0.0,
+                      3.4906555555555556
+                    ],
+                    "scale": [
+                      1.0,
+                      1.0,
+                      1.0
+                    ]
+                  },
+                  "material": "emerald",
+                  "metadata": {},
+                  "children": []
+                },
+                {
+                  "name": "microscope_star_marker_6",
+                  "primitive": {
+                    "kind": "cone",
+                    "params": {
+                      "radius1": 0.05,
+                      "radius2": 0.0,
+                      "depth": 0.12
+                    }
+                  },
+                  "transform": {
+                    "location": [
+                      0.0,
+                      0.8438261687885702,
+                      0.0
+                    ],
+                    "rotation": [
+                      0.0,
+                      0.0,
+                      4.188786666666666
+                    ],
+                    "scale": [
+                      1.0,
+                      1.0,
+                      1.0
+                    ]
+                  },
+                  "material": "emerald",
+                  "metadata": {},
+                  "children": []
+                },
+                {
+                  "name": "microscope_star_marker_7",
+                  "primitive": {
+                    "kind": "cone",
+                    "params": {
+                      "radius1": 0.05,
+                      "radius2": 0.0,
+                      "depth": 0.12
+                    }
+                  },
+                  "transform": {
+                    "location": [
+                      0.0,
+                      0.6990250680249775,
+                      0.0
+                    ],
+                    "rotation": [
+                      0.0,
+                      0.0,
+                      4.886917777777778
+                    ],
+                    "scale": [
+                      1.0,
+                      1.0,
+                      1.0
+                    ]
+                  },
+                  "material": "emerald",
+                  "metadata": {},
+                  "children": []
+                },
+                {
+                  "name": "microscope_star_marker_8",
+                  "primitive": {
+                    "kind": "cone",
+                    "params": {
+                      "radius1": 0.05,
+                      "radius2": 0.0,
+                      "depth": 0.12
+                    }
+                  },
+                  "transform": {
+                    "location": [
+                      0.0,
+                      0.7947984289611356,
+                      0.0
+                    ],
+                    "rotation": [
+                      0.0,
+                      0.0,
+                      5.585048888888888
+                    ],
+                    "scale": [
+                      1.0,
+                      1.0,
+                      1.0
+                    ]
+                  },
+                  "material": "emerald",
+                  "metadata": {},
+                  "children": []
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "name": "microscope_inaccessible_controls",
+          "primitive": null,
+          "transform": {
+            "location": [
+              0.0,
+              0.0,
+              0.0
+            ],
+            "rotation": [
+              0.0,
+              0.0,
+              0.0
+            ],
+            "scale": [
+              1.0,
+              1.0,
+              1.0
+            ]
+          },
+          "material": null,
+          "metadata": {},
+          "children": [
+            {
+              "name": "microscope_control_panel_0",
+              "primitive": {
+                "kind": "box",
+                "params": {
+                  "x": 0.3758203601656362,
+                  "y": 0.183615351750455,
+                  "z": 0.5337325545245851
+                }
+              },
+              "transform": {
+                "location": [
+                  -2.494812315134082,
+                  0.698621274002194,
+                  1.5279855077382878
+                ],
+                "rotation": [
+                  0.8849785864656633,
+                  0.3760478424627852,
+                  0.9262249286896417
+                ],
+                "scale": [
+                  1.0,
+                  1.0,
+                  1.0
+                ]
+              },
+              "material": "obsidian",
+              "metadata": {
+                "accessibility": "inaccessible"
+              },
+              "children": []
+            },
+            {
+              "name": "microscope_control_panel_1",
+              "primitive": {
+                "kind": "box",
+                "params": {
+                  "x": 0.37820144943069894,
+                  "y": 0.10599340427153918,
+                  "z": 0.5856298309215002
+                }
+              },
+              "transform": {
+                "location": [
+                  0.5104153217288876,
+                  0.4279969581584,
+                  1.381141030937502
+                ],
+                "rotation": [
+                  0.3860481659459368,
+                  0.9436905749501511,
+                  0.43898558477124594
+                ],
+                "scale": [
+                  1.0,
+                  1.0,
+                  1.0
+                ]
+              },
+              "material": "obsidian",
+              "metadata": {
+                "accessibility": "inaccessible"
+              },
+              "children": []
+            },
+            {
+              "name": "microscope_control_panel_2",
+              "primitive": {
+                "kind": "box",
+                "params": {
+                  "x": 0.5452310612275242,
+                  "y": 0.0754091310566868,
+                  "z": 0.5129422008601013
+                }
+              },
+              "transform": {
+                "location": [
+                  2.14493857938026,
+                  0.8313283245891645,
+                  1.906513427030064
+                ],
+                "rotation": [
+                  0.9028485118126054,
+                  0.25002959547590986,
+                  0.14140284190580554
+                ],
+                "scale": [
+                  1.0,
+                  1.0,
+                  1.0
+                ]
+              },
+              "material": "obsidian",
+              "metadata": {
+                "accessibility": "inaccessible"
+              },
+              "children": []
+            },
+            {
+              "name": "microscope_control_panel_3",
+              "primitive": {
+                "kind": "box",
+                "params": {
+                  "x": 0.4386094437813976,
+                  "y": 0.08384363085024794,
+                  "z": 0.36710622221618167
+                }
+              },
+              "transform": {
+                "location": [
+                  -1.2139299517127644,
+                  0.024362895782746197,
+                  3.310903612894709
+                ],
+                "rotation": [
+                  0.38240985349032697,
+                  0.2244306593664166,
+                  0.5441405617771855
+                ],
+                "scale": [
+                  1.0,
+                  1.0,
+                  1.0
+                ]
+              },
+              "material": "obsidian",
+              "metadata": {
+                "accessibility": "inaccessible"
+              },
+              "children": []
+            }
+          ]
+        },
+        {
+          "name": "microscope_ornament",
+          "primitive": null,
+          "transform": {
+            "location": [
+              0.0,
+              0.0,
+              0.0
+            ],
+            "rotation": [
+              0.0,
+              0.0,
+              0.0
+            ],
+            "scale": [
+              1.0,
+              1.0,
+              1.0
+            ]
+          },
+          "material": null,
+          "metadata": {},
+          "children": [
+            {
+              "name": "microscope_ornament_torus_0",
+              "primitive": {
+                "kind": "torus",
+                "params": {
+                  "major_radius": 0.2578948372754569,
+                  "minor_radius": 0.026374649931914497
+                }
+              },
+              "transform": {
+                "location": [
+                  -1.2290947127300667,
+                  -2.733558182633059,
+                  -0.9106339977484579
+                ],
+                "rotation": [
+                  0.0,
+                  0.0,
+                  0.0
+                ],
+                "scale": [
+                  1.0,
+                  1.0,
+                  1.0
+                ]
+              },
+              "material": "silver",
+              "metadata": {},
+              "children": []
+            },
+            {
+              "name": "microscope_ornament_torus_1",
+              "primitive": {
+                "kind": "torus",
+                "params": {
+                  "major_radius": 0.20099388074338265,
+                  "minor_radius": 0.04782486532525167
+                }
+              },
+              "transform": {
+                "location": [
+                  0.6939801528915925,
+                  2.0760319114314534,
+                  -0.7281789495680413
+                ],
+                "rotation": [
+                  0.0,
+                  0.0,
+                  0.0
+                ],
+                "scale": [
+                  1.0,
+                  1.0,
+                  1.0
+                ]
+              },
+              "material": "silver",
+              "metadata": {},
+              "children": []
+            },
+            {
+              "name": "microscope_ornament_torus_2",
+              "primitive": {
+                "kind": "torus",
+                "params": {
+                  "major_radius": 0.20084486388274053,
+                  "minor_radius": 0.04389508945531506
+                }
+              },
+              "transform": {
+                "location": [
+                  -1.1089906752107257,
+                  -1.8987357372240994,
+                  2.4963468052180247
+                ],
+                "rotation": [
+                  0.0,
+                  0.0,
+                  0.0
+                ],
+                "scale": [
+                  1.0,
+                  1.0,
+                  1.0
+                ]
+              },
+              "material": "silver",
+              "metadata": {},
+              "children": []
+            },
+            {
+              "name": "microscope_ornament_sphere_3",
+              "primitive": {
+                "kind": "sphere",
+                "params": {
+                  "radius": 0.1999355089694866
+                }
+              },
+              "transform": {
+                "location": [
+                  -1.1842127366013544,
+                  -2.9084859465455164,
+                  -0.10752699922166942
+                ],
+                "rotation": [
+                  0.0,
+                  0.0,
+                  0.0
+                ],
+                "scale": [
+                  1.0,
+                  1.0,
+                  1.0
+                ]
+              },
+              "material": "emerald",
+              "metadata": {},
+              "children": []
+            },
+            {
+              "name": "microscope_ornament_torus_4",
+              "primitive": {
+                "kind": "torus",
+                "params": {
+                  "major_radius": 0.1738381760635252,
+                  "minor_radius": 0.012170193048527018
+                }
+              },
+              "transform": {
+                "location": [
+                  1.230689785691351,
+                  2.9329839975698455,
+                  -0.9217077967210066
+                ],
+                "rotation": [
+                  0.0,
+                  0.0,
+                  0.0
+                ],
+                "scale": [
+                  1.0,
+                  1.0,
+                  1.0
+                ]
+              },
+              "material": "silver",
+              "metadata": {},
+              "children": []
+            },
+            {
+              "name": "microscope_ornament_sphere_5",
+              "primitive": {
+                "kind": "sphere",
+                "params": {
+                  "radius": 0.17004137152823318
+                }
+              },
+              "transform": {
+                "location": [
+                  1.991762038905053,
+                  2.525030305959624,
+                  0.11335602581558879
+                ],
+                "rotation": [
+                  0.0,
+                  0.0,
+                  0.0
+                ],
+                "scale": [
+                  1.0,
+                  1.0,
+                  1.0
+                ]
+              },
+              "material": "emerald",
+              "metadata": {},
+              "children": []
+            },
+            {
+              "name": "microscope_ornament_sphere_6",
+              "primitive": {
+                "kind": "sphere",
+                "params": {
+                  "radius": 0.15276148735906062
+                }
+              },
+              "transform": {
+                "location": [
+                  -2.797607598149103,
+                  2.885989452725555,
+                  1.716092594299838
+                ],
+                "rotation": [
+                  0.0,
+                  0.0,
+                  0.0
+                ],
+                "scale": [
+                  1.0,
+                  1.0,
+                  1.0
+                ]
+              },
+              "material": "emerald",
+              "metadata": {},
+              "children": []
+            },
+            {
+              "name": "microscope_ornament_torus_7",
+              "primitive": {
+                "kind": "torus",
+                "params": {
+                  "major_radius": 0.12160854508210547,
+                  "minor_radius": 0.040031155797785455
+                }
+              },
+              "transform": {
+                "location": [
+                  0.475478334913503,
+                  -1.7159276797451908,
+                  0.8277775372674823
+                ],
+                "rotation": [
+                  0.0,
+                  0.0,
+                  0.0
+                ],
+                "scale": [
+                  1.0,
+                  1.0,
+                  1.0
+                ]
+              },
+              "material": "silver",
+              "metadata": {},
+              "children": []
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "name": "earth_reference_nested",
+      "primitive": null,
+      "transform": {
+        "location": [
+          0.0,
+          0.0,
+          0.0
+        ],
+        "rotation": [
+          0.0,
+          0.0,
+          0.0
+        ],
+        "scale": [
+          1.0,
+          1.0,
+          1.0
+        ]
+      },
+      "material": null,
+      "metadata": {
+        "joke": "observer_scale_reversal"
+      },
+      "children": [
+        {
+          "name": "earth_reference",
+          "primitive": {
+            "kind": "sphere",
+            "params": {
+              "radius": 1.0
+            }
+          },
+          "transform": {
+            "location": [
+              0.0,
+              0.0,
+              -0.2
+            ],
+            "rotation": [
+              0.0,
+              0.0,
+              0.0
+            ],
+            "scale": [
+              0.2,
+              0.2,
+              0.2
+            ]
+          },
+          "material": "ivory",
+          "metadata": {
+            "reference_category": "planet"
+          },
+          "children": []
+        },
+        {
+          "name": "human_reference_miniature_nested_copy",
+          "primitive": {
+            "kind": "box",
+            "params": {
+              "x": 0.15,
+              "y": 0.15,
+              "z": 1.75
+            }
+          },
+          "transform": {
+            "location": [
+              0.0,
+              0.0,
+              0.5
+            ],
+            "rotation": [
+              0.0,
+              0.0,
+              0.0
+            ],
+            "scale": [
+              0.001,
+              0.001,
+              0.001
+            ]
+          },
+          "material": "ceramic",
+          "metadata": {
+            "reference_category": "human",
+            "scale_operation": "magnify",
+            "factor": 1.0
+          },
+          "children": []
+        }
+      ]
+    }
+  ]
+}

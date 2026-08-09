@@ -1,0 +1,127 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Micromegas Visualizer</title>
+  <style>
+    body { font-family: system-ui, -apple-system, Segoe UI, sans-serif; margin: 1rem auto; max-width: 1100px; padding: 0 1rem; background: #111; color: #eee; }
+    h1, h2 { margin-bottom: 0.4rem; }
+    .row { display: flex; gap: 0.75rem; flex-wrap: wrap; align-items: center; }
+    button, input { padding: 0.45rem 0.65rem; border-radius: 0.4rem; border: 1px solid #444; background: #222; color: #eee; }
+    .status { margin: 0.8rem 0; color: #b6c2d9; }
+    .grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); gap: 0.9rem; }
+    .card { background: #1a1a1a; border: 1px solid #303030; border-radius: 0.6rem; padding: 0.8rem; }
+    .meta { font-size: 0.9rem; color: #c2cad4; }
+    img { width: 100%; max-height: 280px; object-fit: contain; border: 1px solid #2d2d2d; border-radius: 0.4rem; background: #0d0d0d; }
+    details { margin-top: 0.5rem; }
+    pre { background: #0f0f0f; border: 1px solid #262626; padding: 0.55rem; border-radius: 0.4rem; font-size: 0.78rem; overflow: auto; }
+  </style>
+</head>
+<body>
+  <h1>Micromegas Artifact Visualizer</h1>
+  <p>Shows one sample artifact per generator family using <code>outputs/micromegas/manifest.json</code>.</p>
+  <div class="row">
+    <button id="loadDefault">Load default manifest</button>
+    <label>Or load manifest file: <input id="manifestInput" type="file" accept="application/json" /></label>
+  </div>
+  <div id="status" class="status"></div>
+  <section id="gallery" class="grid"></section>
+
+  <script>
+    const status = document.getElementById('status');
+    const gallery = document.getElementById('gallery');
+
+    function setStatus(message) {
+      status.textContent = message;
+    }
+
+    function summarizePrimitives(objects) {
+      const counts = new Map();
+      const walk = (obj) => {
+        if (obj.primitive && obj.primitive.kind) {
+          counts.set(obj.primitive.kind, (counts.get(obj.primitive.kind) || 0) + 1);
+        }
+        (obj.children || []).forEach(walk);
+      };
+      (objects || []).forEach(walk);
+      return Object.fromEntries([...counts.entries()].sort());
+    }
+
+    async function fetchJson(path) {
+      const response = await fetch(path);
+      if (!response.ok) throw new Error(`Failed to fetch ${path}`);
+      return response.json();
+    }
+
+    function artifactCard(artifact, data) {
+      const card = document.createElement('article');
+      card.className = 'card';
+      const primitives = summarizePrimitives(data.objects || []);
+
+      const image = artifact.image ? `<img src="../${artifact.image}" alt="${artifact.name} sample render" />` : '<div class="meta">No Blender image found for this artifact.</div>';
+      card.innerHTML = `
+        <h2>${artifact.name}</h2>
+        <div class="meta">seed=${artifact.seed} • family=${data.family || 'unknown'} • objects=${(data.objects || []).length}</div>
+        ${image}
+        <details>
+          <summary>Metadata</summary>
+          <pre>${JSON.stringify(data.metadata || {}, null, 2)}</pre>
+        </details>
+        <details>
+          <summary>Primitive profile</summary>
+          <pre>${JSON.stringify(primitives, null, 2)}</pre>
+        </details>
+      `;
+      return card;
+    }
+
+    async function loadManifest(manifest) {
+      gallery.innerHTML = '';
+      const artifacts = manifest.artifacts || [];
+      if (!artifacts.length) {
+        setStatus('Manifest has no artifacts.');
+        return;
+      }
+
+      let loaded = 0;
+      for (const artifact of artifacts) {
+        try {
+          const sceneData = await fetchJson(`../${artifact.json}`);
+          gallery.appendChild(artifactCard(artifact, sceneData));
+          loaded += 1;
+        } catch (err) {
+          const failed = document.createElement('article');
+          failed.className = 'card';
+          failed.innerHTML = `<h2>${artifact.name}</h2><div class="meta">Failed to load: ${artifact.json}</div><pre>${err.message}</pre>`;
+          gallery.appendChild(failed);
+        }
+      }
+      setStatus(`Loaded ${loaded}/${artifacts.length} artifacts.`);
+    }
+
+    document.getElementById('loadDefault').addEventListener('click', async () => {
+      setStatus('Loading default manifest...');
+      try {
+        const manifest = await fetchJson('../outputs/micromegas/manifest.json');
+        await loadManifest(manifest);
+      } catch (err) {
+        setStatus(`Could not load default manifest: ${err.message}`);
+      }
+    });
+
+    document.getElementById('manifestInput').addEventListener('change', async (event) => {
+      const file = event.target.files?.[0];
+      if (!file) return;
+      setStatus(`Loading ${file.name}...`);
+      try {
+        const text = await file.text();
+        const manifest = JSON.parse(text);
+        await loadManifest(manifest);
+      } catch (err) {
+        setStatus(`Invalid manifest: ${err.message}`);
+      }
+    });
+  </script>
+</body>
+</html>

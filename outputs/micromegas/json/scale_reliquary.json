@@ -1,0 +1,2037 @@
+{
+  "name": "micromegas_scale_reliquary",
+  "seed": 2401,
+  "family": "scale_reliquary",
+  "metadata": {
+    "style": "sample",
+    "complexity": 4,
+    "layer_count": 6
+  },
+  "materials": {
+    "brass": {
+      "name": "brass",
+      "base_color": [
+        0.73,
+        0.58,
+        0.24
+      ],
+      "metallic": 0.85,
+      "roughness": 0.25
+    },
+    "obsidian": {
+      "name": "obsidian",
+      "base_color": [
+        0.08,
+        0.08,
+        0.1
+      ],
+      "metallic": 0.2,
+      "roughness": 0.15
+    },
+    "ivory": {
+      "name": "ivory",
+      "base_color": [
+        0.92,
+        0.91,
+        0.84
+      ],
+      "metallic": 0.05,
+      "roughness": 0.65
+    },
+    "emerald": {
+      "name": "emerald",
+      "base_color": [
+        0.1,
+        0.45,
+        0.3
+      ],
+      "metallic": 0.1,
+      "roughness": 0.35
+    },
+    "silver": {
+      "name": "silver",
+      "base_color": [
+        0.75,
+        0.75,
+        0.78
+      ],
+      "metallic": 0.95,
+      "roughness": 0.12
+    },
+    "ceramic": {
+      "name": "ceramic",
+      "base_color": [
+        0.86,
+        0.86,
+        0.9
+      ],
+      "metallic": 0.0,
+      "roughness": 0.7
+    }
+  },
+  "objects": [
+    {
+      "name": "reliquary_layer_5_nested",
+      "primitive": null,
+      "transform": {
+        "location": [
+          0.0,
+          0.0,
+          0.0
+        ],
+        "rotation": [
+          0.0,
+          0.0,
+          0.0
+        ],
+        "scale": [
+          1.0,
+          1.0,
+          1.0
+        ]
+      },
+      "material": null,
+      "metadata": {},
+      "children": [
+        {
+          "name": "reliquary_layer_5",
+          "primitive": null,
+          "transform": {
+            "location": [
+              0.0,
+              0.0,
+              0.0
+            ],
+            "rotation": [
+              0.0,
+              0.0,
+              0.0
+            ],
+            "scale": [
+              1.0,
+              1.0,
+              1.0
+            ]
+          },
+          "material": null,
+          "metadata": {},
+          "children": [
+            {
+              "name": "reliquary_shell_5",
+              "primitive": {
+                "kind": "box",
+                "params": {
+                  "x": 4.2,
+                  "y": 4.2,
+                  "z": 4.2
+                }
+              },
+              "transform": {
+                "location": [
+                  0.0,
+                  0.0,
+                  0.0
+                ],
+                "rotation": [
+                  0.0,
+                  0.0,
+                  0.0
+                ],
+                "scale": [
+                  1.0,
+                  1.0,
+                  1.0
+                ]
+              },
+              "material": "obsidian",
+              "metadata": {},
+              "children": []
+            },
+            {
+              "name": "reliquary_core_5",
+              "primitive": {
+                "kind": "sphere",
+                "params": {
+                  "radius": 0.7
+                }
+              },
+              "transform": {
+                "location": [
+                  0.0,
+                  0.0,
+                  0.0
+                ],
+                "rotation": [
+                  0.0,
+                  0.0,
+                  0.0
+                ],
+                "scale": [
+                  1.0,
+                  1.0,
+                  1.0
+                ]
+              },
+              "material": "ivory",
+              "metadata": {},
+              "children": []
+            },
+            {
+              "name": "reliquary_5_ornament",
+              "primitive": null,
+              "transform": {
+                "location": [
+                  0.0,
+                  0.0,
+                  0.0
+                ],
+                "rotation": [
+                  0.0,
+                  0.0,
+                  0.0
+                ],
+                "scale": [
+                  1.0,
+                  1.0,
+                  1.0
+                ]
+              },
+              "material": null,
+              "metadata": {},
+              "children": [
+                {
+                  "name": "reliquary_5_ornament_torus_0",
+                  "primitive": {
+                    "kind": "torus",
+                    "params": {
+                      "major_radius": 0.1447887328495056,
+                      "minor_radius": 0.03008657401847048
+                    }
+                  },
+                  "transform": {
+                    "location": [
+                      1.7427980763952275,
+                      -2.9995853252936495,
+                      0.38045845112777954
+                    ],
+                    "rotation": [
+                      0.0,
+                      0.0,
+                      0.0
+                    ],
+                    "scale": [
+                      1.0,
+                      1.0,
+                      1.0
+                    ]
+                  },
+                  "material": "silver",
+                  "metadata": {},
+                  "children": []
+                },
+                {
+                  "name": "reliquary_5_ornament_cone_1",
+                  "primitive": {
+                    "kind": "cone",
+                    "params": {
+                      "radius1": 0.06119054893297068,
+                      "radius2": 0.0,
+                      "depth": 0.0705876356695898
+                    }
+                  },
+                  "transform": {
+                    "location": [
+                      0.6203152198619915,
+                      -0.2922586164718801,
+                      1.7208219757309884
+                    ],
+                    "rotation": [
+                      0.0,
+                      0.0,
+                      0.0
+                    ],
+                    "scale": [
+                      1.0,
+                      1.0,
+                      1.0
+                    ]
+                  },
+                  "material": "ivory",
+                  "metadata": {},
+                  "children": []
+                },
+                {
+                  "name": "reliquary_5_ornament_torus_2",
+                  "primitive": {
+                    "kind": "torus",
+                    "params": {
+                      "major_radius": 0.21170998073470926,
+                      "minor_radius": 0.03125164128280825
+                    }
+                  },
+                  "transform": {
+                    "location": [
+                      -2.1263906196442264,
+                      0.5705178186753059,
+                      1.546568644886583
+                    ],
+                    "rotation": [
+                      0.0,
+                      0.0,
+                      0.0
+                    ],
+                    "scale": [
+                      1.0,
+                      1.0,
+                      1.0
+                    ]
+                  },
+                  "material": "silver",
+                  "metadata": {},
+                  "children": []
+                },
+                {
+                  "name": "reliquary_5_ornament_torus_3",
+                  "primitive": {
+                    "kind": "torus",
+                    "params": {
+                      "major_radius": 0.1722343391431448,
+                      "minor_radius": 0.015846900345144625
+                    }
+                  },
+                  "transform": {
+                    "location": [
+                      2.290353586739582,
+                      1.0507656727728092,
+                      0.8784125097549174
+                    ],
+                    "rotation": [
+                      0.0,
+                      0.0,
+                      0.0
+                    ],
+                    "scale": [
+                      1.0,
+                      1.0,
+                      1.0
+                    ]
+                  },
+                  "material": "silver",
+                  "metadata": {},
+                  "children": []
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "name": "reliquary_layer_4_nested_nested_copy",
+          "primitive": null,
+          "transform": {
+            "location": [
+              0.0,
+              0.0,
+              0.0
+            ],
+            "rotation": [
+              0.0,
+              0.0,
+              0.0
+            ],
+            "scale": [
+              1.0,
+              1.0,
+              1.0
+            ]
+          },
+          "material": null,
+          "metadata": {
+            "scale_operation": "magnify",
+            "factor": 1.0
+          },
+          "children": [
+            {
+              "name": "reliquary_layer_4_nested_copy",
+              "primitive": null,
+              "transform": {
+                "location": [
+                  0.0,
+                  0.0,
+                  0.0
+                ],
+                "rotation": [
+                  0.0,
+                  0.0,
+                  0.0
+                ],
+                "scale": [
+                  1.0,
+                  1.0,
+                  1.0
+                ]
+              },
+              "material": null,
+              "metadata": {
+                "scale_operation": "magnify",
+                "factor": 1.0
+              },
+              "children": [
+                {
+                  "name": "reliquary_shell_4_nested_copy",
+                  "primitive": {
+                    "kind": "box",
+                    "params": {
+                      "x": 3.5999999999999996,
+                      "y": 3.5999999999999996,
+                      "z": 3.5999999999999996
+                    }
+                  },
+                  "transform": {
+                    "location": [
+                      0.0,
+                      0.0,
+                      0.0
+                    ],
+                    "rotation": [
+                      0.0,
+                      0.0,
+                      0.0
+                    ],
+                    "scale": [
+                      1.0,
+                      1.0,
+                      1.0
+                    ]
+                  },
+                  "material": "silver",
+                  "metadata": {
+                    "scale_operation": "magnify",
+                    "factor": 1.0
+                  },
+                  "children": []
+                },
+                {
+                  "name": "reliquary_core_4_nested_copy",
+                  "primitive": {
+                    "kind": "sphere",
+                    "params": {
+                      "radius": 0.6000000000000001
+                    }
+                  },
+                  "transform": {
+                    "location": [
+                      0.0,
+                      0.0,
+                      0.0
+                    ],
+                    "rotation": [
+                      0.0,
+                      0.0,
+                      0.0
+                    ],
+                    "scale": [
+                      1.0,
+                      1.0,
+                      1.0
+                    ]
+                  },
+                  "material": "emerald",
+                  "metadata": {
+                    "scale_operation": "magnify",
+                    "factor": 1.0
+                  },
+                  "children": []
+                },
+                {
+                  "name": "reliquary_4_ornament_nested_copy",
+                  "primitive": null,
+                  "transform": {
+                    "location": [
+                      0.0,
+                      0.0,
+                      0.0
+                    ],
+                    "rotation": [
+                      0.0,
+                      0.0,
+                      0.0
+                    ],
+                    "scale": [
+                      1.0,
+                      1.0,
+                      1.0
+                    ]
+                  },
+                  "material": null,
+                  "metadata": {
+                    "scale_operation": "magnify",
+                    "factor": 1.0
+                  },
+                  "children": [
+                    {
+                      "name": "reliquary_4_ornament_torus_0_nested_copy",
+                      "primitive": {
+                        "kind": "torus",
+                        "params": {
+                          "major_radius": 0.17447569345647201,
+                          "minor_radius": 0.02068760289059146
+                        }
+                      },
+                      "transform": {
+                        "location": [
+                          1.6090646253855967,
+                          2.455754281190414,
+                          -0.07371551467120163
+                        ],
+                        "rotation": [
+                          0.0,
+                          0.0,
+                          0.0
+                        ],
+                        "scale": [
+                          1.0,
+                          1.0,
+                          1.0
+                        ]
+                      },
+                      "material": "silver",
+                      "metadata": {
+                        "scale_operation": "magnify",
+                        "factor": 1.0
+                      },
+                      "children": []
+                    },
+                    {
+                      "name": "reliquary_4_ornament_torus_1_nested_copy",
+                      "primitive": {
+                        "kind": "torus",
+                        "params": {
+                          "major_radius": 0.2349194826745813,
+                          "minor_radius": 0.011941693951695628
+                        }
+                      },
+                      "transform": {
+                        "location": [
+                          1.6986957622710808,
+                          2.372569647461475,
+                          2.566156183316835
+                        ],
+                        "rotation": [
+                          0.0,
+                          0.0,
+                          0.0
+                        ],
+                        "scale": [
+                          1.0,
+                          1.0,
+                          1.0
+                        ]
+                      },
+                      "material": "silver",
+                      "metadata": {
+                        "scale_operation": "magnify",
+                        "factor": 1.0
+                      },
+                      "children": []
+                    }
+                  ]
+                }
+              ]
+            },
+            {
+              "name": "reliquary_layer_3_nested_nested_copy_nested_copy",
+              "primitive": null,
+              "transform": {
+                "location": [
+                  0.0,
+                  0.0,
+                  0.0
+                ],
+                "rotation": [
+                  0.0,
+                  0.0,
+                  0.0
+                ],
+                "scale": [
+                  1.0,
+                  1.0,
+                  1.0
+                ]
+              },
+              "material": null,
+              "metadata": {
+                "scale_operation": "magnify",
+                "factor": 1.0
+              },
+              "children": [
+                {
+                  "name": "reliquary_layer_3_nested_copy_nested_copy",
+                  "primitive": null,
+                  "transform": {
+                    "location": [
+                      0.0,
+                      0.0,
+                      0.0
+                    ],
+                    "rotation": [
+                      0.0,
+                      0.0,
+                      0.0
+                    ],
+                    "scale": [
+                      1.0,
+                      1.0,
+                      1.0
+                    ]
+                  },
+                  "material": null,
+                  "metadata": {
+                    "scale_operation": "magnify",
+                    "factor": 1.0
+                  },
+                  "children": [
+                    {
+                      "name": "reliquary_shell_3_nested_copy_nested_copy",
+                      "primitive": {
+                        "kind": "box",
+                        "params": {
+                          "x": 3.0,
+                          "y": 3.0,
+                          "z": 3.0
+                        }
+                      },
+                      "transform": {
+                        "location": [
+                          0.0,
+                          0.0,
+                          0.0
+                        ],
+                        "rotation": [
+                          0.0,
+                          0.0,
+                          0.0
+                        ],
+                        "scale": [
+                          1.0,
+                          1.0,
+                          1.0
+                        ]
+                      },
+                      "material": "brass",
+                      "metadata": {
+                        "scale_operation": "magnify",
+                        "factor": 1.0
+                      },
+                      "children": []
+                    },
+                    {
+                      "name": "reliquary_core_3_nested_copy_nested_copy",
+                      "primitive": {
+                        "kind": "sphere",
+                        "params": {
+                          "radius": 0.5
+                        }
+                      },
+                      "transform": {
+                        "location": [
+                          0.0,
+                          0.0,
+                          0.0
+                        ],
+                        "rotation": [
+                          0.0,
+                          0.0,
+                          0.0
+                        ],
+                        "scale": [
+                          1.0,
+                          1.0,
+                          1.0
+                        ]
+                      },
+                      "material": "emerald",
+                      "metadata": {
+                        "scale_operation": "magnify",
+                        "factor": 1.0
+                      },
+                      "children": []
+                    },
+                    {
+                      "name": "reliquary_3_ornament_nested_copy_nested_copy",
+                      "primitive": null,
+                      "transform": {
+                        "location": [
+                          0.0,
+                          0.0,
+                          0.0
+                        ],
+                        "rotation": [
+                          0.0,
+                          0.0,
+                          0.0
+                        ],
+                        "scale": [
+                          1.0,
+                          1.0,
+                          1.0
+                        ]
+                      },
+                      "material": null,
+                      "metadata": {
+                        "scale_operation": "magnify",
+                        "factor": 1.0
+                      },
+                      "children": [
+                        {
+                          "name": "reliquary_3_ornament_sphere_0_nested_copy_nested_copy",
+                          "primitive": {
+                            "kind": "sphere",
+                            "params": {
+                              "radius": 0.10239116485942047
+                            }
+                          },
+                          "transform": {
+                            "location": [
+                              0.4975584682833176,
+                              -1.557156942610873,
+                              -0.8396514100562347
+                            ],
+                            "rotation": [
+                              0.0,
+                              0.0,
+                              0.0
+                            ],
+                            "scale": [
+                              1.0,
+                              1.0,
+                              1.0
+                            ]
+                          },
+                          "material": "emerald",
+                          "metadata": {
+                            "scale_operation": "magnify",
+                            "factor": 1.0
+                          },
+                          "children": []
+                        },
+                        {
+                          "name": "reliquary_3_ornament_sphere_1_nested_copy_nested_copy",
+                          "primitive": {
+                            "kind": "sphere",
+                            "params": {
+                              "radius": 0.12185842534513724
+                            }
+                          },
+                          "transform": {
+                            "location": [
+                              -0.7261743958861704,
+                              0.9556213577269084,
+                              1.535055699521275
+                            ],
+                            "rotation": [
+                              0.0,
+                              0.0,
+                              0.0
+                            ],
+                            "scale": [
+                              1.0,
+                              1.0,
+                              1.0
+                            ]
+                          },
+                          "material": "emerald",
+                          "metadata": {
+                            "scale_operation": "magnify",
+                            "factor": 1.0
+                          },
+                          "children": []
+                        },
+                        {
+                          "name": "reliquary_3_ornament_torus_2_nested_copy_nested_copy",
+                          "primitive": {
+                            "kind": "torus",
+                            "params": {
+                              "major_radius": 0.16398681666924136,
+                              "minor_radius": 0.041885885280133525
+                            }
+                          },
+                          "transform": {
+                            "location": [
+                              -0.8429997773437652,
+                              -2.6839748472006324,
+                              1.5529004768948624
+                            ],
+                            "rotation": [
+                              0.0,
+                              0.0,
+                              0.0
+                            ],
+                            "scale": [
+                              1.0,
+                              1.0,
+                              1.0
+                            ]
+                          },
+                          "material": "silver",
+                          "metadata": {
+                            "scale_operation": "magnify",
+                            "factor": 1.0
+                          },
+                          "children": []
+                        },
+                        {
+                          "name": "reliquary_3_ornament_sphere_3_nested_copy_nested_copy",
+                          "primitive": {
+                            "kind": "sphere",
+                            "params": {
+                              "radius": 0.14164966083056682
+                            }
+                          },
+                          "transform": {
+                            "location": [
+                              -0.8663818281246347,
+                              2.3779724915507714,
+                              1.0484367317601082
+                            ],
+                            "rotation": [
+                              0.0,
+                              0.0,
+                              0.0
+                            ],
+                            "scale": [
+                              1.0,
+                              1.0,
+                              1.0
+                            ]
+                          },
+                          "material": "emerald",
+                          "metadata": {
+                            "scale_operation": "magnify",
+                            "factor": 1.0
+                          },
+                          "children": []
+                        },
+                        {
+                          "name": "reliquary_3_ornament_torus_4_nested_copy_nested_copy",
+                          "primitive": {
+                            "kind": "torus",
+                            "params": {
+                              "major_radius": 0.2318947530718335,
+                              "minor_radius": 0.047000445524477116
+                            }
+                          },
+                          "transform": {
+                            "location": [
+                              1.580795855943295,
+                              -0.8088758461417287,
+                              0.5801197478828239
+                            ],
+                            "rotation": [
+                              0.0,
+                              0.0,
+                              0.0
+                            ],
+                            "scale": [
+                              1.0,
+                              1.0,
+                              1.0
+                            ]
+                          },
+                          "material": "silver",
+                          "metadata": {
+                            "scale_operation": "magnify",
+                            "factor": 1.0
+                          },
+                          "children": []
+                        },
+                        {
+                          "name": "reliquary_3_ornament_torus_5_nested_copy_nested_copy",
+                          "primitive": {
+                            "kind": "torus",
+                            "params": {
+                              "major_radius": 0.27520009813228113,
+                              "minor_radius": 0.011575085478233832
+                            }
+                          },
+                          "transform": {
+                            "location": [
+                              -2.36018228273485,
+                              -1.0148481901534365,
+                              -0.16168334241563587
+                            ],
+                            "rotation": [
+                              0.0,
+                              0.0,
+                              0.0
+                            ],
+                            "scale": [
+                              1.0,
+                              1.0,
+                              1.0
+                            ]
+                          },
+                          "material": "silver",
+                          "metadata": {
+                            "scale_operation": "magnify",
+                            "factor": 1.0
+                          },
+                          "children": []
+                        }
+                      ]
+                    }
+                  ]
+                },
+                {
+                  "name": "reliquary_layer_2_nested_nested_copy_nested_copy_nested_copy",
+                  "primitive": null,
+                  "transform": {
+                    "location": [
+                      0.0,
+                      0.0,
+                      0.0
+                    ],
+                    "rotation": [
+                      0.0,
+                      0.0,
+                      0.0
+                    ],
+                    "scale": [
+                      1.0,
+                      1.0,
+                      1.0
+                    ]
+                  },
+                  "material": null,
+                  "metadata": {
+                    "scale_operation": "magnify",
+                    "factor": 1.0
+                  },
+                  "children": [
+                    {
+                      "name": "reliquary_layer_2_nested_copy_nested_copy_nested_copy",
+                      "primitive": null,
+                      "transform": {
+                        "location": [
+                          0.0,
+                          0.0,
+                          0.0
+                        ],
+                        "rotation": [
+                          0.0,
+                          0.0,
+                          0.0
+                        ],
+                        "scale": [
+                          1.0,
+                          1.0,
+                          1.0
+                        ]
+                      },
+                      "material": null,
+                      "metadata": {
+                        "scale_operation": "magnify",
+                        "factor": 1.0
+                      },
+                      "children": [
+                        {
+                          "name": "reliquary_shell_2_nested_copy_nested_copy_nested_copy",
+                          "primitive": {
+                            "kind": "box",
+                            "params": {
+                              "x": 2.4,
+                              "y": 2.4,
+                              "z": 2.4
+                            }
+                          },
+                          "transform": {
+                            "location": [
+                              0.0,
+                              0.0,
+                              0.0
+                            ],
+                            "rotation": [
+                              0.0,
+                              0.0,
+                              0.0
+                            ],
+                            "scale": [
+                              1.0,
+                              1.0,
+                              1.0
+                            ]
+                          },
+                          "material": "obsidian",
+                          "metadata": {
+                            "scale_operation": "magnify",
+                            "factor": 1.0
+                          },
+                          "children": []
+                        },
+                        {
+                          "name": "reliquary_core_2_nested_copy_nested_copy_nested_copy",
+                          "primitive": {
+                            "kind": "sphere",
+                            "params": {
+                              "radius": 0.4
+                            }
+                          },
+                          "transform": {
+                            "location": [
+                              0.0,
+                              0.0,
+                              0.0
+                            ],
+                            "rotation": [
+                              0.0,
+                              0.0,
+                              0.0
+                            ],
+                            "scale": [
+                              1.0,
+                              1.0,
+                              1.0
+                            ]
+                          },
+                          "material": "emerald",
+                          "metadata": {
+                            "scale_operation": "magnify",
+                            "factor": 1.0
+                          },
+                          "children": []
+                        },
+                        {
+                          "name": "reliquary_2_ornament_nested_copy_nested_copy_nested_copy",
+                          "primitive": null,
+                          "transform": {
+                            "location": [
+                              0.0,
+                              0.0,
+                              0.0
+                            ],
+                            "rotation": [
+                              0.0,
+                              0.0,
+                              0.0
+                            ],
+                            "scale": [
+                              1.0,
+                              1.0,
+                              1.0
+                            ]
+                          },
+                          "material": null,
+                          "metadata": {
+                            "scale_operation": "magnify",
+                            "factor": 1.0
+                          },
+                          "children": [
+                            {
+                              "name": "reliquary_2_ornament_sphere_0_nested_copy_nested_copy_nested_copy",
+                              "primitive": {
+                                "kind": "sphere",
+                                "params": {
+                                  "radius": 0.17537255455817097
+                                }
+                              },
+                              "transform": {
+                                "location": [
+                                  1.0396168803787846,
+                                  -2.219017252831061,
+                                  1.7456745554045292
+                                ],
+                                "rotation": [
+                                  0.0,
+                                  0.0,
+                                  0.0
+                                ],
+                                "scale": [
+                                  1.0,
+                                  1.0,
+                                  1.0
+                                ]
+                              },
+                              "material": "emerald",
+                              "metadata": {
+                                "scale_operation": "magnify",
+                                "factor": 1.0
+                              },
+                              "children": []
+                            },
+                            {
+                              "name": "reliquary_2_ornament_cone_1_nested_copy_nested_copy_nested_copy",
+                              "primitive": {
+                                "kind": "cone",
+                                "params": {
+                                  "radius1": 0.09164103873535562,
+                                  "radius2": 0.0,
+                                  "depth": 0.15500941554135783
+                                }
+                              },
+                              "transform": {
+                                "location": [
+                                  1.786239711424999,
+                                  1.8274889434440613,
+                                  1.6887361455498704
+                                ],
+                                "rotation": [
+                                  0.0,
+                                  0.0,
+                                  0.0
+                                ],
+                                "scale": [
+                                  1.0,
+                                  1.0,
+                                  1.0
+                                ]
+                              },
+                              "material": "ivory",
+                              "metadata": {
+                                "scale_operation": "magnify",
+                                "factor": 1.0
+                              },
+                              "children": []
+                            },
+                            {
+                              "name": "reliquary_2_ornament_cone_2_nested_copy_nested_copy_nested_copy",
+                              "primitive": {
+                                "kind": "cone",
+                                "params": {
+                                  "radius1": 0.09670960249472837,
+                                  "radius2": 0.0,
+                                  "depth": 0.21178425139573845
+                                }
+                              },
+                              "transform": {
+                                "location": [
+                                  -0.6839597589515085,
+                                  0.5279204044922441,
+                                  2.378201262201727
+                                ],
+                                "rotation": [
+                                  0.0,
+                                  0.0,
+                                  0.0
+                                ],
+                                "scale": [
+                                  1.0,
+                                  1.0,
+                                  1.0
+                                ]
+                              },
+                              "material": "ivory",
+                              "metadata": {
+                                "scale_operation": "magnify",
+                                "factor": 1.0
+                              },
+                              "children": []
+                            },
+                            {
+                              "name": "reliquary_2_ornament_torus_3_nested_copy_nested_copy_nested_copy",
+                              "primitive": {
+                                "kind": "torus",
+                                "params": {
+                                  "major_radius": 0.2299838886598881,
+                                  "minor_radius": 0.03352051270344564
+                                }
+                              },
+                              "transform": {
+                                "location": [
+                                  -2.905772155873771,
+                                  -1.558268509695012,
+                                  1.380457708207762
+                                ],
+                                "rotation": [
+                                  0.0,
+                                  0.0,
+                                  0.0
+                                ],
+                                "scale": [
+                                  1.0,
+                                  1.0,
+                                  1.0
+                                ]
+                              },
+                              "material": "silver",
+                              "metadata": {
+                                "scale_operation": "magnify",
+                                "factor": 1.0
+                              },
+                              "children": []
+                            },
+                            {
+                              "name": "reliquary_2_ornament_cone_4_nested_copy_nested_copy_nested_copy",
+                              "primitive": {
+                                "kind": "cone",
+                                "params": {
+                                  "radius1": 0.055390177495491764,
+                                  "radius2": 0.0,
+                                  "depth": 0.17669182550915286
+                                }
+                              },
+                              "transform": {
+                                "location": [
+                                  0.0338864227764093,
+                                  -0.2260150214734109,
+                                  2.5366215569893265
+                                ],
+                                "rotation": [
+                                  0.0,
+                                  0.0,
+                                  0.0
+                                ],
+                                "scale": [
+                                  1.0,
+                                  1.0,
+                                  1.0
+                                ]
+                              },
+                              "material": "ivory",
+                              "metadata": {
+                                "scale_operation": "magnify",
+                                "factor": 1.0
+                              },
+                              "children": []
+                            },
+                            {
+                              "name": "reliquary_2_ornament_torus_5_nested_copy_nested_copy_nested_copy",
+                              "primitive": {
+                                "kind": "torus",
+                                "params": {
+                                  "major_radius": 0.2768613224133458,
+                                  "minor_radius": 0.049274045425799336
+                                }
+                              },
+                              "transform": {
+                                "location": [
+                                  2.91141600458357,
+                                  -1.9164657403949799,
+                                  1.5873726380317925
+                                ],
+                                "rotation": [
+                                  0.0,
+                                  0.0,
+                                  0.0
+                                ],
+                                "scale": [
+                                  1.0,
+                                  1.0,
+                                  1.0
+                                ]
+                              },
+                              "material": "silver",
+                              "metadata": {
+                                "scale_operation": "magnify",
+                                "factor": 1.0
+                              },
+                              "children": []
+                            }
+                          ]
+                        }
+                      ]
+                    },
+                    {
+                      "name": "reliquary_layer_1_nested_nested_copy_nested_copy_nested_copy_nested_copy",
+                      "primitive": null,
+                      "transform": {
+                        "location": [
+                          0.0,
+                          0.0,
+                          0.0
+                        ],
+                        "rotation": [
+                          0.0,
+                          0.0,
+                          0.0
+                        ],
+                        "scale": [
+                          1.0,
+                          1.0,
+                          1.0
+                        ]
+                      },
+                      "material": null,
+                      "metadata": {
+                        "scale_operation": "magnify",
+                        "factor": 1.0
+                      },
+                      "children": [
+                        {
+                          "name": "reliquary_layer_1_nested_copy_nested_copy_nested_copy_nested_copy",
+                          "primitive": null,
+                          "transform": {
+                            "location": [
+                              0.0,
+                              0.0,
+                              0.0
+                            ],
+                            "rotation": [
+                              0.0,
+                              0.0,
+                              0.0
+                            ],
+                            "scale": [
+                              1.0,
+                              1.0,
+                              1.0
+                            ]
+                          },
+                          "material": null,
+                          "metadata": {
+                            "scale_operation": "magnify",
+                            "factor": 1.0
+                          },
+                          "children": [
+                            {
+                              "name": "reliquary_shell_1_nested_copy_nested_copy_nested_copy_nested_copy",
+                              "primitive": {
+                                "kind": "box",
+                                "params": {
+                                  "x": 1.7999999999999998,
+                                  "y": 1.7999999999999998,
+                                  "z": 1.7999999999999998
+                                }
+                              },
+                              "transform": {
+                                "location": [
+                                  0.0,
+                                  0.0,
+                                  0.0
+                                ],
+                                "rotation": [
+                                  0.0,
+                                  0.0,
+                                  0.0
+                                ],
+                                "scale": [
+                                  1.0,
+                                  1.0,
+                                  1.0
+                                ]
+                              },
+                              "material": "silver",
+                              "metadata": {
+                                "scale_operation": "magnify",
+                                "factor": 1.0
+                              },
+                              "children": []
+                            },
+                            {
+                              "name": "reliquary_core_1_nested_copy_nested_copy_nested_copy_nested_copy",
+                              "primitive": {
+                                "kind": "sphere",
+                                "params": {
+                                  "radius": 0.30000000000000004
+                                }
+                              },
+                              "transform": {
+                                "location": [
+                                  0.0,
+                                  0.0,
+                                  0.0
+                                ],
+                                "rotation": [
+                                  0.0,
+                                  0.0,
+                                  0.0
+                                ],
+                                "scale": [
+                                  1.0,
+                                  1.0,
+                                  1.0
+                                ]
+                              },
+                              "material": "emerald",
+                              "metadata": {
+                                "scale_operation": "magnify",
+                                "factor": 1.0
+                              },
+                              "children": []
+                            },
+                            {
+                              "name": "reliquary_1_ornament_nested_copy_nested_copy_nested_copy_nested_copy",
+                              "primitive": null,
+                              "transform": {
+                                "location": [
+                                  0.0,
+                                  0.0,
+                                  0.0
+                                ],
+                                "rotation": [
+                                  0.0,
+                                  0.0,
+                                  0.0
+                                ],
+                                "scale": [
+                                  1.0,
+                                  1.0,
+                                  1.0
+                                ]
+                              },
+                              "material": null,
+                              "metadata": {
+                                "scale_operation": "magnify",
+                                "factor": 1.0
+                              },
+                              "children": [
+                                {
+                                  "name": "reliquary_1_ornament_sphere_0_nested_copy_nested_copy_nested_copy_nested_copy",
+                                  "primitive": {
+                                    "kind": "sphere",
+                                    "params": {
+                                      "radius": 0.15698414687417783
+                                    }
+                                  },
+                                  "transform": {
+                                    "location": [
+                                      2.4144842294408253,
+                                      -0.8803779860546488,
+                                      2.0670869367572005
+                                    ],
+                                    "rotation": [
+                                      0.0,
+                                      0.0,
+                                      0.0
+                                    ],
+                                    "scale": [
+                                      1.0,
+                                      1.0,
+                                      1.0
+                                    ]
+                                  },
+                                  "material": "emerald",
+                                  "metadata": {
+                                    "scale_operation": "magnify",
+                                    "factor": 1.0
+                                  },
+                                  "children": []
+                                },
+                                {
+                                  "name": "reliquary_1_ornament_torus_1_nested_copy_nested_copy_nested_copy_nested_copy",
+                                  "primitive": {
+                                    "kind": "torus",
+                                    "params": {
+                                      "major_radius": 0.12404150988252655,
+                                      "minor_radius": 0.033838727272296566
+                                    }
+                                  },
+                                  "transform": {
+                                    "location": [
+                                      -1.0074526943786821,
+                                      2.067747579226876,
+                                      1.5708971936232752
+                                    ],
+                                    "rotation": [
+                                      0.0,
+                                      0.0,
+                                      0.0
+                                    ],
+                                    "scale": [
+                                      1.0,
+                                      1.0,
+                                      1.0
+                                    ]
+                                  },
+                                  "material": "silver",
+                                  "metadata": {
+                                    "scale_operation": "magnify",
+                                    "factor": 1.0
+                                  },
+                                  "children": []
+                                },
+                                {
+                                  "name": "reliquary_1_ornament_sphere_2_nested_copy_nested_copy_nested_copy_nested_copy",
+                                  "primitive": {
+                                    "kind": "sphere",
+                                    "params": {
+                                      "radius": 0.179156806234965
+                                    }
+                                  },
+                                  "transform": {
+                                    "location": [
+                                      -1.908767673122127,
+                                      0.7626925139373073,
+                                      -0.8845410818247337
+                                    ],
+                                    "rotation": [
+                                      0.0,
+                                      0.0,
+                                      0.0
+                                    ],
+                                    "scale": [
+                                      1.0,
+                                      1.0,
+                                      1.0
+                                    ]
+                                  },
+                                  "material": "emerald",
+                                  "metadata": {
+                                    "scale_operation": "magnify",
+                                    "factor": 1.0
+                                  },
+                                  "children": []
+                                },
+                                {
+                                  "name": "reliquary_1_ornament_sphere_3_nested_copy_nested_copy_nested_copy_nested_copy",
+                                  "primitive": {
+                                    "kind": "sphere",
+                                    "params": {
+                                      "radius": 0.09441485640260637
+                                    }
+                                  },
+                                  "transform": {
+                                    "location": [
+                                      -0.0009667594339495267,
+                                      -2.4112712464842874,
+                                      0.41910516082781957
+                                    ],
+                                    "rotation": [
+                                      0.0,
+                                      0.0,
+                                      0.0
+                                    ],
+                                    "scale": [
+                                      1.0,
+                                      1.0,
+                                      1.0
+                                    ]
+                                  },
+                                  "material": "emerald",
+                                  "metadata": {
+                                    "scale_operation": "magnify",
+                                    "factor": 1.0
+                                  },
+                                  "children": []
+                                }
+                              ]
+                            }
+                          ]
+                        },
+                        {
+                          "name": "reliquary_layer_0_nested_copy_nested_copy_nested_copy_nested_copy_nested_copy",
+                          "primitive": null,
+                          "transform": {
+                            "location": [
+                              0.0,
+                              0.0,
+                              0.0
+                            ],
+                            "rotation": [
+                              0.0,
+                              0.0,
+                              0.0
+                            ],
+                            "scale": [
+                              1.0,
+                              1.0,
+                              1.0
+                            ]
+                          },
+                          "material": null,
+                          "metadata": {
+                            "scale_operation": "magnify",
+                            "factor": 1.0
+                          },
+                          "children": [
+                            {
+                              "name": "reliquary_shell_0_nested_copy_nested_copy_nested_copy_nested_copy_nested_copy",
+                              "primitive": {
+                                "kind": "box",
+                                "params": {
+                                  "x": 1.2,
+                                  "y": 1.2,
+                                  "z": 1.2
+                                }
+                              },
+                              "transform": {
+                                "location": [
+                                  0.0,
+                                  0.0,
+                                  0.0
+                                ],
+                                "rotation": [
+                                  0.0,
+                                  0.0,
+                                  0.0
+                                ],
+                                "scale": [
+                                  1.0,
+                                  1.0,
+                                  1.0
+                                ]
+                              },
+                              "material": "silver",
+                              "metadata": {
+                                "scale_operation": "magnify",
+                                "factor": 1.0
+                              },
+                              "children": []
+                            },
+                            {
+                              "name": "reliquary_core_0_nested_copy_nested_copy_nested_copy_nested_copy_nested_copy",
+                              "primitive": {
+                                "kind": "sphere",
+                                "params": {
+                                  "radius": 0.2
+                                }
+                              },
+                              "transform": {
+                                "location": [
+                                  0.0,
+                                  0.0,
+                                  0.0
+                                ],
+                                "rotation": [
+                                  0.0,
+                                  0.0,
+                                  0.0
+                                ],
+                                "scale": [
+                                  1.0,
+                                  1.0,
+                                  1.0
+                                ]
+                              },
+                              "material": "ivory",
+                              "metadata": {
+                                "scale_operation": "magnify",
+                                "factor": 1.0
+                              },
+                              "children": []
+                            },
+                            {
+                              "name": "reliquary_0_ornament_nested_copy_nested_copy_nested_copy_nested_copy_nested_copy",
+                              "primitive": null,
+                              "transform": {
+                                "location": [
+                                  0.0,
+                                  0.0,
+                                  0.0
+                                ],
+                                "rotation": [
+                                  0.0,
+                                  0.0,
+                                  0.0
+                                ],
+                                "scale": [
+                                  1.0,
+                                  1.0,
+                                  1.0
+                                ]
+                              },
+                              "material": null,
+                              "metadata": {
+                                "scale_operation": "magnify",
+                                "factor": 1.0
+                              },
+                              "children": [
+                                {
+                                  "name": "reliquary_0_ornament_torus_0_nested_copy_nested_copy_nested_copy_nested_copy_nested_copy",
+                                  "primitive": {
+                                    "kind": "torus",
+                                    "params": {
+                                      "major_radius": 0.13753149748362486,
+                                      "minor_radius": 0.014325707893275528
+                                    }
+                                  },
+                                  "transform": {
+                                    "location": [
+                                      -2.8159092341001477,
+                                      0.009835992867794907,
+                                      -0.6260384162891759
+                                    ],
+                                    "rotation": [
+                                      0.0,
+                                      0.0,
+                                      0.0
+                                    ],
+                                    "scale": [
+                                      1.0,
+                                      1.0,
+                                      1.0
+                                    ]
+                                  },
+                                  "material": "silver",
+                                  "metadata": {
+                                    "scale_operation": "magnify",
+                                    "factor": 1.0
+                                  },
+                                  "children": []
+                                },
+                                {
+                                  "name": "reliquary_0_ornament_torus_1_nested_copy_nested_copy_nested_copy_nested_copy_nested_copy",
+                                  "primitive": {
+                                    "kind": "torus",
+                                    "params": {
+                                      "major_radius": 0.14811923016790357,
+                                      "minor_radius": 0.0352667790799445
+                                    }
+                                  },
+                                  "transform": {
+                                    "location": [
+                                      -0.4663445216343165,
+                                      1.6809425922925154,
+                                      0.6206356284033516
+                                    ],
+                                    "rotation": [
+                                      0.0,
+                                      0.0,
+                                      0.0
+                                    ],
+                                    "scale": [
+                                      1.0,
+                                      1.0,
+                                      1.0
+                                    ]
+                                  },
+                                  "material": "silver",
+                                  "metadata": {
+                                    "scale_operation": "magnify",
+                                    "factor": 1.0
+                                  },
+                                  "children": []
+                                },
+                                {
+                                  "name": "reliquary_0_ornament_torus_2_nested_copy_nested_copy_nested_copy_nested_copy_nested_copy",
+                                  "primitive": {
+                                    "kind": "torus",
+                                    "params": {
+                                      "major_radius": 0.12124212256638027,
+                                      "minor_radius": 0.022739237841333436
+                                    }
+                                  },
+                                  "transform": {
+                                    "location": [
+                                      -0.5166195665675226,
+                                      -1.5316352053836995,
+                                      -0.6885852192535142
+                                    ],
+                                    "rotation": [
+                                      0.0,
+                                      0.0,
+                                      0.0
+                                    ],
+                                    "scale": [
+                                      1.0,
+                                      1.0,
+                                      1.0
+                                    ]
+                                  },
+                                  "material": "silver",
+                                  "metadata": {
+                                    "scale_operation": "magnify",
+                                    "factor": 1.0
+                                  },
+                                  "children": []
+                                },
+                                {
+                                  "name": "reliquary_0_ornament_torus_3_nested_copy_nested_copy_nested_copy_nested_copy_nested_copy",
+                                  "primitive": {
+                                    "kind": "torus",
+                                    "params": {
+                                      "major_radius": 0.2972289715341351,
+                                      "minor_radius": 0.010238451086147933
+                                    }
+                                  },
+                                  "transform": {
+                                    "location": [
+                                      0.044855438577697804,
+                                      1.4574986405867074,
+                                      0.39717746568887113
+                                    ],
+                                    "rotation": [
+                                      0.0,
+                                      0.0,
+                                      0.0
+                                    ],
+                                    "scale": [
+                                      1.0,
+                                      1.0,
+                                      1.0
+                                    ]
+                                  },
+                                  "material": "silver",
+                                  "metadata": {
+                                    "scale_operation": "magnify",
+                                    "factor": 1.0
+                                  },
+                                  "children": []
+                                },
+                                {
+                                  "name": "reliquary_0_ornament_torus_4_nested_copy_nested_copy_nested_copy_nested_copy_nested_copy",
+                                  "primitive": {
+                                    "kind": "torus",
+                                    "params": {
+                                      "major_radius": 0.08746017421748045,
+                                      "minor_radius": 0.03633494341286604
+                                    }
+                                  },
+                                  "transform": {
+                                    "location": [
+                                      0.2099436987661356,
+                                      2.6866174052703258,
+                                      -0.7417789658399037
+                                    ],
+                                    "rotation": [
+                                      0.0,
+                                      0.0,
+                                      0.0
+                                    ],
+                                    "scale": [
+                                      1.0,
+                                      1.0,
+                                      1.0
+                                    ]
+                                  },
+                                  "material": "silver",
+                                  "metadata": {
+                                    "scale_operation": "magnify",
+                                    "factor": 1.0
+                                  },
+                                  "children": []
+                                },
+                                {
+                                  "name": "reliquary_0_ornament_torus_5_nested_copy_nested_copy_nested_copy_nested_copy_nested_copy",
+                                  "primitive": {
+                                    "kind": "torus",
+                                    "params": {
+                                      "major_radius": 0.08837444016923911,
+                                      "minor_radius": 0.013774199325069092
+                                    }
+                                  },
+                                  "transform": {
+                                    "location": [
+                                      2.9281928527306498,
+                                      2.5270542330669175,
+                                      -0.9287784093822511
+                                    ],
+                                    "rotation": [
+                                      0.0,
+                                      0.0,
+                                      0.0
+                                    ],
+                                    "scale": [
+                                      1.0,
+                                      1.0,
+                                      1.0
+                                    ]
+                                  },
+                                  "material": "silver",
+                                  "metadata": {
+                                    "scale_operation": "magnify",
+                                    "factor": 1.0
+                                  },
+                                  "children": []
+                                }
+                              ]
+                            }
+                          ]
+                        }
+                      ]
+                    }
+                  ]
+                }
+              ]
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "name": "city_reference_miniature",
+      "primitive": {
+        "kind": "box",
+        "params": {
+          "x": 2.5,
+          "y": 2.5,
+          "z": 4.0
+        }
+      },
+      "transform": {
+        "location": [
+          0.0,
+          0.0,
+          0.2
+        ],
+        "rotation": [
+          0.0,
+          0.0,
+          0.0
+        ],
+        "scale": [
+          0.02,
+          0.02,
+          0.02
+        ]
+      },
+      "material": "ceramic",
+      "metadata": {
+        "reference_category": "city",
+        "scale_operation": "magnify",
+        "factor": 0.016666666666666666
+      },
+      "children": []
+    },
+    {
+      "name": "human_reference_miniature",
+      "primitive": {
+        "kind": "box",
+        "params": {
+          "x": 0.15,
+          "y": 0.15,
+          "z": 1.75
+        }
+      },
+      "transform": {
+        "location": [
+          0.0,
+          0.0,
+          0.25
+        ],
+        "rotation": [
+          0.0,
+          0.0,
+          0.0
+        ],
+        "scale": [
+          0.008,
+          0.008,
+          0.008
+        ]
+      },
+      "material": "ceramic",
+      "metadata": {
+        "reference_category": "human",
+        "scale_operation": "magnify",
+        "factor": 0.005
+      },
+      "children": []
+    },
+    {
+      "name": "planet_reference_orders",
+      "primitive": null,
+      "transform": {
+        "location": [
+          0.0,
+          0.0,
+          0.0
+        ],
+        "rotation": [
+          0.0,
+          0.0,
+          0.0
+        ],
+        "scale": [
+          1.0,
+          1.0,
+          1.0
+        ]
+      },
+      "material": null,
+      "metadata": {},
+      "children": [
+        {
+          "name": "planet_reference_x0.1",
+          "primitive": {
+            "kind": "sphere",
+            "params": {
+              "radius": 1.0
+            }
+          },
+          "transform": {
+            "location": [
+              0.0,
+              0.0,
+              0.0
+            ],
+            "rotation": [
+              0.0,
+              0.0,
+              0.0
+            ],
+            "scale": [
+              0.1,
+              0.1,
+              0.1
+            ]
+          },
+          "material": "ivory",
+          "metadata": {
+            "reference_category": "planet",
+            "scale_operation": "magnify",
+            "factor": 0.1,
+            "scale_index": 0
+          },
+          "children": []
+        },
+        {
+          "name": "planet_reference_x1",
+          "primitive": {
+            "kind": "sphere",
+            "params": {
+              "radius": 1.0
+            }
+          },
+          "transform": {
+            "location": [
+              0.0,
+              2.5,
+              0.0
+            ],
+            "rotation": [
+              0.0,
+              0.0,
+              0.0
+            ],
+            "scale": [
+              1.0,
+              1.0,
+              1.0
+            ]
+          },
+          "material": "ivory",
+          "metadata": {
+            "reference_category": "planet",
+            "scale_operation": "magnify",
+            "factor": 1.0,
+            "scale_index": 1
+          },
+          "children": []
+        },
+        {
+          "name": "planet_reference_x8",
+          "primitive": {
+            "kind": "sphere",
+            "params": {
+              "radius": 1.0
+            }
+          },
+          "transform": {
+            "location": [
+              0.0,
+              19.0,
+              0.0
+            ],
+            "rotation": [
+              0.0,
+              0.0,
+              0.0
+            ],
+            "scale": [
+              8.0,
+              8.0,
+              8.0
+            ]
+          },
+          "material": "ivory",
+          "metadata": {
+            "reference_category": "planet",
+            "scale_operation": "magnify",
+            "factor": 8.0,
+            "scale_index": 2
+          },
+          "children": []
+        }
+      ]
+    }
+  ]
+}

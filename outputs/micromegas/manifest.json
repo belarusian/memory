@@ -1,0 +1,10 @@
+{
+  "artifacts": [
+    {"name":"great_microscope","seed":1847,"json":"outputs/micromegas/json/great_microscope.json","image":""},
+    {"name":"empty_book","seed":1776,"json":"outputs/micromegas/json/empty_book.json","image":""},
+    {"name":"sirian_instrument","seed":1633,"json":"outputs/micromegas/json/sirian_instrument.json","image":""},
+    {"name":"cosmic_necklace","seed":1911,"json":"outputs/micromegas/json/cosmic_necklace.json","image":""},
+    {"name":"alien_measure","seed":2024,"json":"outputs/micromegas/json/alien_measure.json","image":""},
+    {"name":"scale_reliquary","seed":2401,"json":"outputs/micromegas/json/scale_reliquary.json","image":""}
+  ]
+}

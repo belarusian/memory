@@ -1,0 +1,3012 @@
+{
+  "name": "micromegas_sirian_instrument",
+  "seed": 1633,
+  "family": "sirian_instrument",
+  "metadata": {
+    "style": "sample",
+    "complexity": 4
+  },
+  "materials": {
+    "brass": {
+      "name": "brass",
+      "base_color": [
+        0.73,
+        0.58,
+        0.24
+      ],
+      "metallic": 0.85,
+      "roughness": 0.25
+    },
+    "obsidian": {
+      "name": "obsidian",
+      "base_color": [
+        0.08,
+        0.08,
+        0.1
+      ],
+      "metallic": 0.2,
+      "roughness": 0.15
+    },
+    "ivory": {
+      "name": "ivory",
+      "base_color": [
+        0.92,
+        0.91,
+        0.84
+      ],
+      "metallic": 0.05,
+      "roughness": 0.65
+    },
+    "emerald": {
+      "name": "emerald",
+      "base_color": [
+        0.1,
+        0.45,
+        0.3
+      ],
+      "metallic": 0.1,
+      "roughness": 0.35
+    },
+    "silver": {
+      "name": "silver",
+      "base_color": [
+        0.75,
+        0.75,
+        0.78
+      ],
+      "metallic": 0.95,
+      "roughness": 0.12
+    },
+    "ceramic": {
+      "name": "ceramic",
+      "base_color": [
+        0.86,
+        0.86,
+        0.9
+      ],
+      "metallic": 0.0,
+      "roughness": 0.7
+    }
+  },
+  "objects": [
+    {
+      "name": "sirian_apparatus",
+      "primitive": null,
+      "transform": {
+        "location": [
+          0.0,
+          0.0,
+          0.0
+        ],
+        "rotation": [
+          0.0,
+          0.0,
+          0.0
+        ],
+        "scale": [
+          1.0,
+          1.0,
+          1.0
+        ]
+      },
+      "material": null,
+      "metadata": {},
+      "children": [
+        {
+          "name": "sirian_core_spine",
+          "primitive": {
+            "kind": "cylinder",
+            "params": {
+              "radius": 0.4171240937582765,
+              "depth": 4.5989635470991
+            }
+          },
+          "transform": {
+            "location": [
+              0.0,
+              0.0,
+              0.0
+            ],
+            "rotation": [
+              1.5708,
+              0.0,
+              0.0
+            ],
+            "scale": [
+              1.0,
+              1.0,
+              1.0
+            ]
+          },
+          "material": "brass",
+          "metadata": {},
+          "children": []
+        },
+        {
+          "name": "sirian_core_crown",
+          "primitive": {
+            "kind": "sphere",
+            "params": {
+              "radius": 0.748852109855188
+            }
+          },
+          "transform": {
+            "location": [
+              0.0,
+              0.0,
+              2.3269065537744233
+            ],
+            "rotation": [
+              0.0,
+              0.0,
+              0.0
+            ],
+            "scale": [
+              1.0,
+              1.0,
+              1.0
+            ]
+          },
+          "material": "emerald",
+          "metadata": {},
+          "children": []
+        },
+        {
+          "name": "sirian_support_arms",
+          "primitive": null,
+          "transform": {
+            "location": [
+              0.0,
+              0.0,
+              0.0
+            ],
+            "rotation": [
+              0.0,
+              0.0,
+              0.0
+            ],
+            "scale": [
+              1.0,
+              1.0,
+              1.0
+            ]
+          },
+          "material": null,
+          "metadata": {},
+          "children": [
+            {
+              "name": "sirian_arm_0",
+              "primitive": null,
+              "transform": {
+                "location": [
+                  -0.05317374724417512,
+                  -1.5760821067670125,
+                  -0.6013224561106599
+                ],
+                "rotation": [
+                  -0.5211339468777627,
+                  -0.8117149841470854,
+                  1.252303010868523
+                ],
+                "scale": [
+                  1.0,
+                  1.0,
+                  1.0
+                ]
+              },
+              "material": null,
+              "metadata": {},
+              "children": [
+                {
+                  "name": "sirian_arm_0_segment_0",
+                  "primitive": {
+                    "kind": "box",
+                    "params": {
+                      "x": 0.11120487953770497,
+                      "y": 1.5550525454159798,
+                      "z": 0.17604376458632048
+                    }
+                  },
+                  "transform": {
+                    "location": [
+                      0.0,
+                      0.0,
+                      0.0
+                    ],
+                    "rotation": [
+                      0.0,
+                      0.0,
+                      -0.2865158901687727
+                    ],
+                    "scale": [
+                      1.0,
+                      1.0,
+                      1.0
+                    ]
+                  },
+                  "material": "silver",
+                  "metadata": {},
+                  "children": []
+                },
+                {
+                  "name": "sirian_arm_0_joint_0",
+                  "primitive": {
+                    "kind": "sphere",
+                    "params": {
+                      "radius": 0.138115734992742
+                    }
+                  },
+                  "transform": {
+                    "location": [
+                      0.0,
+                      0.0,
+                      0.0
+                    ],
+                    "rotation": [
+                      0.0,
+                      0.0,
+                      0.0
+                    ],
+                    "scale": [
+                      1.0,
+                      1.0,
+                      1.0
+                    ]
+                  },
+                  "material": "silver",
+                  "metadata": {},
+                  "children": []
+                },
+                {
+                  "name": "sirian_arm_0_segment_1",
+                  "primitive": {
+                    "kind": "box",
+                    "params": {
+                      "x": 0.09740964846247403,
+                      "y": 1.5550525454159798,
+                      "z": 0.16883001007776377
+                    }
+                  },
+                  "transform": {
+                    "location": [
+                      0.0,
+                      1.3217946636035829,
+                      0.0
+                    ],
+                    "rotation": [
+                      0.0,
+                      0.0,
+                      0.3475569924483426
+                    ],
+                    "scale": [
+                      1.0,
+                      1.0,
+                      1.0
+                    ]
+                  },
+                  "material": "silver",
+                  "metadata": {},
+                  "children": []
+                },
+                {
+                  "name": "sirian_arm_0_joint_1",
+                  "primitive": {
+                    "kind": "sphere",
+                    "params": {
+                      "radius": 0.081931509769777
+                    }
+                  },
+                  "transform": {
+                    "location": [
+                      0.0,
+                      1.3217946636035829,
+                      0.0
+                    ],
+                    "rotation": [
+                      0.0,
+                      0.0,
+                      0.0
+                    ],
+                    "scale": [
+                      1.0,
+                      1.0,
+                      1.0
+                    ]
+                  },
+                  "material": "silver",
+                  "metadata": {},
+                  "children": []
+                },
+                {
+                  "name": "sirian_arm_0_segment_2",
+                  "primitive": {
+                    "kind": "box",
+                    "params": {
+                      "x": 0.1621939339496946,
+                      "y": 1.5550525454159798,
+                      "z": 0.12044765366158637
+                    }
+                  },
+                  "transform": {
+                    "location": [
+                      0.0,
+                      2.6435893272071658,
+                      0.0
+                    ],
+                    "rotation": [
+                      0.0,
+                      0.0,
+                      -0.5782417165752082
+                    ],
+                    "scale": [
+                      1.0,
+                      1.0,
+                      1.0
+                    ]
+                  },
+                  "material": "silver",
+                  "metadata": {},
+                  "children": []
+                },
+                {
+                  "name": "sirian_arm_0_joint_2",
+                  "primitive": {
+                    "kind": "sphere",
+                    "params": {
+                      "radius": 0.13565529786149283
+                    }
+                  },
+                  "transform": {
+                    "location": [
+                      0.0,
+                      2.6435893272071658,
+                      0.0
+                    ],
+                    "rotation": [
+                      0.0,
+                      0.0,
+                      0.0
+                    ],
+                    "scale": [
+                      1.0,
+                      1.0,
+                      1.0
+                    ]
+                  },
+                  "material": "silver",
+                  "metadata": {},
+                  "children": []
+                },
+                {
+                  "name": "sirian_arm_0_segment_3",
+                  "primitive": {
+                    "kind": "box",
+                    "params": {
+                      "x": 0.09360208111254317,
+                      "y": 1.5550525454159798,
+                      "z": 0.10343058546263012
+                    }
+                  },
+                  "transform": {
+                    "location": [
+                      0.0,
+                      3.9653839908107487,
+                      0.0
+                    ],
+                    "rotation": [
+                      0.0,
+                      0.0,
+                      0.14518799604241317
+                    ],
+                    "scale": [
+                      1.0,
+                      1.0,
+                      1.0
+                    ]
+                  },
+                  "material": "silver",
+                  "metadata": {},
+                  "children": []
+                },
+                {
+                  "name": "sirian_arm_0_joint_3",
+                  "primitive": {
+                    "kind": "sphere",
+                    "params": {
+                      "radius": 0.14099262900527465
+                    }
+                  },
+                  "transform": {
+                    "location": [
+                      0.0,
+                      3.9653839908107487,
+                      0.0
+                    ],
+                    "rotation": [
+                      0.0,
+                      0.0,
+                      0.0
+                    ],
+                    "scale": [
+                      1.0,
+                      1.0,
+                      1.0
+                    ]
+                  },
+                  "material": "silver",
+                  "metadata": {},
+                  "children": []
+                },
+                {
+                  "name": "sirian_arm_0_segment_4",
+                  "primitive": {
+                    "kind": "box",
+                    "params": {
+                      "x": 0.09949121281461669,
+                      "y": 1.5550525454159798,
+                      "z": 0.13439837741360217
+                    }
+                  },
+                  "transform": {
+                    "location": [
+                      0.0,
+                      5.2871786544143315,
+                      0.0
+                    ],
+                    "rotation": [
+                      0.0,
+                      0.0,
+                      -0.36874545731811254
+                    ],
+                    "scale": [
+                      1.0,
+                      1.0,
+                      1.0
+                    ]
+                  },
+                  "material": "silver",
+                  "metadata": {},
+                  "children": []
+                },
+                {
+                  "name": "sirian_arm_0_joint_4",
+                  "primitive": {
+                    "kind": "sphere",
+                    "params": {
+                      "radius": 0.1571037898967388
+                    }
+                  },
+                  "transform": {
+                    "location": [
+                      0.0,
+                      5.2871786544143315,
+                      0.0
+                    ],
+                    "rotation": [
+                      0.0,
+                      0.0,
+                      0.0
+                    ],
+                    "scale": [
+                      1.0,
+                      1.0,
+                      1.0
+                    ]
+                  },
+                  "material": "silver",
+                  "metadata": {},
+                  "children": []
+                }
+              ]
+            },
+            {
+              "name": "sirian_arm_1",
+              "primitive": null,
+              "transform": {
+                "location": [
+                  -0.4459108048727751,
+                  -1.138517859230479,
+                  -0.2721202679305188
+                ],
+                "rotation": [
+                  -0.3490414679567819,
+                  0.462665500346499,
+                  2.3951358176806754
+                ],
+                "scale": [
+                  1.0,
+                  1.0,
+                  1.0
+                ]
+              },
+              "material": null,
+              "metadata": {},
+              "children": [
+                {
+                  "name": "sirian_arm_1_segment_0",
+                  "primitive": {
+                    "kind": "box",
+                    "params": {
+                      "x": 0.09690085432952171,
+                      "y": 1.3162757407569585,
+                      "z": 0.15158342934741556
+                    }
+                  },
+                  "transform": {
+                    "location": [
+                      0.0,
+                      0.0,
+                      0.0
+                    ],
+                    "rotation": [
+                      0.0,
+                      0.0,
+                      -0.6554798745833597
+                    ],
+                    "scale": [
+                      1.0,
+                      1.0,
+                      1.0
+                    ]
+                  },
+                  "material": "silver",
+                  "metadata": {},
+                  "children": []
+                },
+                {
+                  "name": "sirian_arm_1_joint_0",
+                  "primitive": {
+                    "kind": "sphere",
+                    "params": {
+                      "radius": 0.13691893689572399
+                    }
+                  },
+                  "transform": {
+                    "location": [
+                      0.0,
+                      0.0,
+                      0.0
+                    ],
+                    "rotation": [
+                      0.0,
+                      0.0,
+                      0.0
+                    ],
+                    "scale": [
+                      1.0,
+                      1.0,
+                      1.0
+                    ]
+                  },
+                  "material": "silver",
+                  "metadata": {},
+                  "children": []
+                },
+                {
+                  "name": "sirian_arm_1_segment_1",
+                  "primitive": {
+                    "kind": "box",
+                    "params": {
+                      "x": 0.14121604383784975,
+                      "y": 1.3162757407569585,
+                      "z": 0.17845046645114043
+                    }
+                  },
+                  "transform": {
+                    "location": [
+                      0.0,
+                      1.1188343796434148,
+                      0.0
+                    ],
+                    "rotation": [
+                      0.0,
+                      0.0,
+                      0.5910952100982199
+                    ],
+                    "scale": [
+                      1.0,
+                      1.0,
+                      1.0
+                    ]
+                  },
+                  "material": "silver",
+                  "metadata": {},
+                  "children": []
+                },
+                {
+                  "name": "sirian_arm_1_joint_1",
+                  "primitive": {
+                    "kind": "sphere",
+                    "params": {
+                      "radius": 0.10345987794440083
+                    }
+                  },
+                  "transform": {
+                    "location": [
+                      0.0,
+                      1.1188343796434148,
+                      0.0
+                    ],
+                    "rotation": [
+                      0.0,
+                      0.0,
+                      0.0
+                    ],
+                    "scale": [
+                      1.0,
+                      1.0,
+                      1.0
+                    ]
+                  },
+                  "material": "silver",
+                  "metadata": {},
+                  "children": []
+                },
+                {
+                  "name": "sirian_arm_1_segment_2",
+                  "primitive": {
+                    "kind": "box",
+                    "params": {
+                      "x": 0.0937259599084442,
+                      "y": 1.3162757407569585,
+                      "z": 0.13319556157114526
+                    }
+                  },
+                  "transform": {
+                    "location": [
+                      0.0,
+                      2.2376687592868296,
+                      0.0
+                    ],
+                    "rotation": [
+                      0.0,
+                      0.0,
+                      -0.5431743848578774
+                    ],
+                    "scale": [
+                      1.0,
+                      1.0,
+                      1.0
+                    ]
+                  },
+                  "material": "silver",
+                  "metadata": {},
+                  "children": []
+                },
+                {
+                  "name": "sirian_arm_1_joint_2",
+                  "primitive": {
+                    "kind": "sphere",
+                    "params": {
+                      "radius": 0.12793892829027625
+                    }
+                  },
+                  "transform": {
+                    "location": [
+                      0.0,
+                      2.2376687592868296,
+                      0.0
+                    ],
+                    "rotation": [
+                      0.0,
+                      0.0,
+                      0.0
+                    ],
+                    "scale": [
+                      1.0,
+                      1.0,
+                      1.0
+                    ]
+                  },
+                  "material": "silver",
+                  "metadata": {},
+                  "children": []
+                },
+                {
+                  "name": "sirian_arm_1_segment_3",
+                  "primitive": {
+                    "kind": "box",
+                    "params": {
+                      "x": 0.11968191856822857,
+                      "y": 1.3162757407569585,
+                      "z": 0.12167957214191802
+                    }
+                  },
+                  "transform": {
+                    "location": [
+                      0.0,
+                      3.356503138930244,
+                      0.0
+                    ],
+                    "rotation": [
+                      0.0,
+                      0.0,
+                      0.6302461730107747
+                    ],
+                    "scale": [
+                      1.0,
+                      1.0,
+                      1.0
+                    ]
+                  },
+                  "material": "silver",
+                  "metadata": {},
+                  "children": []
+                },
+                {
+                  "name": "sirian_arm_1_joint_3",
+                  "primitive": {
+                    "kind": "sphere",
+                    "params": {
+                      "radius": 0.09908906438778223
+                    }
+                  },
+                  "transform": {
+                    "location": [
+                      0.0,
+                      3.356503138930244,
+                      0.0
+                    ],
+                    "rotation": [
+                      0.0,
+                      0.0,
+                      0.0
+                    ],
+                    "scale": [
+                      1.0,
+                      1.0,
+                      1.0
+                    ]
+                  },
+                  "material": "silver",
+                  "metadata": {},
+                  "children": []
+                }
+              ]
+            },
+            {
+              "name": "sirian_arm_2",
+              "primitive": null,
+              "transform": {
+                "location": [
+                  0.8543053536824212,
+                  0.7245855632224516,
+                  -0.4225109142745884
+                ],
+                "rotation": [
+                  0.6631658321685112,
+                  0.4433515553755716,
+                  -2.627626013361552
+                ],
+                "scale": [
+                  1.0,
+                  1.0,
+                  1.0
+                ]
+              },
+              "material": null,
+              "metadata": {},
+              "children": [
+                {
+                  "name": "sirian_arm_2_segment_0",
+                  "primitive": {
+                    "kind": "box",
+                    "params": {
+                      "x": 0.16099120697635202,
+                      "y": 1.5631940500041053,
+                      "z": 0.11691523454891978
+                    }
+                  },
+                  "transform": {
+                    "location": [
+                      0.0,
+                      0.0,
+                      0.0
+                    ],
+                    "rotation": [
+                      0.0,
+                      0.0,
+                      0.09423507213676663
+                    ],
+                    "scale": [
+                      1.0,
+                      1.0,
+                      1.0
+                    ]
+                  },
+                  "material": "silver",
+                  "metadata": {},
+                  "children": []
+                },
+                {
+                  "name": "sirian_arm_2_joint_0",
+                  "primitive": {
+                    "kind": "sphere",
+                    "params": {
+                      "radius": 0.07221311934586394
+                    }
+                  },
+                  "transform": {
+                    "location": [
+                      0.0,
+                      0.0,
+                      0.0
+                    ],
+                    "rotation": [
+                      0.0,
+                      0.0,
+                      0.0
+                    ],
+                    "scale": [
+                      1.0,
+                      1.0,
+                      1.0
+                    ]
+                  },
+                  "material": "silver",
+                  "metadata": {},
+                  "children": []
+                },
+                {
+                  "name": "sirian_arm_2_segment_1",
+                  "primitive": {
+                    "kind": "box",
+                    "params": {
+                      "x": 0.1319548930890666,
+                      "y": 1.5631940500041053,
+                      "z": 0.12485170370012952
+                    }
+                  },
+                  "transform": {
+                    "location": [
+                      0.0,
+                      1.3287149425034894,
+                      0.0
+                    ],
+                    "rotation": [
+                      0.0,
+                      0.0,
+                      -0.65456085435022
+                    ],
+                    "scale": [
+                      1.0,
+                      1.0,
+                      1.0
+                    ]
+                  },
+                  "material": "silver",
+                  "metadata": {},
+                  "children": []
+                },
+                {
+                  "name": "sirian_arm_2_joint_1",
+                  "primitive": {
+                    "kind": "sphere",
+                    "params": {
+                      "radius": 0.11297849525322896
+                    }
+                  },
+                  "transform": {
+                    "location": [
+                      0.0,
+                      1.3287149425034894,
+                      0.0
+                    ],
+                    "rotation": [
+                      0.0,
+                      0.0,
+                      0.0
+                    ],
+                    "scale": [
+                      1.0,
+                      1.0,
+                      1.0
+                    ]
+                  },
+                  "material": "silver",
+                  "metadata": {},
+                  "children": []
+                }
+              ]
+            },
+            {
+              "name": "sirian_arm_3",
+              "primitive": null,
+              "transform": {
+                "location": [
+                  -1.3457831743677566,
+                  0.3290217612275814,
+                  -0.14041734903800496
+                ],
+                "rotation": [
+                  -0.02903110132203013,
+                  -0.008929005463451878,
+                  -0.20805582192768535
+                ],
+                "scale": [
+                  1.0,
+                  1.0,
+                  1.0
+                ]
+              },
+              "material": null,
+              "metadata": {},
+              "children": [
+                {
+                  "name": "sirian_arm_3_segment_0",
+                  "primitive": {
+                    "kind": "box",
+                    "params": {
+                      "x": 0.10447889700968105,
+                      "y": 1.1171914896009572,
+                      "z": 0.10142512904211104
+                    }
+                  },
+                  "transform": {
+                    "location": [
+                      0.0,
+                      0.0,
+                      0.0
+                    ],
+                    "rotation": [
+                      0.0,
+                      0.0,
+                      -0.48637386064138743
+                    ],
+                    "scale": [
+                      1.0,
+                      1.0,
+                      1.0
+                    ]
+                  },
+                  "material": "silver",
+                  "metadata": {},
+                  "children": []
+                },
+                {
+                  "name": "sirian_arm_3_joint_0",
+                  "primitive": {
+                    "kind": "sphere",
+                    "params": {
+                      "radius": 0.1368104618605463
+                    }
+                  },
+                  "transform": {
+                    "location": [
+                      0.0,
+                      0.0,
+                      0.0
+                    ],
+                    "rotation": [
+                      0.0,
+                      0.0,
+                      0.0
+                    ],
+                    "scale": [
+                      1.0,
+                      1.0,
+                      1.0
+                    ]
+                  },
+                  "material": "silver",
+                  "metadata": {},
+                  "children": []
+                },
+                {
+                  "name": "sirian_arm_3_segment_1",
+                  "primitive": {
+                    "kind": "box",
+                    "params": {
+                      "x": 0.15590736624872215,
+                      "y": 1.1171914896009572,
+                      "z": 0.15764910045527403
+                    }
+                  },
+                  "transform": {
+                    "location": [
+                      0.0,
+                      0.9496127661608136,
+                      0.0
+                    ],
+                    "rotation": [
+                      0.0,
+                      0.0,
+                      0.40811776966763014
+                    ],
+                    "scale": [
+                      1.0,
+                      1.0,
+                      1.0
+                    ]
+                  },
+                  "material": "silver",
+                  "metadata": {},
+                  "children": []
+                },
+                {
+                  "name": "sirian_arm_3_joint_1",
+                  "primitive": {
+                    "kind": "sphere",
+                    "params": {
+                      "radius": 0.08442145990758891
+                    }
+                  },
+                  "transform": {
+                    "location": [
+                      0.0,
+                      0.9496127661608136,
+                      0.0
+                    ],
+                    "rotation": [
+                      0.0,
+                      0.0,
+                      0.0
+                    ],
+                    "scale": [
+                      1.0,
+                      1.0,
+                      1.0
+                    ]
+                  },
+                  "material": "silver",
+                  "metadata": {},
+                  "children": []
+                }
+              ]
+            },
+            {
+              "name": "sirian_arm_4",
+              "primitive": null,
+              "transform": {
+                "location": [
+                  -1.2473165630168919,
+                  -1.3603164012469398,
+                  0.661282040138842
+                ],
+                "rotation": [
+                  -0.8209263952315546,
+                  -0.23299255471881009,
+                  1.832118382089892
+                ],
+                "scale": [
+                  1.0,
+                  1.0,
+                  1.0
+                ]
+              },
+              "material": null,
+              "metadata": {},
+              "children": [
+                {
+                  "name": "sirian_arm_4_segment_0",
+                  "primitive": {
+                    "kind": "box",
+                    "params": {
+                      "x": 0.1486935308443606,
+                      "y": 1.5577189199623898,
+                      "z": 0.12715901794498813
+                    }
+                  },
+                  "transform": {
+                    "location": [
+                      0.0,
+                      0.0,
+                      0.0
+                    ],
+                    "rotation": [
+                      0.0,
+                      0.0,
+                      0.4204551009784421
+                    ],
+                    "scale": [
+                      1.0,
+                      1.0,
+                      1.0
+                    ]
+                  },
+                  "material": "silver",
+                  "metadata": {},
+                  "children": []
+                },
+                {
+                  "name": "sirian_arm_4_joint_0",
+                  "primitive": {
+                    "kind": "sphere",
+                    "params": {
+                      "radius": 0.08280890901102268
+                    }
+                  },
+                  "transform": {
+                    "location": [
+                      0.0,
+                      0.0,
+                      0.0
+                    ],
+                    "rotation": [
+                      0.0,
+                      0.0,
+                      0.0
+                    ],
+                    "scale": [
+                      1.0,
+                      1.0,
+                      1.0
+                    ]
+                  },
+                  "material": "silver",
+                  "metadata": {},
+                  "children": []
+                },
+                {
+                  "name": "sirian_arm_4_segment_1",
+                  "primitive": {
+                    "kind": "box",
+                    "params": {
+                      "x": 0.17031814416260127,
+                      "y": 1.5577189199623898,
+                      "z": 0.158752162896174
+                    }
+                  },
+                  "transform": {
+                    "location": [
+                      0.0,
+                      1.3240610819680312,
+                      0.0
+                    ],
+                    "rotation": [
+                      0.0,
+                      0.0,
+                      -0.6024053255090166
+                    ],
+                    "scale": [
+                      1.0,
+                      1.0,
+                      1.0
+                    ]
+                  },
+                  "material": "silver",
+                  "metadata": {},
+                  "children": []
+                },
+                {
+                  "name": "sirian_arm_4_joint_1",
+                  "primitive": {
+                    "kind": "sphere",
+                    "params": {
+                      "radius": 0.1466612857326873
+                    }
+                  },
+                  "transform": {
+                    "location": [
+                      0.0,
+                      1.3240610819680312,
+                      0.0
+                    ],
+                    "rotation": [
+                      0.0,
+                      0.0,
+                      0.0
+                    ],
+                    "scale": [
+                      1.0,
+                      1.0,
+                      1.0
+                    ]
+                  },
+                  "material": "silver",
+                  "metadata": {},
+                  "children": []
+                },
+                {
+                  "name": "sirian_arm_4_segment_2",
+                  "primitive": {
+                    "kind": "box",
+                    "params": {
+                      "x": 0.17689581413032235,
+                      "y": 1.5577189199623898,
+                      "z": 0.1563885282011105
+                    }
+                  },
+                  "transform": {
+                    "location": [
+                      0.0,
+                      2.6481221639360624,
+                      0.0
+                    ],
+                    "rotation": [
+                      0.0,
+                      0.0,
+                      -0.6021782794848062
+                    ],
+                    "scale": [
+                      1.0,
+                      1.0,
+                      1.0
+                    ]
+                  },
+                  "material": "silver",
+                  "metadata": {},
+                  "children": []
+                },
+                {
+                  "name": "sirian_arm_4_joint_2",
+                  "primitive": {
+                    "kind": "sphere",
+                    "params": {
+                      "radius": 0.11866185961318537
+                    }
+                  },
+                  "transform": {
+                    "location": [
+                      0.0,
+                      2.6481221639360624,
+                      0.0
+                    ],
+                    "rotation": [
+                      0.0,
+                      0.0,
+                      0.0
+                    ],
+                    "scale": [
+                      1.0,
+                      1.0,
+                      1.0
+                    ]
+                  },
+                  "material": "silver",
+                  "metadata": {},
+                  "children": []
+                },
+                {
+                  "name": "sirian_arm_4_segment_3",
+                  "primitive": {
+                    "kind": "box",
+                    "params": {
+                      "x": 0.0828724591935944,
+                      "y": 1.5577189199623898,
+                      "z": 0.08468410591192362
+                    }
+                  },
+                  "transform": {
+                    "location": [
+                      0.0,
+                      3.9721832459040938,
+                      0.0
+                    ],
+                    "rotation": [
+                      0.0,
+                      0.0,
+                      0.021937249910372825
+                    ],
+                    "scale": [
+                      1.0,
+                      1.0,
+                      1.0
+                    ]
+                  },
+                  "material": "silver",
+                  "metadata": {},
+                  "children": []
+                },
+                {
+                  "name": "sirian_arm_4_joint_3",
+                  "primitive": {
+                    "kind": "sphere",
+                    "params": {
+                      "radius": 0.13700466344414497
+                    }
+                  },
+                  "transform": {
+                    "location": [
+                      0.0,
+                      3.9721832459040938,
+                      0.0
+                    ],
+                    "rotation": [
+                      0.0,
+                      0.0,
+                      0.0
+                    ],
+                    "scale": [
+                      1.0,
+                      1.0,
+                      1.0
+                    ]
+                  },
+                  "material": "silver",
+                  "metadata": {},
+                  "children": []
+                }
+              ]
+            },
+            {
+              "name": "sirian_arm_5",
+              "primitive": null,
+              "transform": {
+                "location": [
+                  0.970140403310261,
+                  0.004980556598590979,
+                  0.14988182058199695
+                ],
+                "rotation": [
+                  -0.26132514617574554,
+                  -0.12641877813771374,
+                  1.377767673870086
+                ],
+                "scale": [
+                  1.0,
+                  1.0,
+                  1.0
+                ]
+              },
+              "material": null,
+              "metadata": {},
+              "children": [
+                {
+                  "name": "sirian_arm_5_segment_0",
+                  "primitive": {
+                    "kind": "box",
+                    "params": {
+                      "x": 0.1062521559307476,
+                      "y": 0.9609994108462552,
+                      "z": 0.1427847200075239
+                    }
+                  },
+                  "transform": {
+                    "location": [
+                      0.0,
+                      0.0,
+                      0.0
+                    ],
+                    "rotation": [
+                      0.0,
+                      0.0,
+                      0.6066322230795942
+                    ],
+                    "scale": [
+                      1.0,
+                      1.0,
+                      1.0
+                    ]
+                  },
+                  "material": "silver",
+                  "metadata": {},
+                  "children": []
+                },
+                {
+                  "name": "sirian_arm_5_joint_0",
+                  "primitive": {
+                    "kind": "sphere",
+                    "params": {
+                      "radius": 0.07135613029822258
+                    }
+                  },
+                  "transform": {
+                    "location": [
+                      0.0,
+                      0.0,
+                      0.0
+                    ],
+                    "rotation": [
+                      0.0,
+                      0.0,
+                      0.0
+                    ],
+                    "scale": [
+                      1.0,
+                      1.0,
+                      1.0
+                    ]
+                  },
+                  "material": "silver",
+                  "metadata": {},
+                  "children": []
+                },
+                {
+                  "name": "sirian_arm_5_segment_1",
+                  "primitive": {
+                    "kind": "box",
+                    "params": {
+                      "x": 0.15629173427951693,
+                      "y": 0.9609994108462552,
+                      "z": 0.1647125928774438
+                    }
+                  },
+                  "transform": {
+                    "location": [
+                      0.0,
+                      0.8168494992193169,
+                      0.0
+                    ],
+                    "rotation": [
+                      0.0,
+                      0.0,
+                      -0.3468190896768044
+                    ],
+                    "scale": [
+                      1.0,
+                      1.0,
+                      1.0
+                    ]
+                  },
+                  "material": "silver",
+                  "metadata": {},
+                  "children": []
+                },
+                {
+                  "name": "sirian_arm_5_joint_1",
+                  "primitive": {
+                    "kind": "sphere",
+                    "params": {
+                      "radius": 0.12560206841429333
+                    }
+                  },
+                  "transform": {
+                    "location": [
+                      0.0,
+                      0.8168494992193169,
+                      0.0
+                    ],
+                    "rotation": [
+                      0.0,
+                      0.0,
+                      0.0
+                    ],
+                    "scale": [
+                      1.0,
+                      1.0,
+                      1.0
+                    ]
+                  },
+                  "material": "silver",
+                  "metadata": {},
+                  "children": []
+                },
+                {
+                  "name": "sirian_arm_5_segment_2",
+                  "primitive": {
+                    "kind": "box",
+                    "params": {
+                      "x": 0.13618551235360654,
+                      "y": 0.9609994108462552,
+                      "z": 0.09875956626570276
+                    }
+                  },
+                  "transform": {
+                    "location": [
+                      0.0,
+                      1.6336989984386339,
+                      0.0
+                    ],
+                    "rotation": [
+                      0.0,
+                      0.0,
+                      -0.24189313046406835
+                    ],
+                    "scale": [
+                      1.0,
+                      1.0,
+                      1.0
+                    ]
+                  },
+                  "material": "silver",
+                  "metadata": {},
+                  "children": []
+                },
+                {
+                  "name": "sirian_arm_5_joint_2",
+                  "primitive": {
+                    "kind": "sphere",
+                    "params": {
+                      "radius": 0.08464941381590212
+                    }
+                  },
+                  "transform": {
+                    "location": [
+                      0.0,
+                      1.6336989984386339,
+                      0.0
+                    ],
+                    "rotation": [
+                      0.0,
+                      0.0,
+                      0.0
+                    ],
+                    "scale": [
+                      1.0,
+                      1.0,
+                      1.0
+                    ]
+                  },
+                  "material": "silver",
+                  "metadata": {},
+                  "children": []
+                }
+              ]
+            },
+            {
+              "name": "sirian_arm_6",
+              "primitive": null,
+              "transform": {
+                "location": [
+                  0.026308844354865357,
+                  1.622992017791221,
+                  0.6199698974768253
+                ],
+                "rotation": [
+                  -0.18887059665807504,
+                  0.8854846129037064,
+                  -2.2312703399640474
+                ],
+                "scale": [
+                  1.0,
+                  1.0,
+                  1.0
+                ]
+              },
+              "material": null,
+              "metadata": {},
+              "children": [
+                {
+                  "name": "sirian_arm_6_segment_0",
+                  "primitive": {
+                    "kind": "box",
+                    "params": {
+                      "x": 0.15162389514739505,
+                      "y": 0.9268273949021935,
+                      "z": 0.1515384826408417
+                    }
+                  },
+                  "transform": {
+                    "location": [
+                      0.0,
+                      0.0,
+                      0.0
+                    ],
+                    "rotation": [
+                      0.0,
+                      0.0,
+                      0.2886680266066055
+                    ],
+                    "scale": [
+                      1.0,
+                      1.0,
+                      1.0
+                    ]
+                  },
+                  "material": "silver",
+                  "metadata": {},
+                  "children": []
+                },
+                {
+                  "name": "sirian_arm_6_joint_0",
+                  "primitive": {
+                    "kind": "sphere",
+                    "params": {
+                      "radius": 0.09441603960230381
+                    }
+                  },
+                  "transform": {
+                    "location": [
+                      0.0,
+                      0.0,
+                      0.0
+                    ],
+                    "rotation": [
+                      0.0,
+                      0.0,
+                      0.0
+                    ],
+                    "scale": [
+                      1.0,
+                      1.0,
+                      1.0
+                    ]
+                  },
+                  "material": "silver",
+                  "metadata": {},
+                  "children": []
+                },
+                {
+                  "name": "sirian_arm_6_segment_1",
+                  "primitive": {
+                    "kind": "box",
+                    "params": {
+                      "x": 0.1576476060122517,
+                      "y": 0.9268273949021935,
+                      "z": 0.1208576997262028
+                    }
+                  },
+                  "transform": {
+                    "location": [
+                      0.0,
+                      0.7878032856668644,
+                      0.0
+                    ],
+                    "rotation": [
+                      0.0,
+                      0.0,
+                      0.40348889115838826
+                    ],
+                    "scale": [
+                      1.0,
+                      1.0,
+                      1.0
+                    ]
+                  },
+                  "material": "silver",
+                  "metadata": {},
+                  "children": []
+                },
+                {
+                  "name": "sirian_arm_6_joint_1",
+                  "primitive": {
+                    "kind": "sphere",
+                    "params": {
+                      "radius": 0.13731844827881826
+                    }
+                  },
+                  "transform": {
+                    "location": [
+                      0.0,
+                      0.7878032856668644,
+                      0.0
+                    ],
+                    "rotation": [
+                      0.0,
+                      0.0,
+                      0.0
+                    ],
+                    "scale": [
+                      1.0,
+                      1.0,
+                      1.0
+                    ]
+                  },
+                  "material": "silver",
+                  "metadata": {},
+                  "children": []
+                },
+                {
+                  "name": "sirian_arm_6_segment_2",
+                  "primitive": {
+                    "kind": "box",
+                    "params": {
+                      "x": 0.15486460040574468,
+                      "y": 0.9268273949021935,
+                      "z": 0.15206783443626673
+                    }
+                  },
+                  "transform": {
+                    "location": [
+                      0.0,
+                      1.5756065713337288,
+                      0.0
+                    ],
+                    "rotation": [
+                      0.0,
+                      0.0,
+                      0.19760013576064295
+                    ],
+                    "scale": [
+                      1.0,
+                      1.0,
+                      1.0
+                    ]
+                  },
+                  "material": "silver",
+                  "metadata": {},
+                  "children": []
+                },
+                {
+                  "name": "sirian_arm_6_joint_2",
+                  "primitive": {
+                    "kind": "sphere",
+                    "params": {
+                      "radius": 0.09686402245059181
+                    }
+                  },
+                  "transform": {
+                    "location": [
+                      0.0,
+                      1.5756065713337288,
+                      0.0
+                    ],
+                    "rotation": [
+                      0.0,
+                      0.0,
+                      0.0
+                    ],
+                    "scale": [
+                      1.0,
+                      1.0,
+                      1.0
+                    ]
+                  },
+                  "material": "silver",
+                  "metadata": {},
+                  "children": []
+                },
+                {
+                  "name": "sirian_arm_6_segment_3",
+                  "primitive": {
+                    "kind": "box",
+                    "params": {
+                      "x": 0.1056433161112733,
+                      "y": 0.9268273949021935,
+                      "z": 0.10430066087993436
+                    }
+                  },
+                  "transform": {
+                    "location": [
+                      0.0,
+                      2.363409857000593,
+                      0.0
+                    ],
+                    "rotation": [
+                      0.0,
+                      0.0,
+                      0.4345698933132862
+                    ],
+                    "scale": [
+                      1.0,
+                      1.0,
+                      1.0
+                    ]
+                  },
+                  "material": "silver",
+                  "metadata": {},
+                  "children": []
+                },
+                {
+                  "name": "sirian_arm_6_joint_3",
+                  "primitive": {
+                    "kind": "sphere",
+                    "params": {
+                      "radius": 0.12020570779242758
+                    }
+                  },
+                  "transform": {
+                    "location": [
+                      0.0,
+                      2.363409857000593,
+                      0.0
+                    ],
+                    "rotation": [
+                      0.0,
+                      0.0,
+                      0.0
+                    ],
+                    "scale": [
+                      1.0,
+                      1.0,
+                      1.0
+                    ]
+                  },
+                  "material": "silver",
+                  "metadata": {},
+                  "children": []
+                }
+              ]
+            },
+            {
+              "name": "sirian_arm_7",
+              "primitive": null,
+              "transform": {
+                "location": [
+                  -0.8894974337692174,
+                  -1.0532455411950066,
+                  -0.23304960318359302
+                ],
+                "rotation": [
+                  -0.6078696062632383,
+                  -0.5978303061715999,
+                  3.044647131897403
+                ],
+                "scale": [
+                  1.0,
+                  1.0,
+                  1.0
+                ]
+              },
+              "material": null,
+              "metadata": {},
+              "children": [
+                {
+                  "name": "sirian_arm_7_segment_0",
+                  "primitive": {
+                    "kind": "box",
+                    "params": {
+                      "x": 0.1097039961216155,
+                      "y": 0.8818391057683389,
+                      "z": 0.09898944009056786
+                    }
+                  },
+                  "transform": {
+                    "location": [
+                      0.0,
+                      0.0,
+                      0.0
+                    ],
+                    "rotation": [
+                      0.0,
+                      0.0,
+                      0.22830842834825937
+                    ],
+                    "scale": [
+                      1.0,
+                      1.0,
+                      1.0
+                    ]
+                  },
+                  "material": "silver",
+                  "metadata": {},
+                  "children": []
+                },
+                {
+                  "name": "sirian_arm_7_joint_0",
+                  "primitive": {
+                    "kind": "sphere",
+                    "params": {
+                      "radius": 0.08878460428508855
+                    }
+                  },
+                  "transform": {
+                    "location": [
+                      0.0,
+                      0.0,
+                      0.0
+                    ],
+                    "rotation": [
+                      0.0,
+                      0.0,
+                      0.0
+                    ],
+                    "scale": [
+                      1.0,
+                      1.0,
+                      1.0
+                    ]
+                  },
+                  "material": "silver",
+                  "metadata": {},
+                  "children": []
+                },
+                {
+                  "name": "sirian_arm_7_segment_1",
+                  "primitive": {
+                    "kind": "box",
+                    "params": {
+                      "x": 0.14599449917174978,
+                      "y": 0.8818391057683389,
+                      "z": 0.12127979280117805
+                    }
+                  },
+                  "transform": {
+                    "location": [
+                      0.0,
+                      0.749563239903088,
+                      0.0
+                    ],
+                    "rotation": [
+                      0.0,
+                      0.0,
+                      0.1524188690506515
+                    ],
+                    "scale": [
+                      1.0,
+                      1.0,
+                      1.0
+                    ]
+                  },
+                  "material": "silver",
+                  "metadata": {},
+                  "children": []
+                },
+                {
+                  "name": "sirian_arm_7_joint_1",
+                  "primitive": {
+                    "kind": "sphere",
+                    "params": {
+                      "radius": 0.11456721387954487
+                    }
+                  },
+                  "transform": {
+                    "location": [
+                      0.0,
+                      0.749563239903088,
+                      0.0
+                    ],
+                    "rotation": [
+                      0.0,
+                      0.0,
+                      0.0
+                    ],
+                    "scale": [
+                      1.0,
+                      1.0,
+                      1.0
+                    ]
+                  },
+                  "material": "silver",
+                  "metadata": {},
+                  "children": []
+                },
+                {
+                  "name": "sirian_arm_7_segment_2",
+                  "primitive": {
+                    "kind": "box",
+                    "params": {
+                      "x": 0.15460668496262842,
+                      "y": 0.8818391057683389,
+                      "z": 0.10606837046834955
+                    }
+                  },
+                  "transform": {
+                    "location": [
+                      0.0,
+                      1.499126479806176,
+                      0.0
+                    ],
+                    "rotation": [
+                      0.0,
+                      0.0,
+                      -0.22644012870030172
+                    ],
+                    "scale": [
+                      1.0,
+                      1.0,
+                      1.0
+                    ]
+                  },
+                  "material": "silver",
+                  "metadata": {},
+                  "children": []
+                },
+                {
+                  "name": "sirian_arm_7_joint_2",
+                  "primitive": {
+                    "kind": "sphere",
+                    "params": {
+                      "radius": 0.13770226518577763
+                    }
+                  },
+                  "transform": {
+                    "location": [
+                      0.0,
+                      1.499126479806176,
+                      0.0
+                    ],
+                    "rotation": [
+                      0.0,
+                      0.0,
+                      0.0
+                    ],
+                    "scale": [
+                      1.0,
+                      1.0,
+                      1.0
+                    ]
+                  },
+                  "material": "silver",
+                  "metadata": {},
+                  "children": []
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "name": "sirian_lens_assemblies",
+          "primitive": null,
+          "transform": {
+            "location": [
+              0.0,
+              0.0,
+              0.0
+            ],
+            "rotation": [
+              0.0,
+              0.0,
+              0.0
+            ],
+            "scale": [
+              1.0,
+              1.0,
+              1.0
+            ]
+          },
+          "material": null,
+          "metadata": {},
+          "children": [
+            {
+              "name": "sirian_lens_0",
+              "primitive": {
+                "kind": "torus",
+                "params": {
+                  "major_radius": 0.3386600419592585,
+                  "minor_radius": 0.052658867757913896
+                }
+              },
+              "transform": {
+                "location": [
+                  0.0,
+                  0.0,
+                  0.0
+                ],
+                "rotation": [
+                  0.7841348308520202,
+                  0.10134466611444272,
+                  0.1435186569563535
+                ],
+                "scale": [
+                  1.0,
+                  1.0,
+                  1.0
+                ]
+              },
+              "material": "obsidian",
+              "metadata": {},
+              "children": []
+            },
+            {
+              "name": "sirian_lens_1",
+              "primitive": {
+                "kind": "torus",
+                "params": {
+                  "major_radius": 0.43796544205663795,
+                  "minor_radius": 0.07321608397943563
+                }
+              },
+              "transform": {
+                "location": [
+                  0.0,
+                  0.0,
+                  0.0
+                ],
+                "rotation": [
+                  1.1315343201083419,
+                  0.9011226498782299,
+                  0.6757297826899812
+                ],
+                "scale": [
+                  1.0,
+                  1.0,
+                  1.0
+                ]
+              },
+              "material": "obsidian",
+              "metadata": {},
+              "children": []
+            },
+            {
+              "name": "sirian_lens_2",
+              "primitive": {
+                "kind": "torus",
+                "params": {
+                  "major_radius": 0.5240878071411978,
+                  "minor_radius": 0.06338301511773915
+                }
+              },
+              "transform": {
+                "location": [
+                  0.0,
+                  0.0,
+                  0.0
+                ],
+                "rotation": [
+                  0.6556455178005597,
+                  0.7343169773641945,
+                  1.1309567870759276
+                ],
+                "scale": [
+                  1.0,
+                  1.0,
+                  1.0
+                ]
+              },
+              "material": "obsidian",
+              "metadata": {},
+              "children": []
+            },
+            {
+              "name": "sirian_lens_3",
+              "primitive": {
+                "kind": "torus",
+                "params": {
+                  "major_radius": 0.6576456398631612,
+                  "minor_radius": 0.03316785837994191
+                }
+              },
+              "transform": {
+                "location": [
+                  0.0,
+                  0.0,
+                  0.0
+                ],
+                "rotation": [
+                  0.9270874069901038,
+                  0.36657959522828504,
+                  0.6788938417031115
+                ],
+                "scale": [
+                  1.0,
+                  1.0,
+                  1.0
+                ]
+              },
+              "material": "obsidian",
+              "metadata": {},
+              "children": []
+            },
+            {
+              "name": "sirian_lens_4",
+              "primitive": {
+                "kind": "torus",
+                "params": {
+                  "major_radius": 1.0269660774875875,
+                  "minor_radius": 0.08775219615017371
+                }
+              },
+              "transform": {
+                "location": [
+                  0.0,
+                  0.0,
+                  0.0
+                ],
+                "rotation": [
+                  0.5821267865796932,
+                  0.774477555981881,
+                  0.6266788998667304
+                ],
+                "scale": [
+                  1.0,
+                  1.0,
+                  1.0
+                ]
+              },
+              "material": "obsidian",
+              "metadata": {},
+              "children": []
+            },
+            {
+              "name": "sirian_lens_5",
+              "primitive": {
+                "kind": "torus",
+                "params": {
+                  "major_radius": 0.799394643682249,
+                  "minor_radius": 0.0694843972542396
+                }
+              },
+              "transform": {
+                "location": [
+                  0.0,
+                  0.0,
+                  0.0
+                ],
+                "rotation": [
+                  1.1650037542218121,
+                  0.18716532503412114,
+                  0.34955571708643257
+                ],
+                "scale": [
+                  1.0,
+                  1.0,
+                  1.0
+                ]
+              },
+              "material": "obsidian",
+              "metadata": {},
+              "children": []
+            },
+            {
+              "name": "sirian_lens_6",
+              "primitive": {
+                "kind": "torus",
+                "params": {
+                  "major_radius": 1.3873948237745442,
+                  "minor_radius": 0.07066015188646615
+                }
+              },
+              "transform": {
+                "location": [
+                  0.0,
+                  0.0,
+                  0.0
+                ],
+                "rotation": [
+                  0.7795619143987939,
+                  1.0908676032061642,
+                  1.1555020149724151
+                ],
+                "scale": [
+                  1.0,
+                  1.0,
+                  1.0
+                ]
+              },
+              "material": "obsidian",
+              "metadata": {},
+              "children": []
+            },
+            {
+              "name": "sirian_lens_7",
+              "primitive": {
+                "kind": "torus",
+                "params": {
+                  "major_radius": 1.267813516439816,
+                  "minor_radius": 0.04405668126185188
+                }
+              },
+              "transform": {
+                "location": [
+                  0.0,
+                  0.0,
+                  0.0
+                ],
+                "rotation": [
+                  0.5977625994640101,
+                  0.8106113684538258,
+                  0.5825193506082148
+                ],
+                "scale": [
+                  1.0,
+                  1.0,
+                  1.0
+                ]
+              },
+              "material": "obsidian",
+              "metadata": {},
+              "children": []
+            },
+            {
+              "name": "sirian_lens_8",
+              "primitive": {
+                "kind": "torus",
+                "params": {
+                  "major_radius": 1.2445401577422657,
+                  "minor_radius": 0.05683513127304271
+                }
+              },
+              "transform": {
+                "location": [
+                  0.0,
+                  0.0,
+                  0.0
+                ],
+                "rotation": [
+                  0.8561991525400587,
+                  0.47440778311469683,
+                  0.17102138691807514
+                ],
+                "scale": [
+                  1.0,
+                  1.0,
+                  1.0
+                ]
+              },
+              "material": "obsidian",
+              "metadata": {},
+              "children": []
+            }
+          ]
+        },
+        {
+          "name": "sirian_astronomical_calibration",
+          "primitive": null,
+          "transform": {
+            "location": [
+              0.0,
+              0.0,
+              0.0
+            ],
+            "rotation": [
+              0.0,
+              0.0,
+              0.0
+            ],
+            "scale": [
+              1.0,
+              1.0,
+              1.0
+            ]
+          },
+          "material": null,
+          "metadata": {},
+          "children": [
+            {
+              "name": "sirian_gyro_core",
+              "primitive": {
+                "kind": "torus",
+                "params": {
+                  "major_radius": 0.5513894707203724,
+                  "minor_radius": 0.04
+                }
+              },
+              "transform": {
+                "location": [
+                  0.0,
+                  0.0,
+                  0.0
+                ],
+                "rotation": [
+                  0.0,
+                  0.0,
+                  0.0
+                ],
+                "scale": [
+                  1.0,
+                  1.0,
+                  1.0
+                ]
+              },
+              "material": "brass",
+              "metadata": {},
+              "children": []
+            },
+            {
+              "name": "sirian_gyro_spindle",
+              "primitive": {
+                "kind": "cylinder",
+                "params": {
+                  "radius": 0.03,
+                  "depth": 1.6500769434690263
+                }
+              },
+              "transform": {
+                "location": [
+                  0.0,
+                  0.0,
+                  0.0
+                ],
+                "rotation": [
+                  1.5708,
+                  0.0,
+                  0.0
+                ],
+                "scale": [
+                  1.0,
+                  1.0,
+                  1.0
+                ]
+              },
+              "material": "silver",
+              "metadata": {},
+              "children": []
+            },
+            {
+              "name": "sirian_star_markers",
+              "primitive": null,
+              "transform": {
+                "location": [
+                  0.0,
+                  0.0,
+                  0.0
+                ],
+                "rotation": [
+                  0.0,
+                  0.0,
+                  0.0
+                ],
+                "scale": [
+                  1.0,
+                  1.0,
+                  1.0
+                ]
+              },
+              "material": null,
+              "metadata": {},
+              "children": [
+                {
+                  "name": "sirian_star_marker_0",
+                  "primitive": {
+                    "kind": "cone",
+                    "params": {
+                      "radius1": 0.05,
+                      "radius2": 0.0,
+                      "depth": 0.12
+                    }
+                  },
+                  "transform": {
+                    "location": [
+                      0.0,
+                      0.5685547185716784,
+                      0.0
+                    ],
+                    "rotation": [
+                      0.0,
+                      0.0,
+                      0.0
+                    ],
+                    "scale": [
+                      1.0,
+                      1.0,
+                      1.0
+                    ]
+                  },
+                  "material": "emerald",
+                  "metadata": {},
+                  "children": []
+                },
+                {
+                  "name": "sirian_star_marker_1",
+                  "primitive": {
+                    "kind": "cone",
+                    "params": {
+                      "radius1": 0.05,
+                      "radius2": 0.0,
+                      "depth": 0.12
+                    }
+                  },
+                  "transform": {
+                    "location": [
+                      0.0,
+                      0.7776570153801081,
+                      0.0
+                    ],
+                    "rotation": [
+                      0.0,
+                      0.0,
+                      0.7853975
+                    ],
+                    "scale": [
+                      1.0,
+                      1.0,
+                      1.0
+                    ]
+                  },
+                  "material": "emerald",
+                  "metadata": {},
+                  "children": []
+                },
+                {
+                  "name": "sirian_star_marker_2",
+                  "primitive": {
+                    "kind": "cone",
+                    "params": {
+                      "radius1": 0.05,
+                      "radius2": 0.0,
+                      "depth": 0.12
+                    }
+                  },
+                  "transform": {
+                    "location": [
+                      0.0,
+                      0.7073024526702552,
+                      0.0
+                    ],
+                    "rotation": [
+                      0.0,
+                      0.0,
+                      1.570795
+                    ],
+                    "scale": [
+                      1.0,
+                      1.0,
+                      1.0
+                    ]
+                  },
+                  "material": "emerald",
+                  "metadata": {},
+                  "children": []
+                },
+                {
+                  "name": "sirian_star_marker_3",
+                  "primitive": {
+                    "kind": "cone",
+                    "params": {
+                      "radius1": 0.05,
+                      "radius2": 0.0,
+                      "depth": 0.12
+                    }
+                  },
+                  "transform": {
+                    "location": [
+                      0.0,
+                      0.5673500729874877,
+                      0.0
+                    ],
+                    "rotation": [
+                      0.0,
+                      0.0,
+                      2.3561924999999997
+                    ],
+                    "scale": [
+                      1.0,
+                      1.0,
+                      1.0
+                    ]
+                  },
+                  "material": "emerald",
+                  "metadata": {},
+                  "children": []
+                },
+                {
+                  "name": "sirian_star_marker_4",
+                  "primitive": {
+                    "kind": "cone",
+                    "params": {
+                      "radius1": 0.05,
+                      "radius2": 0.0,
+                      "depth": 0.12
+                    }
+                  },
+                  "transform": {
+                    "location": [
+                      0.0,
+                      0.819422820598884,
+                      0.0
+                    ],
+                    "rotation": [
+                      0.0,
+                      0.0,
+                      3.14159
+                    ],
+                    "scale": [
+                      1.0,
+                      1.0,
+                      1.0
+                    ]
+                  },
+                  "material": "emerald",
+                  "metadata": {},
+                  "children": []
+                },
+                {
+                  "name": "sirian_star_marker_5",
+                  "primitive": {
+                    "kind": "cone",
+                    "params": {
+                      "radius1": 0.05,
+                      "radius2": 0.0,
+                      "depth": 0.12
+                    }
+                  },
+                  "transform": {
+                    "location": [
+                      0.0,
+                      0.4207867972132786,
+                      0.0
+                    ],
+                    "rotation": [
+                      0.0,
+                      0.0,
+                      3.9269875
+                    ],
+                    "scale": [
+                      1.0,
+                      1.0,
+                      1.0
+                    ]
+                  },
+                  "material": "emerald",
+                  "metadata": {},
+                  "children": []
+                },
+                {
+                  "name": "sirian_star_marker_6",
+                  "primitive": {
+                    "kind": "cone",
+                    "params": {
+                      "radius1": 0.05,
+                      "radius2": 0.0,
+                      "depth": 0.12
+                    }
+                  },
+                  "transform": {
+                    "location": [
+                      0.0,
+                      0.8804863496567128,
+                      0.0
+                    ],
+                    "rotation": [
+                      0.0,
+                      0.0,
+                      4.712384999999999
+                    ],
+                    "scale": [
+                      1.0,
+                      1.0,
+                      1.0
+                    ]
+                  },
+                  "material": "emerald",
+                  "metadata": {},
+                  "children": []
+                },
+                {
+                  "name": "sirian_star_marker_7",
+                  "primitive": {
+                    "kind": "cone",
+                    "params": {
+                      "radius1": 0.05,
+                      "radius2": 0.0,
+                      "depth": 0.12
+                    }
+                  },
+                  "transform": {
+                    "location": [
+                      0.0,
+                      0.5570185624437919,
+                      0.0
+                    ],
+                    "rotation": [
+                      0.0,
+                      0.0,
+                      5.4977825
+                    ],
+                    "scale": [
+                      1.0,
+                      1.0,
+                      1.0
+                    ]
+                  },
+                  "material": "emerald",
+                  "metadata": {},
+                  "children": []
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "name": "sirian_ornament",
+          "primitive": null,
+          "transform": {
+            "location": [
+              0.0,
+              0.0,
+              0.0
+            ],
+            "rotation": [
+              0.0,
+              0.0,
+              0.0
+            ],
+            "scale": [
+              1.0,
+              1.0,
+              1.0
+            ]
+          },
+          "material": null,
+          "metadata": {},
+          "children": [
+            {
+              "name": "sirian_ornament_cone_0",
+              "primitive": {
+                "kind": "cone",
+                "params": {
+                  "radius1": 0.09574459476463265,
+                  "radius2": 0.0,
+                  "depth": 0.09802450480051098
+                }
+              },
+              "transform": {
+                "location": [
+                  -1.824159836448994,
+                  -0.22724371029403123,
+                  2.9475943186341484
+                ],
+                "rotation": [
+                  0.0,
+                  0.0,
+                  0.0
+                ],
+                "scale": [
+                  1.0,
+                  1.0,
+                  1.0
+                ]
+              },
+              "material": "ivory",
+              "metadata": {},
+              "children": []
+            },
+            {
+              "name": "sirian_ornament_torus_1",
+              "primitive": {
+                "kind": "torus",
+                "params": {
+                  "major_radius": 0.1875461038345722,
+                  "minor_radius": 0.031246717311273972
+                }
+              },
+              "transform": {
+                "location": [
+                  -2.289428954463217,
+                  -1.5076193805304596,
+                  -0.32137979557687446
+                ],
+                "rotation": [
+                  0.0,
+                  0.0,
+                  0.0
+                ],
+                "scale": [
+                  1.0,
+                  1.0,
+                  1.0
+                ]
+              },
+              "material": "silver",
+              "metadata": {},
+              "children": []
+            },
+            {
+              "name": "sirian_ornament_torus_2",
+              "primitive": {
+                "kind": "torus",
+                "params": {
+                  "major_radius": 0.10672532131852891,
+                  "minor_radius": 0.01521186382052242
+                }
+              },
+              "transform": {
+                "location": [
+                  -0.1481728530942119,
+                  1.7787504707214445,
+                  2.273319902094622
+                ],
+                "rotation": [
+                  0.0,
+                  0.0,
+                  0.0
+                ],
+                "scale": [
+                  1.0,
+                  1.0,
+                  1.0
+                ]
+              },
+              "material": "silver",
+              "metadata": {},
+              "children": []
+            },
+            {
+              "name": "sirian_ornament_torus_3",
+              "primitive": {
+                "kind": "torus",
+                "params": {
+                  "major_radius": 0.09102177281977483,
+                  "minor_radius": 0.04491784912122309
+                }
+              },
+              "transform": {
+                "location": [
+                  -1.2539277422553754,
+                  -0.9249870227822377,
+                  1.1512109278288793
+                ],
+                "rotation": [
+                  0.0,
+                  0.0,
+                  0.0
+                ],
+                "scale": [
+                  1.0,
+                  1.0,
+                  1.0
+                ]
+              },
+              "material": "silver",
+              "metadata": {},
+              "children": []
+            },
+            {
+              "name": "sirian_ornament_sphere_4",
+              "primitive": {
+                "kind": "sphere",
+                "params": {
+                  "radius": 0.09599405440042591
+                }
+              },
+              "transform": {
+                "location": [
+                  0.2614343612991723,
+                  0.07331877509890017,
+                  0.5697794312036013
+                ],
+                "rotation": [
+                  0.0,
+                  0.0,
+                  0.0
+                ],
+                "scale": [
+                  1.0,
+                  1.0,
+                  1.0
+                ]
+              },
+              "material": "emerald",
+              "metadata": {},
+              "children": []
+            },
+            {
+              "name": "sirian_ornament_sphere_5",
+              "primitive": {
+                "kind": "sphere",
+                "params": {
+                  "radius": 0.1527121060160629
+                }
+              },
+              "transform": {
+                "location": [
+                  1.2867451801620167,
+                  -2.966345205441292,
+                  0.41603062601158225
+                ],
+                "rotation": [
+                  0.0,
+                  0.0,
+                  0.0
+                ],
+                "scale": [
+                  1.0,
+                  1.0,
+                  1.0
+                ]
+              },
+              "material": "emerald",
+              "metadata": {},
+              "children": []
+            },
+            {
+              "name": "sirian_ornament_torus_6",
+              "primitive": {
+                "kind": "torus",
+                "params": {
+                  "major_radius": 0.1660127397840699,
+                  "minor_radius": 0.020620549219409017
+                }
+              },
+              "transform": {
+                "location": [
+                  -1.9279376266452604,
+                  2.38936704519422,
+                  -0.5716378005896612
+                ],
+                "rotation": [
+                  0.0,
+                  0.0,
+                  0.0
+                ],
+                "scale": [
+                  1.0,
+                  1.0,
+                  1.0
+                ]
+              },
+              "material": "silver",
+              "metadata": {},
+              "children": []
+            },
+            {
+              "name": "sirian_ornament_cone_7",
+              "primitive": {
+                "kind": "cone",
+                "params": {
+                  "radius1": 0.042727517888233035,
+                  "radius2": 0.0,
+                  "depth": 0.07661037603922169
+                }
+              },
+              "transform": {
+                "location": [
+                  1.7903015542853709,
+                  -2.0715089519474548,
+                  0.8849644750693599
+                ],
+                "rotation": [
+                  0.0,
+                  0.0,
+                  0.0
+                ],
+                "scale": [
+                  1.0,
+                  1.0,
+                  1.0
+                ]
+              },
+              "material": "ivory",
+              "metadata": {},
+              "children": []
+            },
+            {
+              "name": "sirian_ornament_torus_8",
+              "primitive": {
+                "kind": "torus",
+                "params": {
+                  "major_radius": 0.20800081063375564,
+                  "minor_radius": 0.04119151584590149
+                }
+              },
+              "transform": {
+                "location": [
+                  -0.8783280106736973,
+                  0.7481276881223997,
+                  0.7841436752065993
+                ],
+                "rotation": [
+                  0.0,
+                  0.0,
+                  0.0
+                ],
+                "scale": [
+                  1.0,
+                  1.0,
+                  1.0
+                ]
+              },
+              "material": "silver",
+              "metadata": {},
+              "children": []
+            },
+            {
+              "name": "sirian_ornament_sphere_9",
+              "primitive": {
+                "kind": "sphere",
+                "params": {
+                  "radius": 0.07260010783594958
+                }
+              },
+              "transform": {
+                "location": [
+                  0.4541420859109939,
+                  0.6602740936135882,
+                  0.6903044839736396
+                ],
+                "rotation": [
+                  0.0,
+                  0.0,
+                  0.0
+                ],
+                "scale": [
+                  1.0,
+                  1.0,
+                  1.0
+                ]
+              },
+              "material": "emerald",
+              "metadata": {},
+              "children": []
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "name": "sirian_height_reference",
+      "primitive": {
+        "kind": "box",
+        "params": {
+          "x": 2.5,
+          "y": 2.5,
+          "z": 4.0
+        }
+      },
+      "transform": {
+        "location": [
+          0.0,
+          -2.0,
+          -1.0
+        ],
+        "rotation": [
+          0.0,
+          0.0,
+          0.0
+        ],
+        "scale": [
+          0.25,
+          0.25,
+          0.25
+        ]
+      },
+      "material": "ceramic",
+      "metadata": {
+        "reference_category": "city"
+      },
+      "children": []
+    }
+  ]
+}
