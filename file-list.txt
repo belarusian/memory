@@ -1,0 +1,509 @@
+.
+├── Building_Forth_from_Spherepop_primitives.json
+├── Building_Forth_from_Spherepop_primitives.mp3
+├── Building_Forth_from_Spherepop_primitives.srt
+├── Building_Forth_from_Spherepop_primitives.tsv
+├── Building_Forth_from_Spherepop_primitives.txt
+├── Building_Forth_from_Spherepop_primitives.vtt
+├── Engineering_Fusion_Persistence.pdf
+├── How_semantic_fields_fix_AI_amnesia.json
+├── How_semantic_fields_fix_AI_amnesia.mp3
+├── How_semantic_fields_fix_AI_amnesia.srt
+├── How_semantic_fields_fix_AI_amnesia.tsv
+├── How_semantic_fields_fix_AI_amnesia.txt
+├── How_semantic_fields_fix_AI_amnesia.vtt
+├── README.md
+├── The_Monotonic_Ledger.pdf
+├── The_World_Engine.pdf
+├── Why_Fusion_Success_Is_Not_Just_Ignition.json
+├── Why_Fusion_Success_Is_Not_Just_Ignition.mp3
+├── Why_Fusion_Success_Is_Not_Just_Ignition.srt
+├── Why_Fusion_Success_Is_Not_Just_Ignition.tsv
+├── Why_Fusion_Success_Is_Not_Just_Ignition.txt
+├── Why_Fusion_Success_Is_Not_Just_Ignition.vtt
+├── beyond-optimal-foraging.aux
+├── beyond-optimal-foraging.log
+├── beyond-optimal-foraging.out
+├── beyond-optimal-foraging.pdf
+├── beyond-optimal-foraging.tex
+├── building-forth.aux
+├── building-forth.log
+├── building-forth.pdf
+├── building-forth.tex
+├── continuation-laboratory.ipynb
+├── corrections.log
+├── file-list.txt
+├── fix_transcription_errors.sh
+├── fusion-viability
+│   ├── chapters
+│   │   ├── ch01.aux
+│   │   ├── ch01.tex
+│   │   ├── ch02.aux
+│   │   ├── ch02.tex
+│   │   ├── ch03.aux
+│   │   ├── ch03.tex
+│   │   ├── ch04.aux
+│   │   ├── ch04.tex
+│   │   ├── ch05.aux
+│   │   ├── ch05.tex
+│   │   ├── ch06.aux
+│   │   ├── ch06.tex
+│   │   ├── ch07.aux
+│   │   ├── ch07.tex
+│   │   ├── ch08.aux
+│   │   ├── ch08.tex
+│   │   ├── ch09.aux
+│   │   ├── ch09.tex
+│   │   ├── ch10.aux
+│   │   ├── ch10.tex
+│   │   ├── ch11.aux
+│   │   ├── ch11.tex
+│   │   ├── ch12.aux
+│   │   ├── ch12.tex
+│   │   ├── ch13.aux
+│   │   ├── ch13.tex
+│   │   ├── ch14.aux
+│   │   ├── ch14.tex
+│   │   ├── ch15.aux
+│   │   ├── ch15.tex
+│   │   ├── ch16.aux
+│   │   ├── ch16.tex
+│   │   ├── ch17.aux
+│   │   ├── ch17.tex
+│   │   ├── ch18.aux
+│   │   ├── ch18.tex
+│   │   ├── ch19.aux
+│   │   └── ch19.tex
+│   ├── fusion-viability-book-latex
+│   │   ├── chapters
+│   │   │   ├── ch01.tex
+│   │   │   ├── ch02.tex
+│   │   │   ├── ch03.tex
+│   │   │   ├── ch04.tex
+│   │   │   ├── ch05.tex
+│   │   │   ├── ch06.tex
+│   │   │   ├── ch07.tex
+│   │   │   ├── ch08.tex
+│   │   │   ├── ch09.tex
+│   │   │   ├── ch10.tex
+│   │   │   ├── ch11.tex
+│   │   │   ├── ch12.tex
+│   │   │   ├── ch13.tex
+│   │   │   ├── ch14.tex
+│   │   │   ├── ch15.tex
+│   │   │   ├── ch16.tex
+│   │   │   ├── ch17.tex
+│   │   │   ├── ch18.tex
+│   │   │   └── ch19.tex
+│   │   └── main.tex
+│   ├── fusion-viability.pdf
+│   ├── main.aux
+│   ├── main.log
+│   ├── main.out
+│   ├── main.pdf
+│   ├── main.tex
+│   └── main.toc
+├── fusion-viability.pdf
+├── generators
+│   ├── __init__.py
+│   ├── alien_measure.py
+│   ├── common.py
+│   ├── cosmic_necklace.py
+│   ├── empty_book.py
+│   ├── great_microscope.py
+│   ├── render_still.py
+│   ├── run_samples.sh
+│   ├── scale_reliquary.py
+│   ├── sirian_instrument.py
+│   └── validate_seed_sweep.py
+├── index.html
+├── micromegas
+│   ├── README.md
+│   ├── __init__.py
+│   ├── astronomy.py
+│   ├── blender_backend.py
+│   ├── cli.py
+│   ├── geometry.py
+│   ├── io.py
+│   ├── materials.py
+│   ├── mechanisms.py
+│   ├── randomness.py
+│   ├── scale.py
+│   └── visualizer.html
+├── outputs
+│   └── micromegas
+│       ├── blend
+│       ├── images
+│       ├── json
+│       │   ├── alien_measure.json
+│       │   ├── cosmic_necklace.json
+│       │   ├── empty_book.json
+│       │   ├── great_microscope.json
+│       │   ├── scale_reliquary.json
+│       │   └── sirian_instrument.json
+│       └── manifest.json
+├── persistent-generative-worlds
+│   ├── chapters
+│   │   ├── apxA.tex
+│   │   ├── apxB.tex
+│   │   ├── apxC.tex
+│   │   ├── apxD.tex
+│   │   ├── apxE.tex
+│   │   ├── apxF.tex
+│   │   ├── ch01.tex
+│   │   ├── ch02.tex
+│   │   ├── ch03.tex
+│   │   ├── ch04.tex
+│   │   ├── ch05.tex
+│   │   ├── ch06.tex
+│   │   ├── ch07.tex
+│   │   ├── ch08.tex
+│   │   ├── ch09.tex
+│   │   ├── ch10.tex
+│   │   ├── ch11.tex
+│   │   ├── ch12.tex
+│   │   ├── ch13.tex
+│   │   ├── ch14.tex
+│   │   ├── ch15.tex
+│   │   ├── ch16.tex
+│   │   ├── ch17.tex
+│   │   ├── ch18.tex
+│   │   ├── ch19.tex
+│   │   ├── ch20.tex
+│   │   ├── ch21.tex
+│   │   ├── ch22.tex
+│   │   ├── ch23.tex
+│   │   ├── ch24.tex
+│   │   ├── ch25.tex
+│   │   ├── ch26.tex
+│   │   ├── ch27.tex
+│   │   ├── ch28.tex
+│   │   ├── ch29.tex
+│   │   ├── ch30.tex
+│   │   ├── ch31.tex
+│   │   ├── ch32.tex
+│   │   ├── ch33.tex
+│   │   ├── ch34.tex
+│   │   ├── ch35.tex
+│   │   ├── ch36.tex
+│   │   ├── ch37.tex
+│   │   ├── ch38.tex
+│   │   ├── ch39.tex
+│   │   ├── ch40.tex
+│   │   ├── ch41.tex
+│   │   └── ch42.tex
+│   ├── convert.py
+│   ├── inline_math.py
+│   ├── main.aux
+│   ├── main.log
+│   ├── main.pdf
+│   ├── main.tex
+│   ├── main.toc
+│   ├── math_lines.py
+│   └── persistent-generative-worlds.pdf
+├── persistent-generative-worlds.pdf
+├── persistent-worlds.png
+├── processing
+│   ├── Al-Biruni_and_the_cost_of_objective_truth.json
+│   ├── Al-Biruni_and_the_cost_of_objective_truth.mp3
+│   ├── Al-Biruni_and_the_cost_of_objective_truth.srt
+│   ├── Al-Biruni_and_the_cost_of_objective_truth.tsv
+│   ├── Al-Biruni_and_the_cost_of_objective_truth.txt
+│   ├── Al-Biruni_and_the_cost_of_objective_truth.vtt
+│   ├── Constitutional_Cybernetics.pdf
+│   ├── Dip_of_the_Horizon.pdf
+│   ├── Engineering_Your_LaTeX_Document_as_Code.json
+│   ├── Engineering_Your_LaTeX_Document_as_Code.mp3
+│   ├── Engineering_Your_LaTeX_Document_as_Code.srt
+│   ├── Engineering_Your_LaTeX_Document_as_Code.tsv
+│   ├── Engineering_Your_LaTeX_Document_as_Code.txt
+│   ├── Engineering_Your_LaTeX_Document_as_Code.vtt
+│   ├── Engineering_the_Document.pdf
+│   ├── Machine_Learning_Bottlenecks_and_Grounding.pdf
+│   ├── README.md
+│   ├── Steering_the_state_with_cybernetics.json
+│   ├── Steering_the_state_with_cybernetics.mp3
+│   ├── Steering_the_state_with_cybernetics.srt
+│   ├── Steering_the_state_with_cybernetics.tsv
+│   ├── Steering_the_state_with_cybernetics.txt
+│   ├── Steering_the_state_with_cybernetics.vtt
+│   ├── The_250-year_struggle_to_ground_AI.json
+│   ├── The_250-year_struggle_to_ground_AI.mp3
+│   ├── The_250-year_struggle_to_ground_AI.srt
+│   ├── The_250-year_struggle_to_ground_AI.tsv
+│   ├── The_250-year_struggle_to_ground_AI.txt
+│   ├── The_250-year_struggle_to_ground_AI.vtt
+│   ├── The_Structural_Grammar_of_Vim.json
+│   ├── The_Structural_Grammar_of_Vim.mp3
+│   ├── The_Structural_Grammar_of_Vim.srt
+│   ├── The_Structural_Grammar_of_Vim.tsv
+│   ├── The_Structural_Grammar_of_Vim.txt
+│   ├── The_Structural_Grammar_of_Vim.vtt
+│   ├── The_Vim_Grammar.pdf
+│   ├── act-one_body.tex
+│   ├── act-three_body.tex
+│   ├── act-two_body.tex
+│   ├── appendices
+│   │   ├── appendix-a.tex
+│   │   ├── appendix-b.tex
+│   │   ├── appendix-c.tex
+│   │   └── appendix-d.tex
+│   ├── bib
+│   │   └── bibliography.tex
+│   ├── book1-latex-source
+│   │   ├── chapters
+│   │   │   ├── 00-prologue.md
+│   │   │   ├── 01-ch1.md
+│   │   │   ├── 02-ch2.md
+│   │   │   ├── 03-ch3.md
+│   │   │   ├── 04-ch4.md
+│   │   │   ├── 05-ch5.md
+│   │   │   ├── 06-ch6.md
+│   │   │   ├── 07-ch7.md
+│   │   │   ├── 08-ch8.md
+│   │   │   ├── 09-ch9.md
+│   │   │   ├── 10-ch10.md
+│   │   │   ├── 11-ch11.md
+│   │   │   ├── 12-ch12.md
+│   │   │   ├── 13-ch13.md
+│   │   │   ├── 14-ch14.md
+│   │   │   ├── 15-ch15.md
+│   │   │   └── 16-ch16.md
+│   │   ├── convert.py
+│   │   ├── history-of-machine-learning.pdf
+│   │   ├── main.pdf
+│   │   ├── main.tex
+│   │   └── tex
+│   │       ├── 00-prologue.tex
+│   │       ├── 01-ch1.tex
+│   │       ├── 02-ch2.tex
+│   │       ├── 03-ch3.tex
+│   │       ├── 04-ch4.tex
+│   │       ├── 05-ch5.tex
+│   │       ├── 06-ch6.tex
+│   │       ├── 07-ch7.tex
+│   │       ├── 08-ch8.tex
+│   │       ├── 09-ch9.tex
+│   │       ├── 10-ch10.tex
+│   │       ├── 11-ch11.tex
+│   │       ├── 12-ch12.tex
+│   │       ├── 13-ch13.tex
+│   │       ├── 14-ch14.tex
+│   │       ├── 15-ch15.tex
+│   │       └── 16-ch16.tex
+│   ├── chapters
+│   │   ├── 01-thinking-like-tex.tex
+│   │   ├── 02-why-latex-works.tex
+│   │   ├── 03-document-architecture.tex
+│   │   ├── 04-version-control.tex
+│   │   ├── 05-build-systems.tex
+│   │   ├── 06-macros-as-terms.tex
+│   │   ├── 07-conditionals-loops-keyvalue.tex
+│   │   ├── 08-robust-command-design.tex
+│   │   ├── 09-modern-font-technology.tex
+│   │   ├── 10-custom-fonts-symbols-writing-systems.tex
+│   │   ├── 11-mathematics-beyond-basics.tex
+│   │   ├── 12-bibliographies-at-scale.tex
+│   │   ├── 13-indexes-glossaries-nomenclature.tex
+│   │   ├── 14-graphics-as-pipeline.tex
+│   │   ├── 15-computation-inside-document.tex
+│   │   ├── 16-custom-document-classes.tex
+│   │   ├── 17-title-pages-front-matter.tex
+│   │   ├── 18-publishing-pipelines.tex
+│   │   ├── 19-debugging-like-a-superuser.tex
+│   │   ├── 20-writing-book-length-works.tex
+│   │   ├── 21-tex-ecosystem.tex
+│   │   └── 22-latex-as-one-stage.tex
+│   ├── constitutional-cybernetics.pdf
+│   ├── constitutional-cybernetics.tex
+│   ├── cover.pdf
+│   ├── dip-of-the-horizon.pdf
+│   ├── dip-of-the-horizon.tex
+│   ├── fix_transcription_errors.sh
+│   ├── frontmatter
+│   │   └── preface.tex
+│   ├── history-of-machine-learning.pdf
+│   ├── infographic.png
+│   ├── latexmkrc
+│   ├── main.pdf
+│   ├── main.tex
+│   ├── mainstream-ml-curriculum-outline.md
+│   ├── marble.png
+│   ├── non_sequitur.mac
+│   ├── notation
+│   │   └── notation.tex
+│   ├── superuser-guide-to-latex
+│   │   ├── PREVIEW-computer-modern.pdf
+│   │   ├── README.md
+│   │   ├── appendices
+│   │   │   ├── appendix-a.tex
+│   │   │   ├── appendix-b.tex
+│   │   │   ├── appendix-c.tex
+│   │   │   └── appendix-d.tex
+│   │   ├── bib
+│   │   │   └── bibliography.tex
+│   │   ├── chapters
+│   │   │   ├── 01-thinking-like-tex.tex
+│   │   │   ├── 02-why-latex-works.tex
+│   │   │   ├── 03-document-architecture.tex
+│   │   │   ├── 04-version-control.tex
+│   │   │   ├── 05-build-systems.tex
+│   │   │   ├── 06-macros-as-terms.tex
+│   │   │   ├── 07-conditionals-loops-keyvalue.tex
+│   │   │   ├── 08-robust-command-design.tex
+│   │   │   ├── 09-modern-font-technology.tex
+│   │   │   ├── 10-custom-fonts-symbols-writing-systems.tex
+│   │   │   ├── 11-mathematics-beyond-basics.tex
+│   │   │   ├── 12-bibliographies-at-scale.tex
+│   │   │   ├── 13-indexes-glossaries-nomenclature.tex
+│   │   │   ├── 14-graphics-as-pipeline.tex
+│   │   │   ├── 15-computation-inside-document.tex
+│   │   │   ├── 16-custom-document-classes.tex
+│   │   │   ├── 17-title-pages-front-matter.tex
+│   │   │   ├── 18-publishing-pipelines.tex
+│   │   │   ├── 19-debugging-like-a-superuser.tex
+│   │   │   ├── 20-writing-book-length-works.tex
+│   │   │   ├── 21-tex-ecosystem.tex
+│   │   │   └── 22-latex-as-one-stage.tex
+│   │   ├── frontmatter
+│   │   │   └── preface.tex
+│   │   ├── latexmkrc
+│   │   ├── main.tex
+│   │   ├── notation
+│   │   │   └── notation.tex
+│   │   └── superuserguide.cls
+│   ├── superuser-guide-to-latex.pdf
+│   ├── superuserguide.cls
+│   └── thinking-in-vim.pdf
+└── rust-continuation-laboratory
+    ├── Cargo.lock
+    ├── Cargo.toml
+    ├── README.md
+    ├── clean-all.sh
+    ├── exp01
+    │   ├── Cargo.toml
+    │   ├── README.md
+    │   └── src
+    │       └── main.rs
+    ├── exp02
+    │   ├── Cargo.toml
+    │   ├── README.md
+    │   └── src
+    │       └── main.rs
+    ├── exp03
+    │   ├── Cargo.toml
+    │   ├── README.md
+    │   └── src
+    │       └── main.rs
+    ├── exp04
+    │   ├── Cargo.toml
+    │   ├── README.md
+    │   └── src
+    │       └── main.rs
+    ├── exp05
+    │   ├── Cargo.toml
+    │   ├── README.md
+    │   └── src
+    │       └── main.rs
+    ├── exp06
+    │   ├── Cargo.toml
+    │   ├── README.md
+    │   └── src
+    │       └── main.rs
+    ├── exp07
+    │   ├── Cargo.toml
+    │   ├── README.md
+    │   └── src
+    │       └── main.rs
+    ├── exp08
+    │   ├── Cargo.toml
+    │   ├── README.md
+    │   └── src
+    │       └── main.rs
+    ├── exp09
+    │   ├── Cargo.toml
+    │   ├── README.md
+    │   └── src
+    │       └── main.rs
+    ├── exp10
+    │   ├── Cargo.toml
+    │   ├── README.md
+    │   └── src
+    │       └── main.rs
+    ├── exp11
+    │   ├── Cargo.toml
+    │   ├── README.md
+    │   └── src
+    │       └── main.rs
+    ├── exp12
+    │   ├── Cargo.toml
+    │   ├── README.md
+    │   └── src
+    │       └── main.rs
+    ├── exp13
+    │   ├── Cargo.toml
+    │   ├── README.md
+    │   └── src
+    │       └── main.rs
+    ├── exp14
+    │   ├── Cargo.toml
+    │   ├── README.md
+    │   └── src
+    │       └── main.rs
+    ├── exp15
+    │   ├── Cargo.toml
+    │   ├── README.md
+    │   └── src
+    │       └── main.rs
+    ├── exp16
+    │   ├── Cargo.toml
+    │   ├── README.md
+    │   └── src
+    │       └── main.rs
+    ├── exp17
+    │   ├── Cargo.toml
+    │   ├── README.md
+    │   └── src
+    │       └── main.rs
+    ├── exp18
+    │   ├── Cargo.toml
+    │   ├── README.md
+    │   └── src
+    │       └── main.rs
+    ├── exp19
+    │   ├── Cargo.toml
+    │   ├── README.md
+    │   └── src
+    │       └── main.rs
+    ├── exp20
+    │   ├── Cargo.toml
+    │   ├── README.md
+    │   └── src
+    │       └── main.rs
+    ├── exp21
+    │   ├── Cargo.toml
+    │   ├── README.md
+    │   └── src
+    │       └── main.rs
+    ├── exp22
+    │   ├── Cargo.toml
+    │   ├── README.md
+    │   └── src
+    │       └── main.rs
+    ├── exp23
+    │   ├── Cargo.toml
+    │   ├── README.md
+    │   └── src
+    │       └── main.rs
+    ├── exp24
+    │   ├── Cargo.toml
+    │   ├── README.md
+    │   └── src
+    │       └── main.rs
+    ├── run-all.sh
+    └── shared
+        ├── Cargo.toml
+        └── src
+            └── lib.rs
+
+80 directories, 427 files
