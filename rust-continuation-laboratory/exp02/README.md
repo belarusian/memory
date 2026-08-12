@@ -18,7 +18,24 @@ The printed trajectory should distinguish present-state equality from the richer
 
 ## Observed Result
 
-Record the output from a run here, together with any modifications to parameters.
+```
+EXPERIMENT: Identity Through Repair
+CLAIM: A repaired entity may differ materially while remaining the same continuation.
+
+
+Comparisons
+-----------
+same snapshot: false
+same identifier: true
+same continuation: true
+repair history: ["cooled State { temperature: 38.0, shape: 5 } to State { temperature: 20.0, shape: 5 }"]
+
+Result
+------
+Static equality was lost; historical continuity was not.
+```
+
+No parameter modifications. The trajectory confirms the prediction: `same_snapshot` is `false` (shape permanently changed), while `same_continuation` is `true` (ID preserved, repair history grew).
 
 ## Interpretation
 
